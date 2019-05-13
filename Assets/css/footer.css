@@ -1,0 +1,18 @@
+footer {
+	background-color: #111;
+	color: #165163;
+	padding: 2%;
+	font-family: 'Didact Gothic', Arial, sans-serif;
+	font-family: var(--sans-font);
+	line-height: 120%;
+	text-align: center;
+	margin-top: 33%;
+}
+
+.iconosFooter {
+	width: 3%;
+}
+
+img#logo {
+	width: 20%; 
+}
