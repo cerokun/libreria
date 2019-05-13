@@ -4,6 +4,10 @@ header {
 	text-align: center;
 }
 
+#cabecera {
+	width: 100%;
+}
+
 #nombre {
 	position: absolute;
 	font-size: 200%;
@@ -33,7 +37,7 @@ header {
 	position: absolute;
 	top: 3%;
 	right: 2%;
-	width: 10%;
+	width: 13%;
 }
 
 #buscador {

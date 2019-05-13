@@ -30,7 +30,7 @@
 
      <header>
          <!-- Imagen cabecera -->
-         <img src="../Assets/img/pagina/cabecera.jpg">
+         <img id="cabecera" src="../Assets/img/pagina/cabecera.jpg">
          <!-- Tipo de usuario -->
          <h3 id="tipo"> Cliente o Administrador</h3>
          <!-- Nombre del usuario -->
@@ -38,7 +38,7 @@
          <!-- Hora a la que se ha conectado -->
          <h5 id="hora"><span style="color:white"> Has iniciado</span> sesion a las 20:00 </h5>
          <!-- Boton para identificarse como usuario -->
-         <a href="#"> <img src="../Assets/img/pagina/identificate.png" width="85px" title="Cerrar la sesion" id="identificate"> </a>
+         <a href="#"> <img src="../Assets/img/pagina/identificate.png" title="Identificate" id="identificate"> </a>
          <div class="input-group col-md-5 mx-auto" id="buscador">
              <!-- Las categorias -->
              <select class="btn btn-primary" id="categorias">
