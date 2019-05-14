@@ -33,4 +33,11 @@ class Principal extends CI_Controller
 		//$data["provincias"] = $this->provincias->dameProvincias(1);
 		$this->load->view("registro");
 	}
-}
+
+	public function cerrarSesion()
+	{
+		$this->session->sess_destroy("usuario");
+		redirect('Principal');
+	}
+
+} // Final clase

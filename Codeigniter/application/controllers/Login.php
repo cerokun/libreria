@@ -11,7 +11,6 @@ class Login extends CI_Controller
         $this->load->helper('form');
         $this->load->library('form_validation');
         $this->load->model('ComprobarLogin');
-
     }
 
     /**
@@ -36,7 +35,7 @@ class Login extends CI_Controller
                 "contraseña" => $this->input->post("contraseña")
             );
 
-           
+
             // Hago uso del modelo, para hacer una consulta a la base de datos, necesito saber, si existe el usuario.
             $resultado = $this->ComprobarLogin->buscar($data);
 
@@ -50,7 +49,6 @@ class Login extends CI_Controller
             }
         } else { // El formulario, no ha pasado las validaciones de sus campos.
             $this->load->view("login");
-           
         }
     }
 
@@ -70,18 +68,13 @@ class Login extends CI_Controller
             'usuario' => $usuario["usuario"],
             'nombre' => $usuario["nombre"],
             'apellidos' => $usuario["apellidos"],
+            'tipo' => $usuario["tipo"],
             'logeado' => TRUE
         );
 
         // Creo la sesion
         $this->session->set_userdata("usuario", $datos);
         redirect('Principal');
-
-    }
-
-    public function cerrarSesion()
-    {
-        $this->session->session_destroy("usuario");
     }
 }
 

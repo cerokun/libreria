@@ -28,18 +28,26 @@
  </head>
 
  <body>
- 
+
      <header>
          <!-- Imagen cabecera -->
          <img id="cabecera" src="../Assets/img/pagina/cabecera.jpg">
-         <!-- Tipo de usuario -->
-         <h3 id="tipo"> Cliente o Administrador</h3>
-         <!-- Nombre del usuario -->
-         <h4 id="nombre"> ¡Bienvenido nombre usuario! </h4>
-         <!-- Hora a la que se ha conectado -->
-         <h5 id="hora"><span style="color:white"> Has iniciado</span> sesion a las 20:00 </h5>
-         <!-- Boton para identificarse como usuario -->
-         <a href="Principal/mostrarFormularioLogin"> <img src="../Assets/img/pagina/identificate.png" id="identificate"> </a>
+
+         <?php if ($this->session->has_userdata('usuario')  and  $this->session->userdata("usuario")["logeado"]) :
+                $usuario = $this->session->userdata("usuario");
+                ?>
+             <h4 id="nombre"> ¡Bienvenido <?= $usuario["nombre"] ?>! </h4>
+             <!-- Tipo de usuario -->
+             <h3 id="tipo"> <?= $usuario["tipo"] ?> </h3>
+             <!-- Hora a la que se ha conectado -->
+             <h5 id="hora"><span style="color:white"> Has iniciado</span> sesion a las 20:00 </h5>
+             <!-- Boton para cerrar la sesion -->
+             <a href="Principal/cerrarSesion"> <img src="../Assets/img/pagina/cerrarSesion.png" id="cerrarSesion"> </a>
+         <?php else : ?>
+             <!-- Boton para identificarse como usuario -->
+             <a href="Principal/mostrarFormularioLogin"> <img src="../Assets/img/pagina/identificate.png" id="identificate"> </a>
+         <?php endif; ?>
+
          <div class="input-group col-md-5 mx-auto" id="buscador">
              <!-- Las categorias -->
              <select class="btn btn-primary" id="categorias">

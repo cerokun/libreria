@@ -33,11 +33,18 @@ header {
 	color: #b0a6a5;
 }
 
-#identificate {
+#identificate, #cerrarSesion {
 	position: absolute;
 	top: 3%;
 	right: 2%;
+}
+
+img#identificate {
 	width: 13%;
+}
+
+img#cerrarSesion {
+	width: 6%;
 }
 
 #buscador {
