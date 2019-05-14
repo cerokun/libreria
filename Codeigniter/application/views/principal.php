@@ -1,20 +1,22 @@
 <style>
-    #ejemplo img {
+    .card {
         margin: 0.5%;
+
+        width: 100%;
     }
 </style>
 
-<div class="container-fluid text-center" id="ejemplo">
+<div class="container text-center" id="ejemplo">
 
 
-     <br>
+    <br>
 
     <h3> Los libros iran aqui... </h3>
 
     <div class="row">
 
         <div class="col-2">
-            <div class="card" style="width:100%">
+            <div class="card">
                 <img class="card-img-top" src="../Assets/img/libros/cienañosdesoledad.jpg" alt="portada libro">
                 <div class="card-body">
                     <h5 class="card-title"> Titulo </h5>
@@ -31,7 +33,7 @@
         </div>
 
         <div class="col-2">
-            <div class="card" style="width: 100%">
+            <div class="card">
                 <img class="card-img-top" src="../Assets/img/libros/cienañosdesoledad.jpg" alt="portada libro">
                 <div class="card-body">
                     <h5 class="card-title"> Titulo </h5>
@@ -48,7 +50,7 @@
         </div>
 
         <div class="col-2">
-            <div class="card" style="width: 100%">
+            <div class="card">
                 <img class="card-img-top" src="../Assets/img/libros/cienañosdesoledad.jpg" alt="portada libro">
                 <div class="card-body">
                     <h5 class="card-title"> Titulo </h5>
@@ -65,7 +67,7 @@
         </div>
 
         <div class="col-2">
-            <div class="card" style="width: 100%">
+            <div class="card">
                 <img class="card-img-top" src="../Assets/img/libros/cienañosdesoledad.jpg" alt="portada libro">
                 <div class="card-body">
                     <h5 class="card-title"> Titulo </h5>
@@ -83,7 +85,7 @@
 
 
         <div class="col-2">
-            <div class="card" style="width: 100%">
+            <div class="card">
                 <img class="card-img-top" src="../Assets/img/libros/cienañosdesoledad.jpg" alt="portada libro">
                 <div class="card-body">
                     <h5 class="card-title"> Titulo </h5>
@@ -100,7 +102,7 @@
         </div>
 
         <div class="col-2">
-            <div class="card" style="width: 100%">
+            <div class="card">
                 <img class="card-img-top" src="../Assets/img/libros/cienañosdesoledad.jpg" alt="portada libro">
                 <div class="card-body">
                     <h5 class="card-title"> Titulo </h5>
@@ -121,7 +123,7 @@
     <div class="row">
 
         <div class="col-2">
-            <div class="card" style="width: 100%">
+            <div class="card">
                 <img class="card-img-top" src="../Assets/img/libros/cienañosdesoledad.jpg" alt="portada libro">
                 <div class="card-body">
                     <h5 class="card-title"> Titulo </h5>
@@ -138,7 +140,7 @@
         </div>
 
         <div class="col-2">
-            <div class="card" style="width: 100%">
+            <div class="card">
                 <img class="card-img-top" src="../Assets/img/libros/cienañosdesoledad.jpg" alt="portada libro">
                 <div class="card-body">
                     <h5 class="card-title"> Titulo </h5>
@@ -155,7 +157,7 @@
         </div>
 
         <div class="col-2">
-            <div class="card" style="width: 100%">
+            <div class="card">
                 <img class="card-img-top" src="../Assets/img/libros/cienañosdesoledad.jpg" alt="portada libro">
                 <div class="card-body">
                     <h5 class="card-title"> Titulo </h5>
@@ -172,7 +174,7 @@
         </div>
 
         <div class="col-2">
-            <div class="card" style="width: 100%">
+            <div class="card">
                 <img class="card-img-top" src="../Assets/img/libros/cienañosdesoledad.jpg" alt="portada libro">
                 <div class="card-body">
                     <h5 class="card-title"> Titulo </h5>
@@ -190,7 +192,7 @@
 
 
         <div class="col-2">
-            <div class="card" style="width: 100%">
+            <div class="card">
                 <img class="card-img-top" src="../Assets/img/libros/cienañosdesoledad.jpg" alt="portada libro">
                 <div class="card-body">
                     <h5 class="card-title"> Titulo </h5>
@@ -207,7 +209,7 @@
         </div>
 
         <div class="col-2">
-            <div class="card" style="width: 100%">
+            <div class="card">
                 <img class="card-img-top" src="../Assets/img/libros/cienañosdesoledad.jpg" alt="portada libro">
                 <div class="card-body">
                     <h5 class="card-title"> Titulo </h5>
@@ -226,4 +228,9 @@
     </div>
 
     <h2> PAGINADOR</h2>
+
+
+    <!--Aqui mostrare las ventanas modales de login y registro -->
+    <div class="modal fade" id="myModal" role="dialog"> </div>
+
 </div>

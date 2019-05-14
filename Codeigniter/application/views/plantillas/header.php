@@ -24,10 +24,11 @@
      <link rel="stylesheet" href="../Assets/css/general.css" />
      <link rel="stylesheet" href="../Assets/css/footer.css" />
 
+
  </head>
 
  <body>
-
+ 
      <header>
          <!-- Imagen cabecera -->
          <img id="cabecera" src="../Assets/img/pagina/cabecera.jpg">
@@ -38,7 +39,7 @@
          <!-- Hora a la que se ha conectado -->
          <h5 id="hora"><span style="color:white"> Has iniciado</span> sesion a las 20:00 </h5>
          <!-- Boton para identificarse como usuario -->
-         <a href="#"> <img src="../Assets/img/pagina/identificate.png" title="Identificate" id="identificate"> </a>
+         <a href="Principal/mostrarFormularioLogin"> <img src="../Assets/img/pagina/identificate.png" id="identificate"> </a>
          <div class="input-group col-md-5 mx-auto" id="buscador">
              <!-- Las categorias -->
              <select class="btn btn-primary" id="categorias">

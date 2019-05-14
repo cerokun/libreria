@@ -17,4 +17,20 @@ class Principal extends CI_Controller
 		$this->load->view('principal');
 		$this->load->view("plantillas/footer");
 	}
+
+
+	/**
+	 * Muestra el formulario de login.
+	 * @return [type] [description]
+	 */
+	public function mostrarFormularioLogin()
+	{
+		$this->load->view("login");
+	}
+
+	public function mostrarFormularioRegistro()
+	{
+		//$data["provincias"] = $this->provincias->dameProvincias(1);
+		$this->load->view("registro");
+	}
 }

@@ -1,5 +1,5 @@
 <?php
 
-    header('Location: http://localhost/Libreria/CodeIgniter/');
+    header('Location: http://localhost/Libreria/Codeigniter/');
     
 ?>
