@@ -42,11 +42,16 @@
                         <label> <i class="fas fa-unlock-alt"></i> Contraseña <?= form_error("contraseña") ?></label>
                         <input type="text" class="form-control" type="password" name="contraseña" value="<?= set_value('contraseña') ?>" placeholder="Introduce la contraseña...">
                     </div>
-                    <button type="submit" class="btn btn-success btn-block"> Login </button>
+
+                    <div class="text-center">
+                        <a class="btn btn-dark" role="button" href="<?= site_url() . 'Principal' ?>"><i class="fas fa-undo"></i> Regresar al menu principal </a>
+                        <button type="submit" class="btn btn-success"> Login </button>
+                    </div>
+
                     </form>
                 </div>
                 <div class="modal-footer">
-
+                    <a href="<?= site_url() . 'Principal/mostrarFormularioRegistro' ?>"> ¿Aun no estas registrado...?</a>
                 </div>
             </div>
 

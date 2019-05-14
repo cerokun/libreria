@@ -21,23 +21,29 @@ class Principal extends CI_Controller
 
 	/**
 	 * Muestra el formulario de login.
-	 * @return [type] [description]
+	 * 
+	 * @return void
 	 */
 	public function mostrarFormularioLogin()
 	{
-		$this->load->view("login");
+		$this->load->view("formularioLogin");
 	}
 
 	public function mostrarFormularioRegistro()
 	{
 		//$data["provincias"] = $this->provincias->dameProvincias(1);
-		$this->load->view("registro");
+		$this->load->view("formularioRegistro");
 	}
 
+	/**
+	 * Destruye la sesion.
+	 *
+	 * @return void
+	 */
 	public function cerrarSesion()
 	{
 		$this->session->sess_destroy("usuario");
+		// Redireccino al menu principal.
 		redirect('Principal');
 	}
-
 } // Final clase
