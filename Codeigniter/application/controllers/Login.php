@@ -89,6 +89,15 @@ class Login extends CI_Controller
         // Redirecciono al usuario a la pagina principal.
         redirect('Principal');
     }
-}
 
-// Final clase
+    /**
+     * Muestra el formulario de login.
+     * @return void
+     */
+    public function mostrarFormulario()
+    {
+        $this->load->view("formularioLogin");
+    }
+
+    
+}// Final clase

@@ -38,14 +38,14 @@
                 ?>
              <h4 id="nombre"> ¡Bienvenido <?= $usuario["nombre"] ?>! </h4>
              <!-- Tipo de usuario -->
-             <h3 id="tipo"> <?= ucfirst($usuario["tipo"]) ?> </h3>
+             <h3 id="tipo"> Tipo de usuario: <?= ucfirst($usuario["tipo"]) ?> </h3>
              <!-- Hora a la que se ha conectado -->
              <h5 id="hora"><span style="color:white"> Has iniciado</span> sesion a las 20:00 </h5>
              <!-- Boton para cerrar la sesion -->
              <a href="<?= site_url() . 'Principal/cerrarSesion' ?>"> <img src="../Assets/img/pagina/cerrarSesion.png" id="cerrarSesion"> </a>
          <?php else : ?>
              <!-- Boton para identificarse como usuario -->
-             <a href="<?= site_url() . 'Principal/mostrarFormularioLogin' ?>"> <img src="../Assets/img/pagina/identificate.png" id="identificate"> </a>
+             <a href="<?= site_url() . 'Login/mostrarFormulario' ?>"> <img src="../Assets/img/pagina/identificate.png" id="identificate"> </a>
          <?php endif; ?>
 
          <div class="input-group col-md-5 mx-auto" id="buscador">

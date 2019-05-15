@@ -99,10 +99,8 @@
                             <div class="form-group">
                                 <label> <i class="fas fa-city"></i> Provincias </label> <br>
 
-                                <select name="provincias">
-
-
-                                </select>
+                                <!-- Genera el select con las provincias de España -->
+                                <?= crearSelect("provincia", $provincias, $selectedThis = "") ?>
 
                             </div>
 
@@ -111,7 +109,7 @@
 
                     <div class="text-center">
                         <br>
-                        <a class="btn btn-dark" role="button" href="<?= site_url() . 'Principal/mostrarFormularioLogin' ?>"><i class="fas fa-undo"></i> Regresar ventana login </a>
+                        <a class="btn btn-dark" role="button" href="<?= site_url() . 'Login/mostrarFormulario' ?>"><i class="fas fa-undo"></i> Regresar ventana login </a>
                         <button type="submit" class="btn btn-success"> Registrate </button>
 
                     </div>

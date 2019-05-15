@@ -40,7 +40,7 @@
                     </div>
                     <div class="form-group">
                         <label> <i class="fas fa-unlock-alt"></i> Contraseña <?= form_error("contraseña") ?></label>
-                        <input type="text" class="form-control" type="password" name="contraseña" value="<?= set_value('contraseña') ?>" placeholder="Introduce la contraseña...">
+                        <input type="password" class="form-control" name="contraseña" placeholder="Introduce la contraseña...">
                     </div>
 
                     <div class="text-center">
@@ -51,7 +51,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <a href="<?= site_url() . 'Principal/mostrarFormularioRegistro' ?>"> ¿Aun no estas registrado...?</a>
+                    <a href="<?= site_url() . 'Registrar/mostrarFormulario' ?>"> ¿Si aun no tienes cuenta... ? registrate </a>
                 </div>
             </div>
 

@@ -227,7 +227,7 @@
 
     </div>
 
-    <h2> PAGINADOR</h2>
+    <h3> << | < 1 2 3 4 PAGINADOR AQUI 5 6 7 8 > | >></h3>
 
 
     <!--Aqui mostrare las ventanas modales de login y registro -->
