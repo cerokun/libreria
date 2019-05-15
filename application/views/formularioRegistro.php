@@ -109,7 +109,7 @@
 
                     <div class="text-center">
                         <br>
-                        <a class="btn btn-dark" role="button" href="<?= site_url() . 'Login/mostrarFormulario' ?>"><i class="fas fa-undo"></i> Regresar ventana login </a>
+                        <a class="btn btn-dark" role="button" href="<?= site_url('Login/mostrarFormulario') ?>"><i class="fas fa-undo"></i> Regresar ventana login </a>
                         <button type="submit" class="btn btn-success"> Registrate </button>
 
                     </div>

@@ -44,14 +44,14 @@
                     </div>
 
                     <div class="text-center">
-                        <a class="btn btn-dark" role="button" href="<?= site_url() . 'Principal' ?>"><i class="fas fa-undo"></i> Regresar al menu principal </a>
+                        <a class="btn btn-dark" role="button" href="<?= site_url('Principal') ?>"><i class="fas fa-undo"></i> Regresar al menu principal </a>
                         <button type="submit" class="btn btn-success"> Login </button>
                     </div>
 
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <a href="<?= site_url() . 'Registrar/mostrarFormulario' ?>"> ¿Si aun no tienes cuenta... ? registrate </a>
+                    <a href="<?= site_url('Registrar/mostrarFormulario') ?>"> ¿Si aun no tienes cuenta... ? registrate </a>
                 </div>
             </div>
 
