@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/Libreria/';
-// $config['base_url'] = 'https://ieslamarisma.net/proyectos/2019/joseluiscortes/Libreria/';
+// PARA SUBIRLO AL SERVIDOR REMOTO PONER ESTO:  $config['base_url'] = 'https://ieslamarisma.net/proyectos/2019/joseluiscortes/Libreria/';
 /*
 |--------------------------------------------------------------------------
 | Index File

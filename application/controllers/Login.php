@@ -9,6 +9,7 @@ class Login extends CI_Controller
     {
         parent::__construct(); // Invoco al constructor del padre.
         $this->load->library('form_validation'); // Cargo la libreria, para validar formularios.
+        $this->form_validation->set_error_delimiters('<span style="color:red">', '</span>');
         $this->load->model('ComprobarLogin'); // Modelo que utilizare para comprobar el login.
     }
 
@@ -25,7 +26,8 @@ class Login extends CI_Controller
         $this->form_validation->set_rules('correo', 'correo', 'required|trim|valid_email');
         $this->form_validation->set_rules('contraseña', 'contraseña', 'required|md5|trim');
         // Mensajes de error que se mostrara, por cada validacion.
-        $this->form_validation->set_message('required', 'El campo %s es requerido.');
+        $this->form_validation->set_message('required', 'requerido.');
+        $this->form_validation->set_message('valid_email', 'incorrecto.');
 
         // Si ha superado las validaciones
         if ($this->form_validation->run()) {
@@ -39,9 +41,9 @@ class Login extends CI_Controller
      *
      * @return void
      */
-    public function comprobar()
+    public function usuario()
     {
-
+        // Compruebo que los datos del formulario, sea correctos
         if ($this->validar()) {
 
             // Obtengo los valores del formulario.
@@ -52,21 +54,22 @@ class Login extends CI_Controller
 
             // Compruebo si existe el usuario
             if ($this->ComprobarLogin->buscar($data)) {
+
                 // Guardo los datos del usuario.
                 $usuario = $this->ComprobarLogin->buscar($data);
                 // Creo una sesion para dicho usuario.
                 $this->crearSesion($usuario);
-            } else { // Sino existe el usuario 
-                //vuelvo a mostrar el formulario de login.
-                $this->load->view("formularioLogin");
+            } else { // sino existe el usuario 
+                $this->mostrarFormulario(); // Muestro el formulario de login.
             }
         } else { // El formulario, no ha pasado las validaciones de sus campos.
-            $this->load->view("formularioLogin");
+            $this->mostrarFormulario();
         }
     }
 
     /**
-     * Crea una sesion, para el usuario que se acaba de identificar.
+     * Crea una sesion con los datos personales del usuario 
+     * acaba de logearse.
      *
      * @param Array $usuario datos personales.
      * @return void
@@ -87,7 +90,7 @@ class Login extends CI_Controller
         // Creo la sesion
         $this->session->set_userdata("usuario", $datos);
         // Redirecciono al usuario a la pagina principal.
-        redirect('Principal');
+        redirect(site_url());
     }
 
     /**
@@ -98,6 +101,4 @@ class Login extends CI_Controller
     {
         $this->load->view("formularioLogin");
     }
-
-    
 }// Final clase

@@ -23,7 +23,7 @@
 <body>
 
     <!-- Modal -->
-    <div class="moda" id="myModal" role="dialog">
+    <div class="moda" role="dialog">
         <div class="modal-dialog modal-dialog-centered">
 
             <!-- Modal content-->
@@ -32,7 +32,14 @@
                     <h3> Login </h3>
                 </div>
                 <div class="modal-body" style="padding:40px 50px;">
-                    <?= form_open("Login/comprobar") ?>
+
+                    <?php if ( isset( $error) ) : ?>
+                        <div class="alert alert-danger">
+                            <p class="text-center"> <strong> ¡Atención! </strong>  el login es incorrecto. </p>
+                        </div>
+                    <?php endif ?>
+
+                    <?= form_open("Login/usuario") ?>
 
                     <div class="form-group">
                         <label> <i class="fas fa-at"></i> Correo <?= form_error("correo") ?> </label>
@@ -51,7 +58,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <a href="<?= site_url('Registrar/mostrarFormulario') ?>"> ¿Si aun no tienes cuenta... ? registrate </a>
+                    <a href="<?= site_url('Registrar/mostrarFormulario') ?>"> ¿Si aun no tienes cuenta... ? registrate
+                    </a>
                 </div>
             </div>
 

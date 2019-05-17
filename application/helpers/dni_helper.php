@@ -8,7 +8,7 @@
  * @param  string $dni numero nacional de identidad.
  * @return boolean  si es true, es un dni valido, si es false, sera incorrecto.
  */
-function comprobarDni($dni)
+function valid_dni($dni)
 {
 
     // Variable de control, que utilizare para comprobar si el dni es correcto.

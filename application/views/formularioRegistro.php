@@ -31,7 +31,22 @@
                     <h3> Formulario de registro </h3>
                 </div>
                 <div class="modal-body" style="padding:40px 50px;">
-                    <?= form_open("Registrar/comprobar") ?>
+
+                    <?php if ($estoyRegistrado) : ?>
+                        <div class="alert alert-success">
+                            <p> <strong> ¡Información! </strong> Acabas de registrarte. </p>
+                        </div>
+                    <?php endif ?>
+
+                    <?php if (validation_errors()) : ?>
+                        <div class="alert alert-danger">
+                            <p> <strong> ¡Atención! </strong> Se han encontrado <strong> <?= count($this->form_validation->error_array())  ?> </strong>
+                                errores revise los datos del formulario e intentelo de nuevo. </p>
+                        </div>
+                    <?php endif ?>
+
+
+                    <?= form_open("Registrar/usuario") ?>
 
                     <div class="row">
 
@@ -44,7 +59,8 @@
                         </div>
                         <div class="col-4">
                             <div class="form-group">
-                                <label> <i class="fas fa-unlock-alt"></i> Contraseña <?= form_error('contraseña'); ?> </label>
+                                <label> <i class="fas fa-unlock-alt"></i> Contraseña <?= form_error('contraseña'); ?>
+                                </label>
                                 <input type="password" class="form-control" name="contraseña" value="<?= set_value('contraseña') ?>" placeholder="Introduce la contraseña">
                             </div>
                         </div>
@@ -67,7 +83,8 @@
                         </div>
                         <div class="col-4">
                             <div class="form-group">
-                                <label> <i class="fas fa-signature"></i> Apellidos <?= form_error('apellidos'); ?> </label>
+                                <label> <i class="fas fa-signature"></i> Apellidos <?= form_error('apellidos'); ?>
+                                </label>
                                 <input type="text" class="form-control" name="apellidos" value="<?= set_value('apellidos') ?>" placeholder="Introduce los apellidos">
                             </div>
                         </div>
@@ -85,13 +102,15 @@
 
                         <div class="col-4">
                             <div class="form-group">
-                                <label> <i class="fas fa-map-marked-alt"></i> Direccion <?= form_error('direccion'); ?></label>
+                                <label> <i class="fas fa-map-marked-alt"></i> Direccion
+                                    <?= form_error('direccion'); ?></label>
                                 <input type="text" class="form-control" name="direccion" value="<?= set_value('direccion') ?>" placeholder="Introduce la direccion">
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
-                                <label> <i class="fab fa-cuttlefish"></i> Codigo postal <?= form_error('codigoPostal'); ?> </label>
+                                <label> <i class="fab fa-cuttlefish"></i> Codigo postal
+                                    <?= form_error('codigoPostal'); ?> </label>
                                 <input type="text" class="form-control" name="codigoPostal" value="<?= set_value('codigoPostal') ?>" placeholder="Introduce el codigo postal">
                             </div>
                         </div>
@@ -100,7 +119,7 @@
                                 <label> <i class="fas fa-city"></i> Provincias </label> <br>
 
                                 <!-- Genera el select con las provincias de España -->
-                                <?= crearSelect("provincia", $provincias, $selectedThis = "") ?>
+                                <?= crearSelect("provincia", $provincias, set_value('provincia')) ?>
 
                             </div>
 
@@ -110,6 +129,7 @@
                     <div class="text-center">
                         <br>
                         <a class="btn btn-dark" role="button" href="<?= site_url('Login/mostrarFormulario') ?>"><i class="fas fa-undo"></i> Regresar ventana login </a>
+
                         <button type="submit" class="btn btn-success"> Registrate </button>
 
                     </div>

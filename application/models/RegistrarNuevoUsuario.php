@@ -1,10 +1,12 @@
 <?php
 
-defined( 'BASEPATH' ) OR exit( 'No direct script access allowed' );
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class RegistrarNuevoUsuario extends CI_Model {
+class RegistrarNuevoUsuario extends CI_Model
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->load->database();
     }
@@ -14,8 +16,8 @@ class RegistrarNuevoUsuario extends CI_Model {
      * @param type $columnas
      * @return type array con todos los valoes del formulario
      */
-    public function insertar( $columnas ) {
-        return $this->db->insert( 'usuarios', $columnas );
+    public function insertar($columnas)
+    {
+        return $this->db->insert('usuarios', $columnas);
     }
-
 }

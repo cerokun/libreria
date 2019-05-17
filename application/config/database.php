@@ -75,11 +75,11 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'jlcr',
-	'database' => 'libreria',
-	'dbdriver' => 'mysqli',
+	'hostname' => 'localhost', // Se deja igual
+	'username' => 'root', // Para que funciona en el servidor remoto hay que poner esto:       'joseluiscortes'
+	'password' => 'jlcr', // Se deja gual
+	'database' => 'libreria', // Para que funciona en el servidor remoto hay que poner esto:   'joseluiscortes'
+	'dbdriver' => 'mysqli', // Se deja igual
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
