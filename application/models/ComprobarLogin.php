@@ -13,6 +13,7 @@ class ComprobarLogin extends CI_Model
 
     public function buscar($data)
     {
+        $this->db->where('baja', 0);
         return $this->db->get_where("usuarios", $data)->row_array();
     }
 }

@@ -3,7 +3,7 @@
     <ul class="navbar-nav">
 
         <li class="nav-item">
-            <a class="nav-link" href="<?= site_url() ?>"> <img src="<?= base_url() . 'Assets/img/pagina/home.png' ?>" width="85px" title="Menu inicio">
+            <a class="nav-link" href="<?= site_url() ?>"> <img src="<?= base_url() . 'Assets/img/pagina/home.png' ?>" width="40px" title="Menu inicio">
             </a>
         </li>
     </ul>
@@ -16,8 +16,8 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color:darkgreen"> Menu </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="<?= site_url('ModificarDatos') ?>"> Datos personales </a>
-                    <a class="dropdown-item" href="#"> Mis pedidos</a>
-                    <a class="dropdown-item" href="#">Link 3</a>
+                    <a class="dropdown-item" href=""> Mis pedidos</a>
+                    <a class="dropdown-item" href="<?= site_url("Baja") ?>"> Darse de baja </a>
                 </div>
             </li>
 
