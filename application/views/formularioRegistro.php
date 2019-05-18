@@ -14,9 +14,19 @@
     <link rel="stylesheet" href="assets/css/login.css">
     <style>
         body {
-            background-image: url("../../Assets/img/pagina/fondo1.jpg");
+            background-image: url("<?= base_url() . 'Assets/img/pagina/fondoLogin.jpg' ?>");
             background-repeat: no-repeat;
         }
+
+        h3 {
+            color: white;
+        }
+
+        .modal-footer,
+        .modal-header {
+            background-color: black;
+        }
+    </style>
     </style>
 </head>
 
@@ -27,7 +37,7 @@
 
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header" style="padding:35px 50px;">
+                <div class="modal-header justify-content-center" style="padding:35px 50px;">
                     <h3> Formulario de registro </h3>
                 </div>
                 <div class="modal-body" style="padding:40px 50px;">
@@ -129,7 +139,6 @@
                     <div class="text-center">
                         <br>
                         <a class="btn btn-dark" role="button" href="<?= site_url('Login/mostrarFormulario') ?>"><i class="fas fa-undo"></i> Regresar ventana login </a>
-
                         <button type="submit" class="btn btn-success"> Registrate </button>
 
                     </div>

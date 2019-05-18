@@ -37,38 +37,34 @@
 
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header justify-content-center" style="padding:35px 50px;">
-                    <h3> Iniciar sesión </h3>
+                <div class="modal-header" style="padding:35px 50px;">
+                    <h3> Recuperar la contraseña </h3>
                 </div>
                 <div class="modal-body" style="padding:40px 50px;">
 
-                    <?php if (isset($error)) : ?>
-                        <div class="alert alert-danger">
-                            <p class="text-center"> <strong> ¡Atención! </strong> el login es incorrecto. </p>
+                    <?php if (form_error("correo")) : ?>
+                        <div class="alert alert-danger text-center">
+                            <strong> ¡Atención! </strong> <?= form_error("correo")  ?>
                         </div>
                     <?php endif ?>
 
-                    <?= form_open("Login/usuario") ?>
+                    <?= form_open("RecuperaPassword/cuenta") ?>
 
                     <div class="form-group">
-                        <label> <i class="fas fa-at"></i> Correo <?= form_error("correo") ?> </label>
+                        <label> <i class="fas fa-at"></i> Correo </label>
                         <input type="text" class="form-control" name="correo" value="<?= set_value('correo') ?>" placeholder="Introduce el correo electronico...">
-                    </div>
-                    <div class="form-group">
-                        <label> <i class="fas fa-unlock-alt"></i> Contraseña <?= form_error("contraseña") ?></label>
-                        <input type="password" class="form-control" name="contraseña" placeholder="Introduce la contraseña...">
                     </div>
 
                     <div class="text-center">
-                        <a class="btn btn-dark" role="button" href="<?= site_url('Principal') ?>"><i class="fas fa-undo"></i> Regresar al menu principal </a>
-                        <button type="submit" class="btn btn-success"> Login </button>
+                        <a class="btn btn-dark" role="button" href="<?= site_url('Login/mostrarFormulario') ?>"><i class="fas fa-undo"></i> Regresar ventana login </a>
+                        <button type="submit" class="btn btn-success"> Enviar </button>
                     </div>
 
                     </form>
                 </div>
                 <div class="modal-footer" id="pie">
-                    <a class="text-success" href="<?= site_url('Registrar/mostrarFormulario') ?>"> Si aun no tienes cuenta, registrate </a>
-                    <a class="text-warning" href="<?= site_url('RecuperaPassword') ?>"> ¿Olvidaste tu contraseña? </a>
+
+
                 </div>
             </div>
 

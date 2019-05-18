@@ -21,9 +21,16 @@ class Usuario extends CI_Model
      * @param type $columnas
      * @return type array con todos los valoes del formulario
      */
-    public function actualizar($columnas, $id)
+    public function actualizar($columnas)
     {
         $this->db->where('idUsuario', $columnas["idUsuario"]);
         return $this->db->update('usuarios', $columnas);
+    }
+
+
+    public function guardarToken($correo, $token)
+    {
+        $this->db->where('correo', $correo);
+        return $this->db->update('usuarios', array("token" => $token));
     }
 }
