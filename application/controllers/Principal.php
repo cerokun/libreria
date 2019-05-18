@@ -30,4 +30,9 @@ class Principal extends CI_Controller
 		// Redireccino al menu principal.
 		redirect('Principal');
 	}
+
+
+
+
+	
 } // Final clase

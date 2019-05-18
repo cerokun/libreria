@@ -29,12 +29,11 @@
 
   <body>
 
-  <?php base_url()  ?>
       <header>
           <!-- Imagen cabecera -->
           <img id="cabecera" src="<?= base_url() . 'Assets/img/pagina/cabecera.jpg' ?>">
 
-          <?php if ($this->session->has_userdata('usuario') and $this->session->userdata("usuario")["logeado"]) :
+          <?php if ($this->session->has_userdata('usuario') ) :
                 $usuario = $this->session->userdata("usuario");
                 ?>
               <h4 id="nombre"> ¡Bienvenido <?= $usuario["nombre"] ?>! </h4>

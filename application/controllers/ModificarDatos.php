@@ -1,8 +1,10 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Registrar extends CI_Controller
+class ModificarDatos extends CI_Controller
 {
+
+    private $datos;
 
     public function __construct()
     {
@@ -11,7 +13,18 @@ class Registrar extends CI_Controller
         $this->load->helper("dni");
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<span style="color:red">', '</span>');
-        $this->load->model('registrarNuevoUsuario');
+        $this->load->model('usuario');
+    }
+
+    public function index()
+    {
+        $this->load->view("plantillas/header");
+        $this->load->view("plantillas/nav");
+        $dato["idUsuario"] = $this->session->userdata['usuario']['idUsuario'];
+        $this->datos = $this->usuario->dameDatosPersonales($dato);
+        $this->datos["provincias"] = dameTodasLasProvincias();
+        $this->load->view("formularioActualizar", $this->datos);
+        $this->load->view("plantillas/footer");
     }
 
     public function validar()
@@ -21,7 +34,6 @@ class Registrar extends CI_Controller
 
         // 1º Establezco las reglas de validacion.
         $this->form_validation->set_rules('usuario', 'usuario', 'required|trim');
-        $this->form_validation->set_rules('contraseña', 'contraseña', 'required|trim');
         $this->form_validation->set_rules('correo', 'correo', 'required|valid_email');
         $this->form_validation->set_rules('nombre', 'nombre', 'required|trim');
         $this->form_validation->set_rules('apellidos', 'apellidos', 'required|trim');
@@ -54,22 +66,29 @@ class Registrar extends CI_Controller
 
         if ($this->validar()) {
 
-            // Almaceno los campos del formulario en un array asociativo.
+
+            // Obtengo los campos del formulario.
             $columnas = array(
+                "idUsuario" => $this->session->userdata['usuario']['idUsuario'],
                 "usuario" => $this->input->post("usuario"),
-                "contraseña" => md5($this->input->post("contraseña")), // Encripto la contraseña
                 "correo" => $this->input->post("correo"),
                 "nombre" => $this->input->post("nombre"),
                 "apellidos" => $this->input->post("apellidos"),
                 "dni" => $this->input->post("dni"),
                 "direccion" => $this->input->post("direccion"),
                 "provincia" => $this->input->post("provincia"),
-                "codigoPostal" => $this->input->post("codigoPostal"),
-                "tipo" => "cliente"
+                "codigoPostal" => $this->input->post("codigoPostal")
             );
 
-            if ($this->registrarNuevoUsuario->insertar($columnas)) {
-                $this->mostrarFormulario(true);
+            if (!empty($this->input->post("contraseña"))) {
+                $columnas["contraseña"] = md5($this->input->post("contraseña"));
+            }
+
+            if ($this->usuario->actualizar($columnas)) {
+                // Actualizo unicamente el nombre, por que es el unico dato que muestro al usuario en el menu principal, en la bienvenida + nombre.
+                $this->session->userdata['usuario']['nombre'] = $columnas["nombre"];
+                // Redirecciono al usuario a la pagina principal.
+                redirect(site_url());
             }
         } else { // El formulario, no ha pasado las validaciones de sus campos.
             $this->mostrarFormulario();
@@ -77,10 +96,12 @@ class Registrar extends CI_Controller
     } // End method comprobar()
 
 
-    public function mostrarFormulario($estoyRegistrado = false)
+    public function mostrarFormulario()
     {
-        $datos["estoyRegistrado"] = $estoyRegistrado;
-        $datos["provincias"] = dameTodasLasProvincias();
-        $this->load->view("formularioRegistro", $datos);
+        $this->load->view("plantillas/header");
+        $this->load->view("plantillas/nav");
+        $this->datos["provincias"] = dameTodasLasProvincias();
+        $this->load->view("formularioActualizar", $this->datos);
+        $this->load->view("plantillas/footer");
     }
 }

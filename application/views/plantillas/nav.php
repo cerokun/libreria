@@ -3,11 +3,45 @@
     <ul class="navbar-nav">
 
         <li class="nav-item">
-            <a class="nav-link" href="#"> <img src="<?= base_url() . 'Assets/img/pagina/home.png' ?>" width="85px" title="Menu inicio">
+            <a class="nav-link" href="<?= site_url() ?>"> <img src="<?= base_url() . 'Assets/img/pagina/home.png' ?>" width="85px" title="Menu inicio">
             </a>
         </li>
     </ul>
-    <h3 class="navbar-nav ml-auto"> Las opciones de menu para clientes y administradores, iran aqui...</h3>
+
+    <?php if ($this->session->has_userdata('usuario') and $this->session->userdata("usuario")["tipo"] === "cliente") : ?>
+
+        <ul class="navbar-nav">
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color:darkgreen"> Menu </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="<?= site_url('ModificarDatos') ?>"> Datos personales </a>
+                    <a class="dropdown-item" href="#"> Mis pedidos</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+            </li>
+
+        </ul>
+    <?php endif ?>
+
+    <?php if ($this->session->has_userdata('usuario') and $this->session->userdata("usuario")["tipo"] === "administrador") : ?>
+
+        <ul class="navbar-nav">
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color:chocolate"> Menu </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"> Crud categorias </a>
+                    <a class="dropdown-item" href="#"> Crud Productos </a>
+                    <a class="dropdown-item" href="#"> Cambiar estado pedidos </a>
+                    <a class="dropdown-item" href="#"> Importar/exportar xml </a>
+                    <a class="dropdown-item" href="#"> Importar/exportar excel </a>
+                </div>
+            </li>
+
+        </ul>
+    <?php endif ?>
+
     <ul class="navbar-nav ml-auto">
         <li class="menuCarrito">
             <img src="<?= base_url() . 'Assets/img/pagina/carrito.png' ?>" title="Carrito compra"> <span id="numeroDeProductos"> 0 </span>

@@ -83,8 +83,7 @@ class Login extends CI_Controller
             'usuario' => $usuario["usuario"],
             'nombre' => $usuario["nombre"],
             'apellidos' => $usuario["apellidos"],
-            'tipo' => $usuario["tipo"],
-            'logeado' => TRUE
+            'tipo' => $usuario["tipo"]
         );
 
         // Creo la sesion
