@@ -32,7 +32,7 @@
 
 <body>
 
-    <div class="moda" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg" id="myModal" role="dialog">
         <div class="modal-dialog modal-lg modal-dialog-centered">
 
             <!-- Modal content-->

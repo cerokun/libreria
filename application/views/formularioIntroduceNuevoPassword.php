@@ -38,31 +38,35 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header justify-content-center" style="padding:35px 50px;">
-                    <h3> ¿Olvidaste la contraseña? </h3>
+                    <h3> Restablece la contraseña </h3>
                 </div>
                 <div class="modal-body" style="padding:40px 50px;">
 
-
-                    <?php if (form_error("correo")) : ?>
+                    <?php if (isset($mensajeDeError)) : ?>
                         <div class="alert alert-danger text-center">
-                            <strong> ¡Atención! </strong> <?= form_error("correo")  ?>
+                            <strong> ¡Atención! </strong> <?= $mensajeDeError ?>
                         </div>
                     <?php endif ?>
 
-                    <p> Si no recuerdas la contraseña, solo tienes que introducir el correo a
-                        donde te mandaremos la información necesaria, para que puedas cambiar la constraseña</p>
-
-                    <?= form_open("RecuperaPassword/cuenta") ?>
+                    <?= form_open("RecuperaPassword/actualizar") ?>
 
                     <div class="form-group">
-                        <label> <i class="fas fa-at"></i> Correo </label>
-                        <input type="text" class="form-control" name="correo" value="jose@libreria.es" placeholder="Introduce el correo electronico...">
+                        <label> <i class="fas fa-lock"></i> Contraseña </label>
+                        <input type="password" class="form-control" name="password1" placeholder="Introduce la contraseña...">
+                    </div>
+                    <div class="form-group">
+                        <label> <i class="fas fa-lock"></i> Repite la contraseña </label>
+                        <input type="password" class="form-control" name="password2" placeholder="Repita la contraseña...">
                     </div>
 
                     <div class="text-center">
                         <a class="btn btn-dark" role="button" href="<?= site_url('Login/mostrarFormulario') ?>"><i class="fas fa-undo"></i> Regresar ventana login </a>
-                        <button type="submit" class="btn btn-success"> Enviar </button>
+                        <button type="submit" class="btn btn-success"> Aceptar </button>
                     </div>
+
+                    <input type="hidden" name="correo" value="<?= $correo ?>">
+                    <input type="hidden" name="token" value="<?= $token ?>">
+
 
                     </form>
                 </div>

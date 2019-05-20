@@ -32,7 +32,7 @@
 <body>
 
     <!-- Modal -->
-    <div class="moda" role="dialog">
+    <div class="modal-dialog" role="dialog">
         <div class="modal-dialog modal-dialog-centered">
 
             <!-- Modal content-->

@@ -33,4 +33,14 @@ class Usuario extends CI_Model
         $this->db->where('correo', $correo);
         return $this->db->update('usuarios', array("token" => $token));
     }
+
+    public function buscar($condiciones)
+    {
+        return $this->db->get_where("usuarios", $condiciones)->row_array();
+    }
+
+    public function restablecePassword($columnas, $condiciones)
+    {
+        return $this->db->update('usuarios', $columnas, $condiciones);
+    }
 }

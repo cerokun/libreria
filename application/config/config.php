@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/libreria/';
-// PARA SUBIRLO AL SERVIDOR REMOTO PONER ESTO:  $config['base_url'] = 'https://ieslamarisma.net/proyectos/2019/joseluiscortes/Libreria/';
+// PARA SUBIRLO AL SERVIDOR REMOTO PONER ESTO:  $config['base_url'] = 'https://ieslamarisma.net/proyectos/2019/joseluiscortes/libreria/';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -380,7 +380,7 @@ $config['encryption_key'] = '';
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
-//$config['sess_save_path'] = '/var/www/vhosts/ieslamarisma.net/httpdocs/proyectos/2019/joseluiscortes/Libreria/application/sesiones';
+//$config['sess_save_path'] = '/var/www/vhosts/ieslamarisma.net/httpdocs/proyectos/2019/joseluiscortes/libreria/application/sesiones';
 $config['sess_save_path'] = NULL;
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
