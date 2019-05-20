@@ -19,10 +19,10 @@
       <!-- Boostrap js -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
       <!-- Mis estilos -->
-      <link rel="stylesheet" href="<?= base_url() . 'Assets/css/header.css' ?>" />
-      <link rel="stylesheet" href="<?= base_url() . 'Assets/css/nav.css' ?>" />
-      <link rel="stylesheet" href="<?= base_url() . 'Assets/css/general.css' ?>" />
-      <link rel="stylesheet" href="<?= base_url() . 'Assets/css/footer.css' ?>" />
+      <link rel="stylesheet" href="<?= base_url() . 'assets/css/header.css' ?>" />
+      <link rel="stylesheet" href="<?= base_url() . 'assets/css/nav.css' ?>" />
+      <link rel="stylesheet" href="<?= base_url() . 'assets/css/general.css' ?>" />
+      <link rel="stylesheet" href="<?= base_url() . 'assets/css/footer.css' ?>" />
 
 
   </head>
@@ -31,7 +31,7 @@
 
       <header>
           <!-- Imagen cabecera -->
-          <img id="cabecera" src="<?= base_url() . 'Assets/img/pagina/cabecera.jpg' ?>">
+          <img id="cabecera" src="<?= base_url() . 'assets/img/pagina/cabecera.jpg' ?>">
 
           <?php if ($this->session->has_userdata('usuario') ) :
                 $usuario = $this->session->userdata("usuario");
@@ -42,10 +42,10 @@
               <!-- Hora a la que se ha conectado -->
               <h5 id="hora"><span style="color:white"> Has iniciado</span> sesion a las 20:00 </h5>
               <!-- Boton para cerrar la sesion -->
-              <a href="<?= site_url('Principal/cerrarSesion') ?>"> <img src="<?= base_url() . 'Assets/img/pagina/cerrarSesion.png' ?>" id="cerrarSesion"> </a>
+              <a href="<?= site_url('Principal/cerrarSesion') ?>"> <img src="<?= base_url() . 'assets/img/pagina/cerrarSesion.png' ?>" id="cerrarSesion"> </a>
           <?php else : ?>
               <!-- Boton para identificarse como usuario -->
-              <a href="<?= site_url('Login/mostrarFormulario') ?>"> <img src="<?= base_url() . 'Assets/img/pagina/identificate.png' ?>" id="identificate"> </a>
+              <a href="<?= site_url('Login/mostrarFormulario') ?>"> <img src="<?= base_url() . 'assets/img/pagina/identificate.png' ?>" id="identificate"> </a>
           <?php endif; ?>
 
           <div class="input-group col-md-5 mx-auto" id="buscador">

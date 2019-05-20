@@ -16,4 +16,7 @@ class OlvidePassword extends CI_Model
         $this->db->where('baja', 0);
         return $this->db->get_where("usuarios", array("correo" => $correo))->row_array();
     }
+
+    
+    
 }

@@ -14,7 +14,7 @@
 
     <style>
         body {
-            background-image: url("<?= base_url() . 'Assets/img/pagina/fondoLogin.jpg' ?>");
+            background-image: url("<?= base_url() . 'assets/img/pagina/fondoLogin.jpg' ?>");
             background-repeat: no-repeat;
         }
 
@@ -52,7 +52,7 @@
 
                     <div class="form-group">
                         <label> <i class="fas fa-at"></i> Correo </label>
-                        <input type="text" class="form-control" name="correo" value="<?= set_value('correo') ?>" placeholder="Introduce el correo electronico...">
+                        <input type="text" class="form-control" name="correo" value="jose@libreria.es" placeholder="Introduce el correo electronico...">
                     </div>
 
                     <div class="text-center">

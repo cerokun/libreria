@@ -17,7 +17,7 @@
 
          <div class="col-2">
              <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'Assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
+                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
                  <div class="card-body">
                      <h5 class="card-title"> Titulo </h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -34,7 +34,7 @@
 
          <div class="col-2">
              <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'Assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
+                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
                  <div class="card-body">
                      <h5 class="card-title"> Titulo </h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -51,7 +51,7 @@
 
          <div class="col-2">
              <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'Assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
+                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
                  <div class="card-body">
                      <h5 class="card-title"> Titulo </h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -68,7 +68,7 @@
 
          <div class="col-2">
              <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'Assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
+                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
                  <div class="card-body">
                      <h5 class="card-title"> Titulo </h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -86,7 +86,7 @@
 
          <div class="col-2">
              <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'Assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
+                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
                  <div class="card-body">
                      <h5 class="card-title"> Titulo </h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -103,7 +103,7 @@
 
          <div class="col-2">
              <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'Assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
+                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
                  <div class="card-body">
                      <h5 class="card-title"> Titulo </h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -124,7 +124,7 @@
 
          <div class="col-2">
              <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'Assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
+                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
                  <div class="card-body">
                      <h5 class="card-title"> Titulo </h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -141,7 +141,7 @@
 
          <div class="col-2">
              <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'Assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
+                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
                  <div class="card-body">
                      <h5 class="card-title"> Titulo </h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -158,7 +158,7 @@
 
          <div class="col-2">
              <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'Assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
+                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
                  <div class="card-body">
                      <h5 class="card-title"> Titulo </h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -175,7 +175,7 @@
 
          <div class="col-2">
              <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'Assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
+                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
                  <div class="card-body">
                      <h5 class="card-title"> Titulo </h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -193,7 +193,7 @@
 
          <div class="col-2">
              <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'Assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
+                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
                  <div class="card-body">
                      <h5 class="card-title"> Titulo </h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -210,7 +210,7 @@
 
          <div class="col-2">
              <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'Assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
+                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
                  <div class="card-body">
                      <h5 class="card-title"> Titulo </h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

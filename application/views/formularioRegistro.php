@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assets/css/login.css">
     <style>
         body {
-            background-image: url("<?= base_url() . 'Assets/img/pagina/fondoLogin.jpg' ?>");
+            background-image: url("<?= base_url() . 'assets/img/pagina/fondoLogin.jpg' ?>");
             background-repeat: no-repeat;
         }
 

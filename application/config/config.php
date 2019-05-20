@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/Libreria/';
+$config['base_url'] = 'http://localhost/libreria/';
 // PARA SUBIRLO AL SERVIDOR REMOTO PONER ESTO:  $config['base_url'] = 'https://ieslamarisma.net/proyectos/2019/joseluiscortes/Libreria/';
 /*
 |--------------------------------------------------------------------------

@@ -3,7 +3,7 @@
     <ul class="navbar-nav">
 
         <li class="nav-item">
-            <a class="nav-link" href="<?= site_url() ?>"> <img src="<?= base_url() . 'Assets/img/pagina/home.png' ?>" width="40px" title="Menu inicio">
+            <a class="nav-link" href="<?= site_url() ?>"> <img src="<?= base_url() . 'assets/img/pagina/home.png' ?>" width="40px" title="Menu inicio">
             </a>
         </li>
     </ul>
@@ -44,7 +44,7 @@
 
     <ul class="navbar-nav ml-auto">
         <li class="menuCarrito">
-            <img src="<?= base_url() . 'Assets/img/pagina/carrito.png' ?>" title="Carrito compra"> <span id="numeroDeProductos"> 0 </span>
+            <img src="<?= base_url() . 'assets/img/pagina/carrito.png' ?>" title="Carrito compra"> <span id="numeroDeProductos"> 0 </span>
         </li>
     </ul>
 
