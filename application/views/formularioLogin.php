@@ -42,6 +42,14 @@
                 </div>
                 <div class="modal-body" style="padding:40px 50px;">
 
+
+                    <?php if (isset($mensaje)) : ?>
+                        <div class="alert alert-danger">
+                            <p class="text-center"> <strong> <?= isset($mensaje) ?> </strong> </p>
+                        </div>
+                    <?php endif ?>
+
+
                     <?php if (isset($error)) : ?>
                         <div class="alert alert-danger">
                             <p class="text-center"> <strong> ¡Atención! </strong> el login es incorrecto. </p>
@@ -68,7 +76,7 @@
                 </div>
                 <div class="modal-footer" id="pie">
                     <a class="text-success" href="<?= site_url('Registrar/mostrarFormulario') ?>"> Si aun no tienes cuenta, registrate </a>
-                    <a class="text-warning" href="<?= site_url('RecuperaPassword') ?>"> ¿Olvidaste tu contraseña? </a>
+                    <a class="text-warning" href="<?= site_url('OlvideMiPassword') ?>"> ¿Has olvidado tu contraseña? </a>
                 </div>
             </div>
 

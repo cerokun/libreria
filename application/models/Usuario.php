@@ -44,3 +44,4 @@ class Usuario extends CI_Model
         return $this->db->update('usuarios', $columnas, $condiciones);
     }
 }
+

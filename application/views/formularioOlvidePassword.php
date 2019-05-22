@@ -49,14 +49,20 @@
                         </div>
                     <?php endif ?>
 
+                    <?php if (isset($error)) : ?>
+                        <div class="alert alert-danger text-center">
+                            <strong> ¡Atención! </strong> <?= $error ?>
+                        </div>
+                    <?php endif ?>
+
                     <p> Si no recuerdas la contraseña, solo tienes que introducir el correo a
                         donde te mandaremos la información necesaria, para que puedas cambiar la constraseña</p>
 
-                    <?= form_open("RecuperaPassword/cuenta") ?>
+                    <?= form_open("OlvideMiPassword/enviarCorreo") ?>
 
                     <div class="form-group">
                         <label> <i class="fas fa-at"></i> Correo </label>
-                        <input type="text" class="form-control" name="correo" value="jose@libreria.es" placeholder="Introduce el correo electronico...">
+                        <input type="text" class="form-control" name="correo" placeholder="Introduce el correo electronico...">
                     </div>
 
                     <div class="text-center">

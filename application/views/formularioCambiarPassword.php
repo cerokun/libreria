@@ -31,6 +31,8 @@
 
 <body>
 
+    <?php echo validation_errors('<div class="error">', '</div>'); ?>
+
     <!-- Modal -->
     <div class="modal-dialog" role="dialog">
         <div class="modal-dialog modal-dialog-centered">
@@ -42,13 +44,17 @@
                 </div>
                 <div class="modal-body" style="padding:40px 50px;">
 
-                    <?php if (isset($mensajeDeError)) : ?>
+                    <?php if (validation_errors()) : ?>
                         <div class="alert alert-danger text-center">
-                            <strong> ¡Atención! </strong> <?= $mensajeDeError ?>
+                            <strong> ¡Atención! </strong> <?= validation_errors() ?>
                         </div>
                     <?php endif ?>
 
-                    <?= form_open("RecuperaPassword/actualizar") ?>
+                    <p>
+                        Para restablecer la contraseña, debes de escribirla dos veces tu nueva contraseña, utiliza nombres que le sean facilmente recordables, como consejo, no estaria de mas, que apuntase la nueva contraseña, para evitar volver a olvidarla.
+                    </p>
+
+                    <?= form_open("CambiarPassword/actualizar") ?>
 
                     <div class="form-group">
                         <label> <i class="fas fa-lock"></i> Contraseña </label>
@@ -64,8 +70,8 @@
                         <button type="submit" class="btn btn-success"> Aceptar </button>
                     </div>
 
-                    <input type="hidden" name="correo" value="<?= $correo ?>">
-                    <input type="hidden" name="token" value="<?= $token ?>">
+                    <input type="hidden" name="correo" value="<?= isset($correo) ? $correo : "" ?>">
+                    <input type="hidden" name="token" value="<?= isset($token) ? $token : "" ?>">
 
 
                     </form>

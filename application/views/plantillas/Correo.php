@@ -47,17 +47,16 @@ class Correo extends CI_Model
         $mail->Subject = $asunto;
         //Read an HTML message body from an external file, convert referenced images to embedded,
         //convert HTML into a basic plain-text alternative body
-        //$mail->msgHTML($cuerpo);
         $mail->msgHTML($cuerpo);
         //Replace the plain text body with one created manually
         $mail->AltBody = 'Contenido del mensaje';
         //Attach an image file
         // $mail->addAttachment( base_url() . 'documento.pdf'); ver por que no puedo adjuntar ficheros
         //send the message, check for errors
-        if ($mail->send()) {       
+        if ($mail->send()) {
             return true;
         } else {
-            //echo 'Mailer Error: ' . $mail->ErrorInfo;
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
             return false;
         }
     }

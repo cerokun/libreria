@@ -1,5 +1,7 @@
  <div class="container" id="formularioActualizar">
 
+     <h3 class="text-center" style="color:cadetblue"> Actualizar datos del usuario </h3><br>
+
      <?php if (false) : ?>
          <div class="alert alert-success">
              <p> <strong> ¡Información! </strong> Acabas de actualizar. </p>
