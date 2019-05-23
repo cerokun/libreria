@@ -9,7 +9,7 @@ class Login extends CI_Controller
     {
         parent::__construct(); // Invoco al constructor del padre.
         $this->load->library('form_validation'); // Cargo la libreria, para validar formularios.
-        $this->form_validation->set_error_delimiters('<span style="color:red">', '</span>');
+        $this->form_validation->set_error_delimiters('<li>', '</li>');
         $this->load->model('ComprobarLogin'); // Modelo que utilizare para comprobar el login.
     }
 
@@ -26,8 +26,8 @@ class Login extends CI_Controller
         $this->form_validation->set_rules('correo', 'correo', 'required|trim|valid_email');
         $this->form_validation->set_rules('contraseña', 'contraseña', 'required|md5|trim');
         // Mensajes de error que se mostrara, por cada validacion.
-        $this->form_validation->set_message('required', 'requerido.');
-        $this->form_validation->set_message('valid_email', 'incorrecto.');
+        $this->form_validation->set_message('required', 'El campo %s es requerido.');
+        $this->form_validation->set_message('valid_email', 'El campo %s no es valido.');
 
         // Si ha superado las validaciones
         if ($this->form_validation->run()) {
@@ -54,13 +54,12 @@ class Login extends CI_Controller
 
             // Compruebo si existe el usuario
             if ($this->ComprobarLogin->buscar($data)) {
-
                 // Guardo los datos del usuario.
                 $usuario = $this->ComprobarLogin->buscar($data);
                 // Creo una sesion para dicho usuario.
                 $this->crearSesion($usuario);
             } else { // sino existe el usuario 
-                $this->mostrarFormulario(); // Muestro el formulario de login.
+                $this->load->view("formularioLogin", array("usuarioNoExiste" => "El usuario no existe en nuestra base de datos"));
             }
         } else { // El formulario, no ha pasado las validaciones de sus campos.
             $this->mostrarFormulario();

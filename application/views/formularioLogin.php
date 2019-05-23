@@ -42,28 +42,34 @@
                 </div>
                 <div class="modal-body" style="padding:40px 50px;">
 
-
                     <?php if (isset($mensaje)) : ?>
-                        <div class="alert alert-danger">
-                            <p class="text-center"> <strong> <?= isset($mensaje) ?> </strong> </p>
+                        <div class="alert alert-success">
+                            <p class="text-center"> <strong> <?= $mensaje ?> </strong> </p>
                         </div>
                     <?php endif ?>
 
-
-                    <?php if (isset($error)) : ?>
+                    <?php if (isset($usuarioNoExiste)) : ?>
                         <div class="alert alert-danger">
-                            <p class="text-center"> <strong> ¡Atención! </strong> el login es incorrecto. </p>
+                            <p class="text-center"> <strong> <?= $usuarioNoExiste ?> </strong> </p>
+                        </div>
+                    <?php endif ?>
+
+                    <?php if (validation_errors()) : ?>
+                        <div class="alert alert-danger">
+                            <strong>
+                                <ul> <?= validation_errors(); ?> </ul>
+                            </strong>
                         </div>
                     <?php endif ?>
 
                     <?= form_open("Login/usuario") ?>
 
                     <div class="form-group">
-                        <label> <i class="fas fa-at"></i> Correo <?= form_error("correo") ?> </label>
+                        <label> <i class="fas fa-at"></i> Correo </label>
                         <input type="text" class="form-control" name="correo" value="<?= set_value('correo') ?>" placeholder="Introduce el correo electronico...">
                     </div>
                     <div class="form-group">
-                        <label> <i class="fas fa-unlock-alt"></i> Contraseña <?= form_error("contraseña") ?></label>
+                        <label> <i class="fas fa-unlock-alt"></i> Contraseña </label>
                         <input type="password" class="form-control" name="contraseña" placeholder="Introduce la contraseña...">
                     </div>
 
