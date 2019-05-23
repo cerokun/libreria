@@ -7,6 +7,7 @@ class Principal extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('Productos');
 	}
 
 
@@ -14,7 +15,8 @@ class Principal extends CI_Controller
 	{
 		$this->load->view("plantillas/header");
 		$this->load->view("plantillas/nav");
-		$this->load->view('principal');
+		$productos["libros"] = $this->Productos->dameTodos();
+		$this->load->view('principal', $productos);
 		$this->load->view("plantillas/footer");
 	}
 
@@ -31,6 +33,7 @@ class Principal extends CI_Controller
 		redirect('Principal');
 	}
 
+	
 
 
 

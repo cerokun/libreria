@@ -1,238 +1,83 @@
- <style>
-     .card {
-         margin: 0.5%;
+ <div class="container text-center">
 
-         width: 100%;
-     }
- </style>
+     <?php
+        $totalLibros = count($libros);
+        $mostrarPorFila = 4;
+        $mostraPorColumna = 6;
+        $contador = 0;
+        echo "Total libros: $totalLibros <br>";
+        ?>
 
- <div class="container text-center" id="ejemplo">
+     <?php if ($libros) : ?>
+
+         <?php for ($filas = 0; $filas < $mostrarPorFila; $filas++) : ?>
+
+             <div class="row">
+
+                 <?php for ($columnas = 0; $columnas < $mostraPorColumna; $columnas++) : ?>
+
+                     <?php if ($contador < $totalLibros) : ?>
+
+                         <div class="col-2">
+                             <div class="card">
+                                 <?php 
+                                    $url = "assets/img/libros/";
+                                    $imagen = $libros[$contador]["imagen"];
+                                    $compuesto = $url . $imagen;
+                                 
+                                  ?>
+                                 <img class="card-img-top" src="<?= base_url() . $compuesto ?>">
+                                 <div class="card-body">
+                                     <h5 class="card-title"> <?= $libros[$contador]["nombre"] ?> </h5>
+                                     <p class="card-text"> <?= substr($libros[$contador]["descripcion"], 0, 55) ?>... </p>
+                                 </div>
+                                 <ul class="list-group list-group-flush">
+                                     <li class="list-group-item"> <?= $libros[$contador]["precio"] ?> €</li>
+
+                                 </ul>
+                                 <div class="card-body">
+                                     <a href="#" class="btn btn-primary"> <i class="fas fa-cart-plus"></i> Añadir </a>
+                                 </div>
+                             </div>
+                         </div>
+
+                         <?php $contador++; ?>
+                         <!-- Incremento el contador -->
+
+                     <?php endif ?>
+                     <!-- Final if que comprueba si se ha alcanzado el numero total de productos en tienda. -->
 
 
-     <br>
+                 <?php endfor; ?>
+                 <!-- Final bucle que recorre las columnas -->
 
-     <h3> Los libros iran aqui... </h3>
+             </div> <!-- Final clase='row' -->
 
-     <div class="row">
+         <?php endfor; ?>
+         <!-- Final bucle que recorre las filas -->
 
-         <div class="col-2">
-             <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
-                 <div class="card-body">
-                     <h5 class="card-title"> Titulo </h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> 23 €</li>
 
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="btn btn-primary"> Añadir </a>
-                 </div>
-             </div>
+     <?php else : ?>
+
+         <div class="alert alert-danger text-center">
+             <p class="text-center"> <strong> ¡Atenciòn! </strong> no hay productos que mostrar. </p>
          </div>
 
-         <div class="col-2">
-             <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
-                 <div class="card-body">
-                     <h5 class="card-title"> Titulo </h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> 23 €</li>
-
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="btn btn-primary"> Añadir </a>
-                 </div>
-             </div>
-         </div>
-
-         <div class="col-2">
-             <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
-                 <div class="card-body">
-                     <h5 class="card-title"> Titulo </h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> 23 €</li>
-
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="btn btn-primary"> Añadir </a>
-                 </div>
-             </div>
-         </div>
-
-         <div class="col-2">
-             <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
-                 <div class="card-body">
-                     <h5 class="card-title"> Titulo </h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> 23 €</li>
-
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="btn btn-primary"> Añadir </a>
-                 </div>
-             </div>
-         </div>
+     <?php endif; ?>
 
 
-         <div class="col-2">
-             <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
-                 <div class="card-body">
-                     <h5 class="card-title"> Titulo </h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> 23 €</li>
-
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="btn btn-primary"> Añadir </a>
-                 </div>
-             </div>
-         </div>
-
-         <div class="col-2">
-             <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
-                 <div class="card-body">
-                     <h5 class="card-title"> Titulo </h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> 23 €</li>
-
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="btn btn-primary"> Añadir </a>
-                 </div>
-             </div>
-         </div>
-
-     </div>
-
-     <div class="row">
-
-         <div class="col-2">
-             <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
-                 <div class="card-body">
-                     <h5 class="card-title"> Titulo </h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> 23 €</li>
-
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="btn btn-primary"> Añadir </a>
-                 </div>
-             </div>
-         </div>
-
-         <div class="col-2">
-             <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
-                 <div class="card-body">
-                     <h5 class="card-title"> Titulo </h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> 23 €</li>
-
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="btn btn-primary"> Añadir </a>
-                 </div>
-             </div>
-         </div>
-
-         <div class="col-2">
-             <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
-                 <div class="card-body">
-                     <h5 class="card-title"> Titulo </h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> 23 €</li>
-
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="btn btn-primary"> Añadir </a>
-                 </div>
-             </div>
-         </div>
-
-         <div class="col-2">
-             <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
-                 <div class="card-body">
-                     <h5 class="card-title"> Titulo </h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> 23 €</li>
-
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="btn btn-primary"> Añadir </a>
-                 </div>
-             </div>
-         </div>
 
 
-         <div class="col-2">
-             <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
-                 <div class="card-body">
-                     <h5 class="card-title"> Titulo </h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> 23 €</li>
-
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="btn btn-primary"> Añadir </a>
-                 </div>
-             </div>
-         </div>
-
-         <div class="col-2">
-             <div class="card">
-                 <img class="card-img-top" src="<?= base_url() . 'assets/img/libros/cienañosdesoledad.jpg' ?>" alt="portada libro">
-                 <div class="card-body">
-                     <h5 class="card-title"> Titulo </h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> 23 €</li>
-
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="btn btn-primary"> Añadir </a>
-                 </div>
-             </div>
-         </div>
-
-     </div>
-
-     <h3>
-         << | < 1 2 3 4 PAGINADOR AQUI 5 6 7 8> | >>
-     </h3>
 
 
-     <!--Aqui mostrare las ventanas modales de login y registro -->
-     <div class="modal fade" id="myModal" role="dialog"> </div>
+
+
+
+
+
+
+
+
+
 
  </div>

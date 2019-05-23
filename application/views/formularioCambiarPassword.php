@@ -44,7 +44,7 @@
                 <div class="modal-body" style="padding:40px 50px;">
 
                     <?php if (validation_errors()) : ?>
-                        <div class="alert alert-danger text-center">
+                        <div class="alert alert-danger">
                             <strong>
                                 <ul> <?= validation_errors(); ?> </ul>
                             </strong>
