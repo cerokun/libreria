@@ -2,14 +2,14 @@
 
      <h3 class="text-center" style="color:cadetblue"> Actualizar datos del usuario </h3><br>
 
-     <?php if (false) : ?>
-         <div class="alert alert-success">
-             <p> <strong> ¡Información! </strong> Acabas de actualizar. </p>
+     <?php if ( isset($actualizado)) : ?>
+         <div class="alert alert-success text-center">
+             <p> <strong> ¡Información! </strong> ¡Los datos han sido actualizados!. </p>
          </div>
      <?php endif ?>
 
      <?php if (validation_errors()) : ?>
-         <div class="alert alert-danger">
+         <div class="alert alert-danger text-center">
              <p> <strong> ¡Atención! </strong> Se han encontrado <strong> <?= count($this->form_validation->error_array())  ?> </strong>
                  errores revise los datos del formulario e intentelo de nuevo. </p>
          </div>

@@ -43,5 +43,16 @@ class Usuario extends CI_Model
     {
         return $this->db->update('usuarios', $columnas, $condiciones);
     }
+
+    /**
+     * Inserta un nuevo usuario
+     * @param type $columnas
+     * @return type array con todos los valoes del formulario
+     */
+    public function insertar($columnas)
+    {
+        return $this->db->insert('usuarios', $columnas);
+    }
+
 }
 

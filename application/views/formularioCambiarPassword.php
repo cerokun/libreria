@@ -24,14 +24,13 @@
 
         .modal-footer,
         .modal-header {
-            background-color: black;
+            background-color: #341452;
         }
     </style>
 </head>
 
 <body>
 
-    <?php echo validation_errors('<div class="error">', '</div>'); ?>
 
     <!-- Modal -->
     <div class="modal-dialog" role="dialog">
@@ -46,10 +45,11 @@
 
                     <?php if (validation_errors()) : ?>
                         <div class="alert alert-danger text-center">
-                            <strong> ¡Atención! </strong> <?= validation_errors() ?>
+                            <strong>
+                                <ul> <?= validation_errors(); ?> </ul>
+                            </strong>
                         </div>
                     <?php endif ?>
-
                     <p>
                         Para restablecer la contraseña, debes de escribirla dos veces tu nueva contraseña, utiliza nombres que le sean facilmente recordables, como consejo, no estaria de mas, que apuntase la nueva contraseña, para evitar volver a olvidarla.
                     </p>
@@ -70,8 +70,8 @@
                         <button type="submit" class="btn btn-success"> Aceptar </button>
                     </div>
 
-                    <input type="hidden" name="correo" value="<?= isset($correo) ? $correo : "" ?>">
-                    <input type="hidden" name="token" value="<?= isset($token) ? $token : "" ?>">
+                    <input type="hidden" name="correo" value="<?= $this->session->userdata("password")["correo"] ?>">
+                    <input type="hidden" name="token" value="<?= $this->session->userdata("password")["token"] ?>">
 
 
                     </form>

@@ -45,7 +45,7 @@
 
                     <?php if (form_error("correo")) : ?>
                         <div class="alert alert-danger text-center">
-                            <strong> ¡Atención! </strong> <?= form_error("correo")  ?>
+                            <strong> <?= form_error("correo")  ?> </strong>
                         </div>
                     <?php endif ?>
 

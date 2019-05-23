@@ -43,7 +43,7 @@
                 <div class="modal-body" style="padding:40px 50px;">
 
                     <?php if ($estoyRegistrado) : ?>
-                        <div class="alert alert-success">
+                        <div class="alert alert-success text-center">
                             <p> <strong> ¡Información! </strong> Acabas de registrarte. </p>
                         </div>
                     <?php endif ?>

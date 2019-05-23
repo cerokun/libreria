@@ -11,7 +11,7 @@ class Registrar extends CI_Controller
         $this->load->helper("dni");
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<span style="color:red">', '</span>');
-        $this->load->model('registrarNuevoUsuario');
+        $this->load->model('Usuario');
     }
 
     public function validar()
@@ -68,7 +68,7 @@ class Registrar extends CI_Controller
                 "tipo" => "cliente"
             );
 
-            if ($this->registrarNuevoUsuario->insertar($columnas)) {
+            if ($this->Usuario->insertar($columnas)) {
                 $this->mostrarFormulario(true);
             }
         } else { // El formulario, no ha pasado las validaciones de sus campos.

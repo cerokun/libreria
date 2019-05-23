@@ -38,7 +38,7 @@ class OlvideMiPassword extends CI_Controller
         // El correo introducido, no es valido, no cumple el formato.
         $this->form_validation->set_message('valid_email', 'el correo, no cumple un formato valido.');
         // El correo introducido, no se encuentra en la base de datos.
-        $this->form_validation->set_message('exists_email', 'el correo, no existe.');
+        $this->form_validation->set_message('exists_email', 'Este %s, no existe en la base de datos.');
 
         // Si ha superado las validaciones
         if ($this->form_validation->run()) {

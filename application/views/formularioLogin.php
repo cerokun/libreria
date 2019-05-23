@@ -41,24 +41,22 @@
                     <h3> Iniciar sesión </h3>
                 </div>
                 <div class="modal-body" style="padding:40px 50px;">
-
-                    <?php if (isset($mensaje)) : ?>
-                        <div class="alert alert-success">
-                            <p class="text-center"> <strong> <?= $mensaje ?> </strong> </p>
+                    <!-- Si el usuario ha conseguido logearse, muestro el mensaje al usuario. -->
+                    <?php if (isset($usuarioLogueado)) : ?>
+                        <div class="alert alert-success text-center">
+                            <p class="text-center"> <strong> <?= $usuarioLogueado ?> </strong> </p>
                         </div>
                     <?php endif ?>
-
+                    <!-- Como no he conseguido validar el login, comprobar si existe un suaurio mediante un callback, lo tengo que hacer asi, para mostrar el mensaje -->
                     <?php if (isset($usuarioNoExiste)) : ?>
-                        <div class="alert alert-danger">
+                        <div class="alert alert-danger text-center">
                             <p class="text-center"> <strong> <?= $usuarioNoExiste ?> </strong> </p>
                         </div>
                     <?php endif ?>
-
+                    <!-- Aqui muestro los errores de validacion de codeigniter, required, valid_email y trim -->
                     <?php if (validation_errors()) : ?>
                         <div class="alert alert-danger">
-                            <strong>
-                                <ul> <?= validation_errors(); ?> </ul>
-                            </strong>
+                          <strong>  <ul>  <?= validation_errors() ?>  </ul> </strong>
                         </div>
                     <?php endif ?>
 

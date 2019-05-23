@@ -26,14 +26,30 @@ class CambiarPassword extends CI_Controller
     {
         // Obtengo los parametros desde la url
         $datos = $this->uri->uri_to_assoc(3);
+
         // Compruebo que no esten vacios
         if (empty($datos["correo"]) or empty($datos["token"])) {
+            // Al no llegarnos los parametros, envio al usuario de nuevo inicial, para restarar las contraseña.
             $this->load->view('formularioOlvidePassword', array("error" => "no hemos recibido los parametros necesarios, correo o token"));
         } else {
-            $this->load->view('formularioCambiarPassword', $datos);
+            // Array con el correo y el token que nos envia el usuario al hacer click sobre e enlace que le enviamos a su correo electronico.
+            $datos = array(
+                "correo" => $datos["correo"],
+                "token" => $datos["token"]
+            );
+            // Creo la sesion
+            $this->session->set_userdata("password", $datos);
+            // Muestro el formulario donde el usuario podra introducir su nueva contraseña.
+            $this->load->view('formularioCambiarPassword');
         }
     }
 
+
+    public function valorSesion($nombreDeLaSesion, $indice)
+    {
+        return $this->session->userdata($nombreDeLaSesion, $indice);
+    }
+ 
 
     /**
      * Cambia la contraseña que olvido el usuario por una nueva.
@@ -59,9 +75,9 @@ class CambiarPassword extends CI_Controller
         $this->form_validation->set_rules('password1', 'Password', 'required|matches[password2]');
         $this->form_validation->set_rules('password2', 'Password', 'required|matches[password1]');
         // Mensajes para las reglas.
-        $this->form_validation->set_message('required', 'El campo  %s esta vacio, escribe algo.');
-        $this->form_validation->set_message('matches', "Las contraseñas no coinciden.");
-      
+        $this->form_validation->set_message('required', 'El %s esta vacio, escribe algo.');
+        $this->form_validation->set_message('matches', "Las %s no coinciden.");
+
         // valido que la contraseña introducida sea valida.
         if ($this->form_validation->run()) {
 
@@ -75,16 +91,13 @@ class CambiarPassword extends CI_Controller
                 );
                 // Actualizo la contraseña
                 if ($this->usuario->restablecePassword($columnas, $datos)) {
-                    $datos["mensaje"] = "¡Acabas de actualizar la contraseña!";
                     // Muestro el formulario de login y muestro un mensaje de que todo ha salido bien, ya puede identificarse con su nueva contraseña.
-                    $this->load->view("formularioLogin", $datos);
+                    $this->load->view("formularioLogin", array("usuarioLogueado" => "¡Acabas de actualizar la contraseña!"));
                 } else { // No se ha podido actualizar la contraseña.
-                    $datos["error"] = "No se ha podido actualizar la contraseña.";
-                    $this->load->view('formularioCambiarPassword', $datos);
+                    $this->load->view('formularioCambiarPassword', array("error" => "No se ha podido actualizar la contraseña."));
                 }
             } else { // Se ha perdido el valor de los parametros ocultos, el coreo y el token sinn valor.
-                $datos["error"] = "El correo y el token original no coinciden, han sido modificados deliberadamente.";
-                $this->load->view('formularioOlvidePassword', $datos["error"]);
+                $this->load->view('formularioOlvidePassword', array("error" => "El correo y el token original no coinciden, han sido modificados deliberadamente o ha caducado el token."));
             }
         } else { // Las contraseñas no son iguales.
             $this->load->view('formularioCambiarPassword');
