@@ -1,4 +1,4 @@
-<div class="container" id="contenedor">
+<div class="container text-center" id="contenedor">
 
     <?php
 

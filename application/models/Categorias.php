@@ -11,10 +11,14 @@ class Categorias extends CI_Model
         $this->load->database();
     }
 
-   
 
+    /**
+     * Me da todas las categorias que sean visibles.
+     *
+     * @return void
+     */
     public function dameTodas()
     {
-        return $this->db->get("categorias")->result_array();
+        return $this->db->get_where("categorias", array("visible" => 1))->result_array();
     }
 }

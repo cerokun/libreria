@@ -27,17 +27,16 @@
 </head>
 
 <body>
-
-   
+    <div class="container" id="contenedor">
 
         <div class="jumbotron">
             <p class="display-4"> <i class="fas fa-mail-bulk" style="color:darkgreen"></i>¡Correo enviado!</p>
             <p class="lead"> A la siguiente dirección: <strong style="color:darkmagenta"> <?= $correo ?> </strong> el <?= date("d/m/Y") ?> a las <?= date('h:i:s A') ?> horas. </p>
             <hr class="my-4">
             <p> <i class="fas fa-info-circle" style="color:orange"></i> Acabamos de enviarle un correo electrónico a la dirección indicada, en breve recibirá un mensaje en su bandeja de entrada, haga click sobre el enlace que le enviamos y siga atentamente las instrucciones que le indiquemos, una vez haya cambiado la contraseña, vuelva a acceder a esta ventana login e identifiquese.</p>
-          
-        </div>
 
+        </div>
+    </div> <!-- Final contenedor -->
 </body>
 
 </html>

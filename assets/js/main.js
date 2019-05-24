@@ -9,7 +9,6 @@ function categorias() {
     // Obtengo el valor del atributo value del option seleccionado.
     var id = $("#categorias").val();
    
-    alert("peticion ajax categoria " + id );
     // Peticion ajax.
     $.ajax({
 

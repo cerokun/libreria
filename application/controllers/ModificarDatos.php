@@ -13,13 +13,13 @@ class ModificarDatos extends CI_Controller
         $this->load->helper("dni");
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<span style="color:red">', '</span>');
-		$this->load->model('Productos');
+        $this->load->model('Categorias');
         $this->load->model('usuario');
     }
 
     public function index()
     {
-        $misCategorias["categorias"] = $this->Productos->categorias();
+        $misCategorias["categorias"] = $this->Categorias->dameTodas();
         $this->load->view("plantillas/header", $misCategorias);
         $this->load->view("plantillas/nav");
         // Obtengo el identificador del usuario, que guarde en una sesion en el mismo momento que se logeo en el sistema.
@@ -98,7 +98,6 @@ class ModificarDatos extends CI_Controller
                 $this->datos["actualizado"] = "Acabas de actualizar";
                 $this->load->view("formularioActualizar", $this->datos);
                 $this->load->view("plantillas/footer");
-
             }
         } else { // El formulario, no ha pasado las validaciones de sus campos.
             $this->mostrarFormulario();
