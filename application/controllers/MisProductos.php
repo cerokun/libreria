@@ -10,13 +10,17 @@ class MisProductos extends CI_Controller
         $this->load->model('Productos');
     }
 
-   public function dameTodos() {
-       echo "<pre>";
-       print_r(   $this->Productos->dameTodos() );
-       echo "</pre>";
-   }
- 
+    public function dameTodos()
+    {
+        $this->Productos->dameTodos();
+    }
 
+    public function mostraPorCategoria()
+    {
+        $id = $this->input->post("idCategoria");
+        $datos =  $this->Productos->dameProductosPorIdCategoria($id);
+      
 
- 
+       
+    }
 } // Final clase

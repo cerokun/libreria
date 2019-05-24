@@ -7,20 +7,36 @@ class Principal extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('Categorias');
 		$this->load->model('Productos');
 	}
 
-
+	/**
+	 * Muestra los productos destacadas en la pagina principal
+	 *
+	 * @return void
+	 */
 	public function index()
 	{
-		$this->load->view("plantillas/header");
+		$misCategorias["categorias"] = $this->Categorias->dameTodas();
+		$this->load->view("plantillas/header", $misCategorias);
 		$this->load->view("plantillas/nav");
-		$productos["libros"] = $this->Productos->dameTodos();
-		$this->load->view('principal', $productos);
+		$misLibros["libros"] = $this->Productos->destacados();
+		$this->load->view('principal', $misLibros);
 		$this->load->view("plantillas/footer");
 	}
 
- 
+	public function productosPorCategoria()
+	{
+
+		$id = $this->input->post("idCategoria");
+
+		$misLibros["libros"] =  $this->Productos->dameProductosPorIdCategoria($id);
+		$this->load->view('principal', $misLibros);
+	}
+
+
+
 	/**
 	 * Destruye la sesion.
 	 *
@@ -32,10 +48,4 @@ class Principal extends CI_Controller
 		// Redireccino al menu principal.
 		redirect('Principal');
 	}
-
-	
-
-
-
-	
 } // Final clase

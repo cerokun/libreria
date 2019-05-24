@@ -1,4 +1,3 @@
- <div class="container" id="formularioActualizar">
 
      <h3 class="text-center" style="color:cadetblue"> Actualizar datos del usuario </h3><br>
 
@@ -101,4 +100,4 @@
          <button type="submit" class="btn btn-success"> Actualizar </button>
      </div>
      <?= form_close() ?>
- </div>
+ 

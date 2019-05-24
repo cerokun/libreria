@@ -28,8 +28,7 @@
 
 <body>
 
-    <!-- The Modal -->
-    <div class="container">
+   
 
         <div class="jumbotron">
             <p class="display-4"> <i class="fas fa-mail-bulk" style="color:darkgreen"></i>¡Correo enviado!</p>

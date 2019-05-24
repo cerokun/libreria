@@ -11,11 +11,19 @@ class Productos extends CI_Model
         $this->load->database();
     }
 
-    public function dameTodos()
+    public function destacados()
     {
-        $condiciones = array(
-            "visible" => 1
-        );
-        return $this->db->get_where("productos", $condiciones)->result_array();
+        return $this->db->get("productos")->result_array();
+    }
+
+    public function categorias()
+    {
+        return $this->db->get("categorias")->result_array();
+    }
+
+
+    public function dameProductosPorIdCategoria($id)
+    {
+        return $this->db->get_where("productos", array("idCategoria" => $id))->result_array();
     }
 }

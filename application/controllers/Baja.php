@@ -7,13 +7,15 @@ class Baja extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+		$this->load->model('Categorias');
         $this->load->model("BajaCuenta");
     }
 
 
     public function index()
     {
-        $this->load->view("plantillas/header");
+        $misCategorias["categorias"] = $this->Categorias->dameTodas();
+        $this->load->view("plantillas/header", $misCategorias);
         $this->load->view("plantillas/nav");
         $this->load->view('baja');
         $this->load->view("plantillas/footer");

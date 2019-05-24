@@ -18,12 +18,15 @@
 
       <!-- Boostrap js -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+      <!-- Mis ficheros javascript -->
+      <script src="<?= base_url() . 'assets/js/main.js' ?>"></script>
+
       <!-- Mis estilos -->
       <link rel="stylesheet" href="<?= base_url() . 'assets/css/header.css' ?>" />
       <link rel="stylesheet" href="<?= base_url() . 'assets/css/nav.css' ?>" />
       <link rel="stylesheet" href="<?= base_url() . 'assets/css/general.css' ?>" />
       <link rel="stylesheet" href="<?= base_url() . 'assets/css/footer.css' ?>" />
-
 
   </head>
 
@@ -33,7 +36,7 @@
           <!-- Imagen cabecera -->
           <img id="cabecera" src="<?= base_url() . 'assets/img/pagina/cabecera.jpg' ?>">
 
-          <?php if ($this->session->has_userdata('usuario') ) :
+          <?php if ($this->session->has_userdata('usuario')) :
                 $usuario = $this->session->userdata("usuario");
                 ?>
               <h4 id="nombre"> ¡Bienvenido <?= $usuario["nombre"] ?>! </h4>
@@ -51,7 +54,7 @@
           <div class="input-group col-md-5 mx-auto" id="buscador">
               <!-- Las categorias -->
               <select class="btn btn-primary" id="categorias">
-                  <option value="0"> Categorias </option>
+                  <option disabled selected> Categorias </option>
 
                   <?php foreach ($categorias as $fila) : ?>
                       <option value="<?= $fila["idCategoria"] ?>"> <?= $fila["nombre"] ?> </option>

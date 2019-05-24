@@ -1,4 +1,5 @@
-   <footer>
+
+  <footer>
         <img src="<?= base_url() . 'assets/img/pagina/logo.png' ?>" id="logo">
         <h2 style="color:tomato"> 2º Practica: tienda on-line </h2>
         <hr class=" my-4">
