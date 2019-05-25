@@ -19,6 +19,11 @@
       <!-- Boostrap js -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
+      <script>
+          // Obtengo la url en la que nos encontramos.
+          var site_url = '<?= base_url() ?>' + "index.php/";       
+      </script>
+
       <!-- Mis ficheros javascript -->
       <script src="<?= base_url() . 'assets/js/main.js' ?>"></script>
 

@@ -17,9 +17,9 @@ class Productos extends CI_Model
      *
      * @return void
      */
-    public function destacados($quieroMostrarPorPagina, $desde )
-    {   
-       return $this->db->get_where('productos', array('visible' => 1), $quieroMostrarPorPagina, $desde)->result_array();
+    public function destacados($quieroMostrarPorPagina, $desde)
+    {
+        return $this->db->get_where('productos', array('visible' => 1), $quieroMostrarPorPagina, $desde)->result_array();
     }
 
 
@@ -31,19 +31,31 @@ class Productos extends CI_Model
      * @param [type] $id
      * @return void
      */
-    public function dameProductosPorIdCategoria($id)
+    public function dameProductosPorIdCategoria($id, $quieroMostrarPorPagina, $desde)
     {
-        return $this->db->get_where("productos", array("idCategoria" => $id, "visible" => 1))->result_array();
+
+        return $this->db->get_where('productos', array('visible' => 1, "idCategoria" => $id), $quieroMostrarPorPagina, $desde)->result_array();
+        //  return $this->db->get_where("productos", array("idCategoria" => $id, "visible" => 1))->result_array();
     }
 
     /**
-     * Me dice el numero de productos 
+     * Me dice el numero de productos destacados.
      *
      * @return void
      */
     public function num_rows()
     {
         return $this->db->get_where("productos", array("visible" => 1))->num_rows();
+    }
+
+    /**
+     * Me dice el numero de productos destacados.
+     *
+     * @return void
+     */
+    public function num_rows_per_category($id)
+    {
+        return $this->db->get_where("productos", array("visible" => 1,  "idCategoria" => $id))->num_rows();
     }
 
     public function dameProductosPorPagina($limit, $offset)

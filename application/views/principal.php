@@ -61,6 +61,7 @@
         <?php endfor; ?>
         <!-- Final bucle que recorre las filas -->
 
+        <?= $this->pagination->create_links() ?>
 
     <?php else : ?>
 
@@ -70,6 +71,5 @@
 
     <?php endif; ?>
 
-   <?=  $this->pagination->create_links() ?>;
 
 </div> <!-- Final del contenedor- bdoy -->
