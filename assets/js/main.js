@@ -1,7 +1,8 @@
 $(document).ready(function(){
   
     $("#categorias").change( categorias );
-    alert("mi base: " + base_url );
+    alert("site_url() " + site_url );
+    alert("base_url() " + base_url );
 });
 
  

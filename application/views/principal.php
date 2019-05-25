@@ -9,7 +9,6 @@
     $contador = 0;
 
 
-
     ?>
 
     <?php if ($libros) : ?>
@@ -24,13 +23,8 @@
 
                         <div class="col-sm-2 d-flex pb-2">
                             <div class="card card-block">
-                                <?php
-                                $url = "assets/img/libros/";
-                                $imagen = $libros[$contador]["imagen"];
-                                $compuesto = $url . $imagen;
 
-                                ?>
-                                <img class="card-img-top" src="<?= base_url() . $compuesto ?>">
+                                <img class="card-img-top" src="<?= base_url()  . "assets/img/libros/" . $libros[$contador]["imagen"] ?>">
                                 <div class="card-body">
                                     <h5 class="card-title"> <?= $libros[$contador]["nombre"] ?> </h5>
                                     <p class="card-text"> <?= substr($libros[$contador]["descripcion"], 0, 55) ?>... </p>
@@ -40,7 +34,7 @@
 
                                 </ul>
                                 <div class="card-body">
-                                    <a href="#" class="btn btn-primary"> <i class="fas fa-cart-plus"></i> Añadir </a>
+                                    <a href="#" class="btn btn-primary" id="<?= $libros[$contador]['idProducto']  ?>"> <i class="fas fa-cart-plus"></i> Añadir </a>
                                 </div>
                             </div>
                         </div>

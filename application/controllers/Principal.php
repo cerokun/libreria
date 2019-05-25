@@ -23,7 +23,7 @@ class Principal extends CI_Controller
 	{
 
 		$num_row = $this->Productos->num_rows();
-		$quieroMostrarPorPagina = 12;
+		$quieroMostrarPorPagina = 18;
 		$desde = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		// Configuracion base

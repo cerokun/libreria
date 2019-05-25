@@ -21,7 +21,8 @@
 
       <script>
           // Obtengo la url en la que nos encontramos.
-          var site_url = '<?= base_url() ?>' + "index.php/";       
+          var site_url = '<?= base_url() ?>' + "index.php/";
+          var base_url = '<?= base_url() ?>';
       </script>
 
       <!-- Mis ficheros javascript -->
