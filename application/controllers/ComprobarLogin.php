@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login extends CI_Controller
+class ComprobarLogin extends CI_Controller
 {
 
     public function __construct()
@@ -10,7 +10,7 @@ class Login extends CI_Controller
         parent::__construct(); // Invoco al constructor del padre.
         $this->load->library('form_validation'); // Cargo la libreria, para validar formularios.
         $this->form_validation->set_error_delimiters('<li>', '</li>');
-        $this->load->model('ComprobarLogin'); // Modelo que utilizare para comprobar el login.
+        $this->load->model('Login'); // Modelo que utilizare para comprobar el login.
     }
 
     /**
@@ -48,14 +48,15 @@ class Login extends CI_Controller
 
             // Obtengo los valores del formulario.
             $data = array(
+                "baja" => 0,
                 "correo" => $this->input->post("correo"),
                 "contraseña" => $this->input->post("contraseña")
             );
 
             // Compruebo si existe el usuario
-            if ($this->ComprobarLogin->buscar($data)) {
+            if ($this->Login->buscar($data)) {
                 // Guardo los datos del usuario.
-                $usuario = $this->ComprobarLogin->buscar($data);
+                $usuario = $this->Login->buscar($data);
                 // Creo una sesion para dicho usuario.
                 $this->crearSesion($usuario);
             } else { // sino existe el usuario 

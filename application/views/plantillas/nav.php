@@ -15,7 +15,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color:darkgreen"> <i class="fas fa-bars"></i> Menu </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="<?= site_url('ModificarDatos') ?>"> <i class="fas fa-user-edit"></i> Datos personales </a>
+                    <a class="dropdown-item" href="<?= site_url('ModificarDatos/mostrarFormulario') ?>"> <i class="fas fa-user-edit"></i> Datos personales </a>
                     <a class="dropdown-item" href=""> <i class="fas fa-file-invoice"></i> Mis pedidos</a>
                     <a class="dropdown-item" href="<?= site_url("Baja") ?>"> <i class="fas fa-user-times"></i> Darse de baja </a>
                 </div>

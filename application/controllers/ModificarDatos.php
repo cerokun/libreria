@@ -17,21 +17,7 @@ class ModificarDatos extends CI_Controller
         $this->load->model('usuario');
     }
 
-    public function index()
-    {
-        $misCategorias["categorias"] = $this->Categorias->dameTodas();
-        $this->load->view("plantillas/header", $misCategorias);
-        $this->load->view("plantillas/nav");
-        // Obtengo el identificador del usuario, que guarde en una sesion en el mismo momento que se logeo en el sistema.
-        $dato["idUsuario"] = $this->session->userdata['usuario']['idUsuario'];
-        // Solicito a la tabla usuarios, los datos de dicho usuario.
-        $this->datos = $this->usuario->dameDatosPersonales($dato);
-        // Obtengo las provincias
-        $this->datos["provincias"] = dameTodasLasProvincias();
-        // Paso los datos a la vista.
-        $this->load->view("formularioActualizar", $this->datos);
-        $this->load->view("plantillas/footer");
-    }
+
 
     public function validar()
     {
@@ -92,7 +78,10 @@ class ModificarDatos extends CI_Controller
             if ($this->usuario->actualizar($columnas)) {
                 // Actualizo unicamente el nombre, por que es el unico dato que muestro al usuario en el menu principal, en la bienvenida + nombre.
                 $this->session->userdata['usuario']['nombre'] = $columnas["nombre"];
-                $this->load->view("plantillas/header");
+                // Obtengo las categorias
+                $misCategorias["categorias"] = $this->Categorias->dameTodas();
+                // Paso las categorias a la vista
+                $this->load->view("plantillas/header", $misCategorias);
                 $this->load->view("plantillas/nav");
                 $this->datos["provincias"] = dameTodasLasProvincias();
                 $this->datos["actualizado"] = "Acabas de actualizar";
@@ -107,10 +96,21 @@ class ModificarDatos extends CI_Controller
 
     public function mostrarFormulario()
     {
-        $this->load->view("plantillas/header");
+        // Obtengo las categorias
+        $misCategorias["categorias"] = $this->Categorias->dameTodas();
+        // Paso las categorias a la vista
+        $this->load->view("plantillas/header", $misCategorias);
+        // Cargo la vista del menu de navegacion.
         $this->load->view("plantillas/nav");
+        // Obtengo el identificador del usuario, que guarde en una sesion en el mismo momento que se logeo en el sistema.
+        $dato["idUsuario"] = $this->session->userdata['usuario']['idUsuario'];
+        // Solicito a la tabla usuarios, los datos de dicho usuario.
+        $this->datos = $this->usuario->dameDatosPersonales($dato);
+        // Obtengo las provincias
         $this->datos["provincias"] = dameTodasLasProvincias();
+        // Paso los datos a la vista.
         $this->load->view("formularioActualizar", $this->datos);
+        // Muestro el pie de pagina.
         $this->load->view("plantillas/footer");
     }
 }

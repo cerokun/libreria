@@ -17,9 +17,9 @@ class Productos extends CI_Model
      *
      * @return void
      */
-    public function destacados()
-    {
-        return $this->db->get_where("productos", array("visible" => 1))->result_array();
+    public function destacados($quieroMostrarPorPagina, $desde )
+    {   
+       return $this->db->get_where('productos', array('visible' => 1), $quieroMostrarPorPagina, $desde)->result_array();
     }
 
 
@@ -34,5 +34,20 @@ class Productos extends CI_Model
     public function dameProductosPorIdCategoria($id)
     {
         return $this->db->get_where("productos", array("idCategoria" => $id, "visible" => 1))->result_array();
+    }
+
+    /**
+     * Me dice el numero de productos 
+     *
+     * @return void
+     */
+    public function num_rows()
+    {
+        return $this->db->get_where("productos", array("visible" => 1))->num_rows();
+    }
+
+    public function dameProductosPorPagina($limit, $offset)
+    {
+        return $this->db->get_where('productos', array('visible' => 1), $limit, $offset)->result_array();
     }
 }

@@ -60,7 +60,7 @@
                         </div>
                     <?php endif ?>
 
-                    <?= form_open("Login/usuario") ?>
+                    <?= form_open("ComprobarLogin/usuario") ?>
 
                     <div class="form-group">
                         <label> <i class="fas fa-at"></i> Correo </label>

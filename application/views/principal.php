@@ -65,9 +65,11 @@
     <?php else : ?>
 
         <div class="alert alert-danger text-center">
-            <p class="text-center"> <strong> ¡Atenciòn! </strong> no hay productos que mostrar. </p>
+            <p class="text-center"> <strong> <i class="fas fa-exclamation-triangle"></i> ¡Atenciòn! </strong> no hay productos que mostrar. </p>
         </div>
 
     <?php endif; ?>
+
+   <?=  $this->pagination->create_links() ?>;
 
 </div> <!-- Final del contenedor- bdoy -->

@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="text-center">
-                        <a class="btn btn-dark" role="button" href="<?= site_url('Login/mostrarFormulario') ?>"><i class="fas fa-undo"></i> Regresar ventana login </a>
+                        <a class="btn btn-dark" role="button" href="<?= site_url('ComprobarLogin/mostrarFormulario') ?>"><i class="fas fa-undo"></i> Regresar ventana login </a>
                         <button type="submit" class="btn btn-success"> Enviar </button>
                     </div>
 
