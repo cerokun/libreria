@@ -22,8 +22,6 @@ class Principal extends CI_Controller
 	public function index()
 	{
 
-
-
 		$num_row = $this->Productos->num_rows();
 		$quieroMostrarPorPagina = 5;
 		$desde = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
@@ -31,11 +29,12 @@ class Principal extends CI_Controller
 		echo "desde: $desde <br> mostrar por pagina: $quieroMostrarPorPagina <br> numero filas: $num_row";
 
 		// Configuracion base
-		$config['base_url'] = base_url() . "index.php/Principal/index/"; // Controlador que manejara la paginacion.
+		$config['base_url'] = site_url() . "/Principal/index/"; // Controlador que manejara la paginacion.
 		$config['total_rows'] = $num_row; // Numero de productos.
 		$config['per_page'] = $quieroMostrarPorPagina; // indica la cantidad de resultados que se quieren ver por página.
-		$config["uri_segment"] = 2;
+		$config["uri_segment"] = 3;
 		$config["num_links"] = 5;
+		
 
 		// Estilos boostrap
 		$config['full_tag_open'] = '<ul class="pagination">';
