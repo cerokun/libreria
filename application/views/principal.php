@@ -34,7 +34,7 @@
 
                                 </ul>
                                 <div class="card-body">
-                                    <a href="#" class="btn btn-primary" id="<?= $libros[$contador]['idProducto']  ?>"> <i class="fas fa-cart-plus"></i> Añadir </a>
+                                    <a href="#" class="btn btn-primary addCarrito" id="<?= $libros[$contador]['idProducto']  ?>"> <i class="fas fa-cart-plus"></i> Añadir </a>
                                 </div>
                             </div>
                         </div>

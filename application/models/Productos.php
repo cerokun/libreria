@@ -62,4 +62,9 @@ class Productos extends CI_Model
     {
         return $this->db->get_where('productos', array('visible' => 1), $limit, $offset)->result_array();
     }
+
+    public function damePorSuId($id)
+    {
+        return $this->db->get_where('productos', array('visible' => 1, "idProducto" => $id))->result_array();
+    }
 }
