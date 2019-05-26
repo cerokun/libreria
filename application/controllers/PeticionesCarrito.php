@@ -8,8 +8,9 @@ class PeticionesCarrito extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+
         $this->load->model('Productos');
-        // $this->load->model('Carrito'); 
+        $this->load->library("Carrito");
     }
     /**
      * Obtengo la clave primara del producto.
@@ -23,9 +24,9 @@ class PeticionesCarrito extends CI_Controller
 
         // Solicito los datos del producto
         $libro = $this->Productos->damePorSuId($id);
-        
+
         echo "<pre>";
-        print_r( $libro );
+        print_r($libro);
         echo "</pre>";
     }
 }// Final clase

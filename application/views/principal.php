@@ -1,7 +1,9 @@
 <div class="container text-center" id="contenedor">
 
-    <?php
+    <img  src="<?= base_url()  . "assets/img/pagina/destacado.png"?>" width="280px">
 
+
+    <?php
 
     $totalLibros = count($libros);
     $mostrarPorFila = 4;
