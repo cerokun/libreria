@@ -20,7 +20,7 @@ class Carrito
 	{
 
 		// Set the super object to a local variable for use later
-		$this->CI = & get_instance();
+		$this->CI = &get_instance();
 		// Load the Sessions class
 		$this->CI->load->driver('session');
 
@@ -41,7 +41,7 @@ class Carrito
 	function añadir($id, $nuevo)
 	{
 		$this->libros[$id] = $nuevo;
-		$this->guardarDatosAlCarrito();
+		$this->actualizar();
 	}
 
 
@@ -55,7 +55,14 @@ class Carrito
 	 */
 	function modificar($id, $campo, $valor)
 	{
-		$this->libros[$id][$campo] = $valor;
+		$this->libros[$id][0][$campo] =  $valor;
+		$this->actualizar();
+	}
+
+	function incrementarCantidad($id, $valor)
+	{
+		$this->libros[$id][0]["cantidad"] +=  $valor;
+		$this->actualizar();
 	}
 
 	/**
@@ -64,7 +71,7 @@ class Carrito
 	 * @param int $id clave primaria del producto.
 	 * @return array ascociativo con los datos del producto.
 	 */
-	function dameProducto($id)
+	function dameProductoPorSuId($id)
 	{
 		return  $this->libros[$id];
 	}
@@ -78,6 +85,7 @@ class Carrito
 	function eliminar($id)
 	{
 		unset($this->libros[$id]);
+		$this->actualizar();
 	}
 
 	/**

@@ -19,14 +19,28 @@ class PeticionesCarrito extends CI_Controller
      */
     public function addCarrito()
     {
-        // Obtengo el id del producto que queire añadir al carrito
         $id = $this->input->post("idProducto");
+        echo "id: $id";
+      
+        // Compruebo si este producto ya se encuentra almacenando en el carrito
+        if ($this->carrito->siExiste($id)) {
+            echo "Ya existia";
+            $this->carrito->incrementarCantidad($id, 1);
 
-        // Solicito los datos del producto
-        $libro = $this->Productos->damePorSuId($id);
+        } else {
+            // Solicito los datos del producto
+            echo "Nuevo";
+            $libro = $this->Productos->damePorSuId($id);
+            $this->carrito->añadir($id, $libro);
+            $this->carrito->incrementarCantidad($id, 1);
+        }
+       
+
+       // $this->carrito->eliminar($id);
 
         echo "<pre>";
-        print_r($libro);
+        print_r( $this->carrito->dameTodosLosProductos() );
         echo "</pre>";
+ 
     }
 }// Final clase

@@ -1,6 +1,6 @@
 <div class="container text-center" id="contenedor">
 
-    <img  src="<?= base_url()  . "assets/img/pagina/destacado.png"?>" width="280px">
+    <img src="<?= base_url()  . "assets/img/pagina/destacado.png" ?>" width="280px">
 
 
     <?php
@@ -36,7 +36,7 @@
 
                                 </ul>
                                 <div class="card-body">
-                                    <a href="#" class="btn btn-primary addCarrito" id="<?= $libros[$contador]['idProducto']  ?>"> <i class="fas fa-cart-plus"></i> Añadir </a>
+                                    <button class="btn btn-primary addCarrito" id="<?= $libros[$contador]['idProducto']  ?>"> <i class="fas fa-cart-plus"></i> Añadir </button>
                                 </div>
                             </div>
                         </div>
