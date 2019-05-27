@@ -38,6 +38,11 @@ class PeticionesCarrito extends CI_Controller
         }
     }
 
+    public function eliminar() {
+        $id = $this->input->post("idProducto");
+        $this->carrito->eliminar($id);
+        $this->listar();
+    }
 
     public function vaciar()
     {

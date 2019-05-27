@@ -23,7 +23,7 @@
                         <td> <?= $value[0]["precio"] ?> </td>
                         <td> <?= $value[0]["cantidad"] ?> </td>
                         <td> <?= $value[0]["cantidad"] * $value[0]["precio"] ?> € </td>
-                        <td id="<?= $value[0]["idProducto"] ?>"> <i class="fas fa-trash-alt" style="color:red"></i> </td>
+                        <td class="eliminaEsteProductoDelCarrito" id="<?= $value[0]["idProducto"] ?>"> <i class="fas fa-trash-alt" style="color:red"></i> </td>
                     <tr>
 
                     <?php endforeach; ?>
@@ -39,5 +39,12 @@
         </div>
 
     <?php endif; ?>
+
+    <?php
+        echo "<pre>";
+        print_r( $this->session->userdata("carrito"));
+        echo "</pre>";
+    ?>
+
 
 </div>

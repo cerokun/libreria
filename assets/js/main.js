@@ -4,10 +4,37 @@ $(document).ready(function(){
     $( document).on( "click", ".addCarrito",  addCarrito  );
     $( document).on( "click", "#vaciarCarrito", vaciarCarrito  ); 
     $( document).on( "click", "#menuCarrito", listar );
-    
+    $( document).on( "click", ".eliminaEsteProductoDelCarrito", eliminaEsteProductoDelCarrito);
 });
 
+ function eliminaEsteProductoDelCarrito() {
+   
+    var id = $(this).attr("id");
+
+    // Peticion ajax.
+    $.ajax({
+
+        // la URL para la petición, concateno la site_url() con el controlador y metodo al que queiro llamar.
+        url :  site_url + 'PeticionesCarrito/eliminar/',
  
+        // especifica si será una petición POST o GET
+        type : 'POST',
+       
+        // la información a enviar   
+        data : { idProducto : id },
+
+           // el tipo de información que se espera de respuesta
+        dataType : 'html',
+
+        success: function(respuesta) {
+             $("#contenedor").replaceWith( respuesta );
+        }
+       
+    });
+
+
+ }
+
 
 function vaciarCarrito() {
 
