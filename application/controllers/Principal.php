@@ -122,6 +122,7 @@ class Principal extends CI_Controller
 	public function cerrarSesion()
 	{
 		$this->session->sess_destroy("usuario");
+		$this->session->unset_userdata('carrito');
 		// Redireccino al menu principal.
 		redirect('Principal');
 	}

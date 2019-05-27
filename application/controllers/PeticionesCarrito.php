@@ -10,37 +10,30 @@ class PeticionesCarrito extends CI_Controller
         parent::__construct();
 
         $this->load->model('Productos');
-        $this->load->library("Carrito");
+        $this->load->library("carrito");
     }
     /**
      * Obtengo la clave primara del producto.
      *
      * @return void
      */
-    public function addCarrito()
+    public function add()
     {
         $id = $this->input->post("idProducto");
-        echo "id: $id";
-      
+
         // Compruebo si este producto ya se encuentra almacenando en el carrito
         if ($this->carrito->siExiste($id)) {
-            echo "Ya existia";
-            $this->carrito->incrementarCantidad($id, 1);
-
+            if ($this->carrito->incrementarCantidad($id)) {
+                $datos = array("estado" => "true", "total" => $this->carrito->numeroTotalProductos());
+                echo json_encode($datos);
+            }
         } else {
             // Solicito los datos del producto
-            echo "Nuevo";
             $libro = $this->Productos->damePorSuId($id);
-            $this->carrito->añadir($id, $libro);
-            $this->carrito->incrementarCantidad($id, 1);
+            $libro[0]["cantidad"] = 1;
+            if ($this->carrito->añadir($id, $libro)) {
+                $datos = array("estado" => "true",  "total" => $this->carrito->numeroTotalProductos());
+            }
         }
-       
-
-       // $this->carrito->eliminar($id);
-
-        echo "<pre>";
-        print_r( $this->carrito->dameTodosLosProductos() );
-        echo "</pre>";
- 
-    }
-}// Final clase
+    }// Final clase
+}

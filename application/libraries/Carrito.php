@@ -3,6 +3,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Carrito
 {
+
+
+	private $total_items;
 	/**
 	 * Reference to CodeIgniter instance
 	 *
@@ -12,9 +15,10 @@ class Carrito
 	/**
 	 * Carrito, array local, datos volatiles.
 	 *
-	 * @var [type]
+	 * @var Array 
 	 */
-	private $libros;
+	protected $libros = array();
+
 
 	public function __construct()
 	{
@@ -28,7 +32,7 @@ class Carrito
 		if ($this->CI->session->has_userdata('carrito')) {
 			$this->libros = $this->CI->session->userdata("carrito");
 		} else { // Sino la creo
-			$this->CI->session->set_userdata("carrito");
+			$this->CI->session->set_userdata("carrito", $this->libros);
 		}
 	}
 
@@ -38,10 +42,15 @@ class Carrito
 	 * 
 	 * @return  void
 	 */
-	function añadir($id, $nuevo)
+	public function añadir($id, $nuevo)
 	{
-		$this->libros[$id] = $nuevo;
-		$this->actualizar();
+		if (is_array($nuevo) and count($nuevo) > 0) {
+			$this->libros[$id] = $nuevo;
+			$this->actualizar();
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 
@@ -53,17 +62,33 @@ class Carrito
 	 * @param String $valor que quiero guardar.
 	 * @return void
 	 */
-	function modificar($id, $campo, $valor)
+	public function modificar($id, $campo, $valor)
 	{
 		$this->libros[$id][0][$campo] =  $valor;
 		$this->actualizar();
 	}
 
-	function incrementarCantidad($id, $valor)
+	public function incrementarCantidad($id)
 	{
-		$this->libros[$id][0]["cantidad"] +=  $valor;
-		$this->actualizar();
+		if (is_numeric($id)) {
+			$this->libros[$id][0]["cantidad"]++;
+			$this->actualizar();
+			return true;
+		} else {
+			return false;
+		}
 	}
+
+
+	public function numeroTotalProductos()
+	{
+
+		foreach ($this->libros as $libro) {
+			$this->total_items += $libro[0]["cantidad"];
+		}
+		return $this->total_items;
+	}
+
 
 	/**
 	 * Me entrega el producto que le solicitemos
@@ -71,7 +96,7 @@ class Carrito
 	 * @param int $id clave primaria del producto.
 	 * @return array ascociativo con los datos del producto.
 	 */
-	function dameProductoPorSuId($id)
+	public function dameProductoPorSuId($id)
 	{
 		return  $this->libros[$id];
 	}
@@ -82,7 +107,7 @@ class Carrito
 	 * @param int $id clave primaria del producto
 	 * @return void
 	 */
-	function eliminar($id)
+	public function eliminar($id)
 	{
 		unset($this->libros[$id]);
 		$this->actualizar();
@@ -94,17 +119,19 @@ class Carrito
 	 * @param int $id clave primaria del producto.
 	 * @return boolean true si lo ha encontrado y false sino lo encontro.
 	 */
-	function siExiste($id)
+	public function siExiste($id)
 	{
 		return (isset($this->libros[$id])) ? true : false;
 	}
+
+
 
 	/**
 	 * Me entrega todos los productos
 	 *
 	 * @return void
 	 */
-	function dameTodosLosProductos()
+	public function dameTodosLosProductos()
 	{
 		return $this->libros;
 	}
@@ -114,7 +141,7 @@ class Carrito
 	 *
 	 * @return void
 	 */
-	function actualizar()
+	public function actualizar()
 	{
 		$this->CI->session->set_userdata("carrito",  $this->libros);
 	}

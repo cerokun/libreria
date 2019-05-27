@@ -16,19 +16,25 @@ function addCarrito() {
     $.ajax({
 
         // la URL para la petición, concateno la site_url() con el controlador y metodo al que queiro llamar.
-        url :  site_url + 'PeticionesCarrito/addCarrito/',
+        url :  site_url + 'PeticionesCarrito/add/',
 
         // la información a enviar   
         data : { idProducto : id },
 
         // especifica si será una petición POST o GET
         type : 'POST',
-
-        // el tipo de información que se espera de respuesta
-        dataType : 'html',
+ 
+         // el tipo de información que se espera de respuesta
+        dataType : 'json',
 
         success: function(respuesta) {
-          //  $("#contenedor").replaceWith( respuesta );
+                  
+             if (respuesta["estado"] === "true" ) {
+                $("#numeroDeProductos").text( respuesta["total"] );
+             }
+             else {
+                 alert("no se ha podido añadir al carrito, mensaje provisional");
+             }
            
         }
        
