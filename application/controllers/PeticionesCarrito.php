@@ -33,7 +33,14 @@ class PeticionesCarrito extends CI_Controller
             $libro[0]["cantidad"] = 1;
             if ($this->carrito->añadir($id, $libro)) {
                 $datos = array("estado" => "true",  "total" => $this->carrito->numeroTotalProductos());
+                echo json_encode($datos);
             }
         }
-    }// Final clase
+    }
+
+    public function listar()
+    {
+        $datos["libros"] = $this->carrito->dameTodosLosProductos();
+        $this->load->view("mostrarProductosCarrito", $datos);
+    }
 }

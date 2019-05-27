@@ -1,7 +1,7 @@
 nav {
 	background-color: #111;
 }
-.menuCarrito {
+#menuCarrito {
 	font-weight: bold;
 	display: inline-block;
 	padding: 0 25px;
@@ -11,7 +11,7 @@ nav {
 	color: #fdfdfd;
 }
 
-.menuCarrito img {
+#menuCarrito img {
 	float: left;
 	margin: 6px -28px 4px -14px;
 	height: 44px;

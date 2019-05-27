@@ -43,7 +43,7 @@
     <?php endif ?>
 
     <ul class="navbar-nav ml-auto">
-        <li class="menuCarrito">
+        <li id="menuCarrito">
             <img src="<?= base_url() . 'assets/img/pagina/carrito.png' ?>" title="Carrito compra"> <span id="numeroDeProductos"> 0 </span>
         </li>
     </ul>

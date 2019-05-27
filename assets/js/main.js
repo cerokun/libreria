@@ -1,8 +1,9 @@
 $(document).ready(function(){
   
     $("#categorias").change( categorias );
-    $( document).on( "click", ".addCarrito", addCarrito  );
-
+    $( document).on( "click", ".addCarrito",  addCarrito  );
+    $("#menuCarrito").click( listar );
+    
 });
 
  
@@ -40,8 +41,32 @@ function addCarrito() {
        
     });
 
-
+   
 }
+
+ function listar() {
+
+    // Peticion ajax.
+    $.ajax({
+
+        // la URL para la petición, concateno la site_url() con el controlador y metodo al que queiro llamar.
+        url :  site_url + 'PeticionesCarrito/listar/',
+
+        // especifica si será una petición POST o GET
+        type : 'GET',
+ 
+         // el tipo de información que se espera de respuesta
+        dataType : 'html',
+
+        success: function(respuesta) {
+             $("#contenedor").replaceWith( respuesta );
+        }
+       
+    });
+
+    }
+
+
 
 /**
  * Muestra los libros
