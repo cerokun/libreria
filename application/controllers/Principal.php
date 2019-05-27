@@ -10,6 +10,7 @@ class Principal extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('pagination');
+		$this->load->library("carrito");
 		$this->load->model('Categorias');
 		$this->load->model('Productos');
 	}
@@ -56,16 +57,14 @@ class Principal extends CI_Controller
 
 		$this->pagination->initialize($config);
 
-		$misCategorias["categorias"] = $this->Categorias->dameTodas();
-		$this->load->view("plantillas/header", $misCategorias);
-		$this->load->view("plantillas/nav");
-		$misLibros["libros"] = $this->Productos->destacados($quieroMostrarPorPagina, $desde);
-		$this->load->view('principal', $misLibros);
+		$datosHeader["categorias"] = $this->Categorias->dameTodas();
+		$datosNav["total_items_carrito"] = ($this->carrito->numeroTotalProductos() > 0) ?  $this->carrito->numeroTotalProductos() : 0;
+		$this->load->view("plantillas/header", $datosHeader);
+		$this->load->view("plantillas/nav", $datosNav);
+		$datosContainer["libros"] = $this->Productos->destacados($quieroMostrarPorPagina, $desde);
+		$this->load->view('principal', $datosContainer);
 		$this->load->view("plantillas/footer");
 	}
-
-
-
 
 
 	public function productosPorCategoria()

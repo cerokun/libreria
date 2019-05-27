@@ -154,5 +154,6 @@ class Carrito
 	public function destroy()
 	{
 		$this->CI->session->unset_userdata('carrito');
+		$this->libros = 0;
 	}
 }// Final clase

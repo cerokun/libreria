@@ -1,12 +1,39 @@
 $(document).ready(function(){
-  
-    $("#categorias").change( categorias );
+    // Cargo los eventos.
+    $( document).on( "change", "#categorias", categorias );
     $( document).on( "click", ".addCarrito",  addCarrito  );
-    $("#menuCarrito").click( listar );
+    $( document).on( "click", "#vaciarCarrito", vaciarCarrito  ); 
+    $( document).on( "click", "#menuCarrito", listar );
     
 });
 
  
+
+function vaciarCarrito() {
+
+
+    // Peticion ajax.
+    $.ajax({
+
+        // la URL para la petición, concateno la site_url() con el controlador y metodo al que queiro llamar.
+        url :  site_url + 'PeticionesCarrito/vaciar/',
+ 
+        // especifica si será una petición POST o GET
+        type : 'POST',
+  
+           // el tipo de información que se espera de respuesta
+        dataType : 'html',
+
+        success: function(respuesta) {
+             $("#contenedor").replaceWith( respuesta );
+        }
+       
+    });
+
+
+}
+
+
 
 function addCarrito() {
 

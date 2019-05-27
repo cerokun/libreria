@@ -13,11 +13,13 @@
         <ul class="navbar-nav">
             <!-- Dropdown -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color:darkgreen"> <i class="fas fa-bars"></i> Menu </a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color:darkgreen">
+                    <i class="fas fa-bars"></i> Menu </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="<?= site_url('ModificarDatos/mostrarFormulario') ?>"> <i class="fas fa-user-edit"></i> Datos personales </a>
                     <a class="dropdown-item" href=""> <i class="fas fa-file-invoice"></i> Mis pedidos</a>
-                    <a class="dropdown-item" href="<?= site_url("Baja") ?>"> <i class="fas fa-user-times"></i> Darse de baja </a>
+                    <a class="dropdown-item" href="<?= site_url("Baja") ?>"> <i class="fas fa-user-times"></i> Darse de baja
+                    </a>
                 </div>
             </li>
 
@@ -29,7 +31,8 @@
         <ul class="navbar-nav">
             <!-- Dropdown -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color:chocolate"> Menu </a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color:chocolate">
+                    Menu </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#"> Crud categorias </a>
                     <a class="dropdown-item" href="#"> Crud Productos </a>
@@ -44,7 +47,7 @@
 
     <ul class="navbar-nav ml-auto">
         <li id="menuCarrito">
-            <img src="<?= base_url() . 'assets/img/pagina/carrito.png' ?>" title="Carrito compra"> <span id="numeroDeProductos"> 0 </span>
+            <img src="<?= base_url() . 'assets/img/pagina/carrito.png' ?>" title="Carrito compra"> <span id="numeroDeProductos"> <?= $total_items_carrito  ?> </span>
         </li>
     </ul>
 

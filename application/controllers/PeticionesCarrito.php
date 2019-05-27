@@ -38,6 +38,13 @@ class PeticionesCarrito extends CI_Controller
         }
     }
 
+
+    public function vaciar()
+    {
+        $this->carrito->destroy();
+        $this->listar();
+    }
+
     public function listar()
     {
         $datos["libros"] = $this->carrito->dameTodosLosProductos();
