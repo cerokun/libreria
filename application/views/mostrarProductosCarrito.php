@@ -39,12 +39,6 @@
         </div>
 
     <?php endif; ?>
-
-    <?php
-        echo "<pre>";
-        print_r( $this->session->userdata("carrito"));
-        echo "</pre>";
-    ?>
-
+ 
 
 </div>

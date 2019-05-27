@@ -10,7 +10,6 @@ class Principal extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('pagination');
-		$this->load->library("carrito");
 		$this->load->model('Categorias');
 		$this->load->model('Productos');
 	}
@@ -58,9 +57,8 @@ class Principal extends CI_Controller
 		$this->pagination->initialize($config);
 
 		$datosHeader["categorias"] = $this->Categorias->dameTodas();
-		$datosNav["total_items_carrito"] = ($this->carrito->numeroTotalProductos() > 0) ?  $this->carrito->numeroTotalProductos() : 0;
 		$this->load->view("plantillas/header", $datosHeader);
-		$this->load->view("plantillas/nav", $datosNav);
+		$this->load->view("plantillas/nav");
 		$datosContainer["libros"] = $this->Productos->destacados($quieroMostrarPorPagina, $desde);
 		$this->load->view('principal', $datosContainer);
 		$this->load->view("plantillas/footer");
@@ -121,7 +119,6 @@ class Principal extends CI_Controller
 	public function cerrarSesion()
 	{
 		$this->session->sess_destroy("usuario");
-		$this->session->unset_userdata('carrito');
 		// Redireccino al menu principal.
 		redirect('Principal');
 	}
