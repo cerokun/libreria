@@ -67,4 +67,9 @@ class Productos extends CI_Model
     {
         return $this->db->get_where('productos', array('visible' => 1, "idProducto" => $id))->result_array();
     }
+
+    public function actualizarStock($items)
+    {
+        return ($this->db->update_batch("productos", $items, "idProducto")) ? true : false;
+    }
 }

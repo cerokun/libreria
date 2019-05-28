@@ -18,6 +18,6 @@ class Pedidos extends CI_Model
 
     public function insertarProductosEnLineaDePedido($items)
     {
-        return ($this->db->insert("lineaDePedido", $items)) ? true : false;
+        return ($this->db->insert_batch("lineaDePedido", $items)) ? true : false;
     }
 }

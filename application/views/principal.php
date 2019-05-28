@@ -1,6 +1,6 @@
 <div class="container text-center" id="contenedor">
 
-    <img src="<?= base_url()  . "assets/img/pagina/destacado.png" ?>" width="280px">
+    <img src="<?= base_url()  . "assets/img/pagina/destacado.png" ?>" width="250px">
 
 
     <?php
