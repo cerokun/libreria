@@ -1,6 +1,6 @@
 <div class="container text-center" id="contenedor">
-
-    <?php if ( $libros) : ?>
+    <!-- Compruebo si hay libros en el carrito -->
+    <?php if ($libros) : ?>
 
         <h3> Artículos en el carrito </h3>
         <table class="table table-hover">
@@ -15,7 +15,7 @@
                 </tr>
             </thead>
             <tbody>
-
+                <!-- Recorro los libros almacenados en el carrito -->
                 <?php foreach ($libros as $key => $value) : ?>
                     <tr>
                         <td> <img src="<?= base_url()  . "assets/img/libros/" .  $value[0]["imagen"] ?>" width="50px"> </td>
@@ -30,15 +30,23 @@
             </tbody>
         </table>
 
-        <button id="vaciarCarrito" class="btn btn-outline-danger"> Quiero vaciar el carrito </button>
+        <button id="vaciarCarrito" type="button" class="btn btn-danger"> <i class="fas fa-trash"></i> Quiero Vaciar carrito </button>
+
+        <!-- Compruebo si el usuario se ha logeado -->
+        <?php if ($this->session->has_userdata('usuario')) : ?>
+            <a class="btn btn-success" href="<?= site_url("PeticionesPedidos") ?>"> <i class="fas fa-cart-arrow-down"></i> Realizar pedido </a>
+        <?php else : ?>
+            <a class="btn btn-success" href="<?= site_url("ComprobarLogin/mostrarFormulario") ?>"> <i class="fas fa-shopping-cart"></i> Realizar pedido </a>
+        <?php endif; ?>
 
     <?php else : ?>
+        <!-- Final if principal, comprueba si hay algo en el carrito -->
 
         <div class="alert alert-danger text-center">
             <p class="text-center"> <strong> <i class="fas fa-exclamation-triangle"></i> ¡Atenciòn! </strong> el carrito esta vacio. </p>
         </div>
 
     <?php endif; ?>
- 
+
 
 </div>
