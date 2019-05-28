@@ -20,4 +20,15 @@ class Pedidos extends CI_Model
     {
         return ($this->db->insert_batch("lineaDePedido", $items)) ? true : false;
     }
+
+
+    public function realizados($id)
+    {
+        return $this->db
+            ->select("idPedido, fecha, estado")
+            ->from("pedidos")
+            ->where(array("idUsuario" => $id, "cancelado" => 0))
+            ->get()
+            ->result_array();
+    }
 }

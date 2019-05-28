@@ -2,19 +2,24 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class RealizarPedido extends CI_Controller
+class Pedidos_C extends CI_Controller
 {
 
     public function __construct()
     {
         parent::__construct();
+		$this->load->model('Categorias');
         $this->load->model('usuario');
         $this->load->model("pedidos");
-        $this->load->library("carrito");
-        $this->load->model('productos');
     }
 
-    public function index()
+
+    /**
+     * Crea un nuevo pedido.
+     *
+     * @return void
+     */
+    public function nuevo()
     {
 
         // 1º Obtengo el id del cliente
@@ -42,17 +47,6 @@ class RealizarPedido extends CI_Controller
                 "idProducto" => $libro[0]["idProducto"]
             );
         }
-        echo "Items <br>";
-
-        echo "<pre>";
-        print_r($items);
-        echo "</pre>";
-
-        echo "Stocks: <br>";
-
-        echo "<pre>";
-        print_r($stocks);
-        echo "</pre>";
 
 
         // Inserto los items en la tabla linea de pedido.
@@ -62,5 +56,22 @@ class RealizarPedido extends CI_Controller
         } else {
             echo "ERROR";
         }
+    }
+
+    public function listar()
+    {
+
+        // 1º Obtengo el id del cliente
+        $idUsuario = $this->session->userdata['usuario']['idUsuario'];
+        // 2º Obtengo todas las facturas que pudiera tener este usuario
+        $datos["pedidos"] = $this->pedidos->realizados($idUsuario);
+        // Obtengo las categorias
+        $misCategorias["categorias"] = $this->Categorias->dameTodas();
+        // Le paaso las categorias a la vista
+        $this->load->view("plantillas/header", $misCategorias);
+        $this->load->view("plantillas/nav");
+        // Paso todos los pedidos a la vista
+        $this->load->view('mostrarPedidos', $datos);
+        $this->load->view("plantillas/footer");
     }
 }// Final clase
