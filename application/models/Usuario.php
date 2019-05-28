@@ -16,6 +16,16 @@ class Usuario extends CI_Model
         return $this->db->get_where("usuarios", $data)->row_array();
     }
 
+    public function dameDatosPersonalesCliente($id)
+    {
+        return $this->db
+            ->select("idUsuario, nombre, apellidos, dni, direccion, codigoPostal, provincia")
+            ->from("usuarios")
+            ->where("idUsuario" , $id)
+            ->get()
+            ->row_array();
+    }
+
     /**
      * Actualiza los datos del usuario.
      * @param type $columnas
@@ -53,6 +63,4 @@ class Usuario extends CI_Model
     {
         return $this->db->insert('usuarios', $columnas);
     }
-
 }
-
