@@ -10,8 +10,8 @@ class Principal extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('pagination');
-		$this->load->model('Categorias');
-		$this->load->model('Productos');
+		$this->load->model('categorias');
+		$this->load->model('productos');
 	}
 
 	/**
@@ -22,7 +22,7 @@ class Principal extends CI_Controller
 	public function index()
 	{
 
-		$num_row = $this->Productos->num_rows();
+		$num_row = $this->productos->num_rows();
 		$quieroMostrarPorPagina = 18;
 		$desde = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
@@ -56,10 +56,10 @@ class Principal extends CI_Controller
 
 		$this->pagination->initialize($config);
 
-		$datosHeader["categorias"] = $this->Categorias->dameTodas();
+		$datosHeader["categorias"] = $this->categorias->dameTodas();
 		$this->load->view("plantillas/header", $datosHeader);
 		$this->load->view("plantillas/nav");
-		$datosContainer["libros"] = $this->Productos->destacados($quieroMostrarPorPagina, $desde);
+		$datosContainer["libros"] = $this->productos->destacados($quieroMostrarPorPagina, $desde);
 		$this->load->view('principal', $datosContainer);
 		$this->load->view("plantillas/footer");
 	}
@@ -69,7 +69,7 @@ class Principal extends CI_Controller
 	{
 		$id = $this->input->post("idCategoria");
 
-		$num_row = $this->Productos->num_rows_per_category($id);
+		$num_row = $this->productos->num_rows_per_category($id);
 		$quieroMostrarPorPagina = 5;
 
 		$desde = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
@@ -104,7 +104,7 @@ class Principal extends CI_Controller
 		$this->pagination->initialize($config);
 
 
-		$misLibros["libros"] =  $this->Productos->dameProductosPorIdCategoria($id, $quieroMostrarPorPagina, $desde);
+		$misLibros["libros"] =  $this->productos->dameProductosPorIdCategoria($id, $quieroMostrarPorPagina, $desde);
 
 		$this->load->view('principal', $misLibros);
 	}

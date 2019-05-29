@@ -31,4 +31,15 @@ class Pedidos extends CI_Model
             ->get()
             ->result_array();
     }
+
+    /**
+     * Me devuelve todos los articulos que pertenecen a una factura concreta.
+     *
+     * @param int $idPedido
+     * @return Array asociativo con los productos.
+     */
+    public function dameLineaPedido($id)
+    {
+        return $this->db->get_where("lineaDePedido", array('idPedido' => $id))->result_array();
+    }
 }

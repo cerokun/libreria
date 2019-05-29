@@ -7,20 +7,13 @@ class MisProductos extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Productos');
+        $this->load->model('productos');
     }
 
     public function dameTodos()
     {
-        $this->Productos->dameTodos();
+        $this->productos->dameTodos();
     }
 
-    public function mostraPorCategoria()
-    {
-        $id = $this->input->post("idCategoria");
-        $datos =  $this->Productos->dameProductosPorIdCategoria($id);
-      
-
-       
-    }
+   
 } // Final clase

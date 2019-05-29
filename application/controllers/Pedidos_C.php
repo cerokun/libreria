@@ -8,9 +8,11 @@ class Pedidos_C extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-		$this->load->model('Categorias');
+        $this->load->model('categorias');
+        $this->load->model('productos');
         $this->load->model('usuario');
         $this->load->model("pedidos");
+        $this->load->library("carrito");
     }
 
 
@@ -66,12 +68,31 @@ class Pedidos_C extends CI_Controller
         // 2º Obtengo todas las facturas que pudiera tener este usuario
         $datos["pedidos"] = $this->pedidos->realizados($idUsuario);
         // Obtengo las categorias
-        $misCategorias["categorias"] = $this->Categorias->dameTodas();
+        $misCategorias["categorias"] = $this->categorias->dameTodas();
         // Le paaso las categorias a la vista
         $this->load->view("plantillas/header", $misCategorias);
         $this->load->view("plantillas/nav");
         // Paso todos los pedidos a la vista
         $this->load->view('mostrarPedidos', $datos);
+        $this->load->view("plantillas/footer");
+    }
+
+
+
+    public function ver()
+    {
+
+        // 1º Obtengo el id del cliente
+        $idPedido =  $this->uri->segment(3);
+        // 2º Obtengo todos los productos pertenecientes a dicha factura.
+        $datos["lineaDePedido"] = $this->pedidos->dameLineaPedido($idPedido);
+        // Obtengo las categorias
+        $misCategorias["categorias"] = $this->categorias->dameTodas();
+        // Le paaso las categorias a la vista
+        $this->load->view("plantillas/header", $misCategorias);
+        $this->load->view("plantillas/nav");
+        // Paso todos los pedidos a la vista
+        $this->load->view('mostrarLineaDePedido', $datos);
         $this->load->view("plantillas/footer");
     }
 }// Final clase

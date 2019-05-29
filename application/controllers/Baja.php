@@ -7,14 +7,14 @@ class Baja extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-		$this->load->model('Categorias');
-        $this->load->model("BajaCuenta");
+		$this->load->model('categorias');
+        $this->load->model("bajaCuenta");
     }
 
 
     public function index()
     {
-        $misCategorias["categorias"] = $this->Categorias->dameTodas();
+        $misCategorias["categorias"] = $this->categorias->dameTodas();
         $this->load->view("plantillas/header", $misCategorias);
         $this->load->view("plantillas/nav");
         $this->load->view('baja');
@@ -26,6 +26,6 @@ class Baja extends CI_Controller
     public function usuario()
     {
         $id =  $this->session->userdata['usuario']['idUsuario'];
-        $this->BajaCuenta->usuario($id);
+        $this->bajaCuenta->usuario($id);
     }
 } // Final clase

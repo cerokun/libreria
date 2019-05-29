@@ -9,7 +9,7 @@ class PeticionesCarrito extends CI_Controller
     {
         parent::__construct();
 
-        $this->load->model('Productos');
+        $this->load->model('productos');
         $this->load->library("carrito");
     }
     /**
@@ -29,7 +29,7 @@ class PeticionesCarrito extends CI_Controller
             }
         } else {
             // Solicito los datos del producto
-            $libro = $this->Productos->damePorSuId($id);
+            $libro = $this->productos->damePorSuId($id);
             $libro[0]["cantidad"] = 1;
             if ($this->carrito->añadir($id, $libro)) {
                 $datos = array("estado" => "true",  "total" => $this->carrito->numeroTotalProductos());

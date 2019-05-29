@@ -10,7 +10,7 @@ class ComprobarLogin extends CI_Controller
         parent::__construct(); // Invoco al constructor del padre.
         $this->load->library('form_validation'); // Cargo la libreria, para validar formularios.
         $this->form_validation->set_error_delimiters('<li>', '</li>');
-        $this->load->model('Login'); // Modelo que utilizare para comprobar el login.
+        $this->load->model('login'); // Modelo que utilizare para comprobar el login.
     }
 
     /**
@@ -54,9 +54,9 @@ class ComprobarLogin extends CI_Controller
             );
 
             // Compruebo si existe el usuario
-            if ($this->Login->buscar($data)) {
+            if ($this->login->buscar($data)) {
                 // Guardo los datos del usuario.
-                $usuario = $this->Login->buscar($data);
+                $usuario = $this->login->buscar($data);
                 // Creo una sesion para dicho usuario.
                 $this->crearSesion($usuario);
             } else { // sino existe el usuario 

@@ -13,7 +13,7 @@ class ModificarDatos extends CI_Controller
         $this->load->helper("dni");
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<span style="color:red">', '</span>');
-        $this->load->model('Categorias');
+        $this->load->model('categorias');
         $this->load->model('usuario');
     }
 
@@ -79,7 +79,7 @@ class ModificarDatos extends CI_Controller
                 // Actualizo unicamente el nombre, por que es el unico dato que muestro al usuario en el menu principal, en la bienvenida + nombre.
                 $this->session->userdata['usuario']['nombre'] = $columnas["nombre"];
                 // Obtengo las categorias
-                $misCategorias["categorias"] = $this->Categorias->dameTodas();
+                $misCategorias["categorias"] = $this->categorias->dameTodas();
                 // Paso las categorias a la vista
                 $this->load->view("plantillas/header", $misCategorias);
                 $this->load->view("plantillas/nav");
@@ -97,7 +97,7 @@ class ModificarDatos extends CI_Controller
     public function mostrarFormulario()
     {
         // Obtengo las categorias
-        $misCategorias["categorias"] = $this->Categorias->dameTodas();
+        $misCategorias["categorias"] = $this->categorias->dameTodas();
         // Paso las categorias a la vista
         $this->load->view("plantillas/header", $misCategorias);
         // Cargo la vista del menu de navegacion.
