@@ -7,8 +7,8 @@
             <thead class="thead-dark">
                 <tr>
                     <th> IdProducto </th>
-                    <th> Cantidad </th>
                     <th> Precio </th>
+                    <th> Cantidad </th>
                     <th> Total </th>
                 </tr>
             </thead>
@@ -18,8 +18,8 @@
                     <tr>
 
                         <td> <?= $value["idProducto"] ?> </td>
+                        <td> <?= $value["precio"] ?> € </td>
                         <td> <?= $value["cantidad"] ?> </td>
-                        <td> <?= $value["precio"] ?> </td>
                         <td> <?= $value["precio"] * $value["cantidad"]  ?> € </td>
 
                     <tr>
@@ -28,6 +28,14 @@
             </tbody>
         </table>
 
+        <a class="btn btn-outline-secondary" href="<?= site_url("Pedidos_C/listar") ?>"> <i class="fas fa-undo"></i> Regresar a listar pedidos </a>
+
+
+    <?php else : ?>
+        <!-- Final if principal, comprueba si hay algo -->
+        <div class="alert alert-danger text-center">
+            <p class="text-center"> <strong> <i class="fas fa-exclamation-triangle"></i> ¡Atenciòn! </strong> este pedido no tiene productos en su interior. </p>
+        </div>
 
     <?php endif; ?>
 

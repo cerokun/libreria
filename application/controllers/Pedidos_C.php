@@ -95,4 +95,16 @@ class Pedidos_C extends CI_Controller
         $this->load->view('mostrarLineaDePedido', $datos);
         $this->load->view("plantillas/footer");
     }
-}// Final clase
+
+
+    public function eliminar()
+    {
+
+        // 1º Obtengo el id del cliente
+        $idPedido =  $this->uri->segment(3);
+        // Elimino el pedido
+        $this->pedidos->cancelar($idPedido);
+        // Muestro la lista actualizada
+        $this->listar();
+    }
+}

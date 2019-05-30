@@ -18,7 +18,7 @@ class Pedidos extends CI_Model
 
     public function insertarProductosEnLineaDePedido($items)
     {
-        return ($this->db->insert_batch("lineaDePedido", $items)) ? true : false;
+        return $this->db->insert_batch("lineaDePedido", $items);
     }
 
 
@@ -27,7 +27,7 @@ class Pedidos extends CI_Model
         return $this->db
             ->select("idPedido, fecha, estado")
             ->from("pedidos")
-            ->where(array("idUsuario" => $id, "cancelado" => 0))
+            ->where(array("idUsuario" => $id, "cancelar" => 0))
             ->get()
             ->result_array();
     }
@@ -41,5 +41,10 @@ class Pedidos extends CI_Model
     public function dameLineaPedido($id)
     {
         return $this->db->get_where("lineaDePedido", array('idPedido' => $id))->result_array();
+    }
+
+    public function cancelar($id)
+    {
+        return $this->db->update('pedidos', array("cancelar" => 1), array("idPedido" => $id));
     }
 }
