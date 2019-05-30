@@ -5,7 +5,44 @@ $(document).ready(function(){
     $( document).on( "click", "#vaciarCarrito", vaciarCarrito  ); 
     $( document).on( "click", "#menuCarrito", listar );
     $( document).on( "click", ".eliminaEsteProductoDelCarrito", eliminaEsteProductoDelCarrito);
+    $( document).on( "change", ".estados", estados );
 });
+
+
+function estados() {
+
+    // Obtengo el idPedido
+    var idPedido = $(this).attr('id');
+    var estado = $(this).val();
+     
+    var parametros = {
+        "idPedido": idPedido,
+        "estado": estado
+    };
+
+    // Peticion ajax.
+    $.ajax({
+
+        // la URL para la petición, concateno la site_url() con el controlador y metodo al que queiro llamar.
+        url :  site_url + 'Pedidos_C/cambiarEstado/',
+ 
+        // especifica si será una petición POST o GET
+        type : 'POST',
+       
+        // la información a enviar   
+        data : parametros,
+
+           // el tipo de información que se espera de respuesta
+        dataType : 'json',
+
+        success: function(respuesta) {
+            alert( respuesta);
+        }
+       
+    });
+
+     
+}
 
  function eliminaEsteProductoDelCarrito() {
    

@@ -47,4 +47,14 @@ class Pedidos extends CI_Model
     {
         return $this->db->update('pedidos', array("cancelar" => 1), array("idPedido" => $id));
     }
+
+    public function dameTodos()
+    {
+        return $this->db->get("pedidos")->result_array();
+    }
+
+    public function cambiarEstado($estado, $id)
+    {
+        return $this->db->update('pedidos', array("estado" => $estado), array("idPedido" => $id));
+    }
 }

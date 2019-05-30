@@ -8,6 +8,7 @@ class Pedidos_C extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->helper("formulario");
         $this->load->model('categorias');
         $this->load->model('productos');
         $this->load->model('usuario');
@@ -64,9 +65,9 @@ class Pedidos_C extends CI_Controller
     {
 
         // 1º Obtengo el id del cliente
-        $idUsuario = $this->session->userdata['usuario']['idUsuario'];
+        $id = $this->session->userdata['usuario']['idUsuario'];
         // 2º Obtengo todas las facturas que pudiera tener este usuario
-        $datos["pedidos"] = $this->pedidos->realizados($idUsuario);
+        $datos["pedidos"] = $this->pedidos->realizados($id);
         // Obtengo las categorias
         $misCategorias["categorias"] = $this->categorias->dameTodas();
         // Le paaso las categorias a la vista
@@ -106,5 +107,38 @@ class Pedidos_C extends CI_Controller
         $this->pedidos->cancelar($idPedido);
         // Muestro la lista actualizada
         $this->listar();
+    }
+
+    public function muestraFormularioCambiarEstado()
+    {
+
+        // 2º Obtengo todas las facturas que pudiera tener este usuario
+        $datos["pedidos"] = $this->pedidos->dameTodos();
+        // Obtengo las categorias
+        $misCategorias["categorias"] = $this->categorias->dameTodas();
+        // Le paaso las categorias a la vista
+        $this->load->view("plantillas/header", $misCategorias);
+        $this->load->view("plantillas/nav");
+
+        // Estados posibles
+        $datos["opciones"] = array(
+            1 => "Pendiente",
+            2 => "Procesando",
+            3 => "Recibido"
+        );
+
+        // Paso todos los pedidos a la vista
+        $this->load->view('cambiarEstadoPedidos', $datos);
+        $this->load->view("plantillas/footer");
+    }
+
+    public function cambiarEstado()
+    {
+        // Obtengo el idPedido y el estado del pedido, valores enviados desde Ajax      
+        $id = $this->input->post("idPedido");
+        $estado = $this->input->post("estado");
+
+        // Peticion al modelo para cambiar el estado del pedido.
+        $this->pedidos->cambiarEstado($estado, $id);
     }
 }

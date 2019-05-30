@@ -55,7 +55,7 @@
                    <div class="dropdown-menu">
                        <a class="dropdown-item" href="#"> Crud categorias </a>
                        <a class="dropdown-item" href="#"> Crud Productos </a>
-                       <a class="dropdown-item" href="#"> Cambiar estado pedidos </a>
+                       <a class="dropdown-item" href="<?= site_url("Pedidos_C/muestraFormularioCambiarEstado") ?>"> Cambiar estado pedidos </a>
                        <a class="dropdown-item" href="#"> Importar/exportar xml </a>
                        <a class="dropdown-item" href="#"> Importar/exportar excel </a>
                    </div>
