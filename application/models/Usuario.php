@@ -19,7 +19,7 @@ class Usuario extends CI_Model
     public function dameDatosPersonalesCliente($id)
     {
         return $this->db
-            ->select("idUsuario, nombre, apellidos, dni, direccion, codigoPostal, provincia")
+            ->select("idUsuario, nombre, apellidos, dni, direccion, correo, codigoPostal, provincia")
             ->from("usuarios")
             ->where("idUsuario" , $id)
             ->get()

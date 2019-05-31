@@ -64,4 +64,9 @@ class Pedidos extends CI_Model
     {
         return $this->db->update('pedidos', array("estado" => $estado), array("idPedido" => $id));
     }
+
+    public function dameUnPedido($id) {
+        return $this->db->get_where("pedidos", array('idPedido' => $id))->result_array();
+    }
+
 }
