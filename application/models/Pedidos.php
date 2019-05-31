@@ -40,7 +40,14 @@ class Pedidos extends CI_Model
      */
     public function dameLineaPedido($id)
     {
-        return $this->db->get_where("lineaDePedido", array('idPedido' => $id))->result_array();
+        //return $this->db->get_where("lineaDePedido", array('idPedido' => $id))->result_array();
+        return $this->db
+            ->select("*")
+            ->from("lineaDePedido")
+            ->join("productos", "productos.idProducto=lineaDePedido.idProducto")
+            ->where(array("idPedido" => $id))
+            ->get()
+            ->result_array();
     }
 
     public function cancelar($id)
@@ -65,8 +72,8 @@ class Pedidos extends CI_Model
         return $this->db->update('pedidos', array("estado" => $estado), array("idPedido" => $id));
     }
 
-    public function dameUnPedido($id) {
+    public function dameUnPedido($id)
+    {
         return $this->db->get_where("pedidos", array('idPedido' => $id))->result_array();
     }
-
 }
