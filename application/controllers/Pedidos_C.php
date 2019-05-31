@@ -109,6 +109,11 @@ class Pedidos_C extends CI_Controller
         $this->listar();
     }
 
+    /**
+     * Muestra todos los pedidos, menu para el administrador.
+     *
+     * @return void
+     */
     public function muestraFormularioCambiarEstado()
     {
 
@@ -132,6 +137,11 @@ class Pedidos_C extends CI_Controller
         $this->load->view("plantillas/footer");
     }
 
+    /**
+     * Cambia el estado de cualquier pedido.
+     *
+     * @return void
+     */
     public function cambiarEstado()
     {
         // Obtengo el idPedido y el estado del pedido, valores enviados desde Ajax      
@@ -139,6 +149,10 @@ class Pedidos_C extends CI_Controller
         $estado = $this->input->post("estado");
 
         // Peticion al modelo para cambiar el estado del pedido.
-        $this->pedidos->cambiarEstado($estado, $id);
+        if ($this->pedidos->cambiarEstado($estado, $id)) {
+            echo  json_encode(array("actualizado" => "si"));
+        } else {
+            echo json_encode(array("actualizado" => "no"));
+        }
     }
 }

@@ -53,6 +53,13 @@ class Pedidos extends CI_Model
         return $this->db->get("pedidos")->result_array();
     }
 
+    /**
+     * Cambia el estado de un pedido, por parte del administrador.
+     *
+     * @param int $estado 1 = procesando, 2 = pendiente y 3 recibido.
+     * @param int $id identificador del pedido, su idPedido
+     * @return void
+     */
     public function cambiarEstado($estado, $id)
     {
         return $this->db->update('pedidos', array("estado" => $estado), array("idPedido" => $id));

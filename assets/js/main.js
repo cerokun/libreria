@@ -8,7 +8,9 @@ $(document).ready(function(){
     $( document).on( "change", ".estados", estados );
 });
 
-
+/**
+ * Actualiza estado pedido
+ */
 function estados() {
 
     // Obtengo el idPedido
@@ -36,7 +38,13 @@ function estados() {
         dataType : 'json',
 
         success: function(respuesta) {
-            alert( respuesta);
+             if ( respuesta["actualizado"] == "si") {
+                 $("#mensajePedidoActualizado").css("display", "block");             
+             } else {
+                 $("#mensajePedidoNoActualizado").css("display", "block");                         
+             }
+
+             setTimeout(function(){   $("#mensajePedidoActualizado").fadeOut(3000) }, 3000);
         }
        
     });
