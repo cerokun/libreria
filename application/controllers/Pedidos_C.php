@@ -10,7 +10,7 @@ class Pedidos_C extends CI_Controller
     {
         parent::__construct();
         $this->load->library("carrito");
-        $this->load->library("PDF");
+        $this->load->library("Factura");
         $this->load->helper("formulario");
         $this->load->model('categorias');
         $this->load->model('productos');
@@ -161,26 +161,23 @@ class Pedidos_C extends CI_Controller
     public function factura()
     {
 
-        /*
+        
         // Obtengo la clave primara del cliente, almacenada en la sesion.
         $idUsuario = $this->session->userdata['usuario']['idUsuario'];
         // Obtengo el identificador de pedido.
         $idPedido =  $this->uri->segment(3);;
         // Obtengo los datos del pedido y los datos basicos del cliente.
-        $datos["pedido"] = $this->pedidos->dameUnPedido($idPedido);
+        $datos = $this->pedidos->dameUnPedido($idPedido);
         // Obtengo todos los productos de ese pedido.
-        $datos["lineaDePedido"] = $this->pedidos->dameLineaPedido($idPedido);
-       */
-
-        $pdf = new PDF();
-        $pdf->AliasNbPages();
-        $pdf->AddPage();
-        $logo = "/var/www/libreria/assets/img/pagina/api.png";
-        $titulo = "Factura";
-        $pdf->cabecera($logo, $titulo);
-        $pdf->SetFont('Times', '', 12);
-        for ($i = 1; $i <= 40; $i++)
-            $pdf->Cell(0, 10, 'Generando factura cliente ' . $i, 0, 1);
-        $pdf->Output();
+        $datos2 = $this->pedidos->dameLineaPedido($idPedido);
+ 
+        $factura = new Factura();
+        $factura->AliasNbPages();
+        $factura->AddPage();
+        $factura->cabecera( $datos );
+        $columnas = array( "Codigo", "Producto", "Precio", "Cantidad", "Iva", "Importe" );
+        $factura->generarTabla($columnas, $datos2 );
+        $factura->Output();
+    
     }
 }

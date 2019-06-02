@@ -74,6 +74,6 @@ class Pedidos extends CI_Model
 
     public function dameUnPedido($id)
     {
-        return $this->db->get_where("pedidos", array('idPedido' => $id))->result_array();
+        return $this->db->get_where("pedidos", array('idPedido' => $id))->row_array();
     }
 }
