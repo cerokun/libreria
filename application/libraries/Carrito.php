@@ -61,7 +61,7 @@ class Carrito
 	 */
 	public function siHayStock($id)
 	{
-	    return isset( $this->libros[$id][0]["stock"] ) ? count( $this->libros[$id][0]["stock"] ) : "nada";
+	    return isset( $this->libros[$id][0]["stock"] ) ? count( $this->libros[$id][0]["stock"] ) : 0;
 	}
 
 	public function dameElStockDeEsteProducto( $id ) {
@@ -134,7 +134,7 @@ class Carrito
 	 * @param int $id clave primaria del producto.
 	 * @return boolean true si lo ha encontrado y false sino lo encontro.
 	 */
-	public function siExiste($id)
+	public function siElProductoYaEstaEnElCarrito($id)
 	{
 		return (isset($this->libros[$id])) ? true : false;
 	}

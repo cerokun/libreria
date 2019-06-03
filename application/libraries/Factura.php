@@ -114,10 +114,10 @@
             $this->SetFont('', 'B');
             $this->Cell(150, 6, "Subtotal: $subtotal $divisa", 0, 2);
             $this->SetTextColor(255, 0, 0);
-            $this->Cell(10, 6, "Impuestos: -$impuestos " . $divisa, 0, 2);
+            $this->Cell(10, 6, "Impuestos: $impuestos " . $divisa, 0, 2);
             $this->SetTextColor(128, 0, 128);
             // Calculo el total a pagar.
-            $total = $subtotal - $impuestos;
+            $total =  $impuestos + $subtotal;
             // Muestro el total a pagar y con la funcion iconv muestro el icono del la moneda.
             $this->Cell(10, 6, "Total: $total $divisa");
         }

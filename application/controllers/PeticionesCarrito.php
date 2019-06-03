@@ -18,11 +18,12 @@ class PeticionesCarrito extends CI_Controller
      */
     public function add()
     {
-
+        // Obtengo la clave primaria del libro.
         $id = $this->input->post("idProducto");
 
-        // Compruebo si este producto ya se encuentra almacenando en el carrito
-        if ($this->carrito->siExiste($id)) {
+        // Compruebo si producto ya estaba en el carrito.
+        if ($this->carrito->siElProductoYaEstaEnElCarrito($id) and $this->carrito->siHayStock($id)) {
+
             if ($this->carrito->incrementarCantidad($id)) {
                 $datos = array(
                     "estado" => "true",
@@ -31,16 +32,20 @@ class PeticionesCarrito extends CI_Controller
                 );
                 echo json_encode($datos);
             }
+
+            // El producto es nuevo, lo añado al carrito.
         } else {
             // Solicito los datos del producto
             $libro = $this->productos->damePorSuId($id);
             $libro[0]["cantidad"] = 1;
             if ($this->carrito->añadir($id, $libro)) {
+
                 $datos = array(
                     "estado" => "true",
                     "total" => $this->carrito->numeroTotalProductos(),
                     "stock" => $this->carrito->dameElStockDeEsteProducto($id)
                 );
+
                 echo json_encode($datos);
             }
         }

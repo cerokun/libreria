@@ -131,6 +131,7 @@ function addCarrito() {
                   
              if (respuesta["estado"] === "true" ) {
                 $("#numeroDeProductos").text( respuesta["total"] );
+                //$().text( respuesta["stock"] ); obtengo el stock que me tiene el producto.
              }
              else {
                  alert("no se ha podido añadir al carrito, mensaje provisional");
