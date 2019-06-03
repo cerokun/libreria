@@ -26,7 +26,7 @@
                         <div class="col-sm-2 d-flex pb-2">
                             <div class="card card-block">
 
-                                <img class="card-img-top" src="<?= base_url()  . "assets/img/libros/" . $libros[$contador]["imagen"] ?>">
+                                <img class="card-img-top" src="<?= base_url()  . "assets/img/libros/" . $libros[$contador]["imagen"] ?>" title="Stock: <?= $libros[$contador]["stock"]   ?>">
                                 <div class="card-body">
                                     <h5 class="card-title"> <?= $libros[$contador]["nombre"] ?> </h5>
                                     <p class="card-text"> <?= substr($libros[$contador]["descripcion"], 0, 55) ?>... </p>
@@ -36,7 +36,12 @@
 
                                 </ul>
                                 <div class="card-body">
-                                    <button class="btn btn-primary addCarrito" id="<?= $libros[$contador]['idProducto']  ?>"> <i class="fas fa-cart-plus"></i> Añadir </button>
+
+                                    <?php if ($libros[$contador]["stock"]) : ?>
+                                        <button class="btn btn-primary addCarrito" id="<?= $libros[$contador]['idProducto']  ?>"> <i class="fas fa-cart-plus"></i> Añadir </button>
+                                    <?php else : ?>
+                                        <button disabled class="btn btn-primary"> <i class="fas fa-cart-plus"></i> Añadir </button>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
