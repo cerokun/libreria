@@ -81,25 +81,28 @@
             $subtotal = 0;
             // Aqui guardare el total impuestos
             $impuestos = 0;
+            // Importe iva
+            $importeIva = 0;
 
 
             // Recorro la lenea de pedido.
             foreach ($data as $row) {
+
+                $importeIva = (($row["precio"] * $row["cantidad"]) * $row["iva"]) / 100;
 
                 $this->Cell($w[0], 6, $row["idItem"], 'LR', 0, 'L', $fill);
                 $this->Cell($w[1], 6, utf8_decode($row["nombre"]), 'LR', 0, 'L', $fill);
                 $this->Cell($w[2], 6, $row["precio"] . $divisa, 'LR', 0, 'R', $fill);
                 $this->Cell($w[3], 6, $row["cantidad"], 'LR', 0, 'R', $fill);
                 $this->Cell($w[4], 6, $row["iva"] . "%", 'LR', 0, 'R', $fill);
-                $this->Cell($w[5], 6, ($row["precio"] * $row["iva"]  / 100) . $divisa, 'LR', 0, 'R', $fill);
+                $this->Cell($w[5], 6, $importeIva . $divisa, 'LR', 0, 'R', $fill);
                 $this->Cell($w[6], 6, ($row["precio"] * $row["cantidad"]) . $divisa, 'LR', 0, 'R', $fill);
-
 
                 $this->Ln();
                 $fill = !$fill;
 
                 // Calculo el total de impuestos.
-                $impuestos += ($row["precio"] * $row["iva"]  / 100);
+                $impuestos += $importeIva;
                 // Calculo el subtotal
                 $subtotal += $row["precio"] * $row["cantidad"];
             }
@@ -125,7 +128,7 @@
         {
             // Position at 1.5 cm from bottom
             $this->SetY(-15);
-            $this->Image(base_url() . "assets/img/pagina/pieFactura.png", 0, 115, 300);
+            $this->Image(base_url() . "assets/img/pagina/pieFactura.png", 0, 140, 300);
             $this->SetTextColor(255, 255, 255);
             // Arial italic 8
             $this->SetFont('Arial', 'I', 8);
