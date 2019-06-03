@@ -20,10 +20,15 @@ class PeticionesCarrito extends CI_Controller
     {
 
         $id = $this->input->post("idProducto");
+
         // Compruebo si este producto ya se encuentra almacenando en el carrito
         if ($this->carrito->siExiste($id)) {
             if ($this->carrito->incrementarCantidad($id)) {
-                $datos = array("estado" => "true", "total" => $this->carrito->numeroTotalProductos());
+                $datos = array(
+                    "estado" => "true",
+                    "total" => $this->carrito->numeroTotalProductos(),
+                    "stock" => $this->carrito->dameElStockDeEsteProducto($id)
+                );
                 echo json_encode($datos);
             }
         } else {
@@ -31,7 +36,11 @@ class PeticionesCarrito extends CI_Controller
             $libro = $this->productos->damePorSuId($id);
             $libro[0]["cantidad"] = 1;
             if ($this->carrito->añadir($id, $libro)) {
-                $datos = array("estado" => "true",  "total" => $this->carrito->numeroTotalProductos());
+                $datos = array(
+                    "estado" => "true",
+                    "total" => $this->carrito->numeroTotalProductos(),
+                    "stock" => $this->carrito->dameElStockDeEsteProducto($id)
+                );
                 echo json_encode($datos);
             }
         }

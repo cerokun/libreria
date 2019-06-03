@@ -53,6 +53,21 @@ class Carrito
 		}
 	}
 
+	/**
+	 * Comprueba si un producto tiene stock.
+	 *
+	 * @param int $id clave primaria del producto.
+	 * @return void
+	 */
+	public function siHayStock($id)
+	{
+	    return isset( $this->libros[$id][0]["stock"] ) ? count( $this->libros[$id][0]["stock"] ) : "nada";
+	}
+
+	public function dameElStockDeEsteProducto( $id ) {
+		return isset($this->libros[$id][0]["stock"]) ? $this->libros[$id][0]["stock"] : 0;
+	}
+
 
 	/**
 	 * Modifica campos sueltos del producto
