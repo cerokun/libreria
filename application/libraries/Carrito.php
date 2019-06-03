@@ -61,10 +61,11 @@ class Carrito
 	 */
 	public function siHayStock($id)
 	{
-	    return isset( $this->libros[$id][0]["stock"] ) ? count( $this->libros[$id][0]["stock"] ) : 0;
+		return ($this->libros[$id][0]["stock"]  > 0) ? true  : false;
 	}
 
-	public function dameElStockDeEsteProducto( $id ) {
+	public function dameElStockDeEsteProducto($id)
+	{
 		return isset($this->libros[$id][0]["stock"]) ? $this->libros[$id][0]["stock"] : 0;
 	}
 

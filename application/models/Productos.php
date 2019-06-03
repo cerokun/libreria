@@ -72,4 +72,19 @@ class Productos extends CI_Model
     {
         return ($this->db->update_batch("productos", $items, "idProducto")) ? true : false;
     }
+
+    /**
+     * Me dice el stock que tiene l producto.
+     *
+     * @param int $id clave primara del producto
+     * @return int valor del stock.
+     */
+    public function siHayStock($id)
+    {
+        $this->db->select('stock');
+        $this->db->from('productos');
+        $this->db->where('idProducto', $id);
+        $query = $this->db->get()->row_array();
+        return $query;
+    }
 }
