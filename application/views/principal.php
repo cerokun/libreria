@@ -26,7 +26,10 @@
                         <div class="col-sm-2 d-flex pb-2">
                             <div class="card card-block">
 
-                                <img class="card-img-top" src="<?= base_url()  . "assets/img/libros/" . $libros[$contador]["imagen"] ?>" title="Stock: <?= $libros[$contador]["stock"]   ?>">
+
+                                <img class="card-img-top" src="<?= base_url() . "assets/img/libros/" . $libros[$contador]["imagen"] ?>" title="Stock: <?= $libros[$contador]["stock"] ?>">
+
+
                                 <div class="card-body">
                                     <h5 class="card-title"> <?= $libros[$contador]["nombre"] ?> </h5>
                                     <p class="card-text"> <?= substr($libros[$contador]["descripcion"], 0, 55) ?>... </p>
@@ -74,3 +77,6 @@
 
 
 </div> <!-- Final del contenedor- bdoy -->
+
+
+ 

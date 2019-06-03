@@ -8,9 +8,8 @@ class PeticionesCarrito extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-
-        $this->load->model('productos');
         $this->load->library("carrito");
+        $this->load->model('productos');
     }
     /**
      * Obtengo la clave primara del producto.
@@ -19,8 +18,8 @@ class PeticionesCarrito extends CI_Controller
      */
     public function add()
     {
-        $id = $this->input->post("idProducto");
 
+        $id = $this->input->post("idProducto");
         // Compruebo si este producto ya se encuentra almacenando en el carrito
         if ($this->carrito->siExiste($id)) {
             if ($this->carrito->incrementarCantidad($id)) {
@@ -38,7 +37,8 @@ class PeticionesCarrito extends CI_Controller
         }
     }
 
-    public function eliminar() {
+    public function eliminar()
+    {
         $id = $this->input->post("idProducto");
         $this->carrito->eliminar($id);
         $this->listar();
