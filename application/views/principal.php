@@ -85,8 +85,4 @@
 
 </div> <!-- Final del contenedor- bdoy -->
 
-<?php
-echo "<pre>";
-print_r($this->session->userdata("carrito"));
-echo "</pre>";
-?>
+ 

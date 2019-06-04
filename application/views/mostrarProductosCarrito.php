@@ -34,9 +34,9 @@
 
         <!-- Compruebo si el usuario se ha logeado -->
         <?php if ($this->session->has_userdata('usuario')) : ?>
-            <a class="btn btn-success" href="<?= site_url("Pedidos_C/nuevo") ?>"> <i class="fas fa-cart-arrow-down"></i> Realizar pedido </a>
+            <a class="btn btn-success" href="<?= site_url("Resumen/pedido") ?>"> <i class="fas fa-cart-arrow-down"></i> Tramitar pedido </a>
         <?php else : ?>
-            <a class="btn btn-success" href="<?= site_url("ComprobarLogin/mostrarFormulario") ?>"> <i class="fas fa-shopping-cart"></i> Realizar pedido </a>
+            <a class="btn btn-success" href="<?= site_url("ComprobarLogin/mostrarFormulario") ?>"> <i class="fas fa-shopping-cart"></i> Tramitar pedido </a>
         <?php endif; ?>
 
     <?php else : ?>
