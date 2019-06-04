@@ -42,7 +42,7 @@ class Pedidos_C extends CI_Controller
             // Guardo en un array, los stock de los productos ya actualizados.
             $stocks[] = array(
                 "idProducto" => $libro[0]["idProducto"],
-                "stock" =>  $libro[0]["stock"] - $libro[0]["cantidad"]
+                "stock" =>  $libro[0]["stock"]
             );
             // Guardo en un array, todos los productos del carrito de compra.
             $items[] = array(
@@ -61,6 +61,7 @@ class Pedidos_C extends CI_Controller
         } else {
             echo "ERROR";
         }
+        
     }
 
     public function listar()

@@ -140,7 +140,7 @@ function addCarrito() {
                 // Desactivo el boton añadir de dicho producto.
                 $("button#"+id).attr('disabled', true);
                 // Oculto la ventan tras unos segundos
-                setTimeout(function(){  $("#ventanaAlertCarrito").fadeOut(3000) }, 3000);
+                setTimeout(function(){  $("#ventanaAlertCarrito").fadeOut(3000) }, 6000);
 
              }
            
