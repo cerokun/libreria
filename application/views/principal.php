@@ -13,6 +13,13 @@
 
     ?>
 
+    <!-- Final if principal, comprueba si hay algo -->
+    <div class="alert alert-danger text-center" style="display:none" id="ventanaAlertCarrito">
+        <strong> <i class="fas fa-exclamation-triangle"></i> ¡Atenciòn! </strong> <p class="text-center" id="avisoDelCarrito">    </p>
+    </div>
+
+
+
     <?php if ($libros) : ?>
 
         <?php for ($filas = 0; $filas < $mostrarPorFila; $filas++) : ?>
@@ -78,5 +85,8 @@
 
 </div> <!-- Final del contenedor- bdoy -->
 
-
- 
+<?php
+echo "<pre>";
+print_r($this->session->userdata("carrito"));
+echo "</pre>";
+?>

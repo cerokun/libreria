@@ -46,7 +46,7 @@ class Carrito
 	{
 		if (is_array($nuevo) and count($nuevo) > 0) {
 			$this->libros[$id] = $nuevo;
-			$this->actualizar();
+			$this->decrementarStock($id);
 			return true;
 		} else {
 			return false;
@@ -88,12 +88,24 @@ class Carrito
 	{
 		if (is_numeric($id)) {
 			$this->libros[$id][0]["cantidad"]++;
+			$this->decrementarStock($id);
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function decrementarStock($id)
+	{
+		if (is_numeric($id)) {
+			$this->libros[$id][0]["stock"]--;
 			$this->actualizar();
 			return true;
 		} else {
 			return false;
 		}
 	}
+
 
 
 	public function numeroTotalProductos()

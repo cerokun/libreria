@@ -131,10 +131,17 @@ function addCarrito() {
                   
              if (respuesta["estado"] === "true" ) {
                 $("#numeroDeProductos").text( respuesta["total"] );
-                //$().text( respuesta["stock"] ); obtengo el stock que me tiene el producto.
              }
-             else {
-                 alert("no se ha podido añadir al carrito, mensaje provisional");
+             else if ( respuesta["estado"] === "false") {
+                 // Mensaje que mostrare al cliente.
+                $("#avisoDelCarrito").text( respuesta["aviso"] );
+                // Muestro la ventana de alerta que estaba oculta.
+                 $("#ventanaAlertCarrito").css("display", "block");                             
+                // Desactivo el boton añadir de dicho producto.
+                $("button#"+id).attr('disabled', true);
+                // Oculto la ventan tras unos segundos
+                setTimeout(function(){  $("#ventanaAlertCarrito").fadeOut(3000) }, 3000);
+
              }
            
         }

@@ -33,13 +33,17 @@ class PeticionesCarrito extends CI_Controller
                         "total" => $this->carrito->numeroTotalProductos(),
                         "stock" => $this->carrito->dameElStockDeEsteProducto($id)
                     );
-                    echo json_encode($datos);
-                }
-                else {
-                    echo "no se pudo incrementar la cantidad del producto que ya estaba en el carrito";
+                } else {
+                    $datos = array(
+                        "estado" => "false",
+                        "aviso" => "Algo salio mal a la hora de guardarlo en el carrito."
+                    );
                 }
             } else {
-                echo "NO HAY STOCK SUFICIENTE";
+                $datos = array(
+                    "estado" => "false",
+                    "aviso" => "Acabas de alcanzar el limite disponible para este articulo, el stock esta a cero."
+                );
             }
         } // El producto no esta en el carrito.
         else {
@@ -59,48 +63,21 @@ class PeticionesCarrito extends CI_Controller
                         "stock" => $this->carrito->dameElStockDeEsteProducto($id) // Me dice el stock del producto que acabo de añadir.
                     );
                     // Envio los datos.
-                    echo json_encode($datos);
+                } else {
+                    $datos = array(
+                        "estado" => "false",
+                        "aviso" => "Lo setimos, pero algo salio mal, a la hora de guardar el nuevo producto en el carrito de compra."
+                    );
                 }
-                else {
-                    echo "algo salio mal, nose ha podido añadir un nuevo producto al carrto";
-                }
-            }
-            else {
-                echo "El producto no estaba en el carrtio y no tiene stock, no lo guardo.";
+            } else {
+                $datos = array(
+                    "estado" => "false",
+                    "aviso" => "Lo sentimos, no se ha podido añadir, este producto nuevo al carrito de compra, su stock esta a cero."
+                );
             }
         }
-
-
-        /*
-        // Compruebo si producto ya estaba en el carrito.
-        if ($this->carrito->siElProductoYaEstaEnElCarrito($id) and $this->carrito->siHayStock($id)) {
-
-            if ($this->carrito->incrementarCantidad($id)) {
-                $datos = array(
-                    "estado" => "true",
-                    "total" => $this->carrito->numeroTotalProductos(),
-                    "stock" => $this->carrito->dameElStockDeEsteProducto($id)
-                );
-                echo json_encode($datos);
-            }
-
-            // El producto es nuevo, lo añado al carrito.
-        } else {
-            // Solicito los datos del producto
-            $libro = $this->productos->damePorSuId($id);
-            $libro[0]["cantidad"] = 1;
-            if ($this->carrito->añadir($id, $libro)) {
-
-                $datos = array(
-                    "estado" => "true",
-                    "total" => $this->carrito->numeroTotalProductos(),
-                    "stock" => $this->carrito->dameElStockDeEsteProducto($id)
-                );
-
-                echo json_encode($datos);
-            }
-        }
-        */
+        // Envio la respuesta.
+        echo json_encode($datos);
     }
 
     public function eliminar()
