@@ -26,7 +26,7 @@ class Pedidos_C extends CI_Controller
      */
     public function nuevo()
     {
-/*
+
         // 1º Obtengo el id del cliente
         $id = $this->session->userdata['usuario']['idUsuario'];
         // 2º Obtengo los datos personales del cliente.
@@ -36,8 +36,20 @@ class Pedidos_C extends CI_Controller
         // 4º Obtengo los productos almacenados en el carrito de compra.
         $listaProductos = $this->carrito->dameTodosLosProductos();
 
+
         // Recorro la lista de productos
         foreach ($listaProductos as $libro) {
+
+            // Obtengo el subtotal, precio por cantidad, sin aplicar ni el descuento ni el iva.
+            $precioSinDescuentoYSinIva = ($libro[0]["precio"] * $libro[0]["cantidad"]);
+            // Calculo el total descuento.
+            $descuento = ($precioSinDescuentoYSinIva * $libro[0]["descuento"]) / 100;
+            // Aplico el descuento al precio.
+            $precionConDescuento = $precioSinDescuentoYSinIva - $descuento;
+            // Calculo el iva del precio ya con su descuento.
+            $iva = ($precionConDescuento * $libro[0]["iva"]) / 100;
+            // Precio final
+            $precio = $precionConDescuento + $iva;
 
             // Guardo en un array, los stock de los productos ya actualizados.
             $stocks[] = array(
@@ -46,7 +58,7 @@ class Pedidos_C extends CI_Controller
             );
             // Guardo en un array, todos los productos del carrito de compra.
             $items[] = array(
-                "precio" =>  $libro["precio"] - ((($libro[0]["precio"] * $libro[0]["cantidad"]) * 4) / 100), // Calculo el precio total con el descuento aplicado
+                "precio" =>  $precio, // Calculo el precio total con el descuento aplicado y el iva.
                 "cantidad" =>  $libro[0]["cantidad"],
                 "idPedido" => $idPedido,
                 "idProducto" => $libro[0]["idProducto"]
@@ -61,7 +73,6 @@ class Pedidos_C extends CI_Controller
         } else {
             echo "ERROR";
         }
-        */
     }
 
     public function listar()

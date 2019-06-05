@@ -58,7 +58,7 @@ $impuestos = 0;
                         <th> Importe iva </th>
                         <th> Descuento % </th>
                         <th> Importe % </th>
-                        <th> Total </th>
+                        <th> Subtotal </th>
                         <th> Eliminar </th>
                     </tr>
                 </thead>
@@ -110,7 +110,7 @@ $impuestos = 0;
             <hr>
             <hr>
 
-            <h2 style="color:deeppink" class="font-weight-bold"> <?= ($subtotal + $impuestos) - $descuentos ?> € </h2>
+            <h2 style="color:deeppink" class="font-weight-bold"> <?= ($subtotal - $descuentos) + $impuestos ?> € </h2>
 
             <a href="<?= site_url("Pedidos_C/nuevo") ?>"> <img src="<?= base_url() . 'assets/img/pagina/paypal.png' ?>" width="60%"> </a>
 
