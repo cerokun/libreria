@@ -15,7 +15,8 @@
 
     <!-- Final if principal, comprueba si hay algo -->
     <div class="alert alert-danger text-center" style="display:none" id="ventanaAlertCarrito">
-        <strong> <i class="fas fa-exclamation-triangle"></i> ¡Atenciòn! </strong> <p class="text-center" id="avisoDelCarrito">    </p>
+        <strong> <i class="fas fa-exclamation-triangle"></i> ¡Atenciòn! </strong>
+        <p class="text-center" id="avisoDelCarrito"> </p>
     </div>
 
 
@@ -42,7 +43,29 @@
                                     <p class="card-text"> <?= substr($libros[$contador]["descripcion"], 0, 55) ?>... </p>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"> <?= $libros[$contador]["precio"] ?> €</li>
+
+                                    <?php
+                                    // Esto es el precio sin descuento y sin iva.
+                                    $precio =  $libros[$contador]["precio"];
+                                    // Descuento
+                                    $descuento = ($precio * $libros[$contador]["descuento"]) / 100;
+                                    // Aplico el descuento al precio sin iva.
+                                    $precionConDescuento = ($precio - $descuento);
+                                    // Calculo el iva.
+                                    $impuesto = ($precionConDescuento * $libros[$contador]["iva"]) / 100;
+                                    // Aplico el impuesto, iva
+                                    $precioFinal = $precionConDescuento + $impuesto;
+
+                                    ?>
+
+                                    <li class="list-group-item">
+                                        <span style="text-decoration: line-through"> <?= $precio ?> € </span>
+                                        <span style="color:red"> <?= $libros[$contador]["descuento"] ?> % </span>
+                                        <span style="color:blue"><strong> <?= round($precioFinal, 2) ?> € </strong> </span>
+
+                                    </li>
+
+
 
                                 </ul>
                                 <div class="card-body">
@@ -84,5 +107,3 @@
 
 
 </div> <!-- Final del contenedor- bdoy -->
-
- 

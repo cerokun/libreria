@@ -40,9 +40,8 @@ class Pedidos extends CI_Model
      */
     public function dameLineaPedido($id)
     {
-        //return $this->db->get_where("lineaDePedido", array('idPedido' => $id))->result_array();
         return $this->db
-            ->select("*")
+            ->select("lineaDePedido.idProducto, productos.nombre, lineaDePedido.precio, lineaDePedido.cantidad, iva, idItem")
             ->from("lineaDePedido")
             ->join("productos", "productos.idProducto=lineaDePedido.idProducto")
             ->where(array("idPedido" => $id))
