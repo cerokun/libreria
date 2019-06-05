@@ -8,6 +8,7 @@
                 <tr>
                     <th> IdProducto </th>
                     <th> Producto </th>
+                    <th> Precio </th>
                     <th> Cantidad </th>
                     <th> Total </th>
                 </tr>
@@ -19,8 +20,9 @@
 
                         <td> <?= $value["idProducto"] ?> </td>
                         <td> <?= $value["nombre"] ?> </td>
+                        <td> <?= $value["precio"] ?> € </td>
                         <td> <?= $value["cantidad"] ?> </td>
-                        <td> <?= $value["precio"]   ?> € </td>
+                        <td> <?= $value["precio"] * $value["cantidad"]  ?> € </td>
 
                     <tr>
 

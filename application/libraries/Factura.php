@@ -66,7 +66,7 @@
             $this->SetLineWidth(.3);
             $this->SetFont('', 'B');
             // Header
-            $w = array(15, 95, 15, 19, 10, 22, 20);
+            $w = array(15, 50, 15, 22, 21, 22, 10, 20, 15);
             for ($i = 0; $i < count($header); $i++)
                 $this->Cell($w[$i], 7, $header[$i], 1, 0, 'C', true);
             $this->Ln();
@@ -79,32 +79,29 @@
             $fill = false;
             // Aqui guardare el subtotal
             $subtotal = 0;
-            // Aqui guardare el total impuestos
-            $impuestos = 0;
-            // Importe iva
-            $importeIva = 0;
-
 
             // Recorro la lenea de pedido.
             foreach ($data as $row) {
 
-                $importeIva = (($row["precio"] * $row["cantidad"]) * $row["iva"]) / 100;
+                // Aplicando descuento producto
+                $descuento = ($row["precio"] * $row["descuento"]) / 100;
+                // Obtengo el subtotal con el descuento.
+                $subtotal = $descuento  * $row["cantidad"];
+                // Obtengo el importe iva
+                $importeIva = ($subtotal * $row["iva"]) / 100;
 
                 $this->Cell($w[0], 6, $row["idItem"], 'LR', 0, 'L', $fill);
                 $this->Cell($w[1], 6, utf8_decode($row["nombre"]), 'LR', 0, 'L', $fill);
                 $this->Cell($w[2], 6, $row["precio"] . $divisa, 'LR', 0, 'R', $fill);
-                $this->Cell($w[3], 6, $row["cantidad"], 'LR', 0, 'R', $fill);
-                $this->Cell($w[4], 6, $row["iva"] . "%", 'LR', 0, 'R', $fill);
-                $this->Cell($w[5], 6, $importeIva . $divisa, 'LR', 0, 'R', $fill);
-                $this->Cell($w[6], 6, ($row["precio"] * $row["cantidad"]) . $divisa, 'LR', 0, 'R', $fill);
+                $this->Cell($w[3], 6, $row["descuento"] . "%", 'LR', 0, 'R', $fill);
+                $this->Cell($w[4], 6, $row["cantidad"], 'LR', 0, 'R', $fill);
+                $this->Cell($w[5], 6, $subtotal . $divisa, 'LR', 0, 'R', $fill);
+                $this->Cell($w[6], 6, $row["iva"] . "%", 'LR', 0, 'R', $fill);
+                $this->Cell($w[7], 6, $importeIva . "" . $divisa, 'LR', 0, 'R', $fill);
+                $this->Cell($w[8], 6, $subtotal + $importeIva . $divisa, 'LR', 0, 'R', $fill);
 
                 $this->Ln();
                 $fill = !$fill;
-
-                // Calculo el total de impuestos.
-                $impuestos += $importeIva;
-                // Calculo el subtotal
-                $subtotal += $row["precio"] * $row["cantidad"];
             }
 
             // Cierra el borde de la tabla
@@ -112,14 +109,14 @@
             $this->Ln();
             $this->SetX(173);
             $this->SetFont('', 'B');
-            $this->Cell(150, 6, "Subtotal: $subtotal $divisa", 0, 2);
+            //  $this->Cell(150, 6, "Subtotal: $subtotal $divisa", 0, 2);
             $this->SetTextColor(255, 0, 0);
-            $this->Cell(10, 6, "Impuestos: $impuestos " . $divisa, 0, 2);
+            //  $this->Cell(10, 6, "Impuestos: $impuestos " . $divisa, 0, 2);
             $this->SetTextColor(128, 0, 128);
             // Calculo el total a pagar.
-            $total =  $impuestos + $subtotal;
+
             // Muestro el total a pagar y con la funcion iconv muestro el icono del la moneda.
-            $this->Cell(10, 6, "Total: $total $divisa");
+            //$this->Cell(10, 6, "Total: $total $divisa");
         }
 
 

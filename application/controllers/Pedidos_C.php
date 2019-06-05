@@ -33,23 +33,11 @@ class Pedidos_C extends CI_Controller
         $usuario = $this->usuario->dameDatosPersonalesCliente($id);
         // 3º Creo un pedido nuevo y obtengo la clave primaria del pedido, osea el idPedido.
         $idPedido = $this->pedidos->crear($usuario);
-        // 4º Obtengo los productos almacenados en el carrito de compra.
+        // 4º Obtengo los productos almacenados en el carrito de compra de la sesion.
         $listaProductos = $this->carrito->dameTodosLosProductos();
-
 
         // Recorro la lista de productos
         foreach ($listaProductos as $libro) {
-
-            // Obtengo el subtotal, precio por cantidad, sin aplicar ni el descuento ni el iva.
-            $precioSinDescuentoYSinIva = ($libro[0]["precio"] * $libro[0]["cantidad"]);
-            // Calculo el total descuento.
-            $descuento = ($precioSinDescuentoYSinIva * $libro[0]["descuento"]) / 100;
-            // Aplico el descuento al precio.
-            $precionConDescuento = $precioSinDescuentoYSinIva - $descuento;
-            // Calculo el iva del precio ya con su descuento.
-            $iva = ($precionConDescuento * $libro[0]["iva"]) / 100;
-            // Precio final
-            $precio = $precionConDescuento + $iva;
 
             // Guardo en un array, los stock de los productos ya actualizados.
             $stocks[] = array(
@@ -58,13 +46,12 @@ class Pedidos_C extends CI_Controller
             );
             // Guardo en un array, todos los productos del carrito de compra.
             $items[] = array(
-                "precio" =>  $precio, // Calculo el precio total con el descuento aplicado y el iva.
+                "precio" =>  $libro[0]["precio"],  
                 "cantidad" =>  $libro[0]["cantidad"],
                 "idPedido" => $idPedido,
                 "idProducto" => $libro[0]["idProducto"]
             );
         }
-
 
         // Inserto los items en la tabla linea de pedido.
         if ($this->pedidos->insertarProductosEnLineaDePedido($items) and  $this->productos->actualizarStock($stocks)) {
@@ -173,7 +160,6 @@ class Pedidos_C extends CI_Controller
     public function factura()
     {
 
-
         // Obtengo la clave primara del cliente, almacenada en la sesion.
         $idUsuario = $this->session->userdata['usuario']['idUsuario'];
         // Obtengo el identificador de pedido.
@@ -187,7 +173,7 @@ class Pedidos_C extends CI_Controller
         $factura->AliasNbPages();
         $factura->AddPage();
         $factura->cabecera($datos);
-        $columnas = array("Codigo", "Producto", "Precio", "Cantidad", "Iva", "Importe iva", "Total");
+        $columnas = array("Codigo", "Producto", "Precio", "Descuento","Cantidad", "Subtotal", "Iva", "Importe iva", "Total");
         $factura->generarTabla($columnas, $datos2);
         $factura->Output();
     }

@@ -59,13 +59,16 @@
                                     ?>
 
                                     <li class="list-group-item">
-                                        <span style="text-decoration: line-through"> <?= $precio ?> € </span>
-                                        <span style="color:red"> <?= $libros[$contador]["descuento"] ?> % </span>
-                                        <span style="color:blue"><strong> <?= round($precioFinal, 2) ?> € </strong> </span>
+
+                                        <?php if ($libros[$contador]["descuento"] == 0) : ?>
+                                            <span style="color:blue"><strong> <?= round($precioFinal, 2) ?> € </strong> </span>
+                                        <?php else : ?>
+                                            <span style="text-decoration: line-through"> <?= $precio ?> € </span>
+                                            <span style="color:red"> <?= $libros[$contador]["descuento"] ?> % </span>
+                                            <span style="color:blue"><strong> <?= round($precioFinal, 2) ?> € </strong> </span>
+                                        <?php endif; ?>
 
                                     </li>
-
-
 
                                 </ul>
                                 <div class="card-body">

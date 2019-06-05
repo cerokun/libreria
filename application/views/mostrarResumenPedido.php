@@ -54,12 +54,10 @@ $impuestos = 0;
                         <th> Producto </th>
                         <th> Precio unitario </th>
                         <th> Cantidad </th>
+                        <th> Descuento % </th>
                         <th> Iva </th>
                         <th> Importe iva </th>
-                        <th> Descuento % </th>
-                        <th> Importe % </th>
-                        <th> Subtotal </th>
-                        <th> Eliminar </th>
+                        <th> Total </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,12 +65,7 @@ $impuestos = 0;
                     <?php foreach ($libros as $key => $value) : ?>
 
                         <?php
-
-
-
-
                         $importeIva = (($value[0]["precio"] * $value[0]["cantidad"]) * $value[0]["iva"]) / 100;
-
                         $subtotal +=  $value[0]["cantidad"] * $value[0]["precio"];
                         $descuentoLinea = (($value[0]["cantidad"] * $value[0]["precio"]) *  $value[0]["descuento"])  / 100;
                         $descuentos += $descuentoLinea;
@@ -84,12 +77,10 @@ $impuestos = 0;
                             <td> <?= $value[0]["nombre"] ?> </td>
                             <td> <?= $value[0]["precio"] ?> € </td>
                             <td> <?= $value[0]["cantidad"] ?> </td>
+                            <td> <?= $value[0]["descuento"] ?> % </td>
                             <td> <?= $value[0]["iva"]  ?> % </td>
                             <td id="importeIva"> <?= $importeIva  ?> € </td>
-                            <td> <?= $value[0]["descuento"] ?> % </td>
-                            <td id="importeDescuento"> <?= $descuentoLinea  ?> </td>
                             <td> <?= $value[0]["cantidad"] * $value[0]["precio"] ?> € </td>
-                            <td class="eliminaEsteProductoDelCarrito" id="<?= $value[0]["idProducto"] ?>"> <i class="fas fa-trash-alt" style="color:red"></i> </td>
                         <tr>
 
                             <?php $importeIva = 0; ?>
@@ -102,15 +93,14 @@ $impuestos = 0;
             <p class="titulo"> Resumen del pedido </p>
             <hr>
 
-            <p style="color:seagreen"> <strong> Subtotal: <?= $subtotal ?> € </strong> </p>
-            <p style="color:red"> <strong> Impuestos: +<?= $impuestos ?> € </strong> </p>
-            <p style="color:blue"> <strong> Decuentos: -<?= $descuentos ?> € </strong> </p>
+            <p style="color:seagreen"> <strong> Subtotal: <?= $subtotal - $impuestos ?> € </strong> </p> 
+            <p style="color:red"> <strong> Importe IVA: +<?= $impuestos ?> € </strong> </p>
             <br><br><br><br><br><br><br><br><br><br><br><br><br>
             <h3 id="totalAPagar"> Total a pagar </h3>
             <hr>
             <hr>
 
-            <h2 style="color:deeppink" class="font-weight-bold"> <?= ($subtotal - $descuentos) + $impuestos ?> € </h2>
+            <h2 style="color:deeppink" class="font-weight-bold"> <?= $subtotal   ?> € </h2>
 
             <a href="<?= site_url("Pedidos_C/nuevo") ?>"> <img src="<?= base_url() . 'assets/img/pagina/paypal.png' ?>" width="60%"> </a>
 
