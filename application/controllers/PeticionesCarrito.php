@@ -12,7 +12,7 @@ class PeticionesCarrito extends CI_Controller
         $this->load->model('productos');
     }
     /**
-     * Obtengo la clave primara del producto.
+     * Guardo el libro en el carrito de compra.
      *
      * @return void
      */
@@ -52,6 +52,21 @@ class PeticionesCarrito extends CI_Controller
             if ($this->productos->siHayStock($id)) {
                 // Obtengo el libro.
                 $libro = $this->productos->damePorSuId($id);
+
+
+                // Esto es el precio sin descuento y sin iva.
+                $precio =  $libro[0]["precio"];
+                // Descuento
+                $descuento = ($precio * $libro[0]["descuento"]) / 100;
+                // Aplico el descuento al precio sin iva.
+                $precionConDescuento = ($precio - $descuento);
+                // Calculo el iva.
+                $impuesto = ($precionConDescuento * $libro[0]["iva"]) / 100;
+                // Aplico el impuesto, iva
+                $precioFinal = $precionConDescuento + $impuesto;
+
+
+                $libro[0]["precio"] = $precioFinal;
                 // Añado una nueva variable al array, para controlar la cantidad de cada producto añadido al carro.
                 $libro[0]["cantidad"] = 1;
                 // Guarda el producto en el carrito.
