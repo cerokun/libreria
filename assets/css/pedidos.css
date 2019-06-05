@@ -1,0 +1,66 @@
+.titulo {
+	font-weight: bold;
+}
+
+hr {
+	width: 100%;
+	height: 3px;
+	border-color: transparent;
+}
+
+#direccionFacturacion hr {
+	background-color: blue;
+}
+
+#modoDePago hr {
+	background-color: orange;
+}
+
+#direccionEnvio hr {
+	background-color: green;
+}
+
+#listaProductos hr {
+	background-color: #5f94ba;
+}
+
+#totalAPagar hr {
+	background-color: violet;
+}
+
+#resumenPedido hr {
+	background-color: red;
+}
+
+#listaProductos {
+	text-align: left;
+}
+
+#direccionFacturacion {
+	text-align: left;
+}
+
+#direccionEnvio {
+	text-align: right;
+}
+
+#modoDePago img {
+	width: 102%;
+}
+
+#totalAPagar {
+	color: #aeacac;
+	font-weight: bold;
+}
+
+.table .thead-dark th {
+	background-color: #f57f20;
+}
+
+#importeIva {
+	color: red;
+}
+
+#importeDescuento {
+	color: blue;
+}

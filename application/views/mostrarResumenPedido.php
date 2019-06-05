@@ -6,12 +6,20 @@ $impuestos = 0;
 
 ?>
 
+<style>
+    body {
+        background-image: url("<?= base_url()  . "assets/img/pagina/cabeceraPago.png" ?>");
+        background-repeat: no-repeat;
+    }
+</style>
+
 <div class="container-fluid text-center" id="contenedor">
 
     <div class="row">
-        <div class="col-4">
-            <p class="font-weight-bold"> Direccion de facturación </p>
-            <hr style="width: 100%; background-color: blue; height: 3px; border-color : transparent;">
+
+        <div class="col-4" id="direccionFacturacion">
+            <p class="titulo"> Direccion de facturación </p>
+            <hr>
             <?php
             extract($usuario);
             ?>
@@ -23,33 +31,33 @@ $impuestos = 0;
             <br>
             <?php ?>
         </div>
-        <div class="col-4">
-            <p class="font-weight-bold"> Metodo de pago Bancaria/Paypal</p>
-            <hr style="width: 100%; background-color: orange; height: 3px; border-color : transparent;">
-            <img src="<?= base_url()  . "assets/img/pagina/modalidadPago.png" ?>" width="100%">
+        <div class="col-4" id="modoDePago">
+            <p class="titulo"> Metodo de pago </p>
+            <hr>
+            <img src="<?= base_url()  . "assets/img/pagina/modalidadPago.png" ?>">
         </div>
-        <div class="col-4">
-            <p class="font-weight-bold"> Dirección de envio</p>
-            <hr style="width: 100%; background-color: green; height: 3px; border-color : transparent;">
-
+        <div class="col-4" id="direccionEnvio">
+            <p class="titulo"> Dirección de envio</p>
+            <hr>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-9">
+        <div class="col-9" id="listaProductos">
 
-            <p class="font-weight-bold"> Lista de productos</p>
+            <p class="titulo"> Lista de productos</p>
             <hr>
             <table class="table table-hover">
                 <thead class="thead-dark">
                     <tr>
                         <th> Imagen </th>
                         <th> Producto </th>
-                        <th> Precio </th>
+                        <th> Precio unitario </th>
                         <th> Cantidad </th>
                         <th> Iva </th>
                         <th> Importe iva </th>
-                        <th> Descuento </th>
+                        <th> Descuento % </th>
+                        <th> Importe % </th>
                         <th> Total </th>
                         <th> Eliminar </th>
                     </tr>
@@ -59,10 +67,16 @@ $impuestos = 0;
                     <?php foreach ($libros as $key => $value) : ?>
 
                         <?php
+
+
+
+
+                        $importeIva = (($value[0]["precio"] * $value[0]["cantidad"]) * $value[0]["iva"]) / 100;
+
                         $subtotal +=  $value[0]["cantidad"] * $value[0]["precio"];
-                        $importeIva = ($value[0]["precio"] * $value[0]["iva"]) / 100;
+                        $descuentoLinea = (($value[0]["cantidad"] * $value[0]["precio"]) *  $value[0]["descuento"])  / 100;
+                        $descuentos += $descuentoLinea;
                         $impuestos += $importeIva;
-                        $descuentos += $value[0]["descuento"];
 
                         ?>
                         <tr>
@@ -71,35 +85,30 @@ $impuestos = 0;
                             <td> <?= $value[0]["precio"] ?> € </td>
                             <td> <?= $value[0]["cantidad"] ?> </td>
                             <td> <?= $value[0]["iva"]  ?> % </td>
-                            <td> <?= $importeIva  ?> € </td>
+                            <td id="importeIva"> <?= $importeIva  ?> € </td>
                             <td> <?= $value[0]["descuento"] ?> % </td>
+                            <td id="importeDescuento"> <?= $descuentoLinea  ?> </td>
                             <td> <?= $value[0]["cantidad"] * $value[0]["precio"] ?> € </td>
                             <td class="eliminaEsteProductoDelCarrito" id="<?= $value[0]["idProducto"] ?>"> <i class="fas fa-trash-alt" style="color:red"></i> </td>
                         <tr>
 
-                            <?php
-                            $importeIva = 0;
-                            ?>
+                            <?php $importeIva = 0; ?>
 
                         <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
-        <div class="col-3">
-            <p class="font-weight-bold"> Resumen del pedido </p>
-            <hr style="width: 100%; background-color: red; height: 3px; border-color : transparent;">
+        <div class="col-3" id="resumenPedido">
+            <p class="titulo"> Resumen del pedido </p>
+            <hr>
 
-            <p> Subtotal de productos: <?= $subtotal ?> € </p>
-            <p> Total antes de impuestos: <?= $subtotal ?> € </p>
-            <p> Impuestos: <?= $impuestos ?> € </p>
-            <p> total más iva: <?= $subtotal + $impuestos ?> </p>
-            <p> Decuentos: <?= $descuentos ?> € </p>
-            <p> Todal antes de descuentos <?= $subtotal + $impuestos ?> </p>
-            <p> Total menos decuentos: <?= ($subtotal + $impuestos) - $descuentos ?> € </p>
+            <p style="color:seagreen"> <strong> Subtotal: <?= $subtotal ?> € </strong> </p>
+            <p style="color:red"> <strong> Impuestos: +<?= $impuestos ?> € </strong> </p>
+            <p style="color:blue"> <strong> Decuentos: -<?= $descuentos ?> € </strong> </p>
             <br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <h3 style="color:darkgray" class="font-weight-bold"> Total a pagar </h3>
-            <hr style="width: 100%; background-color: violet; height: 3px; border-color : transparent;">
-            <hr style="width: 100%; background-color: violet; height: 3px; border-color : transparent;">
+            <h3 id="totalAPagar"> Total a pagar </h3>
+            <hr>
+            <hr>
 
             <h2 style="color:deeppink" class="font-weight-bold"> <?= ($subtotal + $impuestos) - $descuentos ?> € </h2>
 

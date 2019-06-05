@@ -33,5 +33,6 @@
       <link rel="stylesheet" href="<?= base_url() . 'assets/css/nav.css' ?>" />
       <link rel="stylesheet" href="<?= base_url() . 'assets/css/general.css' ?>" />
       <link rel="stylesheet" href="<?= base_url() . 'assets/css/footer.css' ?>" />
-
+      <link rel="stylesheet" href="<?= base_url() . 'assets/css/pedidos.css' ?>" />
+    
   </head>

@@ -26,7 +26,7 @@ class Pedidos_C extends CI_Controller
      */
     public function nuevo()
     {
-
+/*
         // 1º Obtengo el id del cliente
         $id = $this->session->userdata['usuario']['idUsuario'];
         // 2º Obtengo los datos personales del cliente.
@@ -46,7 +46,7 @@ class Pedidos_C extends CI_Controller
             );
             // Guardo en un array, todos los productos del carrito de compra.
             $items[] = array(
-                "precio" => $libro[0]["precio"],
+                "precio" =>  $libro["precio"] - ((($libro[0]["precio"] * $libro[0]["cantidad"]) * 4) / 100), // Calculo el precio total con el descuento aplicado
                 "cantidad" =>  $libro[0]["cantidad"],
                 "idPedido" => $idPedido,
                 "idProducto" => $libro[0]["idProducto"]
@@ -61,7 +61,7 @@ class Pedidos_C extends CI_Controller
         } else {
             echo "ERROR";
         }
-        
+        */
     }
 
     public function listar()
@@ -162,7 +162,7 @@ class Pedidos_C extends CI_Controller
     public function factura()
     {
 
-        
+
         // Obtengo la clave primara del cliente, almacenada en la sesion.
         $idUsuario = $this->session->userdata['usuario']['idUsuario'];
         // Obtengo el identificador de pedido.
@@ -171,14 +171,13 @@ class Pedidos_C extends CI_Controller
         $datos = $this->pedidos->dameUnPedido($idPedido);
         // Obtengo todos los productos de ese pedido.
         $datos2 = $this->pedidos->dameLineaPedido($idPedido);
- 
+
         $factura = new Factura();
         $factura->AliasNbPages();
         $factura->AddPage();
-        $factura->cabecera( $datos );
-        $columnas = array( "Codigo", "Producto", "Precio", "Cantidad", "Iva", "Importe iva", "Total" );
-        $factura->generarTabla($columnas, $datos2 );
+        $factura->cabecera($datos);
+        $columnas = array("Codigo", "Producto", "Precio", "Cantidad", "Iva", "Importe iva", "Total");
+        $factura->generarTabla($columnas, $datos2);
         $factura->Output();
-    
     }
 }
