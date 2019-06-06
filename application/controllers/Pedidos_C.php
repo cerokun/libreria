@@ -173,7 +173,7 @@ class Pedidos_C extends CI_Controller
         $factura->AliasNbPages();
         $factura->AddPage();
         $factura->cabecera($datos);
-        $columnas = array("Codigo", "Producto", "Precio", "Descuento","Cantidad", "Subtotal", "Iva", "Importe iva", "Total");
+        $columnas = array("Codigo", "Producto", "Precio unitario", "Cantidad", "Descuento", "Iva", "Importe Iva", "Total");
         $factura->generarTabla($columnas, $datos2);
         $factura->Output();
     }

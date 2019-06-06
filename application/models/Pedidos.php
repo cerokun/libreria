@@ -41,13 +41,15 @@ class Pedidos extends CI_Model
     public function dameLineaPedido($id)
     {
         return $this->db
-            ->select("lineaDePedido.idProducto, productos.nombre, productos.precio, lineaDePedido.precio AS lpPrecio, lineaDePedido.cantidad, iva, idItem, descuento")
+            ->select("lineaDePedido.idProducto, productos.nombre, productos.precio, lineaDePedido.precio AS lpPrecio, cantidad, iva, idItem, descuento")
             ->from("lineaDePedido")
             ->join("productos", "productos.idProducto=lineaDePedido.idProducto")
             ->where(array("idPedido" => $id))
             ->get()
             ->result_array();
     }
+
+
 
     public function cancelar($id)
     {

@@ -6,7 +6,7 @@
         <table class="table table-hover">
             <thead class="thead-dark">
                 <tr>
-                    <th> IdProducto </th>
+                    <th> Codigo </th>
                     <th> Producto </th>
                     <th> Precio </th>
                     <th> Cantidad </th>
@@ -18,11 +18,11 @@
                 <?php foreach ($lineaDePedido as $value) : ?>
                     <tr>
 
-                        <td> <?= $value["idProducto"] ?> </td>
+                        <td> <?= $value["idItem"] ?> </td>
                         <td> <?= $value["nombre"] ?> </td>
-                        <td> <?= $value["precio"] ?> € </td>
+                        <td> <?= $value["lpPrecio"] ?> € </td>
                         <td> <?= $value["cantidad"] ?> </td>
-                        <td> <?= $value["precio"] * $value["cantidad"]  ?> € </td>
+                        <td> <?= $value["lpPrecio"] * $value["cantidad"]  ?> € </td>
 
                     <tr>
 
