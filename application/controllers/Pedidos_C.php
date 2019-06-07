@@ -46,7 +46,7 @@ class Pedidos_C extends CI_Controller
             );
             // Guardo en un array, todos los productos del carrito de compra.
             $items[] = array(
-                "precio" =>  $libro[0]["precio"],  
+                "precio" =>  ( $libro[0]["precio"] *  $libro[0]["cantidad"] ),  
                 "cantidad" =>  $libro[0]["cantidad"],
                 "idPedido" => $idPedido,
                 "idProducto" => $libro[0]["idProducto"]
@@ -157,7 +157,7 @@ class Pedidos_C extends CI_Controller
         }
     }
 
-    public function factura()
+    public function verFactura()
     {
 
         // Obtengo la clave primara del cliente, almacenada en la sesion.

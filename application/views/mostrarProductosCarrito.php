@@ -1,3 +1,10 @@
+<?php
+echo "<pre>";
+print_r( $this->session->userdata("carrito") );
+echo "</pre>";
+
+
+?>
 
 <div class="container text-center" id="contenedor">
     <!-- Compruebo si hay libros en el carrito -->
@@ -21,9 +28,9 @@
                     <tr>
                         <td> <img src="<?= base_url()  . "assets/img/libros/" .  $value[0]["imagen"] ?>" width="50px"> </td>
                         <td> <?= $value[0]["nombre"] ?> </td>
-                        <td> <?= $value[0]["precio"] ?> </td>
+                        <td> <?= round($value[0]["precio"], 2) ?> € </td>
                         <td> <?= $value[0]["cantidad"] ?> </td>
-                        <td> <?= $value[0]["cantidad"] * $value[0]["precio"] ?> € </td>
+                        <td> <?= round($value[0]["cantidad"] * $value[0]["precio"], 2) ?> € </td>
                         <td class="eliminaEsteProductoDelCarrito" id="<?= $value[0]["idProducto"] ?>"> <i class="fas fa-trash-alt" style="color:red"></i> </td>
                     <tr>
 

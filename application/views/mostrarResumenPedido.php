@@ -4,6 +4,12 @@ $subtotal = 0;
 $descuentos = 0;
 $impuestos = 0;
 
+ 
+echo "<pre>";
+print_r($this->session->userdata("carrito"));
+echo "</pre>";
+
+
 ?>
 
 <style>
@@ -75,12 +81,12 @@ $impuestos = 0;
                         <tr>
                             <td> <img src="<?= base_url()  . "assets/img/libros/" .  $value[0]["imagen"] ?>" width="50px"> </td>
                             <td> <?= $value[0]["nombre"] ?> </td>
-                            <td> <?= $value[0]["precio"] ?> € </td>
+                            <td> <?= round($value[0]["precio"], 2) ?> € </td>
                             <td> <?= $value[0]["cantidad"] ?> </td>
                             <td> <?= $value[0]["descuento"] ?> % </td>
                             <td> <?= $value[0]["iva"]  ?> % </td>
-                            <td id="importeIva"> <?= $importeIva  ?> € </td>
-                            <td> <?= $value[0]["cantidad"] * $value[0]["precio"] ?> € </td>
+                            <td id="importeIva"> <?= round($importeIva, 2)  ?> € </td>
+                            <td> <?= round($value[0]["cantidad"] * $value[0]["precio"], 2) ?> € </td>
                         <tr>
 
                             <?php $importeIva = 0; ?>
@@ -93,14 +99,14 @@ $impuestos = 0;
             <p class="titulo"> Resumen del pedido </p>
             <hr>
 
-            <p style="color:seagreen"> <strong> Subtotal: <?= $subtotal - $impuestos ?> € </strong> </p> 
-            <p style="color:red"> <strong> Importe IVA: +<?= $impuestos ?> € </strong> </p>
+            <p style="color:seagreen"> <strong> Subtotal: <?= round($subtotal - $impuestos, 2) ?> € </strong> </p>
+            <p style="color:red"> <strong> Importe IVA: +<?= round($impuestos, 2) ?> € </strong> </p>
             <br><br><br><br><br><br><br><br><br><br><br><br><br>
             <h3 id="totalAPagar"> Total a pagar </h3>
             <hr>
             <hr>
 
-            <h2 style="color:deeppink" class="font-weight-bold"> <?= $subtotal   ?> € </h2>
+            <h2 style="color:deeppink" class="font-weight-bold"> <?= round($subtotal, 2)   ?> € </h2>
 
             <a href="<?= site_url("Pedidos_C/nuevo") ?>"> <img src="<?= base_url() . 'assets/img/pagina/paypal.png' ?>" width="60%"> </a>
 

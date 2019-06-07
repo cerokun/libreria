@@ -36,7 +36,7 @@
 
                         <td>
                             <a href="<?= site_url("Pedidos_C/ver/"    . $pedido["idPedido"]) ?>"> <img src="<?= base_url() . 'assets/img/pagina/ver.jpg' ?>" width="30px;" title="Ver"></a>
-                            <a href="<?= site_url("Pedidos_C/factura/" . $pedido["idPedido"]) ?>"> <img src="<?= base_url() . 'assets/img/pagina/factura.png' ?>" width="30px;" title="Factura"></a>
+                            <a href="<?= site_url("Pedidos_C/verFactura/" . $pedido["idPedido"]) ?>"> <img src="<?= base_url() . 'assets/img/pagina/factura.png' ?>" width="30px;" title="Factura"></a>
 
                             <!-- Compruebo el estado -->
                             <?php if ($pedido["estado"] == 1) : ?>

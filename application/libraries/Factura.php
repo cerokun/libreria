@@ -105,7 +105,7 @@
                 $this->Cell($w[4], 6, $row["descuento"] . "%", 'LR', 0, 'R', $fill);
                 $this->Cell($w[5], 6, $row["iva"] . "%", 'LR', 0, 'R', $fill);
                 $this->Cell($w[6], 6, $importeIva . "%", 'LR', 0, 'R', $fill);
-                $this->Cell($w[7], 6, ($subtotalParcial - $importeIva) . $divisa, 'LR', 0, 'R', $fill);
+                $this->Cell($w[7], 6, ($subtotalParcial + $importeIva) . $divisa, 'LR', 0, 'R', $fill);
 
                 $this->Ln();
                 $fill = !$fill;
