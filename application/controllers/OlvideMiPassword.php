@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-require "vendor/phpmailer/phpmailer/class.phpmailer.php";
-require "vendor/phpmailer/phpmailer/class.smtp.php";
+//require "vendor/phpmailer/phpmailer/class.phpmailer.php";
+//require "vendor/phpmailer/phpmailer/class.smtp.php";
 
 class OlvideMiPassword extends CI_Controller
 {

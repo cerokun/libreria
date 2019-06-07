@@ -1,11 +1,3 @@
-<?php
-echo "<pre>";
-print_r( $this->session->userdata("carrito") );
-echo "</pre>";
-
-
-?>
-
 <div class="container text-center" id="contenedor">
     <!-- Compruebo si hay libros en el carrito -->
     <?php if ($libros) : ?>

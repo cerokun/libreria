@@ -16,6 +16,8 @@ class Pedidos_C extends CI_Controller
         $this->load->model('productos');
         $this->load->model('usuario');
         $this->load->model("pedidos");
+        $this->load->model("correo");
+
     }
 
 
@@ -46,21 +48,46 @@ class Pedidos_C extends CI_Controller
             );
             // Guardo en un array, todos los productos del carrito de compra.
             $items[] = array(
-                "precio" =>  ( $libro[0]["precio"] *  $libro[0]["cantidad"] ),  
+                "precio" => ($libro[0]["precio"] *  $libro[0]["cantidad"]),
                 "cantidad" =>  $libro[0]["cantidad"],
                 "idPedido" => $idPedido,
                 "idProducto" => $libro[0]["idProducto"]
             );
         }
 
+
         // Inserto los items en la tabla linea de pedido.
         if ($this->pedidos->insertarProductosEnLineaDePedido($items) and  $this->productos->actualizarStock($stocks)) {
             $this->carrito->destroy();
             echo "PEDIDO REALIZADO";
+            $pdf = $this->dameFactura( $idPedido );
+
+            $this->correo->enviarFactura( $usuario["correo"], "Comprar realizada", "aqui el contenido", $pdf );
+            
+
         } else {
             echo "ERROR";
         }
     }
+
+
+    public function dameFactura($id)
+    {
+ 
+        // Obtengo los datos del pedido y los datos basicos del cliente.
+        $datos = $this->pedidos->dameUnPedido($id);
+        // Obtengo todos los productos de ese pedido.
+        $datos2 = $this->pedidos->dameLineaPedido($id);
+
+        $factura = new Factura();
+        $factura->AliasNbPages();
+        $factura->AddPage();
+        $factura->cabecera($datos);
+        $columnas = array("Codigo", "Producto", "Precio unitario", "Cantidad", "Descuento", "Iva", "Importe Iva", "Total");
+        $factura->generarTabla($columnas, $datos2);
+        return $factura->Output("","S");
+    }
+
 
     public function listar()
     {
@@ -157,13 +184,14 @@ class Pedidos_C extends CI_Controller
         }
     }
 
+
     public function verFactura()
     {
 
         // Obtengo la clave primara del cliente, almacenada en la sesion.
         $idUsuario = $this->session->userdata['usuario']['idUsuario'];
         // Obtengo el identificador de pedido.
-        $idPedido =  $this->uri->segment(3);;
+        $idPedido =  $this->uri->segment(3);
         // Obtengo los datos del pedido y los datos basicos del cliente.
         $datos = $this->pedidos->dameUnPedido($idPedido);
         // Obtengo todos los productos de ese pedido.

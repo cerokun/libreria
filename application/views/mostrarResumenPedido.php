@@ -4,12 +4,6 @@ $subtotal = 0;
 $descuentos = 0;
 $impuestos = 0;
 
- 
-echo "<pre>";
-print_r($this->session->userdata("carrito"));
-echo "</pre>";
-
-
 ?>
 
 <style>
