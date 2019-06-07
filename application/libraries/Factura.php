@@ -104,14 +104,14 @@
                 $this->Cell($w[3], 6, $row["cantidad"], 'LR', 0, 'R', $fill);
                 $this->Cell($w[4], 6, $row["descuento"] . "%", 'LR', 0, 'R', $fill);
                 $this->Cell($w[5], 6, $row["iva"] . "%", 'LR', 0, 'R', $fill);
-                $this->Cell($w[6], 6, $importeIva . "%", 'LR', 0, 'R', $fill);
-                $this->Cell($w[7], 6, ($subtotalParcial + $importeIva) . $divisa, 'LR', 0, 'R', $fill);
+                $this->Cell($w[6], 6, round($importeIva, 2) . "%", 'LR', 0, 'R', $fill);
+                $this->Cell($w[7], 6, round(($subtotalParcial + $importeIva), 2) . $divisa, 'LR', 0, 'R', $fill);
 
                 $this->Ln();
                 $fill = !$fill;
 
                 // Voy guardando la suma de los subtotales parciales.
-                $subtotal += $subtotalParcial;  
+                $subtotal += $subtotalParcial;
             }
 
             // Cierra el borde de la tabla
@@ -119,13 +119,13 @@
             $this->Ln();
             $this->SetX(173);
             $this->SetFont('', 'B');
-            $this->Cell(150, 6, "Subtotales: $subtotal $divisa", 0, 2);
+            $this->Cell(150, 6, "Subtotales: " . round($subtotal, 2) . $divisa, 0, 2);
             $this->SetTextColor(255, 0, 0);
-            $this->Cell(10, 6, "Impuestos: +$impuestos " . $divisa, 0, 2);
+            $this->Cell(10, 6, "Impuestos: +" . round($impuestos, 2) . $divisa, 0, 2);
             $this->SetTextColor(128, 0, 128);
             // Calculo el total a pagar.
             // Muestro el total a pagar y con la funcion iconv muestro el icono del la moneda.
-            $this->Cell(10, 6, "Total a pagar: " . ( $subtotal + $impuestos ) . $divisa );
+            $this->Cell(10, 6, "Total a pagar: " . round($subtotal + $impuestos, 2) . $divisa);
         }
 
 

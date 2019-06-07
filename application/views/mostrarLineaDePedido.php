@@ -8,7 +8,6 @@
                 <tr>
                     <th> Codigo </th>
                     <th> Producto </th>
-                    <th> Precio </th>
                     <th> Cantidad </th>
                     <th> Total </th>
                 </tr>
@@ -17,13 +16,10 @@
                 <!-- Recorro los libros almacenados en el carrito -->
                 <?php foreach ($lineaDePedido as $value) : ?>
                     <tr>
-
                         <td> <?= $value["idItem"] ?> </td>
                         <td> <?= $value["nombre"] ?> </td>
-                        <td> <?= $value["lpPrecio"] ?> € </td>
                         <td> <?= $value["cantidad"] ?> </td>
-                        <td> <?= $value["lpPrecio"] * $value["cantidad"]  ?> € </td>
-
+                        <td> <?= $value["lpPrecio"] ?> € </td>
                     <tr>
 
                     <?php endforeach; ?>
