@@ -8,7 +8,7 @@
                 <tr>
                     <th> Imagen </th>
                     <th> Producto </th>
-                    <th> Precio </th>
+                    <th> Precio unitario </th>
                     <th> Cantidad </th>
                     <th> Total </th>
                     <th> Eliminar </th>
@@ -20,7 +20,7 @@
                     <tr>
                         <td> <img src="<?= base_url()  . "assets/img/libros/" .  $value[0]["imagen"] ?>" width="50px"> </td>
                         <td> <?= $value[0]["nombre"] ?> </td>
-                        <td> <?= round($value[0]["precio"], 2) ?> € </td>
+                        <td> <?= round($value[0]["precioUnitario"], 2)  ?> € </td>
                         <td> <?= $value[0]["cantidad"] ?> </td>
                         <td> <?= round($value[0]["cantidad"] * $value[0]["precio"], 2) ?> € </td>
                         <td class="eliminaEsteProductoDelCarrito" id="<?= $value[0]["idProducto"] ?>"> <i class="fas fa-trash-alt" style="color:red"></i> </td>

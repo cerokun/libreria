@@ -17,7 +17,6 @@ class Pedidos_C extends CI_Controller
         $this->load->model('usuario');
         $this->load->model("pedidos");
         $this->load->model("correo");
-
     }
 
 
@@ -58,22 +57,88 @@ class Pedidos_C extends CI_Controller
 
         // Inserto los items en la tabla linea de pedido.
         if ($this->pedidos->insertarProductosEnLineaDePedido($items) and  $this->productos->actualizarStock($stocks)) {
+
+            echo "1º Pedido realizado. <br>";
+            // Solicito la factura en forma de String y la guardo en la variable.
+            $pdf = $this->dameFactura($idPedido);
+            // Correo del destinatario
+            $correoCliente = $usuario["correo"];
+            // Razon del mensaje
+            $razon = "Compra realizada";
+            // Contenido del mensaje, detalle del pedido.
+            $detalle =  $this->generarDetalle($idPedido, $listaProductos);
+
+            // Envio el correo
+            if ($this->correo->enviarFactura($correoCliente, $razon, $detalle, $pdf)) {
+                echo "2º  Correo enviado. <br>";
+            }
+
             $this->carrito->destroy();
-            echo "PEDIDO REALIZADO";
-            $pdf = $this->dameFactura( $idPedido );
-
-            $this->correo->enviarFactura( $usuario["correo"], "Comprar realizada", "aqui el contenido", $pdf );
-            
-
         } else {
             echo "ERROR";
         }
     }
 
 
+    /**
+     * Documento html que enviare al cliente tras realizar la compra.
+     *
+     * @param array $lista de libros que ha comprado.
+     * @return void
+     */
+    public function generarDetalle($idPedido, $lista)
+    {
+
+        $subtotal =  0;
+        $descuentos = 0;
+        $impuestos = 0;
+
+        $html = '<h3> Pedido: ' .  $idPedido  . '</h3>';
+
+        $html .= '<table class="table table-hover" border="1">
+                    <thead >
+                        <tr style="background-color:orange">
+                            <th> Producto </th>
+                            <th> Precio unitario </th>
+                            <th> Cantidad </th>
+                            <th> Descuento </th>
+                            <th> Iva </th>
+                            <th> Importe iva </th>
+                            <th> Total </th>
+                        </tr>
+                    </thead>
+                    <tbody>';
+
+        foreach ($lista as $libro) {
+
+            $importeIva = (($libro[0]["precio"] * $libro[0]["cantidad"]) * $libro[0]["iva"]) / 100;
+            $subtotal +=  $libro[0]["cantidad"] * $libro[0]["precio"];
+            $descuentoLinea = (($libro[0]["cantidad"] * $libro[0]["precio"]) *  $libro[0]["descuento"])  / 100;
+            $descuentos += $descuentoLinea;
+            $impuestos += $importeIva;
+
+            $html .= '<tr>
+                        <td>' . $libro[0]["nombre"] . '</td>
+                        <td>' . round($libro[0]["precioUnitario"], 2) . '€</td>
+                        <td>' . $libro[0]["cantidad"] . '</td>
+                        <td>' . $libro[0]["descuento"] . '% </td>
+                        <td>' . $libro[0]["iva"] . ' % </td>
+                        <td>' . round($importeIva, 2)   . ' % </td>
+                        <td>' . round($libro[0]["cantidad"] * $libro[0]["precio"], 2) . '</td>                                        
+                    </tr>';
+        }
+
+        $html .=  '</tbody></table>';
+        $html .= '<p><strong> Subtotal: ' . round($subtotal - $impuestos, 2) . '</strong></p>
+                  <p style="color:red"><strong> Impuestos: ' . round($impuestos, 2)  . '</strong> </p>
+                  <p style="color:blue"><strong> Total: ' .  round($subtotal, 2)  . '€</strong></p>';
+
+        return $html;
+    }
+
     public function dameFactura($id)
     {
- 
+
         // Obtengo los datos del pedido y los datos basicos del cliente.
         $datos = $this->pedidos->dameUnPedido($id);
         // Obtengo todos los productos de ese pedido.
@@ -85,7 +150,7 @@ class Pedidos_C extends CI_Controller
         $factura->cabecera($datos);
         $columnas = array("Codigo", "Producto", "Precio unitario", "Cantidad", "Descuento", "Iva", "Importe Iva", "Total");
         $factura->generarTabla($columnas, $datos2);
-        return $factura->Output("","S");
+        return $factura->Output("S");
     }
 
 

@@ -119,7 +119,7 @@
             $this->Ln();
             $this->SetX(173);
             $this->SetFont('', 'B');
-            $this->Cell(150, 6, "Subtotales: " . round($subtotal, 2) . $divisa, 0, 2);
+            $this->Cell(150, 6, "Subtotal: " . round($subtotal, 2) . $divisa, 0, 2);
             $this->SetTextColor(255, 0, 0);
             $this->Cell(10, 6, "Impuestos: +" . round($impuestos, 2) . $divisa, 0, 2);
             $this->SetTextColor(128, 0, 128);

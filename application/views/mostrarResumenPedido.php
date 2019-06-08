@@ -75,7 +75,7 @@ $impuestos = 0;
                         <tr>
                             <td> <img src="<?= base_url()  . "assets/img/libros/" .  $value[0]["imagen"] ?>" width="50px"> </td>
                             <td> <?= $value[0]["nombre"] ?> </td>
-                            <td> <?= round($value[0]["precio"], 2) ?> € </td>
+                            <td> <?= round($value[0]["precioUnitario"], 2) ?> € </td>
                             <td> <?= $value[0]["cantidad"] ?> </td>
                             <td> <?= $value[0]["descuento"] ?> % </td>
                             <td> <?= $value[0]["iva"]  ?> % </td>

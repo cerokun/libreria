@@ -19,7 +19,15 @@ class Productos extends CI_Model
      */
     public function destacados($quieroMostrarPorPagina, $desde)
     {
-        return $this->db->get_where('productos', array('visible' => 1), $quieroMostrarPorPagina, $desde)->result_array();
+         
+        $hoy = date('Y-m-d');
+
+        return $this->db
+            ->from("productos")
+            ->where("destacado=", 1)
+            ->limit($quieroMostrarPorPagina, $desde)
+            ->get()
+            ->result_array();
     }
 
 

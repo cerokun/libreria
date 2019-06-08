@@ -66,6 +66,7 @@ class PeticionesCarrito extends CI_Controller
                 $precioFinal = $precionConDescuento + $impuesto;
 
 
+                $libro[0]["precioUnitario"] = $precio;
                 $libro[0]["precio"] = $precioFinal;
                 // Añado una nueva variable al array, para controlar la cantidad de cada producto añadido al carro.
                 $libro[0]["cantidad"] = 1;

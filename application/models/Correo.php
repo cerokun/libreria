@@ -102,16 +102,18 @@ class Correo extends CI_Model
         //Read an HTML message body from an external file, convert referenced images to embedded,
         //convert HTML into a basic plain-text alternative body
         //$mail->msgHTML($cuerpo);
+        $mail->isHTML(true);
+         
         $mail->msgHTML($cuerpo);
         //Replace the plain text body with one created manually
         $mail->AltBody = 'Pedido realizado';
         //Attach an image file
         $mail->addStringAttachment($fichero, "factura.pdf");
-        //send the message, check for errors
+        // Comprueba que se haya enviado
         if ($mail->send()) {
             return true;
         } else {
-            //echo 'Mailer Error: ' . $mail->ErrorInfo;
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
             return false;
         }
     }
