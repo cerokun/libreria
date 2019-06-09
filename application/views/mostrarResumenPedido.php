@@ -6,12 +6,14 @@ $impuestos = 0;
 
 ?>
 
+
 <style>
     body {
         background-image: url("<?= base_url()  . "assets/img/pagina/cabeceraPago.png" ?>");
         background-repeat: no-repeat;
     }
 </style>
+
 
 <div class="container-fluid text-center" id="contenedor">
 

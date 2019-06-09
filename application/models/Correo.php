@@ -29,7 +29,7 @@ class Correo extends CI_Model
         // 0 = off (for production use)
         // 1 = client messages
         // 2 = client and server messages
-        $mail->SMTPDebug = 2; // cuando todo funcione bien, poner en 0 para que no muestre mensajes internos.
+        $mail->SMTPDebug = 0; // cuando todo funcione bien, poner en 0 para que no muestre mensajes internos.
         //Set the hostname of the mail server
         $mail->Host = 'ieslamarisma.net';
         //Set the SMTP port number - likely to be 25, 465 or 587
@@ -60,7 +60,7 @@ class Correo extends CI_Model
         if ($mail->send()) {
             return true;
         } else {
-            //echo 'Mailer Error: ' . $mail->ErrorInfo;
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
             return false;
         }
     }

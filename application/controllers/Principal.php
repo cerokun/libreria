@@ -70,7 +70,7 @@ class Principal extends CI_Controller
 		$id = $this->input->post("idCategoria");
 
 		$num_row = $this->productos->num_rows_per_category($id);
-		$quieroMostrarPorPagina = 5;
+		$quieroMostrarPorPagina = 18;
 
 		$desde = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
