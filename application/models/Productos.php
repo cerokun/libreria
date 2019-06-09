@@ -19,17 +19,22 @@ class Productos extends CI_Model
      */
     public function destacados($quieroMostrarPorPagina, $desde)
     {
-         
-        $hoy = date('Y-m-d');
+        // Obtengo la fecha actual
+        $hoy = date("Y-m-d");
+        // Aqui guardare los datos que devolvere a la vista.
+        $datos = array();
+        // Solicito todos los libros que sean visibles.
+        $resultados = $this->db->get_where('productos', array('visible' => 1), $quieroMostrarPorPagina, $desde)->result_array();
+        // Recorro cada libro
+        foreach ($resultados as $libro) {
+            // Si el libro esta destacado o la fecha se encuentra dentro dentro del intervalo, hago lo siguiente.
+            if ($libro["destacado"] == 1 or $libro["desde"] < $hoy and $libro["hasta"] >= $hoy) {
+                $datos[] = $libro; // Guardo el libro 
+            }
+        }
 
-        return $this->db
-            ->from("productos")
-            ->where("destacado=", 1)
-            ->limit($quieroMostrarPorPagina, $desde)
-            ->get()
-            ->result_array();
+        return $datos;
     }
-
 
 
     /**
@@ -41,9 +46,7 @@ class Productos extends CI_Model
      */
     public function dameProductosPorIdCategoria($id, $quieroMostrarPorPagina, $desde)
     {
-
         return $this->db->get_where('productos', array('visible' => 1, "idCategoria" => $id), $quieroMostrarPorPagina, $desde)->result_array();
-        //  return $this->db->get_where("productos", array("idCategoria" => $id, "visible" => 1))->result_array();
     }
 
     /**

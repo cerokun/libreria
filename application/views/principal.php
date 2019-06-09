@@ -31,69 +31,65 @@
 
                     <?php if ($contador < $totalLibros) : ?>
 
-                        <?php if ($libros[$contador]["visible"] == 1) : ?>
-
-                            <div class="col-sm-2 d-flex pb-2">
-                                <div class="card card-block">
+                        <div class="col-sm-2 d-flex pb-2">
+                            <div class="card card-block">
 
 
-                                    <img class="card-img-top" src="<?= base_url() . "assets/img/libros/" . $libros[$contador]["imagen"] ?>" title="Stock: <?= $libros[$contador]["stock"] ?>">
+                                <img class="card-img-top" src="<?= base_url() . "assets/img/libros/" . $libros[$contador]["imagen"] ?>" title="Stock: <?= $libros[$contador]["stock"] ?>">
 
 
-                                    <div class="card-body">
-                                        <h5 class="card-title"> <?= $libros[$contador]["nombre"] ?> </h5>
-                                        <p class="card-text"> <?= substr($libros[$contador]["descripcion"], 0, 55) ?>... </p>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-
-                                        <?php
-                                        // Esto es el precio sin descuento y sin iva.
-                                        $precio =  $libros[$contador]["precio"];
-                                        // Descuento
-                                        $descuento = ($precio * $libros[$contador]["descuento"]) / 100;
-                                        // Aplico el descuento al precio sin iva.
-                                        $precionConDescuento = ($precio - $descuento);
-                                        // Calculo el iva.
-                                        $impuesto = ($precionConDescuento * $libros[$contador]["iva"]) / 100;
-                                        // Aplico el impuesto, iva
-                                        $precioFinal = $precionConDescuento + $impuesto;
-
-                                        ?>
-
-                                        <li class="list-group-item">
-
-                                            <?php if ($libros[$contador]["descuento"] == 0) : ?>
-                                                <span style="color:blue"><strong> <?= round($precioFinal, 2) ?> € </strong> </span>
-                                            <?php else : ?>
-                                                <span style="text-decoration: line-through"> <?= $precio ?> € </span>
-                                                <span style="color:red"> <?= $libros[$contador]["descuento"] ?> % </span>
-                                                <span style="color:blue"><strong> <?= round($precioFinal, 2) ?> € </strong> </span>
-                                            <?php endif; ?>
-
-                                        </li>
-
-                                    </ul>
-                                    <div class="card-body">
-
-                                        <?php if ($libros[$contador]["stock"]) : ?>
-                                            <button class="btn btn-primary addCarrito" id="<?= $libros[$contador]['idProducto']  ?>"> <i class="fas fa-cart-plus"></i> Añadir </button>
-                                        <?php else : ?>
-                                            <button disabled class="btn btn-primary"> <i class="fas fa-cart-plus"></i> Añadir </button>
-                                        <?php endif; ?>
-                                    </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"> <?= $libros[$contador]["nombre"] ?> </h5>
+                                    <p class="card-text"> <?= substr($libros[$contador]["descripcion"], 0, 55) ?>... </p>
                                 </div>
+                                <ul class="list-group list-group-flush">
 
+                                    <?php
+                                    // Esto es el precio sin descuento y sin iva.
+                                    $precio =  $libros[$contador]["precio"];
+                                    // Descuento
+                                    $descuento = ($precio * $libros[$contador]["descuento"]) / 100;
+                                    // Aplico el descuento al precio sin iva.
+                                    $precionConDescuento = ($precio - $descuento);
+                                    // Calculo el iva.
+                                    $impuesto = ($precionConDescuento * $libros[$contador]["iva"]) / 100;
+                                    // Aplico el impuesto, iva
+                                    $precioFinal = $precionConDescuento + $impuesto;
 
+                                    ?>
 
+                                    <li class="list-group-item">
+
+                                        <?php if ($libros[$contador]["descuento"] == 0) : ?>
+                                            <span style="color:blue"><strong> <?= round($precioFinal, 2) ?> € </strong> </span>
+                                        <?php else : ?>
+                                            <span style="text-decoration: line-through"> <?= $precio ?> € </span>
+                                            <span style="color:red"> <?= $libros[$contador]["descuento"] ?> % </span>
+                                            <span style="color:blue"><strong> <?= round($precioFinal, 2) ?> € </strong> </span>
+                                        <?php endif; ?>
+
+                                    </li>
+
+                                </ul>
+                                <div class="card-body">
+
+                                    <?php if ($libros[$contador]["stock"]) : ?>
+                                        <button class="btn btn-primary addCarrito" id="<?= $libros[$contador]['idProducto']  ?>"> <i class="fas fa-cart-plus"></i> Añadir </button>
+                                    <?php else : ?>
+                                        <button disabled class="btn btn-primary"> <i class="fas fa-cart-plus"></i> Añadir </button>
+                                    <?php endif; ?>
+                                </div>
                             </div>
 
-                            <?php $contador++; ?>
-                            <!-- Incremento el contador -->
 
-                            <!-- Comprueba si el producto es visible -->
-                        <?php endif ?>
+
+                        </div>
+
+                        <?php $contador++; ?>
+                        <!-- Incremento el contador -->
+
+                        <!-- Final if que comprueba si se ha alcanzado el numero total de productos en tienda. -->
                     <?php endif ?>
-                    <!-- Final if que comprueba si se ha alcanzado el numero total de productos en tienda. -->
 
 
                 <?php endfor; ?>
