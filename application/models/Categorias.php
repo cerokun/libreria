@@ -22,6 +22,12 @@ class Categorias extends CI_Model
         return $this->db->get_where("categorias", array("visible" => 1))->result_array();
     }
 
+    /**
+     * Añade nuevas categorias
+     *
+     * @param array $datos
+     * @return void
+     */
     public function insertar($datos)
     {
         return $this->db->insert_batch("categorias", $datos);

@@ -8,6 +8,7 @@ class ImportarDatosEnXML extends CI_Controller
     {
         parent::__construct();
         $this->load->model('categorias');
+        $this->load->model("productos");
         $config['upload_path']   =  'uploads/';
         $config['allowed_types'] = 'xml';
         $config["overwrite"] = TRUE;
@@ -24,13 +25,20 @@ class ImportarDatosEnXML extends CI_Controller
         $this->load->view("plantillas/footer");
     }
 
-
+    /**
+     * Extrae del fichero .xml los datos y añade una
+     * nueva categoria a la base de datos.
+     *
+     * @param object $xml objeto SimpleXMLElement con las categorias.
+     * @return void
+     */
     public function categorias($xml)
     {
-
-
+        // Recorro el xml
         foreach ($xml as $categoria) {
+            // Voy guardando en el array los datos.
             $datos[] = array(
+                "idCategoria" => $categoria->idCategoria,
                 "nombre" => $categoria->nombre,
                 "descripcion" => $categoria->descripcion,
                 "anuncio" => $categoria->anuncio,
@@ -38,16 +46,41 @@ class ImportarDatosEnXML extends CI_Controller
                 "visible" => $categoria->visible
             );
         }
-  
+        // Inserto las nuevas categorias en la base de datos.
         $this->categorias->insertar($datos);
-
     }
 
+    /**
+     * Extrae del fichero .xml los datos y añade 
+     * nuevos productos a la base de datos.
+     *
+     * @param object $xml objeto SimpleXMLElement con los productos.
+     * @return void
+     */
     public function productos($xml)
     {
-        echo "quiere importar productos";
-        echo $xml->book[0]->attributes()->id;
-        echo $xml->book[2]->author;
+        // Recorro el xml
+        foreach ($xml as $producto) {
+            // Voy guardando en el array los datos.
+            $datos[] = array(
+                "nombre" => $producto->nombre,
+                "imagen" => trim( $producto->imagen ),
+                "descripcion" => $producto->descripcion,
+                "precio" => $producto->precio,
+                "descuento" => $producto->descuento,
+                "iva" => $producto->iva,
+                "stock" => $producto->stock,
+                "isbn" => $producto->isbn,
+                "anuncio" => $producto->anuncio,
+                "destacado" => $producto->destacado,
+                "desde" => $producto->desde,
+                "hasta" => $producto->hasta,
+                "visible" => $producto->visible,
+                "idCategoria" => $producto->idCategoria
+            );
+        }
+        // Inserto los nuevos productos en la base de datos.
+        $this->productos->insertar($datos);
     }
 
     /**

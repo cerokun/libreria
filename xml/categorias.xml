@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <categorias>
    <categoria>
+      <idCategoria> 6 </idCategoria>
       <nombre> Poesia </nombre>
       <descripcion> Libros de poesia </descripcion>
       <anuncio> Anuncio libros poesia </anuncio>
@@ -8,6 +9,7 @@
       <visible> 1 </visible>
    </categoria>
  <categoria>
+      <idCategoria> 7 </idCategoria>
       <nombre> Suspense </nombre>
       <descripcion> Libros de suspense </descripcion>
       <anuncio> Anuncio libros suspense </anuncio>
@@ -15,6 +17,7 @@
       <visible> 1 </visible>
    </categoria>
  <categoria>
+      <idCategoria> 8 </idCategoria>
       <nombre> Romantica </nombre>
       <descripcion> Libros de literatura romantica </descripcion>
       <anuncio> Anuncio libros romatica </anuncio>

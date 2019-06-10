@@ -98,4 +98,15 @@ class Productos extends CI_Model
         $query = $this->db->get()->row_array();
         return $query;
     }
+
+    /**
+     * Añade nuevos productos a la base de datos.
+     *
+     * @param array $datos
+     * @return void
+     */
+    public function insertar($datos)
+    {
+        return $this->db->insert_batch("productos", $datos);
+    }
 }

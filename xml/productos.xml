@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<productos>
+   <producto>
+      <nombre> Campos de Castilla </nombre>
+      <imagen> camposcastilla.jpg </imagen>
+      <descripcion> 
+
+        Antonio Machado (1875-1939) es sin duda una de las figuras señeras de la literatura española del siglo XX. Libro publicado por primera vez en 1912, “Campos de Castilla” muestra una mayor objetividad que el anterior “Soledades. Galerías. Otros poemas” e indaga en nuevos terrenos poéticos –como son las gentes del entorno, los aspectos históricos y sociales españoles y la experiencia de la naturaleza, lo que lo acerca a los regeneracionistas y a los escritores del 98–, así como formales, como el aforismo. El libro incluye la importante serie de poemas dedicados a la enfermedad y muerte de su mujer, Leonor Izquierdo, y el largo poema «La tierra de Alvargonzález», un intento de expresar, mediante una forma popular, lo «elemental humano».
+
+      </descripcion>
+      <precio> 19 </precio>
+      <descuento> 25 </descuento>
+      <iva> 4 </iva>
+      <stock> 70 </stock>
+      <isbn> 9788336064568  </isbn>
+      <anuncio> anuncio sombra aqui </anuncio>
+      <destacado> 0 </destacado>
+      <desde> "2018-2-9" </desde>
+      <hasta> "2019-6-25" </hasta>
+      <visible> 1 </visible>
+      <idCategoria> 6 </idCategoria>
+   </producto>
+   <producto>
+      <nombre> La sangre de los inocentes </nombre>
+      <imagen> sangreinocentes.jpg </imagen>
+      <descripcion>
+         
+          "Soy espía y tengo miedo". Así empieza la crónica que escribe Fray Julián, notario de la Inquisición, cuando recibe la misión de relatar los enfrentamientos acaecidos en Montsegur (Francia) a mediados del siglo XIII.Las luchas de poder entre los cátaros y el control que, en nombre de la fe, lleva la Inquisición, propiciarán que la crónica del fraile sea un valioso tesoro a descubrir. Su última frase - "algún día, alguien vengará la sangre de los inocentes"- se convertirá en un enigma a descifrar de generación en generación.Siglos después, poco antes de iniciarse la Segunda Guerra Mundial, el conde d'Amis, descendiente de una de las grandes familias cátaras, recibirá como legado la crónica de Fray Julián.Una fascinante trama llena de meandros, pistas falsas y enigmas, salpican esta brutal nueva novela de Julia Navarro, una ambiciosa aventura escrita sin concesiones, llena de víctimas y verdugos en la que nadie ni nada es lo que parece.
+
+      </descripcion>
+      <precio> 21.90 </precio>
+      <descuento> 25 </descuento>
+      <iva> 4 </iva>
+      <stock> 320 </stock>
+      <isbn> 9788401336379 </isbn>
+      <anuncio> Aqui el anuncio inocentes </anuncio>
+      <destacado> 1 </destacado>
+      <desde> "2018-1-1" </desde>
+      <hasta> "2019-6-9" </hasta>
+      <visible> 1 </visible>
+      <idCategoria> 5 </idCategoria>
+   </producto>
+   <producto>
+      <nombre> Te dare la tierra </nombre>
+      <imagen> tedarelatierra.jpg </imagen>
+      <descripcion>
+
+         La Barcelona medieval abriga entre sus murallas dos historias, ambas marcadas por el amor y la ambición: la de un joven campesino que logra cambiar su destino con la única esperanza de prosperar, conseguir la ciudadanía y hacerse así merecedor del amor de una joven de alcurnia, y los amores adúlteros del conde de Barcelona, que sumen a la ciudad en un peligroso conflicto político. Te daré la tierra une con maestría, ficción e historia para mostrar el fresco vívido de una ciudad en la que los pactos, el linaje, las intrigas palaciegas, la ambición comercial y la convivencia entre diferentes religiones se tiñen con las emociones más intensas: pasión, amistad, envidia, honor y venganza. Una novela apasionante y ambiciosa que sumerge al lector en la época en que comienza la forja de una ciudad.
+
+      </descripcion>
+      <precio> 20 </precio>
+      <descuento> 0 </descuento>
+      <iva> 4 </iva>
+      <stock> 75 </stock>
+      <isbn> 9788425341977  </isbn>
+      <anuncio> Anuncio te dare la tierra aqui </anuncio>
+      <destacado> 1 </destacado>
+      <desde> "2018-1-1" </desde>
+      <hasta> "2020-1-25"</hasta>
+      <visible> 1 </visible>
+      <idCategoria> 5 </idCategoria>
+   </producto>
+   <producto>
+      <nombre> Rimas y leyendas </nombre>
+      <imagen> rimas.jpg </imagen>
+      <descripcion>
+
+         Las Rimas suponen en su momento el punto de partida de la poesía moderna española. En ellas podemos encontrar tres temas centrales: la creación poética, el amor y la muerte, temas que llegaron a obsesionar al autor. Son obras cortas y breves, entidades completas en sí mismas, pues concentró en ellas la poesía que le hubiera gustado reflejar en otros poemas más extensos que nunca escribió. La poesía becqueriana se caracteriza por su sencillez. Recoge la rima y la entidad del verso en toda su extensión y complejidad. La profunda religiosidad de Bécquer queda reflejada en sus Leyendas, un conjunto de breves narraciones románticas en prosa, en las que destaca una lúcida atmósfera de misterio y fantasía, con evocaciones oníricas, donde el tema fundamental es el amor, aunque no el único, pues trata también lo misterioso y sobrenatural. El amor como un ideal inalcanzable, la muerte siempre presente, lo onírico, la separación entre el cuerpo y el alma, el ideal de mujer, -bella en extremo y fría de carácter, a veces diabólica-, son los temas que explota en estos relatos. Son temas plenamente románticos.
+
+      </descripcion>
+      <precio> 25 </precio>
+      <descuento> 50 </descuento>
+      <iva> 4 </iva>
+      <stock> 420 </stock>
+      <isbn> 9788416775712  </isbn>
+      <anuncio> anuncio rimas aqui </anuncio>
+      <destacado> 0 </destacado>
+      <desde> "2018-1-1"</desde>
+      <hasta> "2020-1-25"</hasta>
+      <visible> 1 </visible>
+      <idCategoria> 6 </idCategoria>
+   </producto>
+   <producto>
+      <nombre> La villa de las telas </nombre>
+      <imagen> telas.jpg </imagen>
+      <descripcion>
+         Una emocionante saga familiar, para fans deDownton Abbey,Kate Morton o Lucinda Riley, que ha cautivado ya a más de un millón de lectoras en Alemania.Una mansión.Una poderosa familia.Un oscuro secreto.El destino de una familia en tiempos convulsos y un amor que todo lo vence.Augsburgo, 1913. La joven Marie entra a trabajar en la cocina de la impresionante villa de los Melzer, una rica familia dedicada a la industria textil. Mientras Marie, una pobre chica proveniente de un orfanato, lucha por abrirse paso entre los criados, los Melzer esperan con ansia el comienzo de la nueva temporada invernal de baile, momento en el que se presentará en sociedad la bella Katharina. Solo Paul, el heredero, permanece ajeno al bullicio, pues prefiere su vida de estudiante en Múnich. Hasta que conoce a Marie...
+      </descripcion>
+      <precio> 20 </precio>
+      <descuento> 0 </descuento>
+      <iva> 21 </iva>
+      <stock> 250 </stock>
+      <isbn> 9788401020520  </isbn>
+      <anuncio> anuncio telas</anuncio>
+      <destacado> 1 </destacado>
+      <desde> "2018-1-25" </desde>
+      <hasta> "2019-7-20" </hasta>
+      <visible> 1 </visible>
+      <idCategoria> 8 </idCategoria>
+   </producto>
+   <producto>
+      <nombre> La sombra de Cristo </nombre>
+      <imagen> sombra.jpg </imagen>
+      <descripcion> 
+         ¿Quieres saber la verdad sobre una mentira que dura desde hace dos mil años? Fray Remondino acaba de descubrir un antiguo manuscrito, enterrado en los sótanos de su convento desde hace 500 años. ¿Cuál es el secreto inconfesable que encierra y por qué alguien está dispuesto a matar a un fraile para ocultarlo? El Papa León X, durante el Renacimiento, pronunció la siguiente frase: "Desde tiempos inmemoriales es sabido cuán provechosa nos ha resultado esta fábula de Jesucristo”. ¿Qué quería decir?¿Por qué Sor Lucía dos Santos, la vidente de Fátima, envió una carta al Vaticano desde su lecho de muerte? Entre las intrigas de la corte papal, unos intentos de envenenamiento y una persecución emocionante, las maquinaciones oscuras de la Iglesia Católica nunca se acabarán, ni siquiera cuando en Egipto será exhumado un esqueleto con una costilla rota...</descripcion>
+      <precio> 10 </precio>
+      <descuento> 50 </descuento>
+      <iva> 4 </iva>
+      <stock> 70 </stock>
+      <isbn> 9788826048468  </isbn>
+      <anuncio> anuncio sombra cristo aqui </anuncio>
+      <destacado> 0 </destacado>
+      <desde> "2019-6-9" </desde>
+      <hasta> "2019-7-25" </hasta>
+      <visible> 1 </visible>
+      <idCategoria> 7 </idCategoria>
+   </producto>
+   <producto>
+      <nombre> Diario de un poeta reciencasado </nombre>
+      <imagen> diariopoeta.jpg </imagen>
+      <descripcion> 
+        " Con el" Diario" empieza el simbolismo moderno en la poesía española" . Con esta observación, Juan Ramón Jiménez señala la enorme importancia histórica de lo que es, en el mundo hispánico, la obra poética más importante del siglo XX. Obra enormemente innovadora por la combinación de verso y prosa en un mismo libro, inicia además un nuevo modo de composición poética, figura entre las primeras obras en prosa de lengua española que recogen imágenes de Nueva York, desarrolla notablemente el poema en prosa y muestra varios estratos de significado: autobiografía lírica escrita en forma de diario, viaje de novio y reciencasado que recorre España de centro a sur, el Atlántico Norte y la América del Este, gran poema en verso y prosa que canta y cuenta la experiencia de Nueva York," breve guía de amor por tierra, mar y cielo" , y lo más extraordinario, obra que transforma un drama íntimo del alma en un arquetipo de la experiencia humana. Esta edición incluye un Apéndice con más de 60 textos inéditos.
+      </descripcion>
+      <precio> 19 </precio>
+      <descuento> 10 </descuento>
+      <iva> 4 </iva>
+      <stock> 1 </stock>
+      <isbn> 97883360434568  </isbn>
+      <anuncio> anuncio sombra aqui </anuncio>
+      <destacado> 0 </destacado>
+      <desde> "2018-2-9" </desde>
+      <hasta> "2019-7-25" </hasta>
+      <visible> 1 </visible>
+      <idCategoria> 6 </idCategoria>
+   </producto>
+   <producto>
+      <nombre> La casa torcida </nombre>
+      <imagen> casatorcida.jpg </imagen>
+      <descripcion>
+         Tres generaciones de la familia del multimillonario griego Aristide Leonides conviven en Inglaterra bajo el mismo techo: una curiosa mansión de estructura inclinada. Una multitud de personajes se entremezcla en los pasillos y las estancias de la casa, incluidas la joven y hermosa Brenda, segunda esposa del anciano patriarca, y Sophia, su más avispada nieta, cuyo futuro suegro es comisario de policía. Sin embargo, la paz hogareña se trunca cuando Aristide es envenenado. Las sospechas recaen sobre todos los miembros de la familia. ¿Quién es el asesino? El misterio está servido. «Escribir La casa torcida fue un placer de principio a fin, y creo poder afirmar que es una de mis mejores obras», Agatha Christie
+      </descripcion>
+      <precio> 30 </precio>
+      <descuento> 25 </descuento>
+      <iva> 4 </iva>
+      <stock> 350 </stock>
+      <isbn></isbn>
+      <anuncio> anuncio sombra aqui </anuncio>
+      <destacado> 0 </destacado>
+      <desde> "2018-2-9" </desde>
+      <hasta> "2019-10-25" </hasta>
+      <visible> 1 </visible>
+      <idCategoria> 7 </idCategoria>
+   </producto>
+   <producto>
+      <nombre> Cincuenta sombras de Grey </nombre>
+      <imagen> sombrasgrey.jpg </imagen>
+      <descripcion>
+         Primera parte de «Cincuenta sombras», la trilogía totalmente adictiva, que te obsesionará, te poseerá y quedará para siempre en tu memoria.Cuando la estudiante de literatura Anastasia Steele recibe el encargo de entrevistar al exitoso y joven empresario Christian Grey, queda impresionada al encontrarse ante un hombre atractivo, seductor y también muy intimidante. La inexperta e inocente Ana intenta olvidarle, pero pronto comprende cuánto le desea.Grey está atormentado por sus propios demonios y le consume la necesidad de controlarlo todo, aunque a su vez se ve incapaz de resistirse a la serena belleza de Ana, a su inteligencia y a su espíritu independiente. Debe admitir que la desea, pero bajo ciertas condiciones.Cuando la pareja inicia por fin una apasionada relación, las peculiares prácticas sexuales de Grey desconciertan a Ana, al tiempo que ella descubre los límites de sus propios y más oscuros deseos.Más de 125 millones de ejemplares vendidos en todo el mundo.133 semanas consecutivas en la lista de los más vendidos del New York Times.7 millones de lectores en español.La crítica ha dicho...«La novela erótica superventas Cincuenta sombras de Grey es una revolución para millones de mujeres, cuyas vida...
+      </descripcion>
+      <precio> 25 </precio>
+      <descuento> 25  </descuento>
+      <iva> 4 </iva>
+      <stock> 300 </stock>
+      <isbn></isbn>
+      <anuncio> anuncio sombra aqui </anuncio>
+      <destacado> 0 </destacado>
+      <desde> "2018-2-9" </desde>
+      <hasta> "2019-6-25" </hasta>
+      <visible> 1 </visible>
+      <idCategoria> 8 </idCategoria>
+   </producto>
+</productos>
