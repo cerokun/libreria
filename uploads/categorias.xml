@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<categorias>
+   <categoria>
+      <nombre> Poesia </nombre>
+      <descripcion> Libros de poesia </descripcion>
+      <anuncio> Anuncio libros poesia </anuncio>
+      <codigo> 	POE </codigo>
+      <visible> 1 </visible>
+   </categoria>
+ <categoria>
+      <nombre> Suspense </nombre>
+      <descripcion> Libros de suspense </descripcion>
+      <anuncio> Anuncio libros suspense </anuncio>
+      <codigo> 	SUS </codigo>
+      <visible> 1 </visible>
+   </categoria>
+ <categoria>
+      <nombre> Romantica </nombre>
+      <descripcion> Libros de literatura romantica </descripcion>
+      <anuncio> Anuncio libros romatica </anuncio>
+      <codigo> 	ROM </codigo>
+      <visible> 1 </visible>
+   </categoria>
+</categorias>
