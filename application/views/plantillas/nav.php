@@ -56,8 +56,8 @@
                        <a class="dropdown-item" href="<?= site_url("Crud/categorias") ?>"> Crud categorias </a>
                        <a class="dropdown-item" href="<?= site_url("Crud/productos") ?>"> Crud Productos </a>
                        <a class="dropdown-item" href="<?= site_url("Pedidos_C/muestraFormularioCambiarEstado") ?>"> Cambiar estado pedidos </a>
-                       <a class="dropdown-item" href="<?= site_url("ImportarDatosEnXML") ?>"> Importar/exportar xml </a>
-                       <a class="dropdown-item" href="#"> Importar/exportar excel </a>
+                       <a class="dropdown-item" href="<?= site_url("Xml") ?>"> Importar/exportar xml </a>
+                       <a class="dropdown-item" href="<?= site_url("Excel") ?>"> Importar/exportar excel </a>
                    </div>
                </li>
 
