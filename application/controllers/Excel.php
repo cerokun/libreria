@@ -15,6 +15,7 @@ class Excel extends CI_Controller
         parent::__construct();
         $this->load->model('categorias');
         $this->load->model("productos");
+        $this->load->model("pedidos");
     }
 
 
@@ -22,8 +23,97 @@ class Excel extends CI_Controller
     {
 
         //$this->exportarCategorias();
-        $this->exportarProductos();
+        //$this->exportarProductos();
+        $this->exportarPedidos();
     }
+
+
+    public function exportarPedidos()
+    {
+
+        // Obtengo todos los pedidos
+        $pedidos = $this->pedidos->dameTodos();
+
+        // Creo el objeto
+        $spreadsheet = new Spreadsheet();
+
+        // Añado las columnas
+        $spreadsheet->setActiveSheetIndex(0)
+            ->setCellValue('A1', 'IdPedido')
+            ->setCellValue('B1', 'Fecha')
+            ->setCellValue('C1', 'Nombre')
+            ->setCellValue('D1', 'Apellidos')
+            ->setCellValue('E1', 'Correo')
+            ->setCellValue('F1', 'Dni')
+            ->setCellValue('G1', 'Direccion')
+            ->setCellValue('H1', 'Codigo postal')
+            ->setCellValue('I1', 'Provincia')
+            ->setCellValue('J1', 'Estado');
+
+        // Ancho que tendran las columnas
+        $spreadsheet->getActiveSheet()->getColumnDimension('A')->setAutoSize(true);
+        $spreadsheet->getActiveSheet()->getColumnDimension('B')->setAutoSize(true);
+        $spreadsheet->getActiveSheet()->getColumnDimension('C')->setWidth(20);
+        $spreadsheet->getActiveSheet()->getColumnDimension('D')->setWidth(20);
+        $spreadsheet->getActiveSheet()->getColumnDimension('E')->setAutoSize(true);
+        $spreadsheet->getActiveSheet()->getColumnDimension('F')->setAutoSize(true);
+        $spreadsheet->getActiveSheet()->getColumnDimension('G')->setWidth(30);
+        $spreadsheet->getActiveSheet()->getColumnDimension('H')->setAutoSize(true);
+        $spreadsheet->getActiveSheet()->getColumnDimension('I')->setAutoSize(true);
+        $spreadsheet->getActiveSheet()->getColumnDimension('J')->setAutoSize(true);
+
+
+        $fila = 2;
+
+        for ($index = 0; $index < count($pedidos); $index++) {
+
+            // Obtengo el identificador del pedido.
+            $idPedido = $pedidos[$index]["idPedido"];
+
+            $spreadsheet->setActiveSheetIndex(0)
+                ->setCellValue('A' . $fila,  $idPedido)
+                ->setCellValue('B' . $fila,  $pedidos[$index]["fecha"])
+                ->setCellValue('C' . $fila,  $pedidos[$index]["nombre"])
+                ->setCellValue('D' . $fila,  $pedidos[$index]["apellidos"])
+                ->setCellValue('E' . $fila,  $pedidos[$index]["correo"])
+                ->setCellValue('F' . $fila,  $pedidos[$index]["dni"])
+                ->setCellValue('G' . $fila,  $pedidos[$index]["direccion"])
+                ->setCellValue('H' . $fila,  $pedidos[$index]["codigoPostal"])
+                ->setCellValue('I' . $fila,  $pedidos[$index]["provincia"])
+                ->setCellValue('J' . $fila,  $pedidos[$index]["estado"]);
+
+
+            // Obtengo su linea de pedido.
+            $lineaPedido = $this->pedidos->dameLineaPedido($idPedido);
+
+            foreach ($lineaPedido as $item) {
+
+
+
+                $spreadsheet->setActiveSheetIndex(0)
+                    ->setCellValue('B' . $fila,  $item["nombre"])
+                    ->setCellValue('C' . $fila,  $item["lpPrecio"] . "€")
+                    ->setCellValue('D' . $fila,  $item["cantidad"])
+                    ->setCellValue('E' . $fila,  ( $item["lpPrecio"] * $item["cantidad"] ) . "€" );
+                $fila++;
+            }
+        }
+
+
+        // redirect output to client browser
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="pedidos.xls"');
+        header('Cache-Control: max-age=0');
+
+        $writer = IOFactory::createWriter($spreadsheet, 'Xls');
+
+        $writer->save('php://output');
+    }
+
+
+
+
+
 
     /**
      * Exporta las categorias a excel.
