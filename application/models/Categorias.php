@@ -33,10 +33,14 @@ class Categorias extends CI_Model
         return $this->db->insert_batch("categorias", $datos);
     }
 
+    /**
+     * Me da todas las categorias, incluidas las que se han
+     * marcado como no visibles por parte del administrador
+     *
+     * @return void
+     */
     public function dameTodasIncluidasLasInvisibles()
     {
-        return $this->db->get_where("categorias", array("visible" => 1))->result_array();
+        return $this->db->get("categorias")->result_array();
     }
-
-
 }

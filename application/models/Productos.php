@@ -109,4 +109,16 @@ class Productos extends CI_Model
     {
         return $this->db->insert_batch("productos", $datos);
     }
+
+    /**
+     * Me da todas los productos, incluidas las que se han
+     * marcado como no visibles por parte del administrador
+     *
+     * @return void
+     */
+    public function dameTodasIncluidasLasInvisibles()
+    {
+        return $this->db->get("productos")->result_array();
+    }
+
 }
