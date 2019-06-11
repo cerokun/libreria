@@ -26,6 +26,16 @@ class Excel extends CI_Controller
         $this->load->view('formularioExcel');
         $this->load->view("plantillas/footer");
         */
+
+
+
+
+        /*
+
+        foreach ($categorias as $categoria) {
+            echo $categoria["nombre"];
+        }
+*/
         $this->exportar();
     }
 
@@ -51,16 +61,33 @@ class Excel extends CI_Controller
             ->setCellValue('B1', 'Nombre')
             ->setCellValue('C1', 'Descripcion')
             ->setCellValue('D1', 'Anuncio')
-            ->setCellValue('E1', 'Codigo Interno')
+            ->setCellValue('E1', 'Codigo')
             ->setCellValue('F1', 'Visible');
 
         // Ancho que tendran las columnas
         $spreadsheet->getActiveSheet()->getColumnDimension('A')->setAutoSize(true);
-        $spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(40);
+        $spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(20);
         $spreadsheet->getActiveSheet()->getColumnDimension('C')->setWidth(60);
         $spreadsheet->getActiveSheet()->getColumnDimension('D')->setWidth(20);
         $spreadsheet->getActiveSheet()->getColumnDimension('E')->setAutoSize(true);
         $spreadsheet->getActiveSheet()->getColumnDimension('F')->setAutoSize(true);
+
+        // Inserto los datos dinamicamente
+        $categorias = $this->categorias->dameTodasIncluidasLasInvisibles();
+
+        for ($index = 0, $fila = 2; $index < count($categorias); $index++, $fila++) {
+
+            $spreadsheet->setActiveSheetIndex(0)
+                ->setCellValue('A' . $fila,  $categorias[$index]["idCategoria"])
+                ->setCellValue('B' . $fila,  $categorias[$index]["nombre"])
+                ->setCellValue('C' . $fila,  $categorias[$index]["descripcion"])
+                ->setCellValue('D' . $fila,  $categorias[$index]["anuncio"])
+                ->setCellValue('E' . $fila,  $categorias[$index]["codigo"])
+                ->setCellValue('F' . $fila,  $categorias[$index]["visible"]);
+        }
+
+
+
 
         // redirect output to client browser
         header('Content-Type: application/vnd.ms-excel');
