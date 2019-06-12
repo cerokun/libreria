@@ -87,16 +87,19 @@ class Excel extends CI_Controller
             $lineaPedido = $this->pedidos->dameLineaPedido($idPedido);
 
             foreach ($lineaPedido as $item) {
-
-
-
+              
+                $fila++;
+                
                 $spreadsheet->setActiveSheetIndex(0)
                     ->setCellValue('B' . $fila,  $item["nombre"])
                     ->setCellValue('C' . $fila,  $item["lpPrecio"] . "€")
                     ->setCellValue('D' . $fila,  $item["cantidad"])
-                    ->setCellValue('E' . $fila,  ( $item["lpPrecio"] * $item["cantidad"] ) . "€" );
-                $fila++;
+                    ->setCellValue('E' . $fila, ($item["lpPrecio"] * $item["cantidad"]) . "€");
+
+                 
+               
             }
+            $fila++;
         }
 
 
