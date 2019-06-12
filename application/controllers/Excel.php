@@ -21,10 +21,11 @@ class Excel extends CI_Controller
 
     public function index()
     {
-
-        //$this->exportarCategorias();
-        //$this->exportarProductos();
-        $this->exportarPedidos();
+        $misCategorias["categorias"] = $this->categorias->dameTodas();
+        $this->load->view("plantillas/header", $misCategorias);
+        $this->load->view("plantillas/nav");
+        $this->load->view("formularioExcel");
+        $this->load->view("plantillas/footer");
     }
 
 
@@ -87,17 +88,14 @@ class Excel extends CI_Controller
             $lineaPedido = $this->pedidos->dameLineaPedido($idPedido);
 
             foreach ($lineaPedido as $item) {
-              
-                $fila++;
-                
-                $spreadsheet->setActiveSheetIndex(0)
-                    ->setCellValue('B' . $fila,  $item["nombre"])
-                    ->setCellValue('C' . $fila,  $item["lpPrecio"] . "€")
-                    ->setCellValue('D' . $fila,  $item["cantidad"])
-                    ->setCellValue('E' . $fila, ($item["lpPrecio"] * $item["cantidad"]) . "€");
 
-                 
-               
+                $fila++;
+
+                $spreadsheet->setActiveSheetIndex(0)
+                    ->setCellValue('A' . $fila,  $item["nombre"])
+                    ->setCellValue('B' . $fila,  $item["lpPrecio"] . "€")
+                    ->setCellValue('C' . $fila,  $item["cantidad"])
+                    ->setCellValue('D' . $fila, ($item["lpPrecio"] * $item["cantidad"]) . "€");
             }
             $fila++;
         }
