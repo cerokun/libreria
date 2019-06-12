@@ -1,5 +1,10 @@
  <?php
 
+    /**
+     * Genera la factura/pedido en formato pdf.
+     * @author Jose Luis 
+     */
+
     defined('BASEPATH') or exit('No direct script access allowed');
 
     require "fpdf/fpdf.php";
@@ -7,7 +12,6 @@
     class Factura extends FPDF
     {
 
-        //Cell(float w [, float h [, string txt [, mixed border [, int ln [, string align [, boolean fill )
         // Page header
         function cabecera($datos)
         {
@@ -53,7 +57,13 @@
             $this->Ln(20);
         }
 
-        // Colored table
+         /**
+          * Creo la tabla dinamicamente
+          *
+          * @param array $header son las columnas que apareceran en el header del documento.
+          * @param array $data los productos 
+          * @return void
+          */
         function generarTabla($header, $data)
         {
 

@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Cambia la contraseña
+ * 
+ * @author Jose Luis
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 

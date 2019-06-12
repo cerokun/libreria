@@ -1,41 +1,45 @@
 <?php
 
-echo "Tu ip es: " . get_client_ip_server();
+
+/***
+ * Consumo un web service y obtengo la ciudad desde donde se conecta.
+ */
+function dameCiudadDesdeLaQueMeConecto()
+{
+
+    // Obtengo la ip del servidor
+    //$ip = get_client_ip_server(); 
+    $ip = "146.158.199.3";
+
+    //$ip = "146.158.199.3"; // Desde local funciona, poner la ip aqui.
+    // Url del servicio soap.
+    $url = "https://ws.cdyne.com/ip2geo/ip2geo.asmx?WSDL";
+
+    // Parametros
+    $datos = array(
+        "ipAddress" => $ip,
+        "licenseKey" => 0
+    );
 
 
-// Url del servicio soap.
-$url = "https://ws.cdyne.com/ip2geo/ip2geo.asmx?WSDL";
-
-
-$datos = array(
-    "ipAddress" => "213.143.61.128",
-    "licenseKey" => 0
-);
-
-
-try {
-    echo "<br><br> Antes de cargar la libreria Soap <br>";
+    // Instancio el servicio
     $client = new SoapClient($url);
-    echo "He cargado la libreria <br>";
+
+    // Le paso los datos
     $result = $client->ResolveIP($datos);
-    echo "Invoco al metodo  client->ResolveIP() <br>";
-} catch (SoapFault $e) {
-    echo $e->getMessage();
-} catch (Exception $e) {
-    echo "Exception general" . $e->getMessage();
+    // Datos que enviare a la vista.
+    $datos["ciudad"] =  $result->ResolveIPResult->City;
+
+    // Devuelvo los datos a la vista.
+    return $datos;
 }
 
-echo "Solicito la ciudad mediante ResolveIPResult->City <br>";
-echo "Tu ciudad es: " . $result->ResolveIPResult->City;
-
-echo "<pre>";
-print_r($result);
-echo "</pre>";
 
 
 // Function to get the client ip address
 function get_client_ip_server()
 {
+
     $ipaddress = '';
     if ($_SERVER['HTTP_CLIENT_IP'])
         $ipaddress = $_SERVER['HTTP_CLIENT_IP'];

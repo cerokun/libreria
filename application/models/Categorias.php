@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Procesa las peticiones basicas sobre la tabla categorias
+ * @author  Jose Luis  
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Categorias extends CI_Model

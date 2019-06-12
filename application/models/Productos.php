@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Procesa y gestiona los productos, todas las operaciones basicas
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Productos extends CI_Model
@@ -120,5 +124,4 @@ class Productos extends CI_Model
     {
         return $this->db->get("productos")->result_array();
     }
-
 }

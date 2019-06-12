@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * Importa categorias o productos desde un fichero .xml 
+ * y los almaceno en la base de datos.
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Xml extends CI_Controller
@@ -64,7 +70,7 @@ class Xml extends CI_Controller
             // Voy guardando en el array los datos.
             $datos[] = array(
                 "nombre" => $producto->nombre,
-                "imagen" => trim( $producto->imagen ),
+                "imagen" => trim($producto->imagen),
                 "descripcion" => $producto->descripcion,
                 "precio" => $producto->precio,
                 "descuento" => $producto->descuento,

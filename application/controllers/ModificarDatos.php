@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * Actualiza, modifca los datos del usuario, tras realizar las validaciones.
+ * @author Jose Luis  
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class ModificarDatos extends CI_Controller
@@ -18,7 +24,11 @@ class ModificarDatos extends CI_Controller
     }
 
 
-
+    /**
+     * Valido los datos del formulario
+     *
+     * @return void
+     */
     public function validar()
     {
         // Supongamos que los datos introducidos en el formulario, no superan las validaciones.

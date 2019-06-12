@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Registra en la base de datos, un nuevo cliente
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Registrar extends CI_Controller
@@ -14,6 +19,12 @@ class Registrar extends CI_Controller
         $this->load->model('Usuario');
     }
 
+    /**
+     * Comprueba que los datos del formulario registro, sean correctos
+     * y los datos proporcionados por el usuario, sean todos correctos.
+     *
+     * @return void
+     */
     public function validar()
     {
         // Supongamos que los datos introducidos en el formulario, no superan las validaciones.
@@ -76,7 +87,12 @@ class Registrar extends CI_Controller
         }
     } // End method comprobar()
 
-
+    /**
+     * Muestra el formulario
+     *
+     * @param boolean $estoyRegistrado
+     * @return void
+     */
     public function mostrarFormulario($estoyRegistrado = false)
     {
         $datos["estoyRegistrado"] = $estoyRegistrado;

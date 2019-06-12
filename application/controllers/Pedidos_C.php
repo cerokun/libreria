@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Procesa las operaciones basicas sobre los pedidos y la linea de pedido.
+ * @author  Jose Luis  
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 
@@ -153,7 +158,11 @@ class Pedidos_C extends CI_Controller
         return $factura->Output("S");
     }
 
-
+    /**
+     * Muestro los pedidos realizados
+     *
+     * @return void
+     */
     public function listar()
     {
 
@@ -172,7 +181,11 @@ class Pedidos_C extends CI_Controller
     }
 
 
-
+    /**
+     * Muestro la linea de pedido
+     *
+     * @return void
+     */
     public function ver()
     {
 
@@ -190,7 +203,11 @@ class Pedidos_C extends CI_Controller
         $this->load->view("plantillas/footer");
     }
 
-
+    /**
+     * Cancelo un pedido,
+     *
+     * @return void
+     */
     public function eliminar()
     {
 
@@ -249,7 +266,11 @@ class Pedidos_C extends CI_Controller
         }
     }
 
-
+    /**
+     * Muestra los datos de una factura/pedido
+     *
+     * @return void
+     */
     public function verFactura()
     {
 

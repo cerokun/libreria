@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Enviar correo al uaurio para cambiar de contraseña si la olvido o para enviar
+ * la factura al cliente tras realizar una compra
+ * @author Jose Luis  
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 require "vendor/phpmailer/phpmailer/class.phpmailer.php";
@@ -15,7 +21,14 @@ class Correo extends CI_Model
     }
 
 
-
+    /**
+     * Envia correo al uaurio, para que pueda cambiar la contraseña
+     *
+     * @param String $correo del cliente
+     * @param String $asunto del mensaje
+     * @param String $cuerpo contenido
+     * @return void
+     */
     public function enviar($correo, $asunto, $cuerpo)
     {
 
@@ -66,7 +79,15 @@ class Correo extends CI_Model
     }
 
 
-
+    /**
+     * Envia la factura al cliente
+     *
+     * @param String $correo del cliente
+     * @param String $asunto del mensaje
+     * @param String $cuerpo del mensaje
+     * @param String $fichero en pdf
+     * @return void
+     */
     public function enviarFactura($correo, $asunto, $cuerpo, $fichero)
     {
 
@@ -103,7 +124,7 @@ class Correo extends CI_Model
         //convert HTML into a basic plain-text alternative body
         //$mail->msgHTML($cuerpo);
         $mail->isHTML(true);
-         
+
         $mail->msgHTML($cuerpo);
         //Replace the plain text body with one created manually
         $mail->AltBody = 'Pedido realizado';

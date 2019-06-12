@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * Genera el crud de las tablas categorias y productos, he utilizado la libreria Grocery Crud
+ * que trae el framework Codeigniter
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Crud extends CI_Controller
@@ -12,15 +18,24 @@ class Crud extends CI_Controller
         $this->load->library('grocery_CRUD');
     }
 
-
+    /**
+     * Genero el crud de la tabla productos
+     *
+     * @return void
+     */
     public function productos()
     {
+        // Instancio el objeto
         $crud = new grocery_CRUD();
+        // Estilos css para la tabla
         $crud->set_theme("datatables");
+        // Tabla 
         $crud->set_table('productos');
+        // Mis columnas
         $crud->columns("nombre", "precio", "stock", "isbn", "destacado", "visible");
+        // Idioma
         $crud->set_language("spanish");
-
+        // Renderiza
         $output = $crud->render();
 
         // Obtengo las categorias
@@ -33,6 +48,11 @@ class Crud extends CI_Controller
         $this->load->view("plantillas/footer");
     }
 
+    /**
+     * Genero el crud de la tabla categorias
+     *
+     * @return void
+     */
     public function categorias()
     {
 

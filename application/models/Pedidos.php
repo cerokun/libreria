@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Procesa y gestiona las peticiones de los clientes y administradores, sobre los pedidos realizados
+ * y la linea de pedido.
+ * @author Jose Luis  
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Pedidos extends CI_Model
@@ -11,17 +17,31 @@ class Pedidos extends CI_Model
         $this->load->database();
     }
 
+    /**
+     * Creo una pedido
+     *
+     * @param array $datos
+     * @return void
+     */
     public function crear($datos)
     {
         return ($this->db->insert("pedidos", $datos)) ? $this->db->insert_id() : false;
     }
 
+    /**
+     * Añade los productos al pedido
+     *
+     * @param array $items
+     * @return void
+     */
     public function insertarProductosEnLineaDePedido($items)
     {
         return $this->db->insert_batch("lineaDePedido", $items);
     }
 
-
+    /**
+     * Muestra todos los pedidos que ha realizado el cliente
+     */
     public function realizados($id)
     {
         return $this->db
@@ -50,12 +70,22 @@ class Pedidos extends CI_Model
     }
 
 
-
+    /**
+     * Cancela un pedido
+     *
+     * @param String $id identificador unico del pedido.
+     * @return boolean
+     */
     public function cancelar($id)
     {
         return $this->db->update('pedidos', array("cancelar" => 1), array("idPedido" => $id));
     }
 
+    /**
+     * Me da todos los pedidos que se hayan realizado, de todos los clientes.
+     *
+     * @return void
+     */
     public function dameTodos()
     {
         return $this->db->get("pedidos")->result_array();
@@ -73,6 +103,12 @@ class Pedidos extends CI_Model
         return $this->db->update('pedidos', array("estado" => $estado), array("idPedido" => $id));
     }
 
+    /**
+     * Me da los datos de un pedido
+     *
+     * @param String $id unico del pedido.
+     * @return void
+     */
     public function dameUnPedido($id)
     {
         return $this->db->get_where("pedidos", array('idPedido' => $id))->row_array();

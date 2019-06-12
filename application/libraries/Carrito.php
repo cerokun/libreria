@@ -1,9 +1,13 @@
 <?php
+
+/**
+ * Procesa y gestiona el carrito de compra mediante sesiones.
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Carrito
 {
-
 
 	private $total_items;
 	/**
@@ -107,7 +111,11 @@ class Carrito
 	}
 
 
-
+	/**
+	 * Me dice el total de productos 
+	 *
+	 * @return void
+	 */
 	public function numeroTotalProductos()
 	{
 

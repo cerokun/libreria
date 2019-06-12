@@ -1,3 +1,22 @@
+  <?php
+
+
+   // Set the super object to a local variable for use later
+    $CI = &get_instance();
+    // Load the Sessions class
+    $CI->load->helper('geolocalizacion');
+
+    if (extension_loaded('soap')) {
+        $soapDisponible = true;
+        $respuesta = dameCiudadDesdeLaQueMeConecto();
+        $ip = $respuesta["ipAddress"];
+    } else {
+        $soapDisponible = false;
+    }
+    ?>
+ 
+
+
   <!DOCTYPE html>
   <html lang="en">
 
@@ -51,10 +70,20 @@
                 $usuario = $this->session->userdata("usuario");
                 ?>
               <h4 id="nombre"> ¡Bienvenido <?= $usuario["nombre"] ?>! </h4>
+
               <!-- Tipo de usuario -->
               <h3 id="tipo"> Tipo de usuario: <?= ucfirst($usuario["tipo"]) ?> </h3>
-              <!-- Hora a la que se ha conectado -->
-              <h5 id="hora"><span style="color:white"> Has iniciado</span> sesion a las 20:00 </h5>
+              <!-- Compruebo si esta disponible el servicio SOAP -->
+              <?php if ( $soapDisponible) : ?>
+                  <img id="estoyAquiSoap" src="<?= base_url() . 'assets/img/pagina/ustedestaaqui.png' ?>" width="5%">
+                  <h3 id="localizacionSoap"> <?= $respuesta["ciudad"];  ?> </h3>
+              <?php else : ?>
+                  <img id="advertenciaSoap" src="<?= base_url() . 'assets/img/pagina/advertencia.png' ?>" width="50px">
+                  <h4 id="mensajeSoap"> Servicio deshabilitado</h4>
+                  <!-- Ciudad desde donde se conecta, servicio Soap -->
+                  <img id="logoSoap" src="<?= base_url() . 'assets/img/pagina/soap.png' ?>">
+              <?php endif; ?>
+
               <!-- Boton para cerrar la sesion -->
               <a href="<?= site_url('Principal/cerrarSesion') ?>"> <img src="<?= base_url() . 'assets/img/pagina/cerrarSesion.png' ?>" id="cerrarSesion"> </a>
           <?php else : ?>

@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Comprueba si el usuario esta logeado
+ * @author Jose Luis 
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class ComprobarLogin extends CI_Controller

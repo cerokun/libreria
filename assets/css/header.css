@@ -26,14 +26,46 @@ header {
 	left: 1%;
 }
 
-#hora {
+#advertenciaSoap {
 	position: absolute;
 	top: 3%;
-	right: 46%;
+	right: 62%;
+}
+
+#mensajeSoap {
+	position: absolute;
+	top: 5%;
+	right: 47%;
+}
+
+#mensajeSoap {
+	color: red;
+	font-style: oblique;
+}
+
+#logoSoap {
+	position: absolute;
+	top: 1%;
+	right: 38%;
+}
+
+#localizacionSoap {
+	position: absolute;
+	top: 16%;
+	right: 48%;
+	color: #658900;
+	font-weight: revert;
+}
+
+#estoyAquiSoap {
+	position: absolute;
+	top: 0%;
+	right: 48%;
 	color: #b0a6a5;
 }
 
-#identificate, #cerrarSesion {
+#identificate,
+#cerrarSesion {
 	position: absolute;
 	top: 3%;
 	right: 2%;

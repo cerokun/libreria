@@ -1,4 +1,12 @@
 <?php
+
+/**
+ * Exporta a formato nativo de excel, los productos, categorias y pedidos.
+ * 
+ * @author Jose Luis 
+ */
+
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 require "vendor/autoload.php";
@@ -18,7 +26,11 @@ class Excel extends CI_Controller
         $this->load->model("pedidos");
     }
 
-
+    /**
+     * Muestro la vista principal
+     *
+     * @return void
+     */
     public function index()
     {
         $misCategorias["categorias"] = $this->categorias->dameTodas();
@@ -28,7 +40,12 @@ class Excel extends CI_Controller
         $this->load->view("plantillas/footer");
     }
 
-
+    /**
+     * Exporta el contenido de las tablas pedido y linea de pedido
+     * a formato excel
+     *
+     * @return void
+     */
     public function exportarPedidos()
     {
 

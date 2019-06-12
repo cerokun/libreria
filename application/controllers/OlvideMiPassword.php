@@ -47,6 +47,13 @@ class OlvideMiPassword extends CI_Controller
         return $estado;
     }
 
+    /**
+     * Comprueba si existe el correo electronico
+     * en la bse de datos.
+     *
+     * @param String $correo
+     * @return boolean true si ha encontrado el correo y false sino existe.
+     */
     public function exists_email($correo)
     {
 
@@ -63,7 +70,11 @@ class OlvideMiPassword extends CI_Controller
     }
 
 
-
+    /**
+     * Enviar el correo al usuario, para que pueda cambiar su contraseña
+     *
+     * @return void
+     */
     public function enviarCorreo()
     {
         // Comprueba que el correo sea valido
@@ -100,7 +111,13 @@ class OlvideMiPassword extends CI_Controller
         }
     }
 
-
+    /**
+     * Genera un token unico para el usuario que acaba de 
+     * solicitar el cambio de contraseña.
+     *
+     * @param [type] $valor
+     * @return void
+     */
     public function generarToken($valor)
     {
         $fechaActual = date('Y-m-d H:i:s');

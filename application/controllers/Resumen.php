@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * Muestra el resumen de los productos que va a comprar el cliente.
+ * @author Jose Luis  
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Resumen extends CI_Controller

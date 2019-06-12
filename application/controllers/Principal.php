@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Controlador principal, desde aqui, muestro la ventana principa, con las novedades y los menu de navegacion
+ * 
+ * @author Jose Luis  
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Principal extends CI_Controller

@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Procesa las peticiones basicas sobre la libreria Carrito, como ver, crear, elminar..etc
+ * 
+ * @author Jose Luis  
+ */
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class PeticionesCarrito extends CI_Controller
@@ -95,7 +101,11 @@ class PeticionesCarrito extends CI_Controller
         // Envio la respuesta.
         echo json_encode($datos);
     }
-
+    /**
+     * Elimino un producto 
+     *
+     * @return void
+     */
     public function eliminar()
     {
         $id = $this->input->post("idProducto");
@@ -103,12 +113,22 @@ class PeticionesCarrito extends CI_Controller
         $this->listar();
     }
 
+    /**
+     * Vacio todo el carrito
+     *
+     * @return void
+     */
     public function vaciar()
     {
         $this->carrito->destroy();
         $this->listar();
     }
 
+    /**
+     * Muestro todos los productos
+     *
+     * @return void
+     */
     public function listar()
     {
         $datos["libros"] = $this->carrito->dameTodosLosProductos();
