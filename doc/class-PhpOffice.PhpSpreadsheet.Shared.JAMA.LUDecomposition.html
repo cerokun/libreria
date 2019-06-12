@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class PhpOffice\PhpSpreadsheet\Shared\JAMA\LUDecomposition</title>
+
+	<script type="text/javascript" src="resources/combined.js?117538352"></script>
+	<script type="text/javascript" src="elementlist.js?1778263301"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Complex.html">Complex</a>
+						</li>
+				<li><a href="namespace-Composer.html">Composer<span></span></a>
+						<ul>
+				<li><a href="namespace-Composer.Autoload.html">Autoload</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Fpdf.html">Fpdf</a>
+						</li>
+				<li><a href="namespace-Matrix.html">Matrix<span></span></a>
+						<ul>
+				<li><a href="namespace-Matrix.Operators.html">Operators</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-PhpOffice.html">PhpOffice<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.html">Calculation<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Engine.html">Engine</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Token.html">Token</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Cell.html">Cell</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.html">Chart<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.Renderer.html">Renderer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Collection.html">Collection</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Document.html">Document</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.html">Reader<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.html">Xls<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Color.html">Color</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Style.html">Style</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.RichText.html">RichText</a>
+						</li>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.html">Shared<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.html">Escher<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.html">DgContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.SpgrContainer.html">SpgrContainer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.html">DggContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.html">BstoreContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.BSE.html">BSE</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.JAMA.html">JAMA</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.html">OLE<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.PPS.html">PPS</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Trend.html">Trend</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Style.html">Style</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.html">Worksheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.html">AutoFilter<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.Column.html">Column</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.Drawing.html">Drawing</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.html">Writer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.html">Ods<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.Cell.html">Cell</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Pdf.html">Pdf</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xls.html">Xls</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-Psr.html">Psr<span></span></a>
+						<ul>
+				<li><a href="namespace-Psr.SimpleCache.html">SimpleCache</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Samples.html">Samples<span></span></a>
+						<ul>
+				<li><a href="namespace-Samples.Sample09.html">Sample09</a>
+						</li>
+				<li><a href="namespace-Samples.Sample10.html">Sample10</a>
+						</li>
+				<li><a href="namespace-Samples.Sample12.html">Sample12</a>
+						</li>
+				<li><a href="namespace-Samples.Sample14.html">Sample14</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.CholeskyDecomposition.html">CholeskyDecomposition</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.EigenvalueDecomposition.html">EigenvalueDecomposition</a></li>
+				<li class="active"><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html">LUDecomposition</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.Matrix.html">Matrix</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.QRDecomposition.html">QRDecomposition</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.SingularValueDecomposition.html">SingularValueDecomposition</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PhpOffice.PhpSpreadsheet.Shared.JAMA.html" title="Summary of PhpOffice\PhpSpreadsheet\Shared\JAMA"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class LUDecomposition</h1>
+
+
+	<div class="description">
+	
+<p>For an m-by-n matrix A with m &gt;= n, the LU decomposition is an m-by-n unit
+lower triangular matrix L, an n-by-n upper triangular matrix U, and a
+permutation vector piv of length m so that A(piv,:) = L*U. If m &lt; n, then L
+is m-by-m and U is m-by-n.</p>
+
+<p>The LU decompostion with pivoting always exists, even if the matrix is
+singular, so the constructor will never fail. The primary use of the LU
+decomposition is in the solution of square systems of simultaneous linear
+equations. This will fail if isNonsingular() returns false.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-PhpOffice.html">PhpOffice</a>\<a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet</a>\<a href="namespace-PhpOffice.PhpSpreadsheet.Shared.html">Shared</a>\<a href="namespace-PhpOffice.PhpSpreadsheet.Shared.JAMA.html">JAMA</a><br>
+		
+
+				<b>Author:</b>
+				Paul Meagher<br>
+				<b>Author:</b>
+				Bartosz Matosiuk<br>
+				<b>Author:</b>
+				Michael Bommarito<br>
+				<b>Version:</b>
+				1.1<br>
+		<b>Located at</b> <a href="source-class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html#7-285" title="Go to source code">vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/JAMA/LUDecomposition.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html#64-127" title="Go to source code">__construct</a>( <span><code><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.Matrix.html">PhpOffice\PhpSpreadsheet\Shared\JAMA\Matrix</a></code> <var>$A</var></span> )</code>
+
+		<div class="description short">
+			
+<p>LU Decomposition constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>LU Decomposition constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$A</var></dt>
+					<dd><code><code><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.Matrix.html">PhpOffice\PhpSpreadsheet\Shared\JAMA\Matrix</a></code></code><br>$A Rectangular matrix</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getL" id="_getL">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.Matrix.html">PhpOffice\PhpSpreadsheet\Shared\JAMA\Matrix</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getL">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html#131-151" title="Go to source code">getL</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get lower triangular factor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get lower triangular factor.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.Matrix.html">PhpOffice\PhpSpreadsheet\Shared\JAMA\Matrix</a></code></code><br>Lower triangular factor<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getU" id="_getU">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.Matrix.html">PhpOffice\PhpSpreadsheet\Shared\JAMA\Matrix</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getU">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html#155-173" title="Go to source code">getU</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get upper triangular factor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get upper triangular factor.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.Matrix.html">PhpOffice\PhpSpreadsheet\Shared\JAMA\Matrix</a></code></code><br>Upper triangular factor<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPivot" id="_getPivot">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPivot">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html#177-185" title="Go to source code">getPivot</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return pivot permutation vector.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return pivot permutation vector.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>Pivot vector<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDoublePivot" id="_getDoublePivot">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDoublePivot">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html#189-197" title="Go to source code">getDoublePivot</a>( )</code>
+
+		<div class="description short">
+			
+<p>Alias for getPivot.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Alias for getPivot.</p>
+
+
+
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html#_getPivot">PhpOffice\PhpSpreadsheet\Shared\JAMA\LUDecomposition::getPivot()</a></code></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isNonsingular" id="_isNonsingular">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isNonsingular">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html#201-215" title="Go to source code">isNonsingular</a>( )</code>
+
+		<div class="description short">
+			
+<p>Is the matrix nonsingular?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is the matrix nonsingular?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if U, and hence A, is nonsingular<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="det" id="_det">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_det">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html#219-236" title="Go to source code">det</a>( )</code>
+
+		<div class="description short">
+			
+<p>Count determinants.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Count determinants.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>d matrix deterninat<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="solve" id="_solve">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.Matrix.html">PhpOffice\PhpSpreadsheet\Shared\JAMA\Matrix</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_solve">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html#240-284" title="Go to source code">solve</a>( <span>mixed <var>$B</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Solve A*X = B.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Solve A*X = B.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$B</var></dt>
+					<dd><code>mixed</code><br>$B a Matrix with as many rows as A and any number of columns</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Shared.JAMA.Matrix.html">PhpOffice\PhpSpreadsheet\Shared\JAMA\Matrix</a></code></code><br>X so that L*U*X = B(piv,:)<br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Calculation.Exception.html">PhpOffice\PhpSpreadsheet\Calculation\Exception</a></code></code><br>illegalArgumentException Matrix row dimensions must agree<br>
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Calculation.Exception.html">PhpOffice\PhpSpreadsheet\Calculation\Exception</a></code></code><br>runtimeException Matrix is singular<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="MATRIX_SINGULAR_EXCEPTION" id="MATRIX_SINGULAR_EXCEPTION">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html#26" title="Go to source code"><b>MATRIX_SINGULAR_EXCEPTION</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'Can only perform operation on singular matrix.'</span></code></td>
+		<td class="description"><div>
+			<a href="#MATRIX_SINGULAR_EXCEPTION" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="MATRIX_SQUARE_EXCEPTION" id="MATRIX_SQUARE_EXCEPTION">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Shared.JAMA.LUDecomposition.html#27" title="Go to source code"><b>MATRIX_SQUARE_EXCEPTION</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'Mismatched Row dimension'</span></code></td>
+		<td class="description"><div>
+			<a href="#MATRIX_SQUARE_EXCEPTION" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

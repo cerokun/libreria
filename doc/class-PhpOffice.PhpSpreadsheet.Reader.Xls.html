@@ -1,0 +1,2314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class PhpOffice\PhpSpreadsheet\Reader\Xls</title>
+
+	<script type="text/javascript" src="resources/combined.js?117538352"></script>
+	<script type="text/javascript" src="elementlist.js?1778263301"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Complex.html">Complex</a>
+						</li>
+				<li><a href="namespace-Composer.html">Composer<span></span></a>
+						<ul>
+				<li><a href="namespace-Composer.Autoload.html">Autoload</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Fpdf.html">Fpdf</a>
+						</li>
+				<li><a href="namespace-Matrix.html">Matrix<span></span></a>
+						<ul>
+				<li><a href="namespace-Matrix.Operators.html">Operators</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-PhpOffice.html">PhpOffice<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.html">Calculation<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Engine.html">Engine</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Token.html">Token</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Cell.html">Cell</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.html">Chart<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.Renderer.html">Renderer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Collection.html">Collection</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Document.html">Document</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Helper.html">Helper</a>
+						</li>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.html">Reader<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.html">Xls<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Color.html">Color</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Style.html">Style</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.RichText.html">RichText</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.html">Shared<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.html">Escher<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.html">DgContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.SpgrContainer.html">SpgrContainer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.html">DggContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.html">BstoreContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.BSE.html">BSE</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.JAMA.html">JAMA</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.html">OLE<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.PPS.html">PPS</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Trend.html">Trend</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Style.html">Style</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.html">Worksheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.html">AutoFilter<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.Column.html">Column</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.Drawing.html">Drawing</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.html">Writer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.html">Ods<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.Cell.html">Cell</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Pdf.html">Pdf</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xls.html">Xls</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-Psr.html">Psr<span></span></a>
+						<ul>
+				<li><a href="namespace-Psr.SimpleCache.html">SimpleCache</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Samples.html">Samples<span></span></a>
+						<ul>
+				<li><a href="namespace-Samples.Sample09.html">Sample09</a>
+						</li>
+				<li><a href="namespace-Samples.Sample10.html">Sample10</a>
+						</li>
+				<li><a href="namespace-Samples.Sample12.html">Sample12</a>
+						</li>
+				<li><a href="namespace-Samples.Sample14.html">Sample14</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html">BaseReader</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Csv.html">Csv</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.DefaultReadFilter.html">DefaultReadFilter</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Gnumeric.html">Gnumeric</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Html.html">Html</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Ods.html">Ods</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Slk.html">Slk</a></li>
+				<li class="active"><a href="class-PhpOffice.PhpSpreadsheet.Reader.Xls.html">Xls</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Xlsx.html">Xlsx</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Xml.html">Xml</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">IReader</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReadFilter.html">IReadFilter</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Exception.html">Exception</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PhpOffice.PhpSpreadsheet.Reader.html" title="Summary of PhpOffice\PhpSpreadsheet\Reader"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Xls</h1>
+
+
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html"><span>PhpOffice\PhpSpreadsheet\Reader\BaseReader</span></a>
+			
+			 implements 
+				<a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html"><span>PhpOffice\PhpSpreadsheet\Reader\IReader</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>PhpOffice\PhpSpreadsheet\Reader\Xls</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-PhpOffice.html">PhpOffice</a>\<a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet</a>\<a href="namespace-PhpOffice.PhpSpreadsheet.Reader.html">Reader</a><br>
+		
+
+		<b>Located at</b> <a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#61-7949" title="Go to source code">vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Xls.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#410-416" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Create a new Xls Reader instance.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a new Xls Reader instance.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="canRead" id="_canRead">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_canRead">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#418-440" title="Go to source code">canRead</a>( <span>string <var>$pFilename</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Can the current IReader read the file?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Can the current IReader read the file?</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pFilename</var></dt>
+					<dd><code>string</code><br>$pFilename</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="listWorksheetNames" id="_listWorksheetNames">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_listWorksheetNames">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#442-500" title="Go to source code">listWorksheetNames</a>( <span>string <var>$pFilename</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Reads names of the worksheets from a file, without parsing the whole file to
+a PhpSpreadsheet object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Reads names of the worksheets from a file, without parsing the whole file to
+a PhpSpreadsheet object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pFilename</var></dt>
+					<dd><code>string</code><br>$pFilename</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.Exception.html">PhpOffice\PhpSpreadsheet\Reader\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="listWorksheetInfo" id="_listWorksheetInfo">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_listWorksheetInfo">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#502-614" title="Go to source code">listWorksheetInfo</a>( <span>string <var>$pFilename</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return worksheet info (Name, Last Column Letter, Last Column Index, Total
+Rows, Total Columns).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return worksheet info (Name, Last Column Letter, Last Column Index, Total
+Rows, Total Columns).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pFilename</var></dt>
+					<dd><code>string</code><br>$pFilename</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.Exception.html">PhpOffice\PhpSpreadsheet\Reader\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="load" id="_load">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Spreadsheet.html">PhpOffice\PhpSpreadsheet\Spreadsheet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_load">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#616-1294" title="Go to source code">load</a>( <span>string <var>$pFilename</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Loads PhpSpreadsheet from file.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Loads PhpSpreadsheet from file.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pFilename</var></dt>
+					<dd><code>string</code><br>$pFilename</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Spreadsheet.html">PhpOffice\PhpSpreadsheet\Spreadsheet</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.Exception.html">PhpOffice\PhpSpreadsheet\Reader\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUInt2d" id="_getUInt2d">
+
+		<td class="attributes"><code>
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUInt2d">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#7892-7903" title="Go to source code">getUInt2d</a>( <span>string <var>$data</var></span>, <span>integer <var>$pos</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Read 16-bit unsigned integer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read 16-bit unsigned integer.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data</dd>
+					<dt><var>$pos</var></dt>
+					<dd><code>integer</code><br>$pos</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getInt2d" id="_getInt2d">
+
+		<td class="attributes"><code>
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getInt2d">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#7905-7916" title="Go to source code">getInt2d</a>( <span>string <var>$data</var></span>, <span>integer <var>$pos</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Read 16-bit signed integer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read 16-bit signed integer.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data</dd>
+					<dt><var>$pos</var></dt>
+					<dd><code>integer</code><br>$pos</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getInt4d" id="_getInt4d">
+
+		<td class="attributes"><code>
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getInt4d">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#7918-7940" title="Go to source code">getInt4d</a>( <span>string <var>$data</var></span>, <span>integer <var>$pos</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Read 32-bit signed integer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read 32-bit signed integer.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data</dd>
+					<dt><var>$pos</var></dt>
+					<dd><code>integer</code><br>$pos</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#methods">PhpOffice\PhpSpreadsheet\Reader\BaseReader</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_getIncludeCharts">getIncludeCharts()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_getLoadSheetsOnly">getLoadSheetsOnly()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_getReadDataOnly">getReadDataOnly()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_getReadEmptyCells">getReadEmptyCells()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_getReadFilter">getReadFilter()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_getSecuritySCanner">getSecuritySCanner()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_openFile">openFile()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_setIncludeCharts">setIncludeCharts()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_setLoadAllSheets">setLoadAllSheets()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_setLoadSheetsOnly">setLoadSheetsOnly()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_setReadDataOnly">setReadDataOnly()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_setReadEmptyCells">setReadEmptyCells()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#_setReadFilter">setReadFilter()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="XLS_BIFF8" id="XLS_BIFF8">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#64" title="Go to source code"><b>XLS_BIFF8</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0600</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_BIFF8" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_BIFF7" id="XLS_BIFF7">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#65" title="Go to source code"><b>XLS_BIFF7</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0500</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_BIFF7" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_WORKBOOKGLOBALS" id="XLS_WORKBOOKGLOBALS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#66" title="Go to source code"><b>XLS_WORKBOOKGLOBALS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0005</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_WORKBOOKGLOBALS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_WORKSHEET" id="XLS_WORKSHEET">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#67" title="Go to source code"><b>XLS_WORKSHEET</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0010</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_WORKSHEET" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_FORMULA" id="XLS_TYPE_FORMULA">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#70" title="Go to source code"><b>XLS_TYPE_FORMULA</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0006</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_FORMULA" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_EOF" id="XLS_TYPE_EOF">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#71" title="Go to source code"><b>XLS_TYPE_EOF</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x000a</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_EOF" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_PROTECT" id="XLS_TYPE_PROTECT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#72" title="Go to source code"><b>XLS_TYPE_PROTECT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0012</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_PROTECT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_OBJECTPROTECT" id="XLS_TYPE_OBJECTPROTECT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#73" title="Go to source code"><b>XLS_TYPE_OBJECTPROTECT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0063</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_OBJECTPROTECT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_SCENPROTECT" id="XLS_TYPE_SCENPROTECT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#74" title="Go to source code"><b>XLS_TYPE_SCENPROTECT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00dd</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_SCENPROTECT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_PASSWORD" id="XLS_TYPE_PASSWORD">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#75" title="Go to source code"><b>XLS_TYPE_PASSWORD</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0013</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_PASSWORD" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_HEADER" id="XLS_TYPE_HEADER">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#76" title="Go to source code"><b>XLS_TYPE_HEADER</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0014</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_HEADER" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_FOOTER" id="XLS_TYPE_FOOTER">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#77" title="Go to source code"><b>XLS_TYPE_FOOTER</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0015</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_FOOTER" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_EXTERNSHEET" id="XLS_TYPE_EXTERNSHEET">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#78" title="Go to source code"><b>XLS_TYPE_EXTERNSHEET</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0017</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_EXTERNSHEET" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_DEFINEDNAME" id="XLS_TYPE_DEFINEDNAME">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#79" title="Go to source code"><b>XLS_TYPE_DEFINEDNAME</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0018</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_DEFINEDNAME" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_VERTICALPAGEBREAKS" id="XLS_TYPE_VERTICALPAGEBREAKS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#80" title="Go to source code"><b>XLS_TYPE_VERTICALPAGEBREAKS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x001a</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_VERTICALPAGEBREAKS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_HORIZONTALPAGEBREAKS" id="XLS_TYPE_HORIZONTALPAGEBREAKS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#81" title="Go to source code"><b>XLS_TYPE_HORIZONTALPAGEBREAKS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x001b</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_HORIZONTALPAGEBREAKS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_NOTE" id="XLS_TYPE_NOTE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#82" title="Go to source code"><b>XLS_TYPE_NOTE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x001c</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_NOTE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_SELECTION" id="XLS_TYPE_SELECTION">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#83" title="Go to source code"><b>XLS_TYPE_SELECTION</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x001d</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_SELECTION" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_DATEMODE" id="XLS_TYPE_DATEMODE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#84" title="Go to source code"><b>XLS_TYPE_DATEMODE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0022</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_DATEMODE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_EXTERNNAME" id="XLS_TYPE_EXTERNNAME">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#85" title="Go to source code"><b>XLS_TYPE_EXTERNNAME</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0023</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_EXTERNNAME" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_LEFTMARGIN" id="XLS_TYPE_LEFTMARGIN">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#86" title="Go to source code"><b>XLS_TYPE_LEFTMARGIN</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0026</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_LEFTMARGIN" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_RIGHTMARGIN" id="XLS_TYPE_RIGHTMARGIN">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#87" title="Go to source code"><b>XLS_TYPE_RIGHTMARGIN</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0027</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_RIGHTMARGIN" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_TOPMARGIN" id="XLS_TYPE_TOPMARGIN">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#88" title="Go to source code"><b>XLS_TYPE_TOPMARGIN</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0028</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_TOPMARGIN" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_BOTTOMMARGIN" id="XLS_TYPE_BOTTOMMARGIN">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#89" title="Go to source code"><b>XLS_TYPE_BOTTOMMARGIN</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0029</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_BOTTOMMARGIN" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_PRINTGRIDLINES" id="XLS_TYPE_PRINTGRIDLINES">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#90" title="Go to source code"><b>XLS_TYPE_PRINTGRIDLINES</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x002b</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_PRINTGRIDLINES" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_FILEPASS" id="XLS_TYPE_FILEPASS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#91" title="Go to source code"><b>XLS_TYPE_FILEPASS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x002f</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_FILEPASS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_FONT" id="XLS_TYPE_FONT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#92" title="Go to source code"><b>XLS_TYPE_FONT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0031</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_FONT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_CONTINUE" id="XLS_TYPE_CONTINUE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#93" title="Go to source code"><b>XLS_TYPE_CONTINUE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x003c</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_CONTINUE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_PANE" id="XLS_TYPE_PANE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#94" title="Go to source code"><b>XLS_TYPE_PANE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0041</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_PANE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_CODEPAGE" id="XLS_TYPE_CODEPAGE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#95" title="Go to source code"><b>XLS_TYPE_CODEPAGE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0042</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_CODEPAGE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_DEFCOLWIDTH" id="XLS_TYPE_DEFCOLWIDTH">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#96" title="Go to source code"><b>XLS_TYPE_DEFCOLWIDTH</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0055</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_DEFCOLWIDTH" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_OBJ" id="XLS_TYPE_OBJ">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#97" title="Go to source code"><b>XLS_TYPE_OBJ</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x005d</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_OBJ" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_COLINFO" id="XLS_TYPE_COLINFO">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#98" title="Go to source code"><b>XLS_TYPE_COLINFO</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x007d</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_COLINFO" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_IMDATA" id="XLS_TYPE_IMDATA">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#99" title="Go to source code"><b>XLS_TYPE_IMDATA</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x007f</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_IMDATA" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_SHEETPR" id="XLS_TYPE_SHEETPR">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#100" title="Go to source code"><b>XLS_TYPE_SHEETPR</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0081</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_SHEETPR" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_HCENTER" id="XLS_TYPE_HCENTER">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#101" title="Go to source code"><b>XLS_TYPE_HCENTER</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0083</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_HCENTER" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_VCENTER" id="XLS_TYPE_VCENTER">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#102" title="Go to source code"><b>XLS_TYPE_VCENTER</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0084</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_VCENTER" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_SHEET" id="XLS_TYPE_SHEET">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#103" title="Go to source code"><b>XLS_TYPE_SHEET</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0085</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_SHEET" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_PALETTE" id="XLS_TYPE_PALETTE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#104" title="Go to source code"><b>XLS_TYPE_PALETTE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0092</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_PALETTE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_SCL" id="XLS_TYPE_SCL">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#105" title="Go to source code"><b>XLS_TYPE_SCL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00a0</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_SCL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_PAGESETUP" id="XLS_TYPE_PAGESETUP">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#106" title="Go to source code"><b>XLS_TYPE_PAGESETUP</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00a1</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_PAGESETUP" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_MULRK" id="XLS_TYPE_MULRK">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#107" title="Go to source code"><b>XLS_TYPE_MULRK</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00bd</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_MULRK" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_MULBLANK" id="XLS_TYPE_MULBLANK">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#108" title="Go to source code"><b>XLS_TYPE_MULBLANK</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00be</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_MULBLANK" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_DBCELL" id="XLS_TYPE_DBCELL">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#109" title="Go to source code"><b>XLS_TYPE_DBCELL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00d7</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_DBCELL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_XF" id="XLS_TYPE_XF">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#110" title="Go to source code"><b>XLS_TYPE_XF</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00e0</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_XF" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_MERGEDCELLS" id="XLS_TYPE_MERGEDCELLS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#111" title="Go to source code"><b>XLS_TYPE_MERGEDCELLS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00e5</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_MERGEDCELLS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_MSODRAWINGGROUP" id="XLS_TYPE_MSODRAWINGGROUP">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#112" title="Go to source code"><b>XLS_TYPE_MSODRAWINGGROUP</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00eb</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_MSODRAWINGGROUP" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_MSODRAWING" id="XLS_TYPE_MSODRAWING">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#113" title="Go to source code"><b>XLS_TYPE_MSODRAWING</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00ec</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_MSODRAWING" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_SST" id="XLS_TYPE_SST">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#114" title="Go to source code"><b>XLS_TYPE_SST</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00fc</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_SST" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_LABELSST" id="XLS_TYPE_LABELSST">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#115" title="Go to source code"><b>XLS_TYPE_LABELSST</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00fd</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_LABELSST" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_EXTSST" id="XLS_TYPE_EXTSST">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#116" title="Go to source code"><b>XLS_TYPE_EXTSST</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x00ff</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_EXTSST" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_EXTERNALBOOK" id="XLS_TYPE_EXTERNALBOOK">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#117" title="Go to source code"><b>XLS_TYPE_EXTERNALBOOK</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x01ae</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_EXTERNALBOOK" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_DATAVALIDATIONS" id="XLS_TYPE_DATAVALIDATIONS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#118" title="Go to source code"><b>XLS_TYPE_DATAVALIDATIONS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x01b2</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_DATAVALIDATIONS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_TXO" id="XLS_TYPE_TXO">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#119" title="Go to source code"><b>XLS_TYPE_TXO</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x01b6</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_TXO" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_HYPERLINK" id="XLS_TYPE_HYPERLINK">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#120" title="Go to source code"><b>XLS_TYPE_HYPERLINK</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x01b8</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_HYPERLINK" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_DATAVALIDATION" id="XLS_TYPE_DATAVALIDATION">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#121" title="Go to source code"><b>XLS_TYPE_DATAVALIDATION</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x01be</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_DATAVALIDATION" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_DIMENSION" id="XLS_TYPE_DIMENSION">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#122" title="Go to source code"><b>XLS_TYPE_DIMENSION</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0200</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_DIMENSION" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_BLANK" id="XLS_TYPE_BLANK">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#123" title="Go to source code"><b>XLS_TYPE_BLANK</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0201</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_BLANK" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_NUMBER" id="XLS_TYPE_NUMBER">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#124" title="Go to source code"><b>XLS_TYPE_NUMBER</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0203</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_NUMBER" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_LABEL" id="XLS_TYPE_LABEL">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#125" title="Go to source code"><b>XLS_TYPE_LABEL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0204</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_LABEL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_BOOLERR" id="XLS_TYPE_BOOLERR">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#126" title="Go to source code"><b>XLS_TYPE_BOOLERR</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0205</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_BOOLERR" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_STRING" id="XLS_TYPE_STRING">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#127" title="Go to source code"><b>XLS_TYPE_STRING</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0207</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_STRING" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_ROW" id="XLS_TYPE_ROW">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#128" title="Go to source code"><b>XLS_TYPE_ROW</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0208</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_ROW" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_INDEX" id="XLS_TYPE_INDEX">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#129" title="Go to source code"><b>XLS_TYPE_INDEX</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x020b</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_INDEX" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_ARRAY" id="XLS_TYPE_ARRAY">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#130" title="Go to source code"><b>XLS_TYPE_ARRAY</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0221</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_ARRAY" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_DEFAULTROWHEIGHT" id="XLS_TYPE_DEFAULTROWHEIGHT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#131" title="Go to source code"><b>XLS_TYPE_DEFAULTROWHEIGHT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0225</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_DEFAULTROWHEIGHT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_WINDOW2" id="XLS_TYPE_WINDOW2">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#132" title="Go to source code"><b>XLS_TYPE_WINDOW2</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x023e</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_WINDOW2" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_RK" id="XLS_TYPE_RK">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#133" title="Go to source code"><b>XLS_TYPE_RK</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x027e</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_RK" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_STYLE" id="XLS_TYPE_STYLE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#134" title="Go to source code"><b>XLS_TYPE_STYLE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0293</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_STYLE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_FORMAT" id="XLS_TYPE_FORMAT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#135" title="Go to source code"><b>XLS_TYPE_FORMAT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x041e</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_FORMAT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_SHAREDFMLA" id="XLS_TYPE_SHAREDFMLA">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#136" title="Go to source code"><b>XLS_TYPE_SHAREDFMLA</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x04bc</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_SHAREDFMLA" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_BOF" id="XLS_TYPE_BOF">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#137" title="Go to source code"><b>XLS_TYPE_BOF</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0809</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_BOF" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_SHEETPROTECTION" id="XLS_TYPE_SHEETPROTECTION">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#138" title="Go to source code"><b>XLS_TYPE_SHEETPROTECTION</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0867</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_SHEETPROTECTION" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_RANGEPROTECTION" id="XLS_TYPE_RANGEPROTECTION">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#139" title="Go to source code"><b>XLS_TYPE_RANGEPROTECTION</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0868</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_RANGEPROTECTION" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_SHEETLAYOUT" id="XLS_TYPE_SHEETLAYOUT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#140" title="Go to source code"><b>XLS_TYPE_SHEETLAYOUT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x0862</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_SHEETLAYOUT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_XFEXT" id="XLS_TYPE_XFEXT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#141" title="Go to source code"><b>XLS_TYPE_XFEXT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x087d</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_XFEXT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_PAGELAYOUTVIEW" id="XLS_TYPE_PAGELAYOUTVIEW">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#142" title="Go to source code"><b>XLS_TYPE_PAGELAYOUTVIEW</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x088b</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_PAGELAYOUTVIEW" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XLS_TYPE_UNKNOWN" id="XLS_TYPE_UNKNOWN">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#143" title="Go to source code"><b>XLS_TYPE_UNKNOWN</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0xffff</span></code></td>
+		<td class="description"><div>
+			<a href="#XLS_TYPE_UNKNOWN" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="MS_BIFF_CRYPTO_NONE" id="MS_BIFF_CRYPTO_NONE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#146" title="Go to source code"><b>MS_BIFF_CRYPTO_NONE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#MS_BIFF_CRYPTO_NONE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="MS_BIFF_CRYPTO_XOR" id="MS_BIFF_CRYPTO_XOR">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#147" title="Go to source code"><b>MS_BIFF_CRYPTO_XOR</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">1</span></code></td>
+		<td class="description"><div>
+			<a href="#MS_BIFF_CRYPTO_XOR" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="MS_BIFF_CRYPTO_RC4" id="MS_BIFF_CRYPTO_RC4">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#148" title="Go to source code"><b>MS_BIFF_CRYPTO_RC4</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">2</span></code></td>
+		<td class="description"><div>
+			<a href="#MS_BIFF_CRYPTO_RC4" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="REKEY_BLOCK" id="REKEY_BLOCK">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.Xls.html#151" title="Go to source code"><b>REKEY_BLOCK</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-num">0x400</span></code></td>
+		<td class="description"><div>
+			<a href="#REKEY_BLOCK" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#properties">PhpOffice\PhpSpreadsheet\Reader\BaseReader</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#$fileHandle"><var>$fileHandle</var></a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#$includeCharts"><var>$includeCharts</var></a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#$loadSheetsOnly"><var>$loadSheetsOnly</var></a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#$readDataOnly"><var>$readDataOnly</var></a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#$readEmptyCells"><var>$readEmptyCells</var></a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#$readFilter"><var>$readFilter</var></a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#$securityScanner"><var>$securityScanner</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+	<meta name="robots" content="noindex">
+
+	<title>File vendor/phpoffice/phpspreadsheet/samples/Reader/14_Reading_a_large_CSV_file_in_chunks_to_split_across_multiple_worksheets.php</title>
+
+	<script type="text/javascript" src="resources/combined.js?117538352"></script>
+	<script type="text/javascript" src="elementlist.js?1778263301"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Complex.html">Complex</a>
+						</li>
+				<li><a href="namespace-Composer.html">Composer<span></span></a>
+						<ul>
+				<li><a href="namespace-Composer.Autoload.html">Autoload</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Fpdf.html">Fpdf</a>
+						</li>
+				<li><a href="namespace-Matrix.html">Matrix<span></span></a>
+						<ul>
+				<li><a href="namespace-Matrix.Operators.html">Operators</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li><a href="namespace-PhpOffice.html">PhpOffice<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.html">Calculation<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Engine.html">Engine</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Token.html">Token</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Cell.html">Cell</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.html">Chart<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.Renderer.html">Renderer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Collection.html">Collection</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Document.html">Document</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.html">Reader<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.html">Xls<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Color.html">Color</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Style.html">Style</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.RichText.html">RichText</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.html">Shared<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.html">Escher<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.html">DgContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.SpgrContainer.html">SpgrContainer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.html">DggContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.html">BstoreContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.BSE.html">BSE</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.JAMA.html">JAMA</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.html">OLE<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.PPS.html">PPS</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Trend.html">Trend</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Style.html">Style</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.html">Worksheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.html">AutoFilter<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.Column.html">Column</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.Drawing.html">Drawing</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.html">Writer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.html">Ods<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.Cell.html">Cell</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Pdf.html">Pdf</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xls.html">Xls</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-Psr.html">Psr<span></span></a>
+						<ul>
+				<li><a href="namespace-Psr.SimpleCache.html">SimpleCache</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Samples.html">Samples<span></span></a>
+						<ul>
+				<li><a href="namespace-Samples.Sample09.html">Sample09</a>
+						</li>
+				<li><a href="namespace-Samples.Sample10.html">Sample10</a>
+						</li>
+				<li><a href="namespace-Samples.Sample12.html">Sample12</a>
+						</li>
+				<li class="active"><a href="namespace-Samples.Sample14.html">Sample14</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Samples.Sample14.ChunkReadFilter.html">ChunkReadFilter</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Samples.Sample14.html" title="Summary of Samples\Sample14"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="class-Samples.Sample14.ChunkReadFilter.html" title="Summary of Samples\Sample14\ChunkReadFilter"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1"> 1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2: </a>
+</span><span id="3" class="l"><a class="l" href="#3"> 3: </a><span class="php-keyword1">namespace</span> Samples\Sample14;
+</span><span id="4" class="l"><a class="l" href="#4"> 4: </a>
+</span><span id="5" class="l"><a class="l" href="#5"> 5: </a><span class="php-keyword1">use</span> PhpOffice\PhpSpreadsheet\IOFactory;
+</span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-keyword1">use</span> PhpOffice\PhpSpreadsheet\Reader\IReadFilter;
+</span><span id="7" class="l"><a class="l" href="#7"> 7: </a><span class="php-keyword1">use</span> PhpOffice\PhpSpreadsheet\Spreadsheet;
+</span><span id="8" class="l"><a class="l" href="#8"> 8: </a>
+</span><span id="9" class="l"><a class="l" href="#9"> 9: </a><span class="php-keyword1">require</span> __DIR__ . <span class="php-quote">'/../Header.php'</span>;
+</span><span id="10" class="l"><a class="l" href="#10">10: </a>
+</span><span id="11" class="l"><a class="l" href="#11">11: </a><span class="php-var">$inputFileType</span> = <span class="php-quote">'Csv'</span>;
+</span><span id="12" class="l"><a class="l" href="#12">12: </a><span class="php-var">$inputFileName</span> = __DIR__ . <span class="php-quote">'/sampleData/example2.csv'</span>;
+</span><span id="13" class="l"><a class="l" href="#13">13: </a>
+</span><span id="14" class="l"><a class="l" href="#14">14: </a><span class="php-comment">/**  Define a Read Filter class implementing IReadFilter  */</span>
+</span><span id="15" class="l"><a class="l" href="#15">15: </a><span class="php-keyword1">class</span> <a id="ChunkReadFilter" href="#ChunkReadFilter">ChunkReadFilter</a> <span class="php-keyword1">implements</span> IReadFilter
+</span><span id="16" class="l"><a class="l" href="#16">16: </a>{
+</span><span id="17" class="l"><a class="l" href="#17">17: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$startRow" href="#$startRow">$startRow</a></span> = <span class="php-num">0</span>;
+</span><span id="18" class="l"><a class="l" href="#18">18: </a>
+</span><span id="19" class="l"><a class="l" href="#19">19: </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$endRow" href="#$endRow">$endRow</a></span> = <span class="php-num">0</span>;
+</span><span id="20" class="l"><a class="l" href="#20">20: </a>
+</span><span id="21" class="l"><a class="l" href="#21">21: </a>    <span class="php-comment">/**
+</span></span><span id="22" class="l"><a class="l" href="#22">22: </a><span class="php-comment">     * Set the list of rows that we want to read.
+</span></span><span id="23" class="l"><a class="l" href="#23">23: </a><span class="php-comment">     *
+</span></span><span id="24" class="l"><a class="l" href="#24">24: </a><span class="php-comment">     * @param mixed $startRow
+</span></span><span id="25" class="l"><a class="l" href="#25">25: </a><span class="php-comment">     * @param mixed $chunkSize
+</span></span><span id="26" class="l"><a class="l" href="#26">26: </a><span class="php-comment">     */</span>
+</span><span id="27" class="l"><a class="l" href="#27">27: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_setRows" href="#_setRows">setRows</a>(<span class="php-var">$startRow</span>, <span class="php-var">$chunkSize</span>)
+</span><span id="28" class="l"><a class="l" href="#28">28: </a>    {
+</span><span id="29" class="l"><a class="l" href="#29">29: </a>        <span class="php-var">$this</span>-&gt;startRow = <span class="php-var">$startRow</span>;
+</span><span id="30" class="l"><a class="l" href="#30">30: </a>        <span class="php-var">$this</span>-&gt;endRow = <span class="php-var">$startRow</span> + <span class="php-var">$chunkSize</span>;
+</span><span id="31" class="l"><a class="l" href="#31">31: </a>    }
+</span><span id="32" class="l"><a class="l" href="#32">32: </a>
+</span><span id="33" class="l"><a class="l" href="#33">33: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_readCell" href="#_readCell">readCell</a>(<span class="php-var">$column</span>, <span class="php-var">$row</span>, <span class="php-var">$worksheetName</span> = <span class="php-quote">''</span>)
+</span><span id="34" class="l"><a class="l" href="#34">34: </a>    {
+</span><span id="35" class="l"><a class="l" href="#35">35: </a>        <span class="php-comment">//  Only read the heading row, and the rows that are configured in $this-&gt;_startRow and $this-&gt;_endRow</span>
+</span><span id="36" class="l"><a class="l" href="#36">36: </a>        <span class="php-keyword1">if</span> ((<span class="php-var">$row</span> == <span class="php-num">1</span>) || (<span class="php-var">$row</span> &gt;= <span class="php-var">$this</span>-&gt;startRow &amp;&amp; <span class="php-var">$row</span> &lt; <span class="php-var">$this</span>-&gt;endRow)) {
+</span><span id="37" class="l"><a class="l" href="#37">37: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
+</span><span id="38" class="l"><a class="l" href="#38">38: </a>        }
+</span><span id="39" class="l"><a class="l" href="#39">39: </a>
+</span><span id="40" class="l"><a class="l" href="#40">40: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="41" class="l"><a class="l" href="#41">41: </a>    }
+</span><span id="42" class="l"><a class="l" href="#42">42: </a>}
+</span><span id="43" class="l"><a class="l" href="#43">43: </a>
+</span><span id="44" class="l"><a class="l" href="#44">44: </a><span class="php-var">$helper</span>-&gt;<span class="php-keyword2">log</span>(<span class="php-quote">'Loading file '</span> . <span class="php-keyword2">pathinfo</span>(<span class="php-var">$inputFileName</span>, PATHINFO_BASENAME) . <span class="php-quote">' using IOFactory with a defined reader type of '</span> . <span class="php-var">$inputFileType</span>);
+</span><span id="45" class="l"><a class="l" href="#45">45: </a><span class="php-comment">// Create a new Reader of the type defined in $inputFileType</span>
+</span><span id="46" class="l"><a class="l" href="#46">46: </a><span class="php-var">$reader</span> = IOFactory::createReader(<span class="php-var">$inputFileType</span>);
+</span><span id="47" class="l"><a class="l" href="#47">47: </a>
+</span><span id="48" class="l"><a class="l" href="#48">48: </a><span class="php-comment">// Define how many rows we want to read for each &quot;chunk&quot;</span>
+</span><span id="49" class="l"><a class="l" href="#49">49: </a><span class="php-var">$chunkSize</span> = <span class="php-num">100</span>;
+</span><span id="50" class="l"><a class="l" href="#50">50: </a><span class="php-comment">// Create a new Instance of our Read Filter</span>
+</span><span id="51" class="l"><a class="l" href="#51">51: </a><span class="php-var">$chunkFilter</span> = <span class="php-keyword1">new</span> ChunkReadFilter();
+</span><span id="52" class="l"><a class="l" href="#52">52: </a>
+</span><span id="53" class="l"><a class="l" href="#53">53: </a><span class="php-comment">// Tell the Reader that we want to use the Read Filter that we've Instantiated</span>
+</span><span id="54" class="l"><a class="l" href="#54">54: </a><span class="php-comment">// and that we want to store it in contiguous rows/columns</span>
+</span><span id="55" class="l"><a class="l" href="#55">55: </a><span class="php-var">$reader</span>-&gt;setReadFilter(<span class="php-var">$chunkFilter</span>)
+</span><span id="56" class="l"><a class="l" href="#56">56: </a>    -&gt;setContiguous(<span class="php-keyword1">true</span>);
+</span><span id="57" class="l"><a class="l" href="#57">57: </a>
+</span><span id="58" class="l"><a class="l" href="#58">58: </a><span class="php-comment">// Instantiate a new PhpSpreadsheet object manually</span>
+</span><span id="59" class="l"><a class="l" href="#59">59: </a><span class="php-var">$spreadsheet</span> = <span class="php-keyword1">new</span> Spreadsheet();
+</span><span id="60" class="l"><a class="l" href="#60">60: </a>
+</span><span id="61" class="l"><a class="l" href="#61">61: </a><span class="php-comment">// Set a sheet index</span>
+</span><span id="62" class="l"><a class="l" href="#62">62: </a><span class="php-var">$sheet</span> = <span class="php-num">0</span>;
+</span><span id="63" class="l"><a class="l" href="#63">63: </a><span class="php-comment">// Loop to read our worksheet in &quot;chunk size&quot; blocks</span>
+</span><span id="64" class="l"><a class="l" href="#64">64: </a><span class="php-comment">/**  $startRow is set to 2 initially because we always read the headings in row #1  * */</span>
+</span><span id="65" class="l"><a class="l" href="#65">65: </a><span class="php-keyword1">for</span> (<span class="php-var">$startRow</span> = <span class="php-num">2</span>; <span class="php-var">$startRow</span> &lt;= <span class="php-num">240</span>; <span class="php-var">$startRow</span> += <span class="php-var">$chunkSize</span>) {
+</span><span id="66" class="l"><a class="l" href="#66">66: </a>    <span class="php-var">$helper</span>-&gt;<span class="php-keyword2">log</span>(<span class="php-quote">'Loading WorkSheet #'</span> . (<span class="php-var">$sheet</span> + <span class="php-num">1</span>) . <span class="php-quote">' using configurable filter for headings row 1 and for rows '</span> . <span class="php-var">$startRow</span> . <span class="php-quote">' to '</span> . (<span class="php-var">$startRow</span> + <span class="php-var">$chunkSize</span> - <span class="php-num">1</span>));
+</span><span id="67" class="l"><a class="l" href="#67">67: </a>    <span class="php-comment">// Tell the Read Filter, the limits on which rows we want to read this iteration</span>
+</span><span id="68" class="l"><a class="l" href="#68">68: </a>    <span class="php-var">$chunkFilter</span>-&gt;setRows(<span class="php-var">$startRow</span>, <span class="php-var">$chunkSize</span>);
+</span><span id="69" class="l"><a class="l" href="#69">69: </a>
+</span><span id="70" class="l"><a class="l" href="#70">70: </a>    <span class="php-comment">// Increment the worksheet index pointer for the Reader</span>
+</span><span id="71" class="l"><a class="l" href="#71">71: </a>    <span class="php-var">$reader</span>-&gt;setSheetIndex(<span class="php-var">$sheet</span>);
+</span><span id="72" class="l"><a class="l" href="#72">72: </a>    <span class="php-comment">// Load only the rows that match our filter into a new worksheet in the PhpSpreadsheet Object</span>
+</span><span id="73" class="l"><a class="l" href="#73">73: </a>    <span class="php-var">$reader</span>-&gt;loadIntoExisting(<span class="php-var">$inputFileName</span>, <span class="php-var">$spreadsheet</span>);
+</span><span id="74" class="l"><a class="l" href="#74">74: </a>    <span class="php-comment">// Set the worksheet title (to reference the &quot;sheet&quot; of data that we've loaded)</span>
+</span><span id="75" class="l"><a class="l" href="#75">75: </a>    <span class="php-comment">// and increment the sheet index as well</span>
+</span><span id="76" class="l"><a class="l" href="#76">76: </a>    <span class="php-var">$spreadsheet</span>-&gt;getActiveSheet()-&gt;setTitle(<span class="php-quote">'Country Data #'</span> . (++<span class="php-var">$sheet</span>));
+</span><span id="77" class="l"><a class="l" href="#77">77: </a>}
+</span><span id="78" class="l"><a class="l" href="#78">78: </a>
+</span><span id="79" class="l"><a class="l" href="#79">79: </a><span class="php-var">$helper</span>-&gt;<span class="php-keyword2">log</span>(<span class="php-var">$spreadsheet</span>-&gt;getSheetCount() . <span class="php-quote">' worksheet'</span> . ((<span class="php-var">$spreadsheet</span>-&gt;getSheetCount() == <span class="php-num">1</span>) ? <span class="php-quote">''</span> : <span class="php-quote">'s'</span>) . <span class="php-quote">' loaded'</span>);
+</span><span id="80" class="l"><a class="l" href="#80">80: </a><span class="php-var">$loadedSheetNames</span> = <span class="php-var">$spreadsheet</span>-&gt;getSheetNames();
+</span><span id="81" class="l"><a class="l" href="#81">81: </a><span class="php-keyword1">foreach</span> (<span class="php-var">$loadedSheetNames</span> <span class="php-keyword1">as</span> <span class="php-var">$sheetIndex</span> =&gt; <span class="php-var">$loadedSheetName</span>) {
+</span><span id="82" class="l"><a class="l" href="#82">82: </a>    <span class="php-var">$helper</span>-&gt;<span class="php-keyword2">log</span>(<span class="php-quote">'&lt;b&gt;Worksheet #'</span> . <span class="php-var">$sheetIndex</span> . <span class="php-quote">' -&gt; '</span> . <span class="php-var">$loadedSheetName</span> . <span class="php-quote">'&lt;/b&gt;'</span>);
+</span><span id="83" class="l"><a class="l" href="#83">83: </a>    <span class="php-var">$spreadsheet</span>-&gt;setActiveSheetIndexByName(<span class="php-var">$loadedSheetName</span>);
+</span><span id="84" class="l"><a class="l" href="#84">84: </a>    <span class="php-var">$sheetData</span> = <span class="php-var">$spreadsheet</span>-&gt;getActiveSheet()-&gt;toArray(<span class="php-keyword1">null</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">false</span>, <span class="php-keyword1">true</span>);
+</span><span id="85" class="l"><a class="l" href="#85">85: </a>    <span class="php-keyword2">var_dump</span>(<span class="php-var">$sheetData</span>);
+</span><span id="86" class="l"><a class="l" href="#86">86: </a>}
+</span><span id="87" class="l"><a class="l" href="#87">87: </a></span></code></pre>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

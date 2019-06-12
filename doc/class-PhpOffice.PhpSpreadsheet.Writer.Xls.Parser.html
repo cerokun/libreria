@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class PhpOffice\PhpSpreadsheet\Writer\Xls\Parser</title>
+
+	<script type="text/javascript" src="resources/combined.js?117538352"></script>
+	<script type="text/javascript" src="elementlist.js?1778263301"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Complex.html">Complex</a>
+						</li>
+				<li><a href="namespace-Composer.html">Composer<span></span></a>
+						<ul>
+				<li><a href="namespace-Composer.Autoload.html">Autoload</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Fpdf.html">Fpdf</a>
+						</li>
+				<li><a href="namespace-Matrix.html">Matrix<span></span></a>
+						<ul>
+				<li><a href="namespace-Matrix.Operators.html">Operators</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-PhpOffice.html">PhpOffice<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.html">Calculation<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Engine.html">Engine</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Token.html">Token</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Cell.html">Cell</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.html">Chart<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.Renderer.html">Renderer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Collection.html">Collection</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Document.html">Document</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.html">Reader<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.html">Xls<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Color.html">Color</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Style.html">Style</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.RichText.html">RichText</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.html">Shared<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.html">Escher<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.html">DgContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.SpgrContainer.html">SpgrContainer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.html">DggContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.html">BstoreContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.BSE.html">BSE</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.JAMA.html">JAMA</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.html">OLE<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.PPS.html">PPS</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Trend.html">Trend</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Style.html">Style</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.html">Worksheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.html">AutoFilter<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.Column.html">Column</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.Drawing.html">Drawing</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.html">Writer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.html">Ods<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.Cell.html">Cell</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Pdf.html">Pdf</a>
+						</li>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xls.html">Xls</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-Psr.html">Psr<span></span></a>
+						<ul>
+				<li><a href="namespace-Psr.SimpleCache.html">SimpleCache</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Samples.html">Samples<span></span></a>
+						<ul>
+				<li><a href="namespace-Samples.Sample09.html">Sample09</a>
+						</li>
+				<li><a href="namespace-Samples.Sample10.html">Sample10</a>
+						</li>
+				<li><a href="namespace-Samples.Sample12.html">Sample12</a>
+						</li>
+				<li><a href="namespace-Samples.Sample14.html">Sample14</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Writer.Xls.BIFFwriter.html">BIFFwriter</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Writer.Xls.Escher.html">Escher</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Writer.Xls.Font.html">Font</a></li>
+				<li class="active"><a href="class-PhpOffice.PhpSpreadsheet.Writer.Xls.Parser.html">Parser</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Writer.Xls.Workbook.html">Workbook</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Writer.Xls.Worksheet.html">Worksheet</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Writer.Xls.Xf.html">Xf</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xls.html" title="Summary of PhpOffice\PhpSpreadsheet\Writer\Xls"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Parser</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-PhpOffice.html">PhpOffice</a>\<a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet</a>\<a href="namespace-PhpOffice.PhpSpreadsheet.Writer.html">Writer</a>\<a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xls.html">Xls</a><br>
+		
+
+		<b>Located at</b> <a href="source-class-PhpOffice.PhpSpreadsheet.Writer.Xls.Parser.html#32-1447" title="Go to source code">vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Writer/Xls/Parser.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Writer.Xls.Parser.html#470-482" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+<p>The class constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The class constructor.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setExtSheet" id="_setExtSheet">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setExtSheet">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Writer.Xls.Parser.html#821-834" title="Go to source code">setExtSheet</a>( <span>string <var>$name</var></span>, <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			
+<p>This method is used to update the array of sheet names. It is called by the
+addWorksheet() method of the \PhpOffice\PhpSpreadsheet\Writer\Xls\Workbook
+class.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This method is used to update the array of sheet names. It is called by the
+addWorksheet() method of the \PhpOffice\PhpSpreadsheet\Writer\Xls\Workbook
+class.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name The name of the worksheet being added</dd>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code><br>$index The index of the worksheet being added</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						\PhpOffice\PhpSpreadsheet\Writer\Xls\Workbook::addWorksheet()<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse" id="_parse">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Writer.Xls.Parser.html#1069-1087" title="Go to source code">parse</a>( <span>string <var>$formula</var></span> )</code>
+
+		<div class="description short">
+			
+<p>The parsing method. It parses a formula.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The parsing method. It parses a formula.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$formula</var></dt>
+					<dd><code>string</code><br>$formula the formula to parse, without the initial equal sign (=)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>true on success<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toReversePolish" id="_toReversePolish">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toReversePolish">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Writer.Xls.Parser.html#1378-1446" title="Go to source code">toReversePolish</a>( <span>array <var>$tree</var> = []</span> )</code>
+
+		<div class="description short">
+			
+<p>Builds a string containing the tree in reverse polish notation (What you
+would use in a HP calculator stack). The following tree:.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Builds a string containing the tree in reverse polish notation (What you
+would use in a HP calculator stack). The following tree:.</p>
+
+<ul>
+	<li>/ \ 2 3</li>
+</ul>
+
+<p>produces: "23+"</p>
+
+<p>The following tree:<br />
++ / \ 3 * / \ 6 A1</p>
+
+<p>produces: "36A1*+"</p>
+
+<p>In fact all operands, functions, references, etc... are written as ptg's</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tree</var></dt>
+					<dd><code>array</code><br>$tree the optional tree to convert</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The tree in reverse polish notation<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="REGEX_SHEET_TITLE_UNQUOTED" id="REGEX_SHEET_TITLE_UNQUOTED">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Writer.Xls.Parser.html#40" title="Go to source code"><b>REGEX_SHEET_TITLE_UNQUOTED</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'[^\*\:\/\\\\\?\[\]\+\-\% \\\'\^\&amp;\&lt;\&gt;\=\,\;\#\(\)\&quot;\{\}]+'</span></code></td>
+		<td class="description"><div>
+			<a href="#REGEX_SHEET_TITLE_UNQUOTED" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="REGEX_SHEET_TITLE_QUOTED" id="REGEX_SHEET_TITLE_QUOTED">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Writer.Xls.Parser.html#46" title="Go to source code"><b>REGEX_SHEET_TITLE_QUOTED</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'(([^\*\:\/\\\\\?\[\]\\\'])+|(\\\'\\\')+)+'</span></code></td>
+		<td class="description"><div>
+			<a href="#REGEX_SHEET_TITLE_QUOTED" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="currentCharacter" id="$currentCharacter">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Writer.Xls.Parser.html#48-53" title="Go to source code"><var>$currentCharacter</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$currentCharacter" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The index of the character we are currently looking at.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The index of the character we are currently looking at.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="currentToken" id="$currentToken">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Writer.Xls.Parser.html#55-60" title="Go to source code"><var>$currentToken</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$currentToken" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The token we are working on.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The token we are working on.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="lookAhead" id="$lookAhead">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Writer.Xls.Parser.html#69-74" title="Go to source code"><var>$lookAhead</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$lookAhead" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>The character ahead of the current char.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The character ahead of the current char.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="references" id="$references">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Writer.Xls.Parser.html#90-95" title="Go to source code"><var>$references</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$references" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Array of sheet references in the form of REF structures.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Array of sheet references in the form of REF structures.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

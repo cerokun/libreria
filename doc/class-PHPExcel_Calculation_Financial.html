@@ -1,0 +1,3424 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class PHPExcel_Calculation_Financial</title>
+
+	<script type="text/javascript" src="resources/combined.js?117538352"></script>
+	<script type="text/javascript" src="elementlist.js?1778263301"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Complex.html">Complex</a>
+						</li>
+				<li><a href="namespace-Composer.html">Composer<span></span></a>
+						<ul>
+				<li><a href="namespace-Composer.Autoload.html">Autoload</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Fpdf.html">Fpdf</a>
+						</li>
+				<li><a href="namespace-Matrix.html">Matrix<span></span></a>
+						<ul>
+				<li><a href="namespace-Matrix.Operators.html">Operators</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li><a href="namespace-PhpOffice.html">PhpOffice<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.html">Calculation<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Engine.html">Engine</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Token.html">Token</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Cell.html">Cell</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.html">Chart<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.Renderer.html">Renderer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Collection.html">Collection</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Document.html">Document</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.html">Reader<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.html">Xls<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Color.html">Color</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Style.html">Style</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.RichText.html">RichText</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.html">Shared<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.html">Escher<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.html">DgContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.SpgrContainer.html">SpgrContainer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.html">DggContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.html">BstoreContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.BSE.html">BSE</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.JAMA.html">JAMA</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.html">OLE<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.PPS.html">PPS</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Trend.html">Trend</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Style.html">Style</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.html">Worksheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.html">AutoFilter<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.Column.html">Column</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.Drawing.html">Drawing</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.html">Writer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.html">Ods<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.Cell.html">Cell</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Pdf.html">Pdf</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xls.html">Xls</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-Psr.html">Psr<span></span></a>
+						<ul>
+				<li><a href="namespace-Psr.SimpleCache.html">SimpleCache</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Samples.html">Samples<span></span></a>
+						<ul>
+				<li><a href="namespace-Samples.Sample09.html">Sample09</a>
+						</li>
+				<li><a href="namespace-Samples.Sample10.html">Sample10</a>
+						</li>
+				<li><a href="namespace-Samples.Sample12.html">Sample12</a>
+						</li>
+				<li><a href="namespace-Samples.Sample14.html">Sample14</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Baja.html">Baja</a></li>
+				<li><a href="class-BajaCuenta.html">BajaCuenta</a></li>
+				<li><a href="class-CambiarPassword.html">CambiarPassword</a></li>
+				<li><a href="class-Carrito.html">Carrito</a></li>
+				<li><a href="class-Categorias.html">Categorias</a></li>
+				<li><a href="class-CholeskyDecomposition.html">CholeskyDecomposition</a></li>
+				<li><a href="class-chunkReadFilter.html" class="invalid">chunkReadFilter</a></li>
+				<li><a href="class-CI_Benchmark.html">CI_Benchmark</a></li>
+				<li><a href="class-CI_Cache.html">CI_Cache</a></li>
+				<li><a href="class-CI_Cache_apc.html">CI_Cache_apc</a></li>
+				<li><a href="class-CI_Cache_dummy.html">CI_Cache_dummy</a></li>
+				<li><a href="class-CI_Cache_file.html">CI_Cache_file</a></li>
+				<li><a href="class-CI_Cache_memcached.html">CI_Cache_memcached</a></li>
+				<li><a href="class-CI_Cache_redis.html">CI_Cache_redis</a></li>
+				<li><a href="class-CI_Cache_wincache.html">CI_Cache_wincache</a></li>
+				<li><a href="class-CI_Calendar.html">CI_Calendar</a></li>
+				<li><a href="class-CI_Config.html">CI_Config</a></li>
+				<li><a href="class-CI_Controller.html">CI_Controller</a></li>
+				<li><a href="class-CI_DB_Cache.html">CI_DB_Cache</a></li>
+				<li><a href="class-CI_DB_cubrid_driver.html">CI_DB_cubrid_driver</a></li>
+				<li><a href="class-CI_DB_cubrid_forge.html">CI_DB_cubrid_forge</a></li>
+				<li><a href="class-CI_DB_cubrid_result.html">CI_DB_cubrid_result</a></li>
+				<li><a href="class-CI_DB_cubrid_utility.html">CI_DB_cubrid_utility</a></li>
+				<li><a href="class-CI_DB_driver.html">CI_DB_driver</a></li>
+				<li><a href="class-CI_DB_forge.html">CI_DB_forge</a></li>
+				<li><a href="class-CI_DB_ibase_driver.html">CI_DB_ibase_driver</a></li>
+				<li><a href="class-CI_DB_ibase_forge.html">CI_DB_ibase_forge</a></li>
+				<li><a href="class-CI_DB_ibase_result.html">CI_DB_ibase_result</a></li>
+				<li><a href="class-CI_DB_ibase_utility.html">CI_DB_ibase_utility</a></li>
+				<li><a href="class-CI_DB_mssql_driver.html">CI_DB_mssql_driver</a></li>
+				<li><a href="class-CI_DB_mssql_forge.html">CI_DB_mssql_forge</a></li>
+				<li><a href="class-CI_DB_mssql_result.html">CI_DB_mssql_result</a></li>
+				<li><a href="class-CI_DB_mssql_utility.html">CI_DB_mssql_utility</a></li>
+				<li><a href="class-CI_DB_mysql_driver.html">CI_DB_mysql_driver</a></li>
+				<li><a href="class-CI_DB_mysql_forge.html">CI_DB_mysql_forge</a></li>
+				<li><a href="class-CI_DB_mysql_result.html">CI_DB_mysql_result</a></li>
+				<li><a href="class-CI_DB_mysql_utility.html">CI_DB_mysql_utility</a></li>
+				<li><a href="class-CI_DB_mysqli_driver.html">CI_DB_mysqli_driver</a></li>
+				<li><a href="class-CI_DB_mysqli_forge.html">CI_DB_mysqli_forge</a></li>
+				<li><a href="class-CI_DB_mysqli_result.html">CI_DB_mysqli_result</a></li>
+				<li><a href="class-CI_DB_mysqli_utility.html">CI_DB_mysqli_utility</a></li>
+				<li><a href="class-CI_DB_oci8_driver.html">CI_DB_oci8_driver</a></li>
+				<li><a href="class-CI_DB_oci8_forge.html">CI_DB_oci8_forge</a></li>
+				<li><a href="class-CI_DB_oci8_result.html">CI_DB_oci8_result</a></li>
+				<li><a href="class-CI_DB_oci8_utility.html">CI_DB_oci8_utility</a></li>
+				<li><a href="class-CI_DB_odbc_driver.html">CI_DB_odbc_driver</a></li>
+				<li><a href="class-CI_DB_odbc_forge.html">CI_DB_odbc_forge</a></li>
+				<li><a href="class-CI_DB_odbc_result.html">CI_DB_odbc_result</a></li>
+				<li><a href="class-CI_DB_odbc_utility.html">CI_DB_odbc_utility</a></li>
+				<li><a href="class-CI_DB_pdo_4d_driver.html">CI_DB_pdo_4d_driver</a></li>
+				<li><a href="class-CI_DB_pdo_4d_forge.html">CI_DB_pdo_4d_forge</a></li>
+				<li><a href="class-CI_DB_pdo_cubrid_driver.html">CI_DB_pdo_cubrid_driver</a></li>
+				<li><a href="class-CI_DB_pdo_cubrid_forge.html">CI_DB_pdo_cubrid_forge</a></li>
+				<li><a href="class-CI_DB_pdo_dblib_driver.html">CI_DB_pdo_dblib_driver</a></li>
+				<li><a href="class-CI_DB_pdo_dblib_forge.html">CI_DB_pdo_dblib_forge</a></li>
+				<li><a href="class-CI_DB_pdo_driver.html">CI_DB_pdo_driver</a></li>
+				<li><a href="class-CI_DB_pdo_firebird_driver.html">CI_DB_pdo_firebird_driver</a></li>
+				<li><a href="class-CI_DB_pdo_firebird_forge.html">CI_DB_pdo_firebird_forge</a></li>
+				<li><a href="class-CI_DB_pdo_forge.html">CI_DB_pdo_forge</a></li>
+				<li><a href="class-CI_DB_pdo_ibm_driver.html">CI_DB_pdo_ibm_driver</a></li>
+				<li><a href="class-CI_DB_pdo_ibm_forge.html">CI_DB_pdo_ibm_forge</a></li>
+				<li><a href="class-CI_DB_pdo_informix_driver.html">CI_DB_pdo_informix_driver</a></li>
+				<li><a href="class-CI_DB_pdo_informix_forge.html">CI_DB_pdo_informix_forge</a></li>
+				<li><a href="class-CI_DB_pdo_mysql_driver.html">CI_DB_pdo_mysql_driver</a></li>
+				<li><a href="class-CI_DB_pdo_mysql_forge.html">CI_DB_pdo_mysql_forge</a></li>
+				<li><a href="class-CI_DB_pdo_oci_driver.html">CI_DB_pdo_oci_driver</a></li>
+				<li><a href="class-CI_DB_pdo_oci_forge.html">CI_DB_pdo_oci_forge</a></li>
+				<li><a href="class-CI_DB_pdo_odbc_driver.html">CI_DB_pdo_odbc_driver</a></li>
+				<li><a href="class-CI_DB_pdo_odbc_forge.html">CI_DB_pdo_odbc_forge</a></li>
+				<li><a href="class-CI_DB_pdo_pgsql_driver.html">CI_DB_pdo_pgsql_driver</a></li>
+				<li><a href="class-CI_DB_pdo_pgsql_forge.html">CI_DB_pdo_pgsql_forge</a></li>
+				<li><a href="class-CI_DB_pdo_result.html">CI_DB_pdo_result</a></li>
+				<li><a href="class-CI_DB_pdo_sqlite_driver.html">CI_DB_pdo_sqlite_driver</a></li>
+				<li><a href="class-CI_DB_pdo_sqlite_forge.html">CI_DB_pdo_sqlite_forge</a></li>
+				<li><a href="class-CI_DB_pdo_sqlsrv_driver.html">CI_DB_pdo_sqlsrv_driver</a></li>
+				<li><a href="class-CI_DB_pdo_sqlsrv_forge.html">CI_DB_pdo_sqlsrv_forge</a></li>
+				<li><a href="class-CI_DB_pdo_utility.html">CI_DB_pdo_utility</a></li>
+				<li><a href="class-CI_DB_postgre_driver.html">CI_DB_postgre_driver</a></li>
+				<li><a href="class-CI_DB_postgre_forge.html">CI_DB_postgre_forge</a></li>
+				<li><a href="class-CI_DB_postgre_result.html">CI_DB_postgre_result</a></li>
+				<li><a href="class-CI_DB_postgre_utility.html">CI_DB_postgre_utility</a></li>
+				<li><a href="class-CI_DB_query_builder.html">CI_DB_query_builder</a></li>
+				<li><a href="class-CI_DB_result.html">CI_DB_result</a></li>
+				<li><a href="class-CI_DB_sqlite3_driver.html">CI_DB_sqlite3_driver</a></li>
+				<li><a href="class-CI_DB_sqlite3_forge.html">CI_DB_sqlite3_forge</a></li>
+				<li><a href="class-CI_DB_sqlite3_result.html">CI_DB_sqlite3_result</a></li>
+				<li><a href="class-CI_DB_sqlite3_utility.html">CI_DB_sqlite3_utility</a></li>
+				<li><a href="class-CI_DB_sqlite_driver.html">CI_DB_sqlite_driver</a></li>
+				<li><a href="class-CI_DB_sqlite_forge.html">CI_DB_sqlite_forge</a></li>
+				<li><a href="class-CI_DB_sqlite_result.html">CI_DB_sqlite_result</a></li>
+				<li><a href="class-CI_DB_sqlite_utility.html">CI_DB_sqlite_utility</a></li>
+				<li><a href="class-CI_DB_sqlsrv_driver.html">CI_DB_sqlsrv_driver</a></li>
+				<li><a href="class-CI_DB_sqlsrv_forge.html">CI_DB_sqlsrv_forge</a></li>
+				<li><a href="class-CI_DB_sqlsrv_result.html">CI_DB_sqlsrv_result</a></li>
+				<li><a href="class-CI_DB_sqlsrv_utility.html">CI_DB_sqlsrv_utility</a></li>
+				<li><a href="class-CI_DB_utility.html">CI_DB_utility</a></li>
+				<li><a href="class-CI_Driver.html">CI_Driver</a></li>
+				<li><a href="class-CI_Driver_Library.html">CI_Driver_Library</a></li>
+				<li><a href="class-CI_Email.html">CI_Email</a></li>
+				<li><a href="class-CI_Encrypt.html">CI_Encrypt</a></li>
+				<li><a href="class-CI_Encryption.html">CI_Encryption</a></li>
+				<li><a href="class-CI_Exceptions.html">CI_Exceptions</a></li>
+				<li><a href="class-CI_Form_validation.html">CI_Form_validation</a></li>
+				<li><a href="class-CI_FTP.html">CI_FTP</a></li>
+				<li><a href="class-CI_Hooks.html">CI_Hooks</a></li>
+				<li><a href="class-CI_Image_lib.html">CI_Image_lib</a></li>
+				<li><a href="class-CI_Input.html">CI_Input</a></li>
+				<li><a href="class-CI_Jquery.html">CI_Jquery</a></li>
+				<li><a href="class-CI_Lang.html">CI_Lang</a></li>
+				<li><a href="class-CI_Loader.html">CI_Loader</a></li>
+				<li><a href="class-CI_Log.html">CI_Log</a></li>
+				<li><a href="class-CI_Migration.html">CI_Migration</a></li>
+				<li><a href="class-CI_Model.html">CI_Model</a></li>
+				<li><a href="class-CI_Output.html">CI_Output</a></li>
+				<li><a href="class-CI_Pagination.html">CI_Pagination</a></li>
+				<li><a href="class-CI_Parser.html">CI_Parser</a></li>
+				<li><a href="class-CI_Profiler.html">CI_Profiler</a></li>
+				<li><a href="class-CI_Router.html">CI_Router</a></li>
+				<li><a href="class-CI_Security.html">CI_Security</a></li>
+				<li><a href="class-CI_Session.html">CI_Session</a></li>
+				<li><a href="class-CI_Session_database_driver.html">CI_Session_database_driver</a></li>
+				<li><a href="class-CI_Session_driver.html">CI_Session_driver</a></li>
+				<li><a href="class-CI_Session_files_driver.html">CI_Session_files_driver</a></li>
+				<li><a href="class-CI_Session_memcached_driver.html">CI_Session_memcached_driver</a></li>
+				<li><a href="class-CI_Session_redis_driver.html">CI_Session_redis_driver</a></li>
+				<li><a href="class-CI_Table.html">CI_Table</a></li>
+				<li><a href="class-CI_Trackback.html">CI_Trackback</a></li>
+				<li><a href="class-CI_Typography.html">CI_Typography</a></li>
+				<li><a href="class-CI_Unit_test.html">CI_Unit_test</a></li>
+				<li><a href="class-CI_Upload.html">CI_Upload</a></li>
+				<li><a href="class-CI_URI.html">CI_URI</a></li>
+				<li><a href="class-CI_User_agent.html">CI_User_agent</a></li>
+				<li><a href="class-CI_Utf8.html">CI_Utf8</a></li>
+				<li><a href="class-CI_Xmlrpc.html">CI_Xmlrpc</a></li>
+				<li><a href="class-CI_Xmlrpcs.html">CI_Xmlrpcs</a></li>
+				<li><a href="class-CI_Zip.html">CI_Zip</a></li>
+				<li><a href="class-CKEditor.html" class="invalid">CKEditor</a></li>
+				<li><a href="class-ComposerAutoloaderInitb156039ff636cefb92a3d8da4c526b76.html">ComposerAutoloaderInitb156039ff636cefb92a3d8da4c526b76</a></li>
+				<li><a href="class-ComprobarLogin.html">ComprobarLogin</a></li>
+				<li><a href="class-Correo.html">Correo</a></li>
+				<li><a href="class-Crud.html">Crud</a></li>
+				<li><a href="class-EasyPeasyICS.html">EasyPeasyICS</a></li>
+				<li><a href="class-EigenvalueDecomposition.html">EigenvalueDecomposition</a></li>
+				<li><a href="class-Excel.html">Excel</a></li>
+				<li><a href="class-Factura.html">Factura</a></li>
+				<li><a href="class-FilenameFilter.html" class="invalid">FilenameFilter</a></li>
+				<li><a href="class-FilesystemRegexFilter.html" class="invalid">FilesystemRegexFilter</a></li>
+				<li><a href="class-FPDF.html" class="invalid">FPDF</a></li>
+				<li><a href="class-Grocery_CRUD.html">Grocery_CRUD</a></li>
+				<li><a href="class-grocery_CRUD_Field_Types.html">grocery_CRUD_Field_Types</a></li>
+				<li><a href="class-grocery_CRUD_Form_validation.html">grocery_CRUD_Form_validation</a></li>
+				<li><a href="class-grocery_CRUD_Layout.html">grocery_CRUD_Layout</a></li>
+				<li><a href="class-Grocery_crud_model.html">Grocery_crud_model</a></li>
+				<li><a href="class-grocery_CRUD_Model_Driver.html">grocery_CRUD_Model_Driver</a></li>
+				<li><a href="class-grocery_CRUD_States.html">grocery_CRUD_States</a></li>
+				<li><a href="class-Html2Text.html">Html2Text</a></li>
+				<li><a href="class-Image_moo.html">Image_moo</a></li>
+				<li><a href="class-Login.html">Login</a></li>
+				<li><a href="class-MisProductos.html">MisProductos</a></li>
+				<li><a href="class-ModificarDatos.html">ModificarDatos</a></li>
+				<li><a href="class-MyReadFilter.html" class="invalid">MyReadFilter</a></li>
+				<li><a href="class-ntlm_sasl_client_class.html">ntlm_sasl_client_class</a></li>
+				<li><a href="class-OlvideMiPassword.html">OlvideMiPassword</a></li>
+				<li><a href="class-PclZip.html">PclZip</a></li>
+				<li><a href="class-PDF.html" class="invalid">PDF</a></li>
+				<li><a href="class-Pedidos.html">Pedidos</a></li>
+				<li><a href="class-Pedidos_C.html">Pedidos_C</a></li>
+				<li><a href="class-PeticionesCarrito.html">PeticionesCarrito</a></li>
+				<li><a href="class-PHPExcel.html">PHPExcel</a></li>
+				<li><a href="class-PHPExcel_Autoloader.html">PHPExcel_Autoloader</a></li>
+				<li><a href="class-PHPExcel_Best_Fit.html">PHPExcel_Best_Fit</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorage_APC.html">PHPExcel_CachedObjectStorage_APC</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorage_CacheBase.html">PHPExcel_CachedObjectStorage_CacheBase</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorage_DiscISAM.html">PHPExcel_CachedObjectStorage_DiscISAM</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorage_Igbinary.html">PHPExcel_CachedObjectStorage_Igbinary</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorage_Memcache.html">PHPExcel_CachedObjectStorage_Memcache</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorage_Memory.html">PHPExcel_CachedObjectStorage_Memory</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorage_MemoryGZip.html">PHPExcel_CachedObjectStorage_MemoryGZip</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorage_MemorySerialized.html">PHPExcel_CachedObjectStorage_MemorySerialized</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorage_PHPTemp.html">PHPExcel_CachedObjectStorage_PHPTemp</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorage_SQLite.html">PHPExcel_CachedObjectStorage_SQLite</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorage_SQLite3.html">PHPExcel_CachedObjectStorage_SQLite3</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorage_Wincache.html">PHPExcel_CachedObjectStorage_Wincache</a></li>
+				<li><a href="class-PHPExcel_CachedObjectStorageFactory.html">PHPExcel_CachedObjectStorageFactory</a></li>
+				<li><a href="class-PHPExcel_CalcEngine_CyclicReferenceStack.html">PHPExcel_CalcEngine_CyclicReferenceStack</a></li>
+				<li><a href="class-PHPExcel_CalcEngine_Logger.html">PHPExcel_CalcEngine_Logger</a></li>
+				<li><a href="class-PHPExcel_Calculation.html">PHPExcel_Calculation</a></li>
+				<li><a href="class-PHPExcel_Calculation_Database.html">PHPExcel_Calculation_Database</a></li>
+				<li><a href="class-PHPExcel_Calculation_DateTime.html">PHPExcel_Calculation_DateTime</a></li>
+				<li><a href="class-PHPExcel_Calculation_Engineering.html">PHPExcel_Calculation_Engineering</a></li>
+				<li><a href="class-PHPExcel_Calculation_ExceptionHandler.html">PHPExcel_Calculation_ExceptionHandler</a></li>
+				<li class="active"><a href="class-PHPExcel_Calculation_Financial.html">PHPExcel_Calculation_Financial</a></li>
+				<li><a href="class-PHPExcel_Calculation_FormulaParser.html">PHPExcel_Calculation_FormulaParser</a></li>
+				<li><a href="class-PHPExcel_Calculation_FormulaToken.html">PHPExcel_Calculation_FormulaToken</a></li>
+				<li><a href="class-PHPExcel_Calculation_Function.html">PHPExcel_Calculation_Function</a></li>
+				<li><a href="class-PHPExcel_Calculation_Functions.html">PHPExcel_Calculation_Functions</a></li>
+				<li><a href="class-PHPExcel_Calculation_Logical.html">PHPExcel_Calculation_Logical</a></li>
+				<li><a href="class-PHPExcel_Calculation_LookupRef.html">PHPExcel_Calculation_LookupRef</a></li>
+				<li><a href="class-PHPExcel_Calculation_MathTrig.html">PHPExcel_Calculation_MathTrig</a></li>
+				<li><a href="class-PHPExcel_Calculation_Statistical.html">PHPExcel_Calculation_Statistical</a></li>
+				<li><a href="class-PHPExcel_Calculation_TextData.html">PHPExcel_Calculation_TextData</a></li>
+				<li><a href="class-PHPExcel_Calculation_Token_Stack.html">PHPExcel_Calculation_Token_Stack</a></li>
+				<li><a href="class-PHPExcel_Cell.html">PHPExcel_Cell</a></li>
+				<li><a href="class-PHPExcel_Cell_AdvancedValueBinder.html">PHPExcel_Cell_AdvancedValueBinder</a></li>
+				<li><a href="class-PHPExcel_Cell_DataType.html">PHPExcel_Cell_DataType</a></li>
+				<li><a href="class-PHPExcel_Cell_DataValidation.html">PHPExcel_Cell_DataValidation</a></li>
+				<li><a href="class-PHPExcel_Cell_DefaultValueBinder.html">PHPExcel_Cell_DefaultValueBinder</a></li>
+				<li><a href="class-PHPExcel_Cell_Hyperlink.html">PHPExcel_Cell_Hyperlink</a></li>
+				<li><a href="class-PHPExcel_Chart.html">PHPExcel_Chart</a></li>
+				<li><a href="class-PHPExcel_Chart_Axis.html">PHPExcel_Chart_Axis</a></li>
+				<li><a href="class-PHPExcel_Chart_DataSeries.html">PHPExcel_Chart_DataSeries</a></li>
+				<li><a href="class-PHPExcel_Chart_DataSeriesValues.html">PHPExcel_Chart_DataSeriesValues</a></li>
+				<li><a href="class-PHPExcel_Chart_GridLines.html">PHPExcel_Chart_GridLines</a></li>
+				<li><a href="class-PHPExcel_Chart_Layout.html">PHPExcel_Chart_Layout</a></li>
+				<li><a href="class-PHPExcel_Chart_Legend.html">PHPExcel_Chart_Legend</a></li>
+				<li><a href="class-PHPExcel_Chart_PlotArea.html">PHPExcel_Chart_PlotArea</a></li>
+				<li><a href="class-PHPExcel_Chart_Properties.html">PHPExcel_Chart_Properties</a></li>
+				<li><a href="class-PHPExcel_Chart_Renderer_jpgraph.html">PHPExcel_Chart_Renderer_jpgraph</a></li>
+				<li><a href="class-PHPExcel_Chart_Title.html">PHPExcel_Chart_Title</a></li>
+				<li><a href="class-PHPExcel_Comment.html">PHPExcel_Comment</a></li>
+				<li><a href="class-PHPExcel_DocumentProperties.html">PHPExcel_DocumentProperties</a></li>
+				<li><a href="class-PHPExcel_DocumentSecurity.html">PHPExcel_DocumentSecurity</a></li>
+				<li><a href="class-PHPExcel_Exponential_Best_Fit.html">PHPExcel_Exponential_Best_Fit</a></li>
+				<li><a href="class-PHPExcel_HashTable.html">PHPExcel_HashTable</a></li>
+				<li><a href="class-PHPExcel_Helper_HTML.html">PHPExcel_Helper_HTML</a></li>
+				<li><a href="class-PHPExcel_IOFactory.html">PHPExcel_IOFactory</a></li>
+				<li><a href="class-PHPExcel_Linear_Best_Fit.html">PHPExcel_Linear_Best_Fit</a></li>
+				<li><a href="class-PHPExcel_Logarithmic_Best_Fit.html">PHPExcel_Logarithmic_Best_Fit</a></li>
+				<li><a href="class-PHPExcel_NamedRange.html">PHPExcel_NamedRange</a></li>
+				<li><a href="class-PHPExcel_Polynomial_Best_Fit.html">PHPExcel_Polynomial_Best_Fit</a></li>
+				<li><a href="class-PHPExcel_Power_Best_Fit.html">PHPExcel_Power_Best_Fit</a></li>
+				<li><a href="class-PHPExcel_Reader_Abstract.html">PHPExcel_Reader_Abstract</a></li>
+				<li><a href="class-PHPExcel_Reader_CSV.html">PHPExcel_Reader_CSV</a></li>
+				<li><a href="class-PHPExcel_Reader_DefaultReadFilter.html">PHPExcel_Reader_DefaultReadFilter</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel2003XML.html">PHPExcel_Reader_Excel2003XML</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel2007.html">PHPExcel_Reader_Excel2007</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel2007_Chart.html">PHPExcel_Reader_Excel2007_Chart</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel2007_Theme.html">PHPExcel_Reader_Excel2007_Theme</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel5.html">PHPExcel_Reader_Excel5</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel5_Color.html">PHPExcel_Reader_Excel5_Color</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel5_Color_BIFF5.html">PHPExcel_Reader_Excel5_Color_BIFF5</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel5_Color_BIFF8.html">PHPExcel_Reader_Excel5_Color_BIFF8</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel5_Color_BuiltIn.html">PHPExcel_Reader_Excel5_Color_BuiltIn</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel5_ErrorCode.html">PHPExcel_Reader_Excel5_ErrorCode</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel5_Escher.html">PHPExcel_Reader_Excel5_Escher</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel5_MD5.html">PHPExcel_Reader_Excel5_MD5</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel5_RC4.html">PHPExcel_Reader_Excel5_RC4</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel5_Style_Border.html">PHPExcel_Reader_Excel5_Style_Border</a></li>
+				<li><a href="class-PHPExcel_Reader_Excel5_Style_FillPattern.html">PHPExcel_Reader_Excel5_Style_FillPattern</a></li>
+				<li><a href="class-PHPExcel_Reader_Gnumeric.html">PHPExcel_Reader_Gnumeric</a></li>
+				<li><a href="class-PHPExcel_Reader_HTML.html">PHPExcel_Reader_HTML</a></li>
+				<li><a href="class-PHPExcel_Reader_OOCalc.html">PHPExcel_Reader_OOCalc</a></li>
+				<li><a href="class-PHPExcel_Reader_SYLK.html">PHPExcel_Reader_SYLK</a></li>
+				<li><a href="class-PHPExcel_ReferenceHelper.html">PHPExcel_ReferenceHelper</a></li>
+				<li><a href="class-PHPExcel_RichText.html">PHPExcel_RichText</a></li>
+				<li><a href="class-PHPExcel_RichText_Run.html">PHPExcel_RichText_Run</a></li>
+				<li><a href="class-PHPExcel_RichText_TextElement.html">PHPExcel_RichText_TextElement</a></li>
+				<li><a href="class-PHPExcel_Settings.html">PHPExcel_Settings</a></li>
+				<li><a href="class-PHPExcel_Shared_CodePage.html">PHPExcel_Shared_CodePage</a></li>
+				<li><a href="class-PHPExcel_Shared_Date.html">PHPExcel_Shared_Date</a></li>
+				<li><a href="class-PHPExcel_Shared_Drawing.html">PHPExcel_Shared_Drawing</a></li>
+				<li><a href="class-PHPExcel_Shared_Escher.html">PHPExcel_Shared_Escher</a></li>
+				<li><a href="class-PHPExcel_Shared_Escher_DgContainer.html">PHPExcel_Shared_Escher_DgContainer</a></li>
+				<li><a href="class-PHPExcel_Shared_Escher_DgContainer_SpgrContainer.html">PHPExcel_Shared_Escher_DgContainer_SpgrContainer</a></li>
+				<li><a href="class-PHPExcel_Shared_Escher_DgContainer_SpgrContainer_SpContainer.html">PHPExcel_Shared_Escher_DgContainer_SpgrContainer_SpContainer</a></li>
+				<li><a href="class-PHPExcel_Shared_Escher_DggContainer.html">PHPExcel_Shared_Escher_DggContainer</a></li>
+				<li><a href="class-PHPExcel_Shared_Escher_DggContainer_BstoreContainer.html">PHPExcel_Shared_Escher_DggContainer_BstoreContainer</a></li>
+				<li><a href="class-PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE.html">PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE</a></li>
+				<li><a href="class-PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE_Blip.html">PHPExcel_Shared_Escher_DggContainer_BstoreContainer_BSE_Blip</a></li>
+				<li><a href="class-PHPExcel_Shared_Excel5.html">PHPExcel_Shared_Excel5</a></li>
+				<li><a href="class-PHPExcel_Shared_File.html">PHPExcel_Shared_File</a></li>
+				<li><a href="class-PHPExcel_Shared_Font.html">PHPExcel_Shared_Font</a></li>
+				<li><a href="class-PHPExcel_Shared_JAMA_LUDecomposition.html">PHPExcel_Shared_JAMA_LUDecomposition</a></li>
+				<li><a href="class-PHPExcel_Shared_JAMA_Matrix.html">PHPExcel_Shared_JAMA_Matrix</a></li>
+				<li><a href="class-PHPExcel_Shared_JAMA_QRDecomposition.html">PHPExcel_Shared_JAMA_QRDecomposition</a></li>
+				<li><a href="class-PHPExcel_Shared_OLE.html">PHPExcel_Shared_OLE</a></li>
+				<li><a href="class-PHPExcel_Shared_OLE_ChainedBlockStream.html">PHPExcel_Shared_OLE_ChainedBlockStream</a></li>
+				<li><a href="class-PHPExcel_Shared_OLE_PPS.html">PHPExcel_Shared_OLE_PPS</a></li>
+				<li><a href="class-PHPExcel_Shared_OLE_PPS_File.html">PHPExcel_Shared_OLE_PPS_File</a></li>
+				<li><a href="class-PHPExcel_Shared_OLE_PPS_Root.html">PHPExcel_Shared_OLE_PPS_Root</a></li>
+				<li><a href="class-PHPExcel_Shared_OLERead.html">PHPExcel_Shared_OLERead</a></li>
+				<li><a href="class-PHPExcel_Shared_PasswordHasher.html">PHPExcel_Shared_PasswordHasher</a></li>
+				<li><a href="class-PHPExcel_Shared_String.html">PHPExcel_Shared_String</a></li>
+				<li><a href="class-PHPExcel_Shared_TimeZone.html">PHPExcel_Shared_TimeZone</a></li>
+				<li><a href="class-PHPExcel_Shared_XMLWriter.html">PHPExcel_Shared_XMLWriter</a></li>
+				<li><a href="class-PHPExcel_Shared_ZipArchive.html">PHPExcel_Shared_ZipArchive</a></li>
+				<li><a href="class-PHPExcel_Shared_ZipStreamWrapper.html">PHPExcel_Shared_ZipStreamWrapper</a></li>
+				<li><a href="class-PHPExcel_Style.html">PHPExcel_Style</a></li>
+				<li><a href="class-PHPExcel_Style_Alignment.html">PHPExcel_Style_Alignment</a></li>
+				<li><a href="class-PHPExcel_Style_Border.html">PHPExcel_Style_Border</a></li>
+				<li><a href="class-PHPExcel_Style_Borders.html">PHPExcel_Style_Borders</a></li>
+				<li><a href="class-PHPExcel_Style_Color.html">PHPExcel_Style_Color</a></li>
+				<li><a href="class-PHPExcel_Style_Conditional.html">PHPExcel_Style_Conditional</a></li>
+				<li><a href="class-PHPExcel_Style_Fill.html">PHPExcel_Style_Fill</a></li>
+				<li><a href="class-PHPExcel_Style_Font.html">PHPExcel_Style_Font</a></li>
+				<li><a href="class-PHPExcel_Style_NumberFormat.html">PHPExcel_Style_NumberFormat</a></li>
+				<li><a href="class-PHPExcel_Style_Protection.html">PHPExcel_Style_Protection</a></li>
+				<li><a href="class-PHPExcel_Style_Supervisor.html">PHPExcel_Style_Supervisor</a></li>
+				<li><a href="class-PHPExcel_Worksheet.html">PHPExcel_Worksheet</a></li>
+				<li><a href="class-PHPExcel_Worksheet_AutoFilter.html">PHPExcel_Worksheet_AutoFilter</a></li>
+				<li><a href="class-PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a></li>
+				<li><a href="class-PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a></li>
+				<li><a href="class-PHPExcel_Worksheet_BaseDrawing.html">PHPExcel_Worksheet_BaseDrawing</a></li>
+				<li><a href="class-PHPExcel_Worksheet_CellIterator.html">PHPExcel_Worksheet_CellIterator</a></li>
+				<li><a href="class-PHPExcel_Worksheet_Column.html">PHPExcel_Worksheet_Column</a></li>
+				<li><a href="class-PHPExcel_Worksheet_ColumnCellIterator.html">PHPExcel_Worksheet_ColumnCellIterator</a></li>
+				<li><a href="class-PHPExcel_Worksheet_ColumnDimension.html">PHPExcel_Worksheet_ColumnDimension</a></li>
+				<li><a href="class-PHPExcel_Worksheet_ColumnIterator.html">PHPExcel_Worksheet_ColumnIterator</a></li>
+				<li><a href="class-PHPExcel_Worksheet_Dimension.html">PHPExcel_Worksheet_Dimension</a></li>
+				<li><a href="class-PHPExcel_Worksheet_Drawing.html">PHPExcel_Worksheet_Drawing</a></li>
+				<li><a href="class-PHPExcel_Worksheet_Drawing_Shadow.html">PHPExcel_Worksheet_Drawing_Shadow</a></li>
+				<li><a href="class-PHPExcel_Worksheet_HeaderFooter.html">PHPExcel_Worksheet_HeaderFooter</a></li>
+				<li><a href="class-PHPExcel_Worksheet_HeaderFooterDrawing.html">PHPExcel_Worksheet_HeaderFooterDrawing</a></li>
+				<li><a href="class-PHPExcel_Worksheet_MemoryDrawing.html">PHPExcel_Worksheet_MemoryDrawing</a></li>
+				<li><a href="class-PHPExcel_Worksheet_PageMargins.html">PHPExcel_Worksheet_PageMargins</a></li>
+				<li><a href="class-PHPExcel_Worksheet_PageSetup.html">PHPExcel_Worksheet_PageSetup</a></li>
+				<li><a href="class-PHPExcel_Worksheet_Protection.html">PHPExcel_Worksheet_Protection</a></li>
+				<li><a href="class-PHPExcel_Worksheet_Row.html">PHPExcel_Worksheet_Row</a></li>
+				<li><a href="class-PHPExcel_Worksheet_RowCellIterator.html">PHPExcel_Worksheet_RowCellIterator</a></li>
+				<li><a href="class-PHPExcel_Worksheet_RowDimension.html">PHPExcel_Worksheet_RowDimension</a></li>
+				<li><a href="class-PHPExcel_Worksheet_RowIterator.html">PHPExcel_Worksheet_RowIterator</a></li>
+				<li><a href="class-PHPExcel_Worksheet_SheetView.html">PHPExcel_Worksheet_SheetView</a></li>
+				<li><a href="class-PHPExcel_WorksheetIterator.html">PHPExcel_WorksheetIterator</a></li>
+				<li><a href="class-PHPExcel_Writer_Abstract.html">PHPExcel_Writer_Abstract</a></li>
+				<li><a href="class-PHPExcel_Writer_CSV.html">PHPExcel_Writer_CSV</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007.html">PHPExcel_Writer_Excel2007</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_Chart.html">PHPExcel_Writer_Excel2007_Chart</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_Comments.html">PHPExcel_Writer_Excel2007_Comments</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_ContentTypes.html">PHPExcel_Writer_Excel2007_ContentTypes</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_DocProps.html">PHPExcel_Writer_Excel2007_DocProps</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_Drawing.html">PHPExcel_Writer_Excel2007_Drawing</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_Rels.html">PHPExcel_Writer_Excel2007_Rels</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_RelsRibbon.html">PHPExcel_Writer_Excel2007_RelsRibbon</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_RelsVBA.html">PHPExcel_Writer_Excel2007_RelsVBA</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_StringTable.html">PHPExcel_Writer_Excel2007_StringTable</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_Style.html">PHPExcel_Writer_Excel2007_Style</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_Theme.html">PHPExcel_Writer_Excel2007_Theme</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_Workbook.html">PHPExcel_Writer_Excel2007_Workbook</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_Worksheet.html">PHPExcel_Writer_Excel2007_Worksheet</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel2007_WriterPart.html">PHPExcel_Writer_Excel2007_WriterPart</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel5.html">PHPExcel_Writer_Excel5</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel5_BIFFwriter.html">PHPExcel_Writer_Excel5_BIFFwriter</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel5_Escher.html">PHPExcel_Writer_Excel5_Escher</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel5_Font.html">PHPExcel_Writer_Excel5_Font</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel5_Parser.html">PHPExcel_Writer_Excel5_Parser</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel5_Workbook.html">PHPExcel_Writer_Excel5_Workbook</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel5_Worksheet.html">PHPExcel_Writer_Excel5_Worksheet</a></li>
+				<li><a href="class-PHPExcel_Writer_Excel5_Xf.html">PHPExcel_Writer_Excel5_Xf</a></li>
+				<li><a href="class-PHPExcel_Writer_HTML.html">PHPExcel_Writer_HTML</a></li>
+				<li><a href="class-PHPExcel_Writer_OpenDocument.html">PHPExcel_Writer_OpenDocument</a></li>
+				<li><a href="class-PHPExcel_Writer_OpenDocument_Cell_Comment.html">PHPExcel_Writer_OpenDocument_Cell_Comment</a></li>
+				<li><a href="class-PHPExcel_Writer_OpenDocument_Content.html">PHPExcel_Writer_OpenDocument_Content</a></li>
+				<li><a href="class-PHPExcel_Writer_OpenDocument_Meta.html">PHPExcel_Writer_OpenDocument_Meta</a></li>
+				<li><a href="class-PHPExcel_Writer_OpenDocument_MetaInf.html">PHPExcel_Writer_OpenDocument_MetaInf</a></li>
+				<li><a href="class-PHPExcel_Writer_OpenDocument_Mimetype.html">PHPExcel_Writer_OpenDocument_Mimetype</a></li>
+				<li><a href="class-PHPExcel_Writer_OpenDocument_Settings.html">PHPExcel_Writer_OpenDocument_Settings</a></li>
+				<li><a href="class-PHPExcel_Writer_OpenDocument_Styles.html">PHPExcel_Writer_OpenDocument_Styles</a></li>
+				<li><a href="class-PHPExcel_Writer_OpenDocument_Thumbnails.html">PHPExcel_Writer_OpenDocument_Thumbnails</a></li>
+				<li><a href="class-PHPExcel_Writer_OpenDocument_WriterPart.html">PHPExcel_Writer_OpenDocument_WriterPart</a></li>
+				<li><a href="class-PHPExcel_Writer_PDF.html">PHPExcel_Writer_PDF</a></li>
+				<li><a href="class-PHPExcel_Writer_PDF_Core.html">PHPExcel_Writer_PDF_Core</a></li>
+				<li><a href="class-PHPExcel_Writer_PDF_DomPDF.html">PHPExcel_Writer_PDF_DomPDF</a></li>
+				<li><a href="class-PHPExcel_Writer_PDF_mPDF.html">PHPExcel_Writer_PDF_mPDF</a></li>
+				<li><a href="class-PHPExcel_Writer_PDF_tcPDF.html">PHPExcel_Writer_PDF_tcPDF</a></li>
+				<li><a href="class-PHPMailer.html">PHPMailer</a></li>
+				<li><a href="class-PHPMailerLangTest.html">PHPMailerLangTest</a></li>
+				<li><a href="class-PHPMailerTest.html">PHPMailerTest</a></li>
+				<li><a href="class-POP3.html">POP3</a></li>
+				<li><a href="class-Principal.html">Principal</a></li>
+				<li><a href="class-Productos.html">Productos</a></li>
+				<li><a href="class-Registrar.html">Registrar</a></li>
+				<li><a href="class-Resumen.html">Resumen</a></li>
+				<li><a href="class-SingularValueDecomposition.html">SingularValueDecomposition</a></li>
+				<li><a href="class-SMTP.html">SMTP</a></li>
+				<li><a href="class-trendClass.html">trendClass</a></li>
+				<li><a href="class-TTFontFile.html">TTFontFile</a></li>
+				<li><a href="class-TTFParser.html" class="invalid">TTFParser</a></li>
+				<li><a href="class-UploadHandler.html">UploadHandler</a></li>
+				<li><a href="class-Usuario.html">Usuario</a></li>
+				<li><a href="class-Xml.html">Xml</a></li>
+				<li><a href="class-XML_RPC_Client.html">XML_RPC_Client</a></li>
+				<li><a href="class-XML_RPC_Message.html">XML_RPC_Message</a></li>
+				<li><a href="class-XML_RPC_Response.html">XML_RPC_Response</a></li>
+				<li><a href="class-XML_RPC_Values.html">XML_RPC_Values</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-PHPExcel_CachedObjectStorage_ICache.html">PHPExcel_CachedObjectStorage_ICache</a></li>
+				<li><a href="class-PHPExcel_Cell_IValueBinder.html">PHPExcel_Cell_IValueBinder</a></li>
+				<li><a href="class-PHPExcel_IComparable.html">PHPExcel_IComparable</a></li>
+				<li><a href="class-PHPExcel_Reader_IReader.html">PHPExcel_Reader_IReader</a></li>
+				<li><a href="class-PHPExcel_Reader_IReadFilter.html">PHPExcel_Reader_IReadFilter</a></li>
+				<li><a href="class-PHPExcel_RichText_ITextElement.html">PHPExcel_RichText_ITextElement</a></li>
+				<li><a href="class-PHPExcel_Writer_IWriter.html">PHPExcel_Writer_IWriter</a></li>
+				<li><a href="class-SessionHandlerInterface.html">SessionHandlerInterface</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-PHPExcel_Calculation_Exception.html">PHPExcel_Calculation_Exception</a></li>
+				<li><a href="class-PHPExcel_Chart_Exception.html">PHPExcel_Chart_Exception</a></li>
+				<li><a href="class-PHPExcel_Exception.html">PHPExcel_Exception</a></li>
+				<li><a href="class-PHPExcel_Reader_Exception.html">PHPExcel_Reader_Exception</a></li>
+				<li><a href="class-PHPExcel_Writer_Exception.html">PHPExcel_Writer_Exception</a></li>
+				<li><a href="class-phpmailerException.html">phpmailerException</a></li>
+			</ul>
+
+			<h3>Constants</h3>
+			<ul>
+				<li><a href="constant-CI_VERSION.html">CI_VERSION</a></li>
+			</ul>
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__autoload.html">__autoload</a></li>
+				<li><a href="function-_attributes_to_string.html">_attributes_to_string</a></li>
+				<li><a href="function-_error_handler.html">_error_handler</a></li>
+				<li><a href="function-_exception_handler.html">_exception_handler</a></li>
+				<li><a href="function-_get_smiley_array.html">_get_smiley_array</a></li>
+				<li><a href="function-_get_validation_object.html">_get_validation_object</a></li>
+				<li><a href="function-_list.html">_list</a></li>
+				<li><a href="function-_parse_form_attributes.html">_parse_form_attributes</a></li>
+				<li><a href="function-_shutdown_handler.html">_shutdown_handler</a></li>
+				<li><a href="function-_stringify_attributes.html">_stringify_attributes</a></li>
+				<li><a href="function-acosh.html">acosh</a></li>
+				<li><a href="function-alternator.html">alternator</a></li>
+				<li><a href="function-anchor.html">anchor</a></li>
+				<li><a href="function-anchor_popup.html">anchor_popup</a></li>
+				<li><a href="function-array_column.html">array_column</a></li>
+				<li><a href="function-ascii_to_entities.html">ascii_to_entities</a></li>
+				<li><a href="function-asinh.html">asinh</a></li>
+				<li><a href="function-atanh.html">atanh</a></li>
+				<li><a href="function-auto_link.html">auto_link</a></li>
+				<li><a href="function-auto_typography.html">auto_typography</a></li>
+				<li><a href="function-base_url.html">base_url</a></li>
+				<li><a href="function-byte_format.html">byte_format</a></li>
+				<li><a href="function-callbackAction.html">callbackAction</a></li>
+				<li><a href="function-camelize.html">camelize</a></li>
+				<li><a href="function-character_limiter.html">character_limiter</a></li>
+				<li><a href="function-cleanEmails.html">cleanEmails</a></li>
+				<li><a href="function-composerRequireb156039ff636cefb92a3d8da4c526b76.html">composerRequireb156039ff636cefb92a3d8da4c526b76</a></li>
+				<li><a href="function-config_item.html">config_item</a></li>
+				<li><a href="function-convert_accented_characters.html">convert_accented_characters</a></li>
+				<li><a href="function-crearSelect.html" class="invalid">crearSelect</a></li>
+				<li><a href="function-create_captcha.html">create_captcha</a></li>
+				<li><a href="function-current_url.html">current_url</a></li>
+				<li><a href="function-dameCiudadDesdeLaQueMeConecto.html">dameCiudadDesdeLaQueMeConecto</a></li>
+				<li><a href="function-dameTodasLasProvincias.html">dameTodasLasProvincias</a></li>
+				<li><a href="function-dameUnaProvincia.html">dameUnaProvincia</a></li>
+				<li><a href="function-date_range.html">date_range</a></li>
+				<li><a href="function-days_in_month.html">days_in_month</a></li>
+				<li><a href="function-DB.html">DB</a></li>
+				<li><a href="function-delete_cookie.html">delete_cookie</a></li>
+				<li><a href="function-delete_files.html">delete_files</a></li>
+				<li><a href="function-directory_map.html">directory_map</a></li>
+				<li><a href="function-doctype.html">doctype</a></li>
+				<li><a href="function-element.html">element</a></li>
+				<li><a href="function-elements.html">elements</a></li>
+				<li><a href="function-ellipsize.html">ellipsize</a></li>
+				<li><a href="function-encode_php_tags.html">encode_php_tags</a></li>
+				<li><a href="function-entities_to_ascii.html">entities_to_ascii</a></li>
+				<li><a href="function-entity_decode.html">entity_decode</a></li>
+				<li><a href="function-Error.html" class="invalid">Error</a></li>
+				<li><a href="function-force_download.html">force_download</a></li>
+				<li><a href="function-form_button.html">form_button</a></li>
+				<li><a href="function-form_checkbox.html">form_checkbox</a></li>
+				<li><a href="function-form_close.html">form_close</a></li>
+				<li><a href="function-form_dropdown.html">form_dropdown</a></li>
+				<li><a href="function-form_error.html">form_error</a></li>
+				<li><a href="function-form_fieldset.html">form_fieldset</a></li>
+				<li><a href="function-form_fieldset_close.html">form_fieldset_close</a></li>
+				<li><a href="function-form_hidden.html">form_hidden</a></li>
+				<li><a href="function-form_input.html">form_input</a></li>
+				<li><a href="function-form_label.html">form_label</a></li>
+				<li><a href="function-form_multiselect.html">form_multiselect</a></li>
+				<li><a href="function-form_open.html">form_open</a></li>
+				<li><a href="function-form_open_multipart.html">form_open_multipart</a></li>
+				<li><a href="function-form_password.html">form_password</a></li>
+				<li><a href="function-form_radio.html">form_radio</a></li>
+				<li><a href="function-form_reset.html">form_reset</a></li>
+				<li><a href="function-form_submit.html">form_submit</a></li>
+				<li><a href="function-form_textarea.html">form_textarea</a></li>
+				<li><a href="function-form_upload.html">form_upload</a></li>
+				<li><a href="function-function_usable.html">function_usable</a></li>
+				<li><a href="function-get_clickable_smileys.html">get_clickable_smileys</a></li>
+				<li><a href="function-get_client_ip_server.html">get_client_ip_server</a></li>
+				<li><a href="function-get_config.html">get_config</a></li>
+				<li><a href="function-get_cookie.html">get_cookie</a></li>
+				<li><a href="function-get_dir_file_info.html">get_dir_file_info</a></li>
+				<li><a href="function-get_file_info.html">get_file_info</a></li>
+				<li><a href="function-get_filenames.html">get_filenames</a></li>
+				<li><a href="function-get_instance.html">get_instance</a></li>
+				<li><a href="function-get_mime_by_extension.html">get_mime_by_extension</a></li>
+				<li><a href="function-get_mimes.html">get_mimes</a></li>
+				<li><a href="function-GetInfoFromTrueType.html" class="invalid">GetInfoFromTrueType</a></li>
+				<li><a href="function-GetInfoFromType1.html" class="invalid">GetInfoFromType1</a></li>
+				<li><a href="function-gmt_to_local.html">gmt_to_local</a></li>
+				<li><a href="function-hash_equals.html">hash_equals</a></li>
+				<li><a href="function-hash_pbkdf2.html">hash_pbkdf2</a></li>
+				<li><a href="function-heading.html">heading</a></li>
+				<li><a href="function-hex2bin.html">hex2bin</a></li>
+				<li><a href="function-highlight_code.html">highlight_code</a></li>
+				<li><a href="function-highlight_phrase.html">highlight_phrase</a></li>
+				<li><a href="function-html_escape.html">html_escape</a></li>
+				<li><a href="function-HTMLFilter.html">HTMLFilter</a></li>
+				<li><a href="function-human_to_unix.html">human_to_unix</a></li>
+				<li><a href="function-humanize.html">humanize</a></li>
+				<li><a href="function-hypo.html" class="invalid">hypo</a></li>
+				<li><a href="function-imageantialias.html">imageantialias</a></li>
+				<li><a href="function-img.html">img</a></li>
+				<li><a href="function-increment_string.html">increment_string</a></li>
+				<li><a href="function-index_page.html">index_page</a></li>
+				<li><a href="function-is_cli.html">is_cli</a></li>
+				<li><a href="function-is_countable.html">is_countable</a></li>
+				<li><a href="function-is_false.html">is_false</a></li>
+				<li><a href="function-is_https.html">is_https</a></li>
+				<li><a href="function-is_loaded.html">is_loaded</a></li>
+				<li><a href="function-is_php.html">is_php</a></li>
+				<li><a href="function-is_really_writable.html">is_really_writable</a></li>
+				<li><a href="function-is_true.html">is_true</a></li>
+				<li><a href="function-JAMAError.html">JAMAError</a></li>
+				<li><a href="function-lang.html">lang</a></li>
+				<li><a href="function-link_tag.html">link_tag</a></li>
+				<li><a href="function-load_class.html">load_class</a></li>
+				<li><a href="function-LoadMap.html" class="invalid">LoadMap</a></li>
+				<li><a href="function-local_to_gmt.html">local_to_gmt</a></li>
+				<li><a href="function-log_message.html">log_message</a></li>
+				<li><a href="function-mailto.html">mailto</a></li>
+				<li><a href="function-MakeDefinitionFile.html" class="invalid">MakeDefinitionFile</a></li>
+				<li><a href="function-MakeFont.html" class="invalid">MakeFont</a></li>
+				<li><a href="function-MakeFontDescriptor.html" class="invalid">MakeFontDescriptor</a></li>
+				<li><a href="function-MakeFontEncoding.html" class="invalid">MakeFontEncoding</a></li>
+				<li><a href="function-MakeUnicodeArray.html" class="invalid">MakeUnicodeArray</a></li>
+				<li><a href="function-MakeWidthArray.html" class="invalid">MakeWidthArray</a></li>
+				<li><a href="function-mb_str_replace.html">mb_str_replace</a></li>
+				<li><a href="function-mb_strlen.html">mb_strlen</a></li>
+				<li><a href="function-mb_strpos.html">mb_strpos</a></li>
+				<li><a href="function-mb_substr.html">mb_substr</a></li>
+				<li><a href="function-mdate.html">mdate</a></li>
+				<li><a href="function-Message.html" class="invalid">Message</a></li>
+				<li><a href="function-meta.html">meta</a></li>
+				<li><a href="function-mysql_to_unix.html">mysql_to_unix</a></li>
+				<li><a href="function-nl2br_except_pre.html">nl2br_except_pre</a></li>
+				<li><a href="function-Notice.html" class="invalid">Notice</a></li>
+				<li><a href="function-now.html">now</a></li>
+				<li><a href="function-octal_permissions.html">octal_permissions</a></li>
+				<li><a href="function-odbc_fetch_array.html">odbc_fetch_array</a></li>
+				<li><a href="function-odbc_fetch_object.html">odbc_fetch_object</a></li>
+				<li><a href="function-ol.html">ol</a></li>
+				<li><a href="function-parse_smileys.html">parse_smileys</a></li>
+				<li><a href="function-password_get_info.html">password_get_info</a></li>
+				<li><a href="function-password_hash.html">password_hash</a></li>
+				<li><a href="function-password_needs_rehash.html">password_needs_rehash</a></li>
+				<li><a href="function-password_verify.html">password_verify</a></li>
+				<li><a href="function-PclZipUtilCopyBlock.html">PclZipUtilCopyBlock</a></li>
+				<li><a href="function-PclZipUtilOptionText.html">PclZipUtilOptionText</a></li>
+				<li><a href="function-PclZipUtilPathInclusion.html">PclZipUtilPathInclusion</a></li>
+				<li><a href="function-PclZipUtilPathReduction.html">PclZipUtilPathReduction</a></li>
+				<li><a href="function-PclZipUtilRename.html">PclZipUtilRename</a></li>
+				<li><a href="function-PclZipUtilTranslateWinPath.html">PclZipUtilTranslateWinPath</a></li>
+				<li><a href="function-PHPMailerAutoload.html">PHPMailerAutoload</a></li>
+				<li><a href="function-plural.html">plural</a></li>
+				<li><a href="function-prep_url.html">prep_url</a></li>
+				<li><a href="function-quotes_to_entities.html">quotes_to_entities</a></li>
+				<li><a href="function-random_element.html">random_element</a></li>
+				<li><a href="function-random_string.html">random_string</a></li>
+				<li><a href="function-redirect.html">redirect</a></li>
+				<li><a href="function-reduce_double_slashes.html">reduce_double_slashes</a></li>
+				<li><a href="function-reduce_multiples.html">reduce_multiples</a></li>
+				<li><a href="function-remove_invisible_characters.html">remove_invisible_characters</a></li>
+				<li><a href="function-safe_mailto.html">safe_mailto</a></li>
+				<li><a href="function-sanitize_filename.html">sanitize_filename</a></li>
+				<li><a href="function-SaveToFile.html" class="invalid">SaveToFile</a></li>
+				<li><a href="function-set_checkbox.html">set_checkbox</a></li>
+				<li><a href="function-set_cookie.html">set_cookie</a></li>
+				<li><a href="function-set_radio.html">set_radio</a></li>
+				<li><a href="function-set_realpath.html">set_realpath</a></li>
+				<li><a href="function-set_select.html">set_select</a></li>
+				<li><a href="function-set_status_header.html">set_status_header</a></li>
+				<li><a href="function-set_value.html">set_value</a></li>
+				<li><a href="function-show_404.html">show_404</a></li>
+				<li><a href="function-show_error.html">show_error</a></li>
+				<li><a href="function-singular.html">singular</a></li>
+				<li><a href="function-site_url.html">site_url</a></li>
+				<li><a href="function-smiley_js.html">smiley_js</a></li>
+				<li><a href="function-strip_image_tags.html">strip_image_tags</a></li>
+				<li><a href="function-strip_quotes.html">strip_quotes</a></li>
+				<li><a href="function-strip_slashes.html">strip_slashes</a></li>
+				<li><a href="function-symbolic_permissions.html">symbolic_permissions</a></li>
+				<li><a href="function-timespan.html">timespan</a></li>
+				<li><a href="function-timezone_menu.html">timezone_menu</a></li>
+				<li><a href="function-timezones.html">timezones</a></li>
+				<li><a href="function-tln_casenormalize.html">tln_casenormalize</a></li>
+				<li><a href="function-tln_deent.html">tln_deent</a></li>
+				<li><a href="function-tln_defang.html">tln_defang</a></li>
+				<li><a href="function-tln_findnxreg.html">tln_findnxreg</a></li>
+				<li><a href="function-tln_findnxstr.html">tln_findnxstr</a></li>
+				<li><a href="function-tln_fixatts.html">tln_fixatts</a></li>
+				<li><a href="function-tln_getnxtag.html">tln_getnxtag</a></li>
+				<li><a href="function-tln_sanitize.html">tln_sanitize</a></li>
+				<li><a href="function-tln_skipspace.html">tln_skipspace</a></li>
+				<li><a href="function-tln_tagprint.html">tln_tagprint</a></li>
+				<li><a href="function-tln_unspace.html">tln_unspace</a></li>
+				<li><a href="function-transpose.html" class="invalid">transpose</a></li>
+				<li><a href="function-ul.html">ul</a></li>
+				<li><a href="function-underscore.html">underscore</a></li>
+				<li><a href="function-unix_to_human.html">unix_to_human</a></li>
+				<li><a href="function-uri_string.html">uri_string</a></li>
+				<li><a href="function-url_title.html">url_title</a></li>
+				<li><a href="function-valid_dni.html">valid_dni</a></li>
+				<li><a href="function-validation_errors.html">validation_errors</a></li>
+				<li><a href="function-Warning.html" class="invalid">Warning</a></li>
+				<li><a href="function-word_censor.html">word_censor</a></li>
+				<li><a href="function-word_is_countable.html">word_is_countable</a></li>
+				<li><a href="function-word_limiter.html">word_limiter</a></li>
+				<li><a href="function-word_wrap.html">word_wrap</a></li>
+				<li><a href="function-write_file.html">write_file</a></li>
+				<li><a href="function-xml_convert.html">xml_convert</a></li>
+				<li><a href="function-xss_clean.html">xss_clean</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class PHPExcel_Calculation_Financial</h1>
+
+
+	<div class="description">
+	
+<p>PHPExcel_Calculation_Financial</p>
+
+<p>Copyright (c) 2006 - 2015 PHPExcel</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License as published by the Free
+Software Foundation; either version 2.1 of the License, or (at your option) any
+later version.</p>
+
+<p>This library is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+details.</p>
+
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this library; if not, write to the Free Software Foundation, Inc., 51
+Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> PHPExcel\Calculation<br>
+
+				<b>Category:</b>
+				PHPExcel<br>
+				<b>Copyright:</b>
+				Copyright (c) 2006 - 2015 PHPExcel (<a
+href="http://www.codeplex.com/PHPExcel">http://www.codeplex.com/PHPExcel</a>)<br>
+				<b>License:</b>
+				<a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt">LGPL</a><br>
+				<b>Version:</b>
+				##VERSION##, ##DATE##<br>
+		<b>Located at</b> <a href="source-class-PHPExcel_Calculation_Financial.html#18-2359" title="Go to source code">vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/Financial.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="ACCRINT" id="_ACCRINT">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ACCRINT">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#156-217" title="Go to source code">ACCRINT</a>( <span>mixed <var>$issue</var></span>, <span>mixed <var>$firstinterest</var></span>, <span>mixed <var>$settlement</var></span>, <span>float <var>$rate</var></span>, <span>float <var>$par</var> = <span class="php-num">1000</span></span>, <span>integer <var>$frequency</var> = <span class="php-num">1</span></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>ACCRINT</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>ACCRINT</p>
+
+<p>Returns the accrued interest for a security that pays periodic interest.</p>
+
+<p>Excel Function:
+ACCRINT(issue,firstinterest,settlement,rate,par,frequency[,basis])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$issue</var></dt>
+					<dd><code>mixed</code><br>$issue The security's issue date.</dd>
+					<dt><var>$firstinterest</var></dt>
+					<dd><code>mixed</code><br>$firstinterest The security's first interest date.</dd>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>$settlement The security's settlement date. The security settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>$rate The security's annual coupon rate.</dd>
+					<dt><var>$par</var></dt>
+					<dd><code>float</code><br>$par The security's par value. If you omit par, ACCRINT uses $1,000.</dd>
+					<dt><var>$frequency</var></dt>
+					<dd><code>integer</code><br>$frequency the number of coupon payments per year. Valid frequency values are: 1
+Annual 2 Semi-Annual 4 Quarterly If working in Gnumeric Mode, the following
+frequency options are also available 6 Bimonthly 12 Monthly</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>$basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ACCRINTM" id="_ACCRINTM">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ACCRINTM">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#220-266" title="Go to source code">ACCRINTM</a>( <span>mixed <var>$issue</var></span>, <span>mixed <var>$settlement</var></span>, <span>float <var>$rate</var></span>, <span>float <var>$par</var> = <span class="php-num">1000</span></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>ACCRINTM</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>ACCRINTM</p>
+
+<p>Returns the accrued interest for a security that pays interest at
+maturity.</p>
+
+<p>Excel Function: ACCRINTM(issue,settlement,rate[,par[,basis]])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$issue</var></dt>
+					<dd><code>mixed</code><br>issue The security's issue date.</dd>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement (or maturity) date.</dd>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>rate The security's annual coupon rate.</dd>
+					<dt><var>$par</var></dt>
+					<dd><code>float</code><br>par The security's par value. If you omit par, ACCRINT uses $1,000.</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="AMORDEGRC" id="_AMORDEGRC">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_AMORDEGRC">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#269-348" title="Go to source code">AMORDEGRC</a>( <span>float <var>$cost</var></span>, <span>mixed <var>$purchased</var></span>, <span>mixed <var>$firstPeriod</var></span>, <span>mixed <var>$salvage</var></span>, <span>float <var>$period</var></span>, <span>float <var>$rate</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>AMORDEGRC</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>AMORDEGRC</p>
+
+<p>Returns the depreciation for each accounting period. This function is
+provided for the French accounting system. If an asset is purchased in the
+middle of the accounting period, the prorated depreciation is taken into
+account. The function is similar to AMORLINC, except that a depreciation
+coefficient is applied in the calculation depending on the life of the assets.
+This function will return the depreciation until the last period of the life of
+the assets or until the cumulated value of depreciation is greater than the cost
+of the assets minus the salvage value.</p>
+
+<p>Excel Function:
+AMORDEGRC(cost,purchased,firstPeriod,salvage,period,rate[,basis])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cost</var></dt>
+					<dd><code>float</code><br>cost The cost of the asset.</dd>
+					<dt><var>$purchased</var></dt>
+					<dd><code>mixed</code><br>purchased Date of the purchase of the asset.</dd>
+					<dt><var>$firstPeriod</var></dt>
+					<dd><code>mixed</code><br>firstPeriod Date of the end of the first period.</dd>
+					<dt><var>$salvage</var></dt>
+					<dd><code>mixed</code><br>salvage The salvage value at the end of the life of the asset.</dd>
+					<dt><var>$period</var></dt>
+					<dd><code>float</code><br>period The period.</dd>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>rate Rate of depreciation.</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="AMORLINC" id="_AMORLINC">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_AMORLINC">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#351-409" title="Go to source code">AMORLINC</a>( <span>float <var>$cost</var></span>, <span>mixed <var>$purchased</var></span>, <span>mixed <var>$firstPeriod</var></span>, <span>mixed <var>$salvage</var></span>, <span>float <var>$period</var></span>, <span>float <var>$rate</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>AMORLINC</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>AMORLINC</p>
+
+<p>Returns the depreciation for each accounting period. This function is
+provided for the French accounting system. If an asset is purchased in the
+middle of the accounting period, the prorated depreciation is taken into
+account.</p>
+
+<p>Excel Function:
+AMORLINC(cost,purchased,firstPeriod,salvage,period,rate[,basis])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cost</var></dt>
+					<dd><code>float</code><br>cost The cost of the asset.</dd>
+					<dt><var>$purchased</var></dt>
+					<dd><code>mixed</code><br>purchased Date of the purchase of the asset.</dd>
+					<dt><var>$firstPeriod</var></dt>
+					<dd><code>mixed</code><br>firstPeriod Date of the end of the first period.</dd>
+					<dt><var>$salvage</var></dt>
+					<dd><code>mixed</code><br>salvage The salvage value at the end of the life of the asset.</dd>
+					<dt><var>$period</var></dt>
+					<dd><code>float</code><br>period The period.</dd>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>rate Rate of depreciation.</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="COUPDAYBS" id="_COUPDAYBS">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_COUPDAYBS">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#412-468" title="Go to source code">COUPDAYBS</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>mixed <var>$frequency</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>COUPDAYBS</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>COUPDAYBS</p>
+
+<p>Returns the number of days from the beginning of the coupon period to the
+settlement date.</p>
+
+<p>Excel Function: COUPDAYBS(settlement,maturity,frequency[,basis])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement date. The security settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$frequency</var></dt>
+					<dd><code>mixed</code><br>frequency the number of coupon payments per year. Valid frequency values are: 1
+Annual 2 Semi-Annual 4 Quarterly If working in Gnumeric Mode, the following
+frequency options are also available 6 Bimonthly 12 Monthly</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="COUPDAYS" id="_COUPDAYS">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_COUPDAYS">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#471-541" title="Go to source code">COUPDAYS</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>mixed <var>$frequency</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>COUPDAYS</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>COUPDAYS</p>
+
+<p>Returns the number of days in the coupon period that contains the settlement
+date.</p>
+
+<p>Excel Function: COUPDAYS(settlement,maturity,frequency[,basis])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement date. The security settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$frequency</var></dt>
+					<dd><code>mixed</code><br>frequency the number of coupon payments per year. Valid frequency values are: 1
+Annual 2 Semi-Annual 4 Quarterly If working in Gnumeric Mode, the following
+frequency options are also available 6 Bimonthly 12 Monthly</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="COUPDAYSNC" id="_COUPDAYSNC">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_COUPDAYSNC">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#544-600" title="Go to source code">COUPDAYSNC</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>mixed <var>$frequency</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>COUPDAYSNC</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>COUPDAYSNC</p>
+
+<p>Returns the number of days from the settlement date to the next coupon
+date.</p>
+
+<p>Excel Function: COUPDAYSNC(settlement,maturity,frequency[,basis])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement date. The security settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$frequency</var></dt>
+					<dd><code>mixed</code><br>frequency the number of coupon payments per year. Valid frequency values are: 1
+Annual 2 Semi-Annual 4 Quarterly If working in Gnumeric Mode, the following
+frequency options are also available 6 Bimonthly 12 Monthly</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="COUPNCD" id="_COUPNCD">
+
+		<td class="attributes"><code>
+			 public static
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_COUPNCD">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#603-657" title="Go to source code">COUPNCD</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>mixed <var>$frequency</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>COUPNCD</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>COUPNCD</p>
+
+<p>Returns the next coupon date after the settlement date.</p>
+
+<p>Excel Function: COUPNCD(settlement,maturity,frequency[,basis])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement date. The security settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$frequency</var></dt>
+					<dd><code>mixed</code><br>frequency the number of coupon payments per year. Valid frequency values are: 1
+Annual 2 Semi-Annual 4 Quarterly If working in Gnumeric Mode, the following
+frequency options are also available 6 Bimonthly 12 Monthly</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>Excel date/time serial value, PHP date/time serial value or PHP date/time
+object, depending on the value of the ReturnDateType flag<br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="COUPNUM" id="_COUPNUM">
+
+		<td class="attributes"><code>
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_COUPNUM">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#660-729" title="Go to source code">COUPNUM</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>mixed <var>$frequency</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>COUPNUM</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>COUPNUM</p>
+
+<p>Returns the number of coupons payable between the settlement date and
+maturity date, rounded up to the nearest whole coupon.</p>
+
+<p>Excel Function: COUPNUM(settlement,maturity,frequency[,basis])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement date. The security settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$frequency</var></dt>
+					<dd><code>mixed</code><br>frequency the number of coupon payments per year. Valid frequency values are: 1
+Annual 2 Semi-Annual 4 Quarterly If working in Gnumeric Mode, the following
+frequency options are also available 6 Bimonthly 12 Monthly</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="COUPPCD" id="_COUPPCD">
+
+		<td class="attributes"><code>
+			 public static
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_COUPPCD">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#732-786" title="Go to source code">COUPPCD</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>mixed <var>$frequency</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>COUPPCD</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>COUPPCD</p>
+
+<p>Returns the previous coupon date before the settlement date.</p>
+
+<p>Excel Function: COUPPCD(settlement,maturity,frequency[,basis])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement date. The security settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$frequency</var></dt>
+					<dd><code>mixed</code><br>frequency the number of coupon payments per year. Valid frequency values are: 1
+Annual 2 Semi-Annual 4 Quarterly If working in Gnumeric Mode, the following
+frequency options are also available 6 Bimonthly 12 Monthly</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>Excel date/time serial value, PHP date/time serial value or PHP date/time
+object, depending on the value of the ReturnDateType flag<br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="CUMIPMT" id="_CUMIPMT">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_CUMIPMT">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#789-834" title="Go to source code">CUMIPMT</a>( <span>float <var>$rate</var></span>, <span>integer <var>$nper</var></span>, <span>float <var>$pv</var></span>, <span>integer <var>$start</var></span>, <span>integer <var>$end</var></span>, <span>integer <var>$type</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>CUMIPMT</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>CUMIPMT</p>
+
+<p>Returns the cumulative interest paid on a loan between the start and end
+periods.</p>
+
+<p>Excel Function: CUMIPMT(rate,nper,pv,start,end[,type])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>$rate The Interest rate</dd>
+					<dt><var>$nper</var></dt>
+					<dd><code>integer</code><br>$nper The total number of payment periods</dd>
+					<dt><var>$pv</var></dt>
+					<dd><code>float</code><br>$pv Present Value</dd>
+					<dt><var>$start</var></dt>
+					<dd><code>integer</code><br>$start The first period in the calculation. Payment periods are numbered
+beginning with 1.</dd>
+					<dt><var>$end</var></dt>
+					<dd><code>integer</code><br>$end The last period in the calculation.</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type A number 0 or 1 and indicates when payments are due: 0 or omitted At the
+end of the period. 1 At the beginning of the period.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="CUMPRINC" id="_CUMPRINC">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_CUMPRINC">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#837-882" title="Go to source code">CUMPRINC</a>( <span>float <var>$rate</var></span>, <span>integer <var>$nper</var></span>, <span>float <var>$pv</var></span>, <span>integer <var>$start</var></span>, <span>integer <var>$end</var></span>, <span>integer <var>$type</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>CUMPRINC</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>CUMPRINC</p>
+
+<p>Returns the cumulative principal paid on a loan between the start and end
+periods.</p>
+
+<p>Excel Function: CUMPRINC(rate,nper,pv,start,end[,type])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>$rate The Interest rate</dd>
+					<dt><var>$nper</var></dt>
+					<dd><code>integer</code><br>$nper The total number of payment periods</dd>
+					<dt><var>$pv</var></dt>
+					<dd><code>float</code><br>$pv Present Value</dd>
+					<dt><var>$start</var></dt>
+					<dd><code>integer</code><br>$start The first period in the calculation. Payment periods are numbered
+beginning with 1.</dd>
+					<dt><var>$end</var></dt>
+					<dd><code>integer</code><br>$end The last period in the calculation.</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type A number 0 or 1 and indicates when payments are due: 0 or omitted At the
+end of the period. 1 At the beginning of the period.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="DB" id="_DB">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_DB">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#885-953" title="Go to source code">DB</a>( <span>float <var>$cost</var></span>, <span>float <var>$salvage</var></span>, <span>integer <var>$life</var></span>, <span>integer <var>$period</var></span>, <span>integer <var>$month</var> = <span class="php-num">12</span></span> )</code>
+
+		<div class="description short">
+			
+<p>DB</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>DB</p>
+
+<p>Returns the depreciation of an asset for a specified period using the
+fixed-declining balance method. This form of depreciation is used if you want to
+get a higher depreciation value at the beginning of the depreciation (as opposed
+to linear depreciation). The depreciation value is reduced with every
+depreciation period by the depreciation already deducted from the initial
+cost.</p>
+
+<p>Excel Function: DB(cost,salvage,life,period[,month])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cost</var></dt>
+					<dd><code>float</code><br>cost Initial cost of the asset.</dd>
+					<dt><var>$salvage</var></dt>
+					<dd><code>float</code><br>salvage Value at the end of the depreciation. (Sometimes called the salvage
+value of the asset)</dd>
+					<dt><var>$life</var></dt>
+					<dd><code>integer</code><br>life Number of periods over which the asset is depreciated. (Sometimes called
+the useful life of the asset)</dd>
+					<dt><var>$period</var></dt>
+					<dd><code>integer</code><br>period The period for which you want to calculate the depreciation. Period must
+use the same units as life.</dd>
+					<dt><var>$month</var></dt>
+					<dd><code>integer</code><br>month Number of months in the first year. If month is omitted, it defaults to
+12.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="DDB" id="_DDB">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_DDB">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#956-1013" title="Go to source code">DDB</a>( <span>float <var>$cost</var></span>, <span>float <var>$salvage</var></span>, <span>integer <var>$life</var></span>, <span>integer <var>$period</var></span>, <span>float <var>$factor</var> = <span class="php-num">2.0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>DDB</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>DDB</p>
+
+<p>Returns the depreciation of an asset for a specified period using the
+double-declining balance method or some other method you specify.</p>
+
+<p>Excel Function: DDB(cost,salvage,life,period[,factor])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cost</var></dt>
+					<dd><code>float</code><br>cost Initial cost of the asset.</dd>
+					<dt><var>$salvage</var></dt>
+					<dd><code>float</code><br>salvage Value at the end of the depreciation. (Sometimes called the salvage
+value of the asset)</dd>
+					<dt><var>$life</var></dt>
+					<dd><code>integer</code><br>life Number of periods over which the asset is depreciated. (Sometimes called
+the useful life of the asset)</dd>
+					<dt><var>$period</var></dt>
+					<dd><code>integer</code><br>period The period for which you want to calculate the depreciation. Period must
+use the same units as life.</dd>
+					<dt><var>$factor</var></dt>
+					<dd><code>float</code><br>factor The rate at which the balance declines. If factor is omitted, it is
+assumed to be 2 (the double-declining balance method).</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="DISC" id="_DISC">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_DISC">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1016-1066" title="Go to source code">DISC</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>integer <var>$price</var></span>, <span>integer <var>$redemption</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>DISC</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>DISC</p>
+
+<p>Returns the discount rate for a security.</p>
+
+<p>Excel Function: DISC(settlement,maturity,price,redemption[,basis])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement date. The security settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$price</var></dt>
+					<dd><code>integer</code><br>price The security's price per $100 face value.</dd>
+					<dt><var>$redemption</var></dt>
+					<dd><code>integer</code><br>redemption The security's redemption value per $100 face value.</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="DOLLARDE" id="_DOLLARDE">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_DOLLARDE">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1069-1103" title="Go to source code">DOLLARDE</a>( <span>float <var>$fractional_dollar</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$fraction</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>DOLLARDE</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>DOLLARDE</p>
+
+<p>Converts a dollar price expressed as an integer part and a fraction part into
+a dollar price expressed as a decimal number. Fractional dollar numbers are
+sometimes used for security prices.</p>
+
+<p>Excel Function: DOLLARDE(fractional_dollar,fraction)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fractional_dollar</var></dt>
+					<dd><code>float</code><br>$fractional_dollar Fractional Dollar</dd>
+					<dt><var>$fraction</var></dt>
+					<dd><code>integer</code><br>$fraction Fraction</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="DOLLARFR" id="_DOLLARFR">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_DOLLARFR">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1106-1140" title="Go to source code">DOLLARFR</a>( <span>float <var>$decimal_dollar</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$fraction</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>DOLLARFR</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>DOLLARFR</p>
+
+<p>Converts a dollar price expressed as a decimal number into a dollar price
+expressed as a fraction. Fractional dollar numbers are sometimes used for
+security prices.</p>
+
+<p>Excel Function: DOLLARFR(decimal_dollar,fraction)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$decimal_dollar</var></dt>
+					<dd><code>float</code><br>$decimal_dollar Decimal Dollar</dd>
+					<dt><var>$fraction</var></dt>
+					<dd><code>integer</code><br>$fraction Fraction</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="EFFECT" id="_EFFECT">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_EFFECT">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1143-1169" title="Go to source code">EFFECT</a>( <span>float <var>$nominal_rate</var> = <span class="php-num">0</span></span>, <span>integer <var>$npery</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>EFFECT</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>EFFECT</p>
+
+<p>Returns the effective interest rate given the nominal rate and the number of
+compounding payments per year.</p>
+
+<p>Excel Function: EFFECT(nominal_rate,npery)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$nominal_rate</var></dt>
+					<dd><code>float</code><br>$nominal_rate Nominal interest rate</dd>
+					<dt><var>$npery</var></dt>
+					<dd><code>integer</code><br>$npery Number of compounding payments per year</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="FV" id="_FV">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_FV">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1172-1212" title="Go to source code">FV</a>( <span>float <var>$rate</var> = <span class="php-num">0</span></span>, <span>integer <var>$nper</var> = <span class="php-num">0</span></span>, <span>float <var>$pmt</var> = <span class="php-num">0</span></span>, <span>float <var>$pv</var> = <span class="php-num">0</span></span>, <span>integer <var>$type</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>FV</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>FV</p>
+
+<p>Returns the Future Value of a cash flow with constant payments and interest
+rate (annuities).</p>
+
+<p>Excel Function: FV(rate,nper,pmt[,pv[,type]])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>$rate The interest rate per period</dd>
+					<dt><var>$nper</var></dt>
+					<dd><code>integer</code><br>$nper Total number of payment periods in an annuity</dd>
+					<dt><var>$pmt</var></dt>
+					<dd><code>float</code><br>$pmt The payment made each period: it cannot change over the life of the
+annuity. Typically, pmt contains principal and interest but no other fees or
+taxes.</dd>
+					<dt><var>$pv</var></dt>
+					<dd><code>float</code><br>$pv Present Value, or the lump-sum amount that a series of future payments is
+worth right now.</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type A number 0 or 1 and indicates when payments are due: 0 or omitted At the
+end of the period. 1 At the beginning of the period.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="FVSCHEDULE" id="_FVSCHEDULE">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_FVSCHEDULE">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1215-1238" title="Go to source code">FVSCHEDULE</a>( <span>float <var>$principal</var></span>, <span>float[] <var>$schedule</var></span> )</code>
+
+		<div class="description short">
+			
+<p>FVSCHEDULE</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>FVSCHEDULE</p>
+
+<p>Returns the future value of an initial principal after applying a series of
+compound interest rates. Use FVSCHEDULE to calculate the future value of an
+investment with a variable or adjustable rate.</p>
+
+<p>Excel Function: FVSCHEDULE(principal,schedule)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$principal</var></dt>
+					<dd><code>float</code><br>$principal The present value.</dd>
+					<dt><var>$schedule</var></dt>
+					<dd><code>float[]</code><br>$schedule An array of interest rates to apply.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="INTRATE" id="_INTRATE">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_INTRATE">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1241-1288" title="Go to source code">INTRATE</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>integer <var>$investment</var></span>, <span>integer <var>$redemption</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>INTRATE</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>INTRATE</p>
+
+<p>Returns the interest rate for a fully invested security.</p>
+
+<p>Excel Function:
+INTRATE(settlement,maturity,investment,redemption[,basis])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>$settlement The security's settlement date. The security settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>$maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$investment</var></dt>
+					<dd><code>integer</code><br>$investment The amount invested in the security.</dd>
+					<dt><var>$redemption</var></dt>
+					<dd><code>integer</code><br>$redemption The amount to be received at maturity.</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>$basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="IPMT" id="_IPMT">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_IPMT">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1291-1327" title="Go to source code">IPMT</a>( <span>float <var>$rate</var></span>, <span>integer <var>$per</var></span>, <span>integer <var>$nper</var></span>, <span>float <var>$pv</var></span>, <span>float <var>$fv</var> = <span class="php-num">0</span></span>, <span>integer <var>$type</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>IPMT</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>IPMT</p>
+
+<p>Returns the interest payment for a given period for an investment based on
+periodic, constant payments and a constant interest rate.</p>
+
+<p>Excel Function: IPMT(rate,per,nper,pv[,fv][,type])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>$rate Interest rate per period</dd>
+					<dt><var>$per</var></dt>
+					<dd><code>integer</code><br>$per Period for which we want to find the interest</dd>
+					<dt><var>$nper</var></dt>
+					<dd><code>integer</code><br>$nper Number of periods</dd>
+					<dt><var>$pv</var></dt>
+					<dd><code>float</code><br>$pv Present Value</dd>
+					<dt><var>$fv</var></dt>
+					<dd><code>float</code><br>$fv Future Value</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type Payment type: 0 = at the end of each period, 1 = at the beginning of each
+period</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="IRR" id="_IRR">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_IRR">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1329-1396" title="Go to source code">IRR</a>( <span>float[] <var>$values</var></span>, <span>float <var>$guess</var> = <span class="php-num">0.1</span></span> )</code>
+
+		<div class="description short">
+			
+<p>IRR</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>IRR</p>
+
+<p>Returns the internal rate of return for a series of cash flows represented by
+the numbers in values. These cash flows do not have to be even, as they would be
+for an annuity. However, the cash flows must occur at regular intervals, such as
+monthly or annually. The internal rate of return is the interest rate received
+for an investment consisting of payments (negative values) and income (positive
+values) that occur at regular periods.</p>
+
+<p>Excel Function: IRR(values[,guess])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$values</var></dt>
+					<dd><code>float[]</code><br>$values An array or a reference to cells that contain numbers for which you want
+to calculate the internal rate of return. Values must contain at least one
+positive value and one negative value to calculate the internal rate of return.</dd>
+					<dt><var>$guess</var></dt>
+					<dd><code>float</code><br>$guess A number that you guess is close to the result of IRR</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ISPMT" id="_ISPMT">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ISPMT">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1399-1438" title="Go to source code">ISPMT</a>( )</code>
+
+		<div class="description short">
+			
+<p>ISPMT</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>ISPMT</p>
+
+<p>Returns the interest payment for an investment based on an interest rate and
+a constant payment schedule.</p>
+
+<p>Excel Function: =ISPMT(interest_rate, period, number_payments, PV)</p>
+
+<p>interest_rate is the interest rate for the investment</p>
+
+<p>period is the period to calculate the interest rate. It must be betweeen 1
+and number_payments.</p>
+
+<p>number_payments is the number of payments for the annuity</p>
+
+<p>PV is the loan amount or present value of the payments</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="MIRR" id="_MIRR">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_MIRR">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1441-1487" title="Go to source code">MIRR</a>( <span>float[] <var>$values</var></span>, <span>float <var>$finance_rate</var></span>, <span>float <var>$reinvestment_rate</var></span> )</code>
+
+		<div class="description short">
+			
+<p>MIRR</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>MIRR</p>
+
+<p>Returns the modified internal rate of return for a series of periodic cash
+flows. MIRR considers both the cost of the investment and the interest received
+on reinvestment of cash.</p>
+
+<p>Excel Function: MIRR(values,finance_rate, reinvestment_rate)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$values</var></dt>
+					<dd><code>float[]</code><br>$values An array or a reference to cells that contain a series of payments and
+income occurring at regular intervals. Payments are negative value, income is
+positive values.</dd>
+					<dt><var>$finance_rate</var></dt>
+					<dd><code>float</code><br>$finance_rate The interest rate you pay on the money used in the cash flows</dd>
+					<dt><var>$reinvestment_rate</var></dt>
+					<dd><code>float</code><br>$reinvestment_rate The interest rate you receive on the cash flows as you
+reinvest them</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="NOMINAL" id="_NOMINAL">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_NOMINAL">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1490-1511" title="Go to source code">NOMINAL</a>( <span>float <var>$effect_rate</var> = <span class="php-num">0</span></span>, <span>integer <var>$npery</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>NOMINAL</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>NOMINAL</p>
+
+<p>Returns the nominal interest rate given the effective rate and the number of
+compounding payments per year.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$effect_rate</var></dt>
+					<dd><code>float</code><br>$effect_rate Effective interest rate</dd>
+					<dt><var>$npery</var></dt>
+					<dd><code>integer</code><br>$npery Number of compounding payments per year</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="NPER" id="_NPER">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_NPER">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1514-1550" title="Go to source code">NPER</a>( <span>float <var>$rate</var> = <span class="php-num">0</span></span>, <span>integer <var>$pmt</var> = <span class="php-num">0</span></span>, <span>float <var>$pv</var> = <span class="php-num">0</span></span>, <span>float <var>$fv</var> = <span class="php-num">0</span></span>, <span>integer <var>$type</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>NPER</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>NPER</p>
+
+<p>Returns the number of periods for a cash flow with constant periodic payments
+(annuities), and interest rate.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>$rate Interest rate per period</dd>
+					<dt><var>$pmt</var></dt>
+					<dd><code>integer</code><br>$pmt Periodic payment (annuity)</dd>
+					<dt><var>$pv</var></dt>
+					<dd><code>float</code><br>$pv Present Value</dd>
+					<dt><var>$fv</var></dt>
+					<dd><code>float</code><br>$fv Future Value</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type Payment type: 0 = at the end of each period, 1 = at the beginning of each
+period</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="NPV" id="_NPV">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_NPV">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1552-1578" title="Go to source code">NPV</a>( )</code>
+
+		<div class="description short">
+			
+<p>NPV</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>NPV</p>
+
+<p>Returns the Net Present Value of a cash flow series given a discount
+rate.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PMT" id="_PMT">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PMT">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1580-1610" title="Go to source code">PMT</a>( <span>float <var>$rate</var> = <span class="php-num">0</span></span>, <span>integer <var>$nper</var> = <span class="php-num">0</span></span>, <span>float <var>$pv</var> = <span class="php-num">0</span></span>, <span>float <var>$fv</var> = <span class="php-num">0</span></span>, <span>integer <var>$type</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>PMT</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>PMT</p>
+
+<p>Returns the constant payment (annuity) for a cash flow with a constant
+interest rate.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>$rate Interest rate per period</dd>
+					<dt><var>$nper</var></dt>
+					<dd><code>integer</code><br>$nper Number of periods</dd>
+					<dt><var>$pv</var></dt>
+					<dd><code>float</code><br>$pv Present Value</dd>
+					<dt><var>$fv</var></dt>
+					<dd><code>float</code><br>$fv Future Value</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type Payment type: 0 = at the end of each period, 1 = at the beginning of each
+period</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PPMT" id="_PPMT">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PPMT">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1613-1646" title="Go to source code">PPMT</a>( <span>float <var>$rate</var></span>, <span>integer <var>$per</var></span>, <span>integer <var>$nper</var></span>, <span>float <var>$pv</var></span>, <span>float <var>$fv</var> = <span class="php-num">0</span></span>, <span>integer <var>$type</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>PPMT</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>PPMT</p>
+
+<p>Returns the interest payment for a given period for an investment based on
+periodic, constant payments and a constant interest rate.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>$rate Interest rate per period</dd>
+					<dt><var>$per</var></dt>
+					<dd><code>integer</code><br>$per Period for which we want to find the interest</dd>
+					<dt><var>$nper</var></dt>
+					<dd><code>integer</code><br>$nper Number of periods</dd>
+					<dt><var>$pv</var></dt>
+					<dd><code>float</code><br>$pv Present Value</dd>
+					<dt><var>$fv</var></dt>
+					<dd><code>float</code><br>$fv Future Value</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type Payment type: 0 = at the end of each period, 1 = at the beginning of each
+period</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PRICE" id="_PRICE">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PRICE">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1649-1688" title="Go to source code">PRICE</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>mixed <var>$rate</var></span>, <span>mixed <var>$yield</var></span>, <span>mixed <var>$redemption</var></span>, <span>mixed <var>$frequency</var></span>, <span>mixed <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PRICEDISC" id="_PRICEDISC">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PRICEDISC">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1691-1732" title="Go to source code">PRICEDISC</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>integer <var>$discount</var></span>, <span>integer <var>$redemption</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>PRICEDISC</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>PRICEDISC</p>
+
+<p>Returns the price per $100 face value of a discounted security.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement date. The security settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$discount</var></dt>
+					<dd><code>integer</code><br>discount The security's discount rate.</dd>
+					<dt><var>$redemption</var></dt>
+					<dd><code>integer</code><br>redemption The security's redemption value per $100 face value.</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PRICEMAT" id="_PRICEMAT">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PRICEMAT">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1735-1797" title="Go to source code">PRICEMAT</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>mixed <var>$issue</var></span>, <span>integer <var>$rate</var></span>, <span>integer <var>$yield</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>PRICEMAT</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>PRICEMAT</p>
+
+<p>Returns the price per $100 face value of a security that pays interest at
+maturity.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement date. The security's settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$issue</var></dt>
+					<dd><code>mixed</code><br>issue The security's issue date.</dd>
+					<dt><var>$rate</var></dt>
+					<dd><code>integer</code><br>rate The security's interest rate at date of issue.</dd>
+					<dt><var>$yield</var></dt>
+					<dd><code>integer</code><br>yield The security's annual yield.</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PV" id="_PV">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PV">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1800-1830" title="Go to source code">PV</a>( <span>float <var>$rate</var> = <span class="php-num">0</span></span>, <span>integer <var>$nper</var> = <span class="php-num">0</span></span>, <span>float <var>$pmt</var> = <span class="php-num">0</span></span>, <span>float <var>$fv</var> = <span class="php-num">0</span></span>, <span>integer <var>$type</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>PV</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>PV</p>
+
+<p>Returns the Present Value of a cash flow with constant payments and interest
+rate (annuities).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>$rate Interest rate per period</dd>
+					<dt><var>$nper</var></dt>
+					<dd><code>integer</code><br>$nper Number of periods</dd>
+					<dt><var>$pmt</var></dt>
+					<dd><code>float</code><br>$pmt Periodic payment (annuity)</dd>
+					<dt><var>$fv</var></dt>
+					<dd><code>float</code><br>$fv Future Value</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type Payment type: 0 = at the end of each period, 1 = at the beginning of each
+period</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RATE" id="_RATE">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RATE">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1833-1904" title="Go to source code">RATE</a>( <span>float <var>$nper</var></span>, <span>float <var>$pmt</var></span>, <span>float <var>$pv</var></span>, <span>float <var>$fv</var> = <span class="php-num">0.0</span></span>, <span>integer <var>$type</var> = <span class="php-num">0</span></span>, <span>float <var>$guess</var> = <span class="php-num">0.1</span></span> )</code>
+
+		<div class="description short">
+			
+<p>RATE</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>RATE</p>
+
+<p>Returns the interest rate per period of an annuity. RATE is calculated by
+iteration and can have zero or more solutions. If the successive results of RATE
+do not converge to within 0.0000001 after 20 iterations, RATE returns the #NUM!
+error value.</p>
+
+<p>Excel Function: RATE(nper,pmt,pv[,fv[,type[,guess]]])</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$nper</var></dt>
+					<dd><code>float</code><br>nper The total number of payment periods in an annuity.</dd>
+					<dt><var>$pmt</var></dt>
+					<dd><code>float</code><br>pmt The payment made each period and cannot change over the life of the annuity.
+Typically, pmt includes principal and interest but no other fees or taxes.</dd>
+					<dt><var>$pv</var></dt>
+					<dd><code>float</code><br>pv The present value - the total amount that a series of future payments is
+worth now.</dd>
+					<dt><var>$fv</var></dt>
+					<dd><code>float</code><br>fv The future value, or a cash balance you want to attain after the last payment
+is made. If fv is omitted, it is assumed to be 0 (the future value of a loan,
+for example, is 0).</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>type A number 0 or 1 and indicates when payments are due: 0 or omitted At the
+end of the period. 1 At the beginning of the period.</dd>
+					<dt><var>$guess</var></dt>
+					<dd><code>float</code><br>guess Your guess for what the rate will be. If you omit guess, it is assumed to
+be 10 percent.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+				<h4>Category</h4>
+				<div class="list">
+						Financial Functions<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RECEIVED" id="_RECEIVED">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RECEIVED">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1907-1948" title="Go to source code">RECEIVED</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>integer <var>$investment</var></span>, <span>integer <var>$discount</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>RECEIVED</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>RECEIVED</p>
+
+<p>Returns the price per $100 face value of a discounted security.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement date. The security settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$investment</var></dt>
+					<dd><code>integer</code><br>investment The amount invested in the security.</dd>
+					<dt><var>$discount</var></dt>
+					<dd><code>integer</code><br>discount The security's discount rate.</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="SLN" id="_SLN">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_SLN">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1951-1975" title="Go to source code">SLN</a>( <span>cost <var>$cost</var></span>, <span>salvage <var>$salvage</var></span>, <span>life <var>$life</var></span> )</code>
+
+		<div class="description short">
+			
+<p>SLN</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>SLN</p>
+
+<p>Returns the straight-line depreciation of an asset for one period</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cost</var></dt>
+					<dd><code>cost</code><br>Initial cost of the asset</dd>
+					<dt><var>$salvage</var></dt>
+					<dd><code>salvage</code><br>Value at the end of the depreciation</dd>
+					<dt><var>$life</var></dt>
+					<dd><code>life</code><br>Number of periods over which the asset is depreciated</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="SYD" id="_SYD">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_SYD">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#1978-2004" title="Go to source code">SYD</a>( <span>cost <var>$cost</var></span>, <span>salvage <var>$salvage</var></span>, <span>life <var>$life</var></span>, <span>period <var>$period</var></span> )</code>
+
+		<div class="description short">
+			
+<p>SYD</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>SYD</p>
+
+<p>Returns the sum-of-years' digits depreciation of an asset for a specified
+period.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cost</var></dt>
+					<dd><code>cost</code><br>Initial cost of the asset</dd>
+					<dt><var>$salvage</var></dt>
+					<dd><code>salvage</code><br>Value at the end of the depreciation</dd>
+					<dt><var>$life</var></dt>
+					<dd><code>life</code><br>Number of periods over which the asset is depreciated</dd>
+					<dt><var>$period</var></dt>
+					<dd><code>period</code><br>Period</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="TBILLEQ" id="_TBILLEQ">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_TBILLEQ">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#2007-2043" title="Go to source code">TBILLEQ</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>integer <var>$discount</var></span> )</code>
+
+		<div class="description short">
+			
+<p>TBILLEQ</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>TBILLEQ</p>
+
+<p>Returns the bond-equivalent yield for a Treasury bill.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The Treasury bill's settlement date. The Treasury bill's settlement
+date is the date after the issue date when the Treasury bill is traded to the
+buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The Treasury bill's maturity date. The maturity date is the date when
+the Treasury bill expires.</dd>
+					<dt><var>$discount</var></dt>
+					<dd><code>integer</code><br>discount The Treasury bill's discount rate.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="TBILLPRICE" id="_TBILLPRICE">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_TBILLPRICE">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#2046-2096" title="Go to source code">TBILLPRICE</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>integer <var>$discount</var></span> )</code>
+
+		<div class="description short">
+			
+<p>TBILLPRICE</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>TBILLPRICE</p>
+
+<p>Returns the yield for a Treasury bill.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The Treasury bill's settlement date. The Treasury bill's settlement
+date is the date after the issue date when the Treasury bill is traded to the
+buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The Treasury bill's maturity date. The maturity date is the date when
+the Treasury bill expires.</dd>
+					<dt><var>$discount</var></dt>
+					<dd><code>integer</code><br>discount The Treasury bill's discount rate.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="TBILLYIELD" id="_TBILLYIELD">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_TBILLYIELD">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#2099-2141" title="Go to source code">TBILLYIELD</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>integer <var>$price</var></span> )</code>
+
+		<div class="description short">
+			
+<p>TBILLYIELD</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>TBILLYIELD</p>
+
+<p>Returns the yield for a Treasury bill.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The Treasury bill's settlement date. The Treasury bill's settlement
+date is the date after the issue date when the Treasury bill is traded to the
+buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The Treasury bill's maturity date. The maturity date is the date when
+the Treasury bill expires.</dd>
+					<dt><var>$price</var></dt>
+					<dd><code>integer</code><br>price The Treasury bill's price per $100 face value.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="XIRR" id="_XIRR">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_XIRR">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#2144-2195" title="Go to source code">XIRR</a>( <span>mixed <var>$values</var></span>, <span>mixed <var>$dates</var></span>, <span>mixed <var>$guess</var> = <span class="php-num">0.1</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="XNPV" id="_XNPV">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_XNPV">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#2198-2244" title="Go to source code">XNPV</a>( <span>float <var>$rate</var></span>, <span>array <var>$values</var></span>, <span>array <var>$dates</var></span> )</code>
+
+		<div class="description short">
+			
+<p>XNPV</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>XNPV</p>
+
+<p>Returns the net present value for a schedule of cash flows that is not
+necessarily periodic. To calculate the net present value for a series of cash
+flows that is periodic, use the NPV function.</p>
+
+<p>Excel Function: =XNPV(rate,values,dates)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rate</var></dt>
+					<dd><code>float</code><br>$rate The discount rate to apply to the cash flows.</dd>
+					<dt><var>$values</var></dt>
+					<dd><code>array</code><br>of float $values A series of cash flows that corresponds to a schedule of
+payments in dates. The first payment is optional and corresponds to a cost or
+payment that occurs at the beginning of the investment. If the first value is a
+cost or payment, it must be a negative value. All succeeding payments are
+discounted based on a 365-day year. The series of values must contain at least
+one positive value and one negative value.</dd>
+					<dt><var>$dates</var></dt>
+					<dd><code>array</code><br>of mixed $dates A schedule of payment dates that corresponds to the cash flow
+payments. The first payment date indicates the beginning of the schedule of
+payments. All other dates must be later than this date, but they may occur in
+any order.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="YIELDDISC" id="_YIELDDISC">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_YIELDDISC">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#2247-2293" title="Go to source code">YIELDDISC</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>integer <var>$price</var></span>, <span>integer <var>$redemption</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>YIELDDISC</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>YIELDDISC</p>
+
+<p>Returns the annual yield of a security that pays interest at maturity.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement date. The security's settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$price</var></dt>
+					<dd><code>integer</code><br>price The security's price per $100 face value.</dd>
+					<dt><var>$redemption</var></dt>
+					<dd><code>integer</code><br>redemption The security's redemption value per $100 face value.</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="YIELDMAT" id="_YIELDMAT">
+
+		<td class="attributes"><code>
+			 public static
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_YIELDMAT">#</a>
+		<code><a href="source-class-PHPExcel_Calculation_Financial.html#2296-2358" title="Go to source code">YIELDMAT</a>( <span>mixed <var>$settlement</var></span>, <span>mixed <var>$maturity</var></span>, <span>mixed <var>$issue</var></span>, <span>integer <var>$rate</var></span>, <span>integer <var>$price</var></span>, <span>integer <var>$basis</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>YIELDMAT</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>YIELDMAT</p>
+
+<p>Returns the annual yield of a security that pays interest at maturity.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settlement</var></dt>
+					<dd><code>mixed</code><br>settlement The security's settlement date. The security's settlement date is the
+date after the issue date when the security is traded to the buyer.</dd>
+					<dt><var>$maturity</var></dt>
+					<dd><code>mixed</code><br>maturity The security's maturity date. The maturity date is the date when the
+security expires.</dd>
+					<dt><var>$issue</var></dt>
+					<dd><code>mixed</code><br>issue The security's issue date.</dd>
+					<dt><var>$rate</var></dt>
+					<dd><code>integer</code><br>rate The security's interest rate at date of issue.</dd>
+					<dt><var>$price</var></dt>
+					<dd><code>integer</code><br>price The security's price per $100 face value.</dd>
+					<dt><var>$basis</var></dt>
+					<dd><code>integer</code><br>basis The type of day count to use. 0 or omitted US (NASD) 30/360 1
+Actual/actual 2 Actual/360 3 Actual/365 4 European 30/360</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

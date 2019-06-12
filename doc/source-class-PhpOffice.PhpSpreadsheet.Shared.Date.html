@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+	<meta name="robots" content="noindex">
+
+	<title>File vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/Date.php</title>
+
+	<script type="text/javascript" src="resources/combined.js?117538352"></script>
+	<script type="text/javascript" src="elementlist.js?1778263301"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Complex.html">Complex</a>
+						</li>
+				<li><a href="namespace-Composer.html">Composer<span></span></a>
+						<ul>
+				<li><a href="namespace-Composer.Autoload.html">Autoload</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Fpdf.html">Fpdf</a>
+						</li>
+				<li><a href="namespace-Matrix.html">Matrix<span></span></a>
+						<ul>
+				<li><a href="namespace-Matrix.Operators.html">Operators</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-PhpOffice.html">PhpOffice<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.html">Calculation<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Engine.html">Engine</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Token.html">Token</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Cell.html">Cell</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.html">Chart<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.Renderer.html">Renderer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Collection.html">Collection</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Document.html">Document</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.html">Reader<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.html">Xls<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Color.html">Color</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Style.html">Style</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.RichText.html">RichText</a>
+						</li>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.html">Shared<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.html">Escher<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.html">DgContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.SpgrContainer.html">SpgrContainer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.html">DggContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.html">BstoreContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.BSE.html">BSE</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.JAMA.html">JAMA</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.html">OLE<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.PPS.html">PPS</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Trend.html">Trend</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Style.html">Style</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.html">Worksheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.html">AutoFilter<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.Column.html">Column</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.Drawing.html">Drawing</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.html">Writer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.html">Ods<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.Cell.html">Cell</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Pdf.html">Pdf</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xls.html">Xls</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-Psr.html">Psr<span></span></a>
+						<ul>
+				<li><a href="namespace-Psr.SimpleCache.html">SimpleCache</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Samples.html">Samples<span></span></a>
+						<ul>
+				<li><a href="namespace-Samples.Sample09.html">Sample09</a>
+						</li>
+				<li><a href="namespace-Samples.Sample10.html">Sample10</a>
+						</li>
+				<li><a href="namespace-Samples.Sample12.html">Sample12</a>
+						</li>
+				<li><a href="namespace-Samples.Sample14.html">Sample14</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.CodePage.html">CodePage</a></li>
+				<li class="active"><a href="class-PhpOffice.PhpSpreadsheet.Shared.Date.html">Date</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.Drawing.html">Drawing</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.Escher.html">Escher</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.File.html">File</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.Font.html">Font</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.OLE.html">OLE</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.OLERead.html">OLERead</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.PasswordHasher.html">PasswordHasher</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.StringHelper.html">StringHelper</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.TimeZone.html">TimeZone</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.Xls.html">Xls</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Shared.XMLWriter.html">XMLWriter</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PhpOffice.PhpSpreadsheet.Shared.html" title="Summary of PhpOffice\PhpSpreadsheet\Shared"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="class-PhpOffice.PhpSpreadsheet.Shared.Date.html" title="Summary of PhpOffice\PhpSpreadsheet\Shared\Date"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1">  1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2">  2: </a>
+</span><span id="3" class="l"><a class="l" href="#3">  3: </a><span class="php-keyword1">namespace</span> PhpOffice\PhpSpreadsheet\Shared;
+</span><span id="4" class="l"><a class="l" href="#4">  4: </a>
+</span><span id="5" class="l"><a class="l" href="#5">  5: </a><span class="php-keyword1">use</span> DateTimeInterface;
+</span><span id="6" class="l"><a class="l" href="#6">  6: </a><span class="php-keyword1">use</span> DateTimeZone;
+</span><span id="7" class="l"><a class="l" href="#7">  7: </a><span class="php-keyword1">use</span> PhpOffice\PhpSpreadsheet\Calculation\DateTime;
+</span><span id="8" class="l"><a class="l" href="#8">  8: </a><span class="php-keyword1">use</span> PhpOffice\PhpSpreadsheet\Calculation\Functions;
+</span><span id="9" class="l"><a class="l" href="#9">  9: </a><span class="php-keyword1">use</span> PhpOffice\PhpSpreadsheet\Cell\Cell;
+</span><span id="10" class="l"><a class="l" href="#10"> 10: </a><span class="php-keyword1">use</span> PhpOffice\PhpSpreadsheet\Style\NumberFormat;
+</span><span id="11" class="l"><a class="l" href="#11"> 11: </a>
+</span><span id="12" class="l"><a class="l" href="#12"> 12: </a><span class="php-keyword1">class</span> <span class="php-keyword2">Date</span>
+</span><span id="13" class="l"><a class="l" href="#13"> 13: </a>{
+</span><span id="14" class="l"><a class="l" href="#14"> 14: </a>    <span class="php-comment">/** constants */</span>
+</span><span id="15" class="l"><a class="l" href="#15"> 15: </a>    <span class="php-keyword1">const</span> CALENDAR_WINDOWS_1900 = <span class="php-num">1900</span>; <span class="php-comment">//    Base date of 1st Jan 1900 = 1.0</span>
+</span><span id="16" class="l"><a class="l" href="#16"> 16: </a>    <span class="php-keyword1">const</span> CALENDAR_MAC_1904 = <span class="php-num">1904</span>; <span class="php-comment">//    Base date of 2nd Jan 1904 = 1.0</span>
+</span><span id="17" class="l"><a class="l" href="#17"> 17: </a>
+</span><span id="18" class="l"><a class="l" href="#18"> 18: </a>    <span class="php-comment">/**
+</span></span><span id="19" class="l"><a class="l" href="#19"> 19: </a><span class="php-comment">     * Names of the months of the year, indexed by shortname
+</span></span><span id="20" class="l"><a class="l" href="#20"> 20: </a><span class="php-comment">     * Planned usage for locale settings.
+</span></span><span id="21" class="l"><a class="l" href="#21"> 21: </a><span class="php-comment">     *
+</span></span><span id="22" class="l"><a class="l" href="#22"> 22: </a><span class="php-comment">     * @var string[]
+</span></span><span id="23" class="l"><a class="l" href="#23"> 23: </a><span class="php-comment">     */</span>
+</span><span id="24" class="l"><a class="l" href="#24"> 24: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$monthNames" href="#$monthNames">$monthNames</a></span> = [
+</span><span id="25" class="l"><a class="l" href="#25"> 25: </a>        <span class="php-quote">'Jan'</span> =&gt; <span class="php-quote">'January'</span>,
+</span><span id="26" class="l"><a class="l" href="#26"> 26: </a>        <span class="php-quote">'Feb'</span> =&gt; <span class="php-quote">'February'</span>,
+</span><span id="27" class="l"><a class="l" href="#27"> 27: </a>        <span class="php-quote">'Mar'</span> =&gt; <span class="php-quote">'March'</span>,
+</span><span id="28" class="l"><a class="l" href="#28"> 28: </a>        <span class="php-quote">'Apr'</span> =&gt; <span class="php-quote">'April'</span>,
+</span><span id="29" class="l"><a class="l" href="#29"> 29: </a>        <span class="php-quote">'May'</span> =&gt; <span class="php-quote">'May'</span>,
+</span><span id="30" class="l"><a class="l" href="#30"> 30: </a>        <span class="php-quote">'Jun'</span> =&gt; <span class="php-quote">'June'</span>,
+</span><span id="31" class="l"><a class="l" href="#31"> 31: </a>        <span class="php-quote">'Jul'</span> =&gt; <span class="php-quote">'July'</span>,
+</span><span id="32" class="l"><a class="l" href="#32"> 32: </a>        <span class="php-quote">'Aug'</span> =&gt; <span class="php-quote">'August'</span>,
+</span><span id="33" class="l"><a class="l" href="#33"> 33: </a>        <span class="php-quote">'Sep'</span> =&gt; <span class="php-quote">'September'</span>,
+</span><span id="34" class="l"><a class="l" href="#34"> 34: </a>        <span class="php-quote">'Oct'</span> =&gt; <span class="php-quote">'October'</span>,
+</span><span id="35" class="l"><a class="l" href="#35"> 35: </a>        <span class="php-quote">'Nov'</span> =&gt; <span class="php-quote">'November'</span>,
+</span><span id="36" class="l"><a class="l" href="#36"> 36: </a>        <span class="php-quote">'Dec'</span> =&gt; <span class="php-quote">'December'</span>,
+</span><span id="37" class="l"><a class="l" href="#37"> 37: </a>    ];
+</span><span id="38" class="l"><a class="l" href="#38"> 38: </a>
+</span><span id="39" class="l"><a class="l" href="#39"> 39: </a>    <span class="php-comment">/**
+</span></span><span id="40" class="l"><a class="l" href="#40"> 40: </a><span class="php-comment">     * @var string[]
+</span></span><span id="41" class="l"><a class="l" href="#41"> 41: </a><span class="php-comment">     */</span>
+</span><span id="42" class="l"><a class="l" href="#42"> 42: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$numberSuffixes" href="#$numberSuffixes">$numberSuffixes</a></span> = [
+</span><span id="43" class="l"><a class="l" href="#43"> 43: </a>        <span class="php-quote">'st'</span>,
+</span><span id="44" class="l"><a class="l" href="#44"> 44: </a>        <span class="php-quote">'nd'</span>,
+</span><span id="45" class="l"><a class="l" href="#45"> 45: </a>        <span class="php-quote">'rd'</span>,
+</span><span id="46" class="l"><a class="l" href="#46"> 46: </a>        <span class="php-quote">'th'</span>,
+</span><span id="47" class="l"><a class="l" href="#47"> 47: </a>    ];
+</span><span id="48" class="l"><a class="l" href="#48"> 48: </a>
+</span><span id="49" class="l"><a class="l" href="#49"> 49: </a>    <span class="php-comment">/**
+</span></span><span id="50" class="l"><a class="l" href="#50"> 50: </a><span class="php-comment">     * Base calendar year to use for calculations
+</span></span><span id="51" class="l"><a class="l" href="#51"> 51: </a><span class="php-comment">     * Value is either CALENDAR_WINDOWS_1900 (1900) or CALENDAR_MAC_1904 (1904).
+</span></span><span id="52" class="l"><a class="l" href="#52"> 52: </a><span class="php-comment">     *
+</span></span><span id="53" class="l"><a class="l" href="#53"> 53: </a><span class="php-comment">     * @var int
+</span></span><span id="54" class="l"><a class="l" href="#54"> 54: </a><span class="php-comment">     */</span>
+</span><span id="55" class="l"><a class="l" href="#55"> 55: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$excelCalendar" href="#$excelCalendar">$excelCalendar</a></span> = self::CALENDAR_WINDOWS_1900;
+</span><span id="56" class="l"><a class="l" href="#56"> 56: </a>
+</span><span id="57" class="l"><a class="l" href="#57"> 57: </a>    <span class="php-comment">/**
+</span></span><span id="58" class="l"><a class="l" href="#58"> 58: </a><span class="php-comment">     * Default timezone to use for DateTime objects.
+</span></span><span id="59" class="l"><a class="l" href="#59"> 59: </a><span class="php-comment">     *
+</span></span><span id="60" class="l"><a class="l" href="#60"> 60: </a><span class="php-comment">     * @var null|\DateTimeZone
+</span></span><span id="61" class="l"><a class="l" href="#61"> 61: </a><span class="php-comment">     */</span>
+</span><span id="62" class="l"><a class="l" href="#62"> 62: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$defaultTimeZone" href="#$defaultTimeZone">$defaultTimeZone</a></span>;
+</span><span id="63" class="l"><a class="l" href="#63"> 63: </a>
+</span><span id="64" class="l"><a class="l" href="#64"> 64: </a>    <span class="php-comment">/**
+</span></span><span id="65" class="l"><a class="l" href="#65"> 65: </a><span class="php-comment">     * Set the Excel calendar (Windows 1900 or Mac 1904).
+</span></span><span id="66" class="l"><a class="l" href="#66"> 66: </a><span class="php-comment">     *
+</span></span><span id="67" class="l"><a class="l" href="#67"> 67: </a><span class="php-comment">     * @param int $baseDate Excel base date (1900 or 1904)
+</span></span><span id="68" class="l"><a class="l" href="#68"> 68: </a><span class="php-comment">     *
+</span></span><span id="69" class="l"><a class="l" href="#69"> 69: </a><span class="php-comment">     * @return bool Success or failure
+</span></span><span id="70" class="l"><a class="l" href="#70"> 70: </a><span class="php-comment">     */</span>
+</span><span id="71" class="l"><a class="l" href="#71"> 71: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_setExcelCalendar" href="#_setExcelCalendar">setExcelCalendar</a>(<span class="php-var">$baseDate</span>)
+</span><span id="72" class="l"><a class="l" href="#72"> 72: </a>    {
+</span><span id="73" class="l"><a class="l" href="#73"> 73: </a>        <span class="php-keyword1">if</span> ((<span class="php-var">$baseDate</span> == self::CALENDAR_WINDOWS_1900) ||
+</span><span id="74" class="l"><a class="l" href="#74"> 74: </a>            (<span class="php-var">$baseDate</span> == self::CALENDAR_MAC_1904)) {
+</span><span id="75" class="l"><a class="l" href="#75"> 75: </a>            self::<span class="php-var">$excelCalendar</span> = <span class="php-var">$baseDate</span>;
+</span><span id="76" class="l"><a class="l" href="#76"> 76: </a>
+</span><span id="77" class="l"><a class="l" href="#77"> 77: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
+</span><span id="78" class="l"><a class="l" href="#78"> 78: </a>        }
+</span><span id="79" class="l"><a class="l" href="#79"> 79: </a>
+</span><span id="80" class="l"><a class="l" href="#80"> 80: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="81" class="l"><a class="l" href="#81"> 81: </a>    }
+</span><span id="82" class="l"><a class="l" href="#82"> 82: </a>
+</span><span id="83" class="l"><a class="l" href="#83"> 83: </a>    <span class="php-comment">/**
+</span></span><span id="84" class="l"><a class="l" href="#84"> 84: </a><span class="php-comment">     * Return the Excel calendar (Windows 1900 or Mac 1904).
+</span></span><span id="85" class="l"><a class="l" href="#85"> 85: </a><span class="php-comment">     *
+</span></span><span id="86" class="l"><a class="l" href="#86"> 86: </a><span class="php-comment">     * @return int Excel base date (1900 or 1904)
+</span></span><span id="87" class="l"><a class="l" href="#87"> 87: </a><span class="php-comment">     */</span>
+</span><span id="88" class="l"><a class="l" href="#88"> 88: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_getExcelCalendar" href="#_getExcelCalendar">getExcelCalendar</a>()
+</span><span id="89" class="l"><a class="l" href="#89"> 89: </a>    {
+</span><span id="90" class="l"><a class="l" href="#90"> 90: </a>        <span class="php-keyword1">return</span> self::<span class="php-var">$excelCalendar</span>;
+</span><span id="91" class="l"><a class="l" href="#91"> 91: </a>    }
+</span><span id="92" class="l"><a class="l" href="#92"> 92: </a>
+</span><span id="93" class="l"><a class="l" href="#93"> 93: </a>    <span class="php-comment">/**
+</span></span><span id="94" class="l"><a class="l" href="#94"> 94: </a><span class="php-comment">     * Set the Default timezone to use for dates.
+</span></span><span id="95" class="l"><a class="l" href="#95"> 95: </a><span class="php-comment">     *
+</span></span><span id="96" class="l"><a class="l" href="#96"> 96: </a><span class="php-comment">     * @param DateTimeZone|string $timeZone The timezone to set for all Excel datetimestamp to PHP DateTime Object conversions
+</span></span><span id="97" class="l"><a class="l" href="#97"> 97: </a><span class="php-comment">     *
+</span></span><span id="98" class="l"><a class="l" href="#98"> 98: </a><span class="php-comment">     * @throws \Exception
+</span></span><span id="99" class="l"><a class="l" href="#99"> 99: </a><span class="php-comment">     *
+</span></span><span id="100" class="l"><a class="l" href="#100">100: </a><span class="php-comment">     * @return bool Success or failure
+</span></span><span id="101" class="l"><a class="l" href="#101">101: </a><span class="php-comment">     * @return bool Success or failure
+</span></span><span id="102" class="l"><a class="l" href="#102">102: </a><span class="php-comment">     */</span>
+</span><span id="103" class="l"><a class="l" href="#103">103: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_setDefaultTimezone" href="#_setDefaultTimezone">setDefaultTimezone</a>(<span class="php-var">$timeZone</span>)
+</span><span id="104" class="l"><a class="l" href="#104">104: </a>    {
+</span><span id="105" class="l"><a class="l" href="#105">105: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$timeZone</span> = self::validateTimeZone(<span class="php-var">$timeZone</span>)) {
+</span><span id="106" class="l"><a class="l" href="#106">106: </a>            self::<span class="php-var">$defaultTimeZone</span> = <span class="php-var">$timeZone</span>;
+</span><span id="107" class="l"><a class="l" href="#107">107: </a>
+</span><span id="108" class="l"><a class="l" href="#108">108: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
+</span><span id="109" class="l"><a class="l" href="#109">109: </a>        }
+</span><span id="110" class="l"><a class="l" href="#110">110: </a>
+</span><span id="111" class="l"><a class="l" href="#111">111: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="112" class="l"><a class="l" href="#112">112: </a>    }
+</span><span id="113" class="l"><a class="l" href="#113">113: </a>
+</span><span id="114" class="l"><a class="l" href="#114">114: </a>    <span class="php-comment">/**
+</span></span><span id="115" class="l"><a class="l" href="#115">115: </a><span class="php-comment">     * Return the Default timezone being used for dates.
+</span></span><span id="116" class="l"><a class="l" href="#116">116: </a><span class="php-comment">     *
+</span></span><span id="117" class="l"><a class="l" href="#117">117: </a><span class="php-comment">     * @return DateTimeZone The timezone being used as default for Excel timestamp to PHP DateTime object
+</span></span><span id="118" class="l"><a class="l" href="#118">118: </a><span class="php-comment">     */</span>
+</span><span id="119" class="l"><a class="l" href="#119">119: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_getDefaultTimezone" href="#_getDefaultTimezone">getDefaultTimezone</a>()
+</span><span id="120" class="l"><a class="l" href="#120">120: </a>    {
+</span><span id="121" class="l"><a class="l" href="#121">121: </a>        <span class="php-keyword1">if</span> (self::<span class="php-var">$defaultTimeZone</span> === <span class="php-keyword1">null</span>) {
+</span><span id="122" class="l"><a class="l" href="#122">122: </a>            self::<span class="php-var">$defaultTimeZone</span> = <span class="php-keyword1">new</span> DateTimeZone(<span class="php-quote">'UTC'</span>);
+</span><span id="123" class="l"><a class="l" href="#123">123: </a>        }
+</span><span id="124" class="l"><a class="l" href="#124">124: </a>
+</span><span id="125" class="l"><a class="l" href="#125">125: </a>        <span class="php-keyword1">return</span> self::<span class="php-var">$defaultTimeZone</span>;
+</span><span id="126" class="l"><a class="l" href="#126">126: </a>    }
+</span><span id="127" class="l"><a class="l" href="#127">127: </a>
+</span><span id="128" class="l"><a class="l" href="#128">128: </a>    <span class="php-comment">/**
+</span></span><span id="129" class="l"><a class="l" href="#129">129: </a><span class="php-comment">     * Validate a timezone.
+</span></span><span id="130" class="l"><a class="l" href="#130">130: </a><span class="php-comment">     *
+</span></span><span id="131" class="l"><a class="l" href="#131">131: </a><span class="php-comment">     * @param DateTimeZone|string $timeZone The timezone to validate, either as a timezone string or object
+</span></span><span id="132" class="l"><a class="l" href="#132">132: </a><span class="php-comment">     *
+</span></span><span id="133" class="l"><a class="l" href="#133">133: </a><span class="php-comment">     * @throws \Exception
+</span></span><span id="134" class="l"><a class="l" href="#134">134: </a><span class="php-comment">     *
+</span></span><span id="135" class="l"><a class="l" href="#135">135: </a><span class="php-comment">     * @return DateTimeZone The timezone as a timezone object
+</span></span><span id="136" class="l"><a class="l" href="#136">136: </a><span class="php-comment">     * @return DateTimeZone The timezone as a timezone object
+</span></span><span id="137" class="l"><a class="l" href="#137">137: </a><span class="php-comment">     */</span>
+</span><span id="138" class="l"><a class="l" href="#138">138: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_validateTimeZone" href="#_validateTimeZone">validateTimeZone</a>(<span class="php-var">$timeZone</span>)
+</span><span id="139" class="l"><a class="l" href="#139">139: </a>    {
+</span><span id="140" class="l"><a class="l" href="#140">140: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$timeZone</span>) &amp;&amp; <span class="php-var">$timeZone</span> <span class="php-keyword1">instanceof</span> DateTimeZone) {
+</span><span id="141" class="l"><a class="l" href="#141">141: </a>            <span class="php-keyword1">return</span> <span class="php-var">$timeZone</span>;
+</span><span id="142" class="l"><a class="l" href="#142">142: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$timeZone</span>)) {
+</span><span id="143" class="l"><a class="l" href="#143">143: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> DateTimeZone(<span class="php-var">$timeZone</span>);
+</span><span id="144" class="l"><a class="l" href="#144">144: </a>        }
+</span><span id="145" class="l"><a class="l" href="#145">145: </a>
+</span><span id="146" class="l"><a class="l" href="#146">146: </a>        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \Exception(<span class="php-quote">'Invalid timezone'</span>);
+</span><span id="147" class="l"><a class="l" href="#147">147: </a>    }
+</span><span id="148" class="l"><a class="l" href="#148">148: </a>
+</span><span id="149" class="l"><a class="l" href="#149">149: </a>    <span class="php-comment">/**
+</span></span><span id="150" class="l"><a class="l" href="#150">150: </a><span class="php-comment">     * Convert a MS serialized datetime value from Excel to a PHP Date/Time object.
+</span></span><span id="151" class="l"><a class="l" href="#151">151: </a><span class="php-comment">     *
+</span></span><span id="152" class="l"><a class="l" href="#152">152: </a><span class="php-comment">     * @param float|int $excelTimestamp MS Excel serialized date/time value
+</span></span><span id="153" class="l"><a class="l" href="#153">153: </a><span class="php-comment">     * @param null|DateTimeZone|string $timeZone The timezone to assume for the Excel timestamp,
+</span></span><span id="154" class="l"><a class="l" href="#154">154: </a><span class="php-comment">     *                                                                        if you don't want to treat it as a UTC value
+</span></span><span id="155" class="l"><a class="l" href="#155">155: </a><span class="php-comment">     *                                                                    Use the default (UST) unless you absolutely need a conversion
+</span></span><span id="156" class="l"><a class="l" href="#156">156: </a><span class="php-comment">     *
+</span></span><span id="157" class="l"><a class="l" href="#157">157: </a><span class="php-comment">     * @throws \Exception
+</span></span><span id="158" class="l"><a class="l" href="#158">158: </a><span class="php-comment">     *
+</span></span><span id="159" class="l"><a class="l" href="#159">159: </a><span class="php-comment">     * @return \DateTime PHP date/time object
+</span></span><span id="160" class="l"><a class="l" href="#160">160: </a><span class="php-comment">     */</span>
+</span><span id="161" class="l"><a class="l" href="#161">161: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_excelToDateTimeObject" href="#_excelToDateTimeObject">excelToDateTimeObject</a>(<span class="php-var">$excelTimestamp</span>, <span class="php-var">$timeZone</span> = <span class="php-keyword1">null</span>)
+</span><span id="162" class="l"><a class="l" href="#162">162: </a>    {
+</span><span id="163" class="l"><a class="l" href="#163">163: </a>        <span class="php-var">$timeZone</span> = (<span class="php-var">$timeZone</span> === <span class="php-keyword1">null</span>) ? self::getDefaultTimezone() : self::validateTimeZone(<span class="php-var">$timeZone</span>);
+</span><span id="164" class="l"><a class="l" href="#164">164: </a>        <span class="php-keyword1">if</span> (Functions::getCompatibilityMode() == Functions::COMPATIBILITY_EXCEL) {
+</span><span id="165" class="l"><a class="l" href="#165">165: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$excelTimestamp</span> &lt; <span class="php-num">1.0</span>) {
+</span><span id="166" class="l"><a class="l" href="#166">166: </a>                <span class="php-comment">// Unix timestamp base date</span>
+</span><span id="167" class="l"><a class="l" href="#167">167: </a>                <span class="php-var">$baseDate</span> = <span class="php-keyword1">new</span> \DateTime(<span class="php-quote">'1970-01-01'</span>, <span class="php-var">$timeZone</span>);
+</span><span id="168" class="l"><a class="l" href="#168">168: </a>            } <span class="php-keyword1">else</span> {
+</span><span id="169" class="l"><a class="l" href="#169">169: </a>                <span class="php-comment">// MS Excel calendar base dates</span>
+</span><span id="170" class="l"><a class="l" href="#170">170: </a>                <span class="php-keyword1">if</span> (self::<span class="php-var">$excelCalendar</span> == self::CALENDAR_WINDOWS_1900) {
+</span><span id="171" class="l"><a class="l" href="#171">171: </a>                    <span class="php-comment">// Allow adjustment for 1900 Leap Year in MS Excel</span>
+</span><span id="172" class="l"><a class="l" href="#172">172: </a>                    <span class="php-var">$baseDate</span> = (<span class="php-var">$excelTimestamp</span> &lt; <span class="php-num">60</span>) ? <span class="php-keyword1">new</span> \DateTime(<span class="php-quote">'1899-12-31'</span>, <span class="php-var">$timeZone</span>) : <span class="php-keyword1">new</span> \DateTime(<span class="php-quote">'1899-12-30'</span>, <span class="php-var">$timeZone</span>);
+</span><span id="173" class="l"><a class="l" href="#173">173: </a>                } <span class="php-keyword1">else</span> {
+</span><span id="174" class="l"><a class="l" href="#174">174: </a>                    <span class="php-var">$baseDate</span> = <span class="php-keyword1">new</span> \DateTime(<span class="php-quote">'1904-01-01'</span>, <span class="php-var">$timeZone</span>);
+</span><span id="175" class="l"><a class="l" href="#175">175: </a>                }
+</span><span id="176" class="l"><a class="l" href="#176">176: </a>            }
+</span><span id="177" class="l"><a class="l" href="#177">177: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="178" class="l"><a class="l" href="#178">178: </a>            <span class="php-var">$baseDate</span> = <span class="php-keyword1">new</span> \DateTime(<span class="php-quote">'1899-12-30'</span>, <span class="php-var">$timeZone</span>);
+</span><span id="179" class="l"><a class="l" href="#179">179: </a>        }
+</span><span id="180" class="l"><a class="l" href="#180">180: </a>
+</span><span id="181" class="l"><a class="l" href="#181">181: </a>        <span class="php-var">$days</span> = <span class="php-keyword2">floor</span>(<span class="php-var">$excelTimestamp</span>);
+</span><span id="182" class="l"><a class="l" href="#182">182: </a>        <span class="php-var">$partDay</span> = <span class="php-var">$excelTimestamp</span> - <span class="php-var">$days</span>;
+</span><span id="183" class="l"><a class="l" href="#183">183: </a>        <span class="php-var">$hours</span> = <span class="php-keyword2">floor</span>(<span class="php-var">$partDay</span> * <span class="php-num">24</span>);
+</span><span id="184" class="l"><a class="l" href="#184">184: </a>        <span class="php-var">$partDay</span> = <span class="php-var">$partDay</span> * <span class="php-num">24</span> - <span class="php-var">$hours</span>;
+</span><span id="185" class="l"><a class="l" href="#185">185: </a>        <span class="php-var">$minutes</span> = <span class="php-keyword2">floor</span>(<span class="php-var">$partDay</span> * <span class="php-num">60</span>);
+</span><span id="186" class="l"><a class="l" href="#186">186: </a>        <span class="php-var">$partDay</span> = <span class="php-var">$partDay</span> * <span class="php-num">60</span> - <span class="php-var">$minutes</span>;
+</span><span id="187" class="l"><a class="l" href="#187">187: </a>        <span class="php-var">$seconds</span> = <span class="php-keyword2">round</span>(<span class="php-var">$partDay</span> * <span class="php-num">60</span>);
+</span><span id="188" class="l"><a class="l" href="#188">188: </a>
+</span><span id="189" class="l"><a class="l" href="#189">189: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$days</span> &gt;= <span class="php-num">0</span>) {
+</span><span id="190" class="l"><a class="l" href="#190">190: </a>            <span class="php-var">$days</span> = <span class="php-quote">'+'</span> . <span class="php-var">$days</span>;
+</span><span id="191" class="l"><a class="l" href="#191">191: </a>        }
+</span><span id="192" class="l"><a class="l" href="#192">192: </a>        <span class="php-var">$interval</span> = <span class="php-var">$days</span> . <span class="php-quote">' days'</span>;
+</span><span id="193" class="l"><a class="l" href="#193">193: </a>
+</span><span id="194" class="l"><a class="l" href="#194">194: </a>        <span class="php-keyword1">return</span> <span class="php-var">$baseDate</span>-&gt;modify(<span class="php-var">$interval</span>)
+</span><span id="195" class="l"><a class="l" href="#195">195: </a>            -&gt;setTime(<span class="php-var">$hours</span>, <span class="php-var">$minutes</span>, <span class="php-var">$seconds</span>);
+</span><span id="196" class="l"><a class="l" href="#196">196: </a>    }
+</span><span id="197" class="l"><a class="l" href="#197">197: </a>
+</span><span id="198" class="l"><a class="l" href="#198">198: </a>    <span class="php-comment">/**
+</span></span><span id="199" class="l"><a class="l" href="#199">199: </a><span class="php-comment">     * Convert a MS serialized datetime value from Excel to a unix timestamp.
+</span></span><span id="200" class="l"><a class="l" href="#200">200: </a><span class="php-comment">     *
+</span></span><span id="201" class="l"><a class="l" href="#201">201: </a><span class="php-comment">     * @param float|int $excelTimestamp MS Excel serialized date/time value
+</span></span><span id="202" class="l"><a class="l" href="#202">202: </a><span class="php-comment">     * @param null|DateTimeZone|string $timeZone The timezone to assume for the Excel timestamp,
+</span></span><span id="203" class="l"><a class="l" href="#203">203: </a><span class="php-comment">     *                                                                        if you don't want to treat it as a UTC value
+</span></span><span id="204" class="l"><a class="l" href="#204">204: </a><span class="php-comment">     *                                                                    Use the default (UST) unless you absolutely need a conversion
+</span></span><span id="205" class="l"><a class="l" href="#205">205: </a><span class="php-comment">     *
+</span></span><span id="206" class="l"><a class="l" href="#206">206: </a><span class="php-comment">     * @throws \Exception
+</span></span><span id="207" class="l"><a class="l" href="#207">207: </a><span class="php-comment">     *
+</span></span><span id="208" class="l"><a class="l" href="#208">208: </a><span class="php-comment">     * @return int Unix timetamp for this date/time
+</span></span><span id="209" class="l"><a class="l" href="#209">209: </a><span class="php-comment">     */</span>
+</span><span id="210" class="l"><a class="l" href="#210">210: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_excelToTimestamp" href="#_excelToTimestamp">excelToTimestamp</a>(<span class="php-var">$excelTimestamp</span>, <span class="php-var">$timeZone</span> = <span class="php-keyword1">null</span>)
+</span><span id="211" class="l"><a class="l" href="#211">211: </a>    {
+</span><span id="212" class="l"><a class="l" href="#212">212: </a>        <span class="php-keyword1">return</span> (int) self::excelToDateTimeObject(<span class="php-var">$excelTimestamp</span>, <span class="php-var">$timeZone</span>)
+</span><span id="213" class="l"><a class="l" href="#213">213: </a>            -&gt;format(<span class="php-quote">'U'</span>);
+</span><span id="214" class="l"><a class="l" href="#214">214: </a>    }
+</span><span id="215" class="l"><a class="l" href="#215">215: </a>
+</span><span id="216" class="l"><a class="l" href="#216">216: </a>    <span class="php-comment">/**
+</span></span><span id="217" class="l"><a class="l" href="#217">217: </a><span class="php-comment">     * Convert a date from PHP to an MS Excel serialized date/time value.
+</span></span><span id="218" class="l"><a class="l" href="#218">218: </a><span class="php-comment">     *
+</span></span><span id="219" class="l"><a class="l" href="#219">219: </a><span class="php-comment">     * @param mixed $dateValue Unix Timestamp or PHP DateTime object or a string
+</span></span><span id="220" class="l"><a class="l" href="#220">220: </a><span class="php-comment">     *
+</span></span><span id="221" class="l"><a class="l" href="#221">221: </a><span class="php-comment">     * @return bool|float Excel date/time value
+</span></span><span id="222" class="l"><a class="l" href="#222">222: </a><span class="php-comment">     *                                  or boolean FALSE on failure
+</span></span><span id="223" class="l"><a class="l" href="#223">223: </a><span class="php-comment">     */</span>
+</span><span id="224" class="l"><a class="l" href="#224">224: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_PHPToExcel" href="#_PHPToExcel">PHPToExcel</a>(<span class="php-var">$dateValue</span>)
+</span><span id="225" class="l"><a class="l" href="#225">225: </a>    {
+</span><span id="226" class="l"><a class="l" href="#226">226: </a>        <span class="php-keyword1">if</span> ((<span class="php-keyword2">is_object</span>(<span class="php-var">$dateValue</span>)) &amp;&amp; (<span class="php-var">$dateValue</span> <span class="php-keyword1">instanceof</span> DateTimeInterface)) {
+</span><span id="227" class="l"><a class="l" href="#227">227: </a>            <span class="php-keyword1">return</span> self::dateTimeToExcel(<span class="php-var">$dateValue</span>);
+</span><span id="228" class="l"><a class="l" href="#228">228: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_numeric</span>(<span class="php-var">$dateValue</span>)) {
+</span><span id="229" class="l"><a class="l" href="#229">229: </a>            <span class="php-keyword1">return</span> self::timestampToExcel(<span class="php-var">$dateValue</span>);
+</span><span id="230" class="l"><a class="l" href="#230">230: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$dateValue</span>)) {
+</span><span id="231" class="l"><a class="l" href="#231">231: </a>            <span class="php-keyword1">return</span> self::stringToExcel(<span class="php-var">$dateValue</span>);
+</span><span id="232" class="l"><a class="l" href="#232">232: </a>        }
+</span><span id="233" class="l"><a class="l" href="#233">233: </a>
+</span><span id="234" class="l"><a class="l" href="#234">234: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="235" class="l"><a class="l" href="#235">235: </a>    }
+</span><span id="236" class="l"><a class="l" href="#236">236: </a>
+</span><span id="237" class="l"><a class="l" href="#237">237: </a>    <span class="php-comment">/**
+</span></span><span id="238" class="l"><a class="l" href="#238">238: </a><span class="php-comment">     * Convert a PHP DateTime object to an MS Excel serialized date/time value.
+</span></span><span id="239" class="l"><a class="l" href="#239">239: </a><span class="php-comment">     *
+</span></span><span id="240" class="l"><a class="l" href="#240">240: </a><span class="php-comment">     * @param DateTimeInterface $dateValue PHP DateTime object
+</span></span><span id="241" class="l"><a class="l" href="#241">241: </a><span class="php-comment">     *
+</span></span><span id="242" class="l"><a class="l" href="#242">242: </a><span class="php-comment">     * @return float MS Excel serialized date/time value
+</span></span><span id="243" class="l"><a class="l" href="#243">243: </a><span class="php-comment">     */</span>
+</span><span id="244" class="l"><a class="l" href="#244">244: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_dateTimeToExcel" href="#_dateTimeToExcel">dateTimeToExcel</a>(DateTimeInterface <span class="php-var">$dateValue</span>)
+</span><span id="245" class="l"><a class="l" href="#245">245: </a>    {
+</span><span id="246" class="l"><a class="l" href="#246">246: </a>        <span class="php-keyword1">return</span> self::formattedPHPToExcel(
+</span><span id="247" class="l"><a class="l" href="#247">247: </a>            <span class="php-var">$dateValue</span>-&gt;format(<span class="php-quote">'Y'</span>),
+</span><span id="248" class="l"><a class="l" href="#248">248: </a>            <span class="php-var">$dateValue</span>-&gt;format(<span class="php-quote">'m'</span>),
+</span><span id="249" class="l"><a class="l" href="#249">249: </a>            <span class="php-var">$dateValue</span>-&gt;format(<span class="php-quote">'d'</span>),
+</span><span id="250" class="l"><a class="l" href="#250">250: </a>            <span class="php-var">$dateValue</span>-&gt;format(<span class="php-quote">'H'</span>),
+</span><span id="251" class="l"><a class="l" href="#251">251: </a>            <span class="php-var">$dateValue</span>-&gt;format(<span class="php-quote">'i'</span>),
+</span><span id="252" class="l"><a class="l" href="#252">252: </a>            <span class="php-var">$dateValue</span>-&gt;format(<span class="php-quote">'s'</span>)
+</span><span id="253" class="l"><a class="l" href="#253">253: </a>        );
+</span><span id="254" class="l"><a class="l" href="#254">254: </a>    }
+</span><span id="255" class="l"><a class="l" href="#255">255: </a>
+</span><span id="256" class="l"><a class="l" href="#256">256: </a>    <span class="php-comment">/**
+</span></span><span id="257" class="l"><a class="l" href="#257">257: </a><span class="php-comment">     * Convert a Unix timestamp to an MS Excel serialized date/time value.
+</span></span><span id="258" class="l"><a class="l" href="#258">258: </a><span class="php-comment">     *
+</span></span><span id="259" class="l"><a class="l" href="#259">259: </a><span class="php-comment">     * @param int $dateValue Unix Timestamp
+</span></span><span id="260" class="l"><a class="l" href="#260">260: </a><span class="php-comment">     *
+</span></span><span id="261" class="l"><a class="l" href="#261">261: </a><span class="php-comment">     * @return float MS Excel serialized date/time value
+</span></span><span id="262" class="l"><a class="l" href="#262">262: </a><span class="php-comment">     */</span>
+</span><span id="263" class="l"><a class="l" href="#263">263: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_timestampToExcel" href="#_timestampToExcel">timestampToExcel</a>(<span class="php-var">$dateValue</span>)
+</span><span id="264" class="l"><a class="l" href="#264">264: </a>    {
+</span><span id="265" class="l"><a class="l" href="#265">265: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_numeric</span>(<span class="php-var">$dateValue</span>)) {
+</span><span id="266" class="l"><a class="l" href="#266">266: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="267" class="l"><a class="l" href="#267">267: </a>        }
+</span><span id="268" class="l"><a class="l" href="#268">268: </a>
+</span><span id="269" class="l"><a class="l" href="#269">269: </a>        <span class="php-keyword1">return</span> self::dateTimeToExcel(<span class="php-keyword1">new</span> \DateTime(<span class="php-quote">'@'</span> . <span class="php-var">$dateValue</span>));
+</span><span id="270" class="l"><a class="l" href="#270">270: </a>    }
+</span><span id="271" class="l"><a class="l" href="#271">271: </a>
+</span><span id="272" class="l"><a class="l" href="#272">272: </a>    <span class="php-comment">/**
+</span></span><span id="273" class="l"><a class="l" href="#273">273: </a><span class="php-comment">     * formattedPHPToExcel.
+</span></span><span id="274" class="l"><a class="l" href="#274">274: </a><span class="php-comment">     *
+</span></span><span id="275" class="l"><a class="l" href="#275">275: </a><span class="php-comment">     * @param int $year
+</span></span><span id="276" class="l"><a class="l" href="#276">276: </a><span class="php-comment">     * @param int $month
+</span></span><span id="277" class="l"><a class="l" href="#277">277: </a><span class="php-comment">     * @param int $day
+</span></span><span id="278" class="l"><a class="l" href="#278">278: </a><span class="php-comment">     * @param int $hours
+</span></span><span id="279" class="l"><a class="l" href="#279">279: </a><span class="php-comment">     * @param int $minutes
+</span></span><span id="280" class="l"><a class="l" href="#280">280: </a><span class="php-comment">     * @param int $seconds
+</span></span><span id="281" class="l"><a class="l" href="#281">281: </a><span class="php-comment">     *
+</span></span><span id="282" class="l"><a class="l" href="#282">282: </a><span class="php-comment">     * @return float Excel date/time value
+</span></span><span id="283" class="l"><a class="l" href="#283">283: </a><span class="php-comment">     */</span>
+</span><span id="284" class="l"><a class="l" href="#284">284: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_formattedPHPToExcel" href="#_formattedPHPToExcel">formattedPHPToExcel</a>(<span class="php-var">$year</span>, <span class="php-var">$month</span>, <span class="php-var">$day</span>, <span class="php-var">$hours</span> = <span class="php-num">0</span>, <span class="php-var">$minutes</span> = <span class="php-num">0</span>, <span class="php-var">$seconds</span> = <span class="php-num">0</span>)
+</span><span id="285" class="l"><a class="l" href="#285">285: </a>    {
+</span><span id="286" class="l"><a class="l" href="#286">286: </a>        <span class="php-keyword1">if</span> (self::<span class="php-var">$excelCalendar</span> == self::CALENDAR_WINDOWS_1900) {
+</span><span id="287" class="l"><a class="l" href="#287">287: </a>            <span class="php-comment">//</span>
+</span><span id="288" class="l"><a class="l" href="#288">288: </a>            <span class="php-comment">//    Fudge factor for the erroneous fact that the year 1900 is treated as a Leap Year in MS Excel</span>
+</span><span id="289" class="l"><a class="l" href="#289">289: </a>            <span class="php-comment">//    This affects every date following 28th February 1900</span>
+</span><span id="290" class="l"><a class="l" href="#290">290: </a>            <span class="php-comment">//</span>
+</span><span id="291" class="l"><a class="l" href="#291">291: </a>            <span class="php-var">$excel1900isLeapYear</span> = <span class="php-keyword1">true</span>;
+</span><span id="292" class="l"><a class="l" href="#292">292: </a>            <span class="php-keyword1">if</span> ((<span class="php-var">$year</span> == <span class="php-num">1900</span>) &amp;&amp; (<span class="php-var">$month</span> &lt;= <span class="php-num">2</span>)) {
+</span><span id="293" class="l"><a class="l" href="#293">293: </a>                <span class="php-var">$excel1900isLeapYear</span> = <span class="php-keyword1">false</span>;
+</span><span id="294" class="l"><a class="l" href="#294">294: </a>            }
+</span><span id="295" class="l"><a class="l" href="#295">295: </a>            <span class="php-var">$myexcelBaseDate</span> = <span class="php-num">2415020</span>;
+</span><span id="296" class="l"><a class="l" href="#296">296: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="297" class="l"><a class="l" href="#297">297: </a>            <span class="php-var">$myexcelBaseDate</span> = <span class="php-num">2416481</span>;
+</span><span id="298" class="l"><a class="l" href="#298">298: </a>            <span class="php-var">$excel1900isLeapYear</span> = <span class="php-keyword1">false</span>;
+</span><span id="299" class="l"><a class="l" href="#299">299: </a>        }
+</span><span id="300" class="l"><a class="l" href="#300">300: </a>
+</span><span id="301" class="l"><a class="l" href="#301">301: </a>        <span class="php-comment">//    Julian base date Adjustment</span>
+</span><span id="302" class="l"><a class="l" href="#302">302: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$month</span> &gt; <span class="php-num">2</span>) {
+</span><span id="303" class="l"><a class="l" href="#303">303: </a>            <span class="php-var">$month</span> -= <span class="php-num">3</span>;
+</span><span id="304" class="l"><a class="l" href="#304">304: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="305" class="l"><a class="l" href="#305">305: </a>            <span class="php-var">$month</span> += <span class="php-num">9</span>;
+</span><span id="306" class="l"><a class="l" href="#306">306: </a>            --<span class="php-var">$year</span>;
+</span><span id="307" class="l"><a class="l" href="#307">307: </a>        }
+</span><span id="308" class="l"><a class="l" href="#308">308: </a>
+</span><span id="309" class="l"><a class="l" href="#309">309: </a>        <span class="php-comment">//    Calculate the Julian Date, then subtract the Excel base date (JD 2415020 = 31-Dec-1899 Giving Excel Date of 0)</span>
+</span><span id="310" class="l"><a class="l" href="#310">310: </a>        <span class="php-var">$century</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$year</span>, <span class="php-num">0</span>, <span class="php-num">2</span>);
+</span><span id="311" class="l"><a class="l" href="#311">311: </a>        <span class="php-var">$decade</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$year</span>, <span class="php-num">2</span>, <span class="php-num">2</span>);
+</span><span id="312" class="l"><a class="l" href="#312">312: </a>        <span class="php-var">$excelDate</span> = <span class="php-keyword2">floor</span>((<span class="php-num">146097</span> * <span class="php-var">$century</span>) / <span class="php-num">4</span>) + <span class="php-keyword2">floor</span>((<span class="php-num">1461</span> * <span class="php-var">$decade</span>) / <span class="php-num">4</span>) + <span class="php-keyword2">floor</span>((<span class="php-num">153</span> * <span class="php-var">$month</span> + <span class="php-num">2</span>) / <span class="php-num">5</span>) + <span class="php-var">$day</span> + <span class="php-num">1721119</span> - <span class="php-var">$myexcelBaseDate</span> + <span class="php-var">$excel1900isLeapYear</span>;
+</span><span id="313" class="l"><a class="l" href="#313">313: </a>
+</span><span id="314" class="l"><a class="l" href="#314">314: </a>        <span class="php-var">$excelTime</span> = ((<span class="php-var">$hours</span> * <span class="php-num">3600</span>) + (<span class="php-var">$minutes</span> * <span class="php-num">60</span>) + <span class="php-var">$seconds</span>) / <span class="php-num">86400</span>;
+</span><span id="315" class="l"><a class="l" href="#315">315: </a>
+</span><span id="316" class="l"><a class="l" href="#316">316: </a>        <span class="php-keyword1">return</span> (float) <span class="php-var">$excelDate</span> + <span class="php-var">$excelTime</span>;
+</span><span id="317" class="l"><a class="l" href="#317">317: </a>    }
+</span><span id="318" class="l"><a class="l" href="#318">318: </a>
+</span><span id="319" class="l"><a class="l" href="#319">319: </a>    <span class="php-comment">/**
+</span></span><span id="320" class="l"><a class="l" href="#320">320: </a><span class="php-comment">     * Is a given cell a date/time?
+</span></span><span id="321" class="l"><a class="l" href="#321">321: </a><span class="php-comment">     *
+</span></span><span id="322" class="l"><a class="l" href="#322">322: </a><span class="php-comment">     * @param Cell $pCell
+</span></span><span id="323" class="l"><a class="l" href="#323">323: </a><span class="php-comment">     *
+</span></span><span id="324" class="l"><a class="l" href="#324">324: </a><span class="php-comment">     * @return bool
+</span></span><span id="325" class="l"><a class="l" href="#325">325: </a><span class="php-comment">     */</span>
+</span><span id="326" class="l"><a class="l" href="#326">326: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_isDateTime" href="#_isDateTime">isDateTime</a>(Cell <span class="php-var">$pCell</span>)
+</span><span id="327" class="l"><a class="l" href="#327">327: </a>    {
+</span><span id="328" class="l"><a class="l" href="#328">328: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">is_numeric</span>(<span class="php-var">$pCell</span>-&gt;getValue()) &amp;&amp;
+</span><span id="329" class="l"><a class="l" href="#329">329: </a>            self::isDateTimeFormat(
+</span><span id="330" class="l"><a class="l" href="#330">330: </a>                <span class="php-var">$pCell</span>-&gt;getWorksheet()-&gt;getStyle(
+</span><span id="331" class="l"><a class="l" href="#331">331: </a>                    <span class="php-var">$pCell</span>-&gt;getCoordinate()
+</span><span id="332" class="l"><a class="l" href="#332">332: </a>                )-&gt;getNumberFormat()
+</span><span id="333" class="l"><a class="l" href="#333">333: </a>            );
+</span><span id="334" class="l"><a class="l" href="#334">334: </a>    }
+</span><span id="335" class="l"><a class="l" href="#335">335: </a>
+</span><span id="336" class="l"><a class="l" href="#336">336: </a>    <span class="php-comment">/**
+</span></span><span id="337" class="l"><a class="l" href="#337">337: </a><span class="php-comment">     * Is a given number format a date/time?
+</span></span><span id="338" class="l"><a class="l" href="#338">338: </a><span class="php-comment">     *
+</span></span><span id="339" class="l"><a class="l" href="#339">339: </a><span class="php-comment">     * @param NumberFormat $pFormat
+</span></span><span id="340" class="l"><a class="l" href="#340">340: </a><span class="php-comment">     *
+</span></span><span id="341" class="l"><a class="l" href="#341">341: </a><span class="php-comment">     * @return bool
+</span></span><span id="342" class="l"><a class="l" href="#342">342: </a><span class="php-comment">     */</span>
+</span><span id="343" class="l"><a class="l" href="#343">343: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_isDateTimeFormat" href="#_isDateTimeFormat">isDateTimeFormat</a>(NumberFormat <span class="php-var">$pFormat</span>)
+</span><span id="344" class="l"><a class="l" href="#344">344: </a>    {
+</span><span id="345" class="l"><a class="l" href="#345">345: </a>        <span class="php-keyword1">return</span> self::isDateTimeFormatCode(<span class="php-var">$pFormat</span>-&gt;getFormatCode());
+</span><span id="346" class="l"><a class="l" href="#346">346: </a>    }
+</span><span id="347" class="l"><a class="l" href="#347">347: </a>
+</span><span id="348" class="l"><a class="l" href="#348">348: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">static</span> <span class="php-var"><a id="$possibleDateFormatCharacters" href="#$possibleDateFormatCharacters">$possibleDateFormatCharacters</a></span> = <span class="php-quote">'eymdHs'</span>;
+</span><span id="349" class="l"><a class="l" href="#349">349: </a>
+</span><span id="350" class="l"><a class="l" href="#350">350: </a>    <span class="php-comment">/**
+</span></span><span id="351" class="l"><a class="l" href="#351">351: </a><span class="php-comment">     * Is a given number format code a date/time?
+</span></span><span id="352" class="l"><a class="l" href="#352">352: </a><span class="php-comment">     *
+</span></span><span id="353" class="l"><a class="l" href="#353">353: </a><span class="php-comment">     * @param string $pFormatCode
+</span></span><span id="354" class="l"><a class="l" href="#354">354: </a><span class="php-comment">     *
+</span></span><span id="355" class="l"><a class="l" href="#355">355: </a><span class="php-comment">     * @return bool
+</span></span><span id="356" class="l"><a class="l" href="#356">356: </a><span class="php-comment">     */</span>
+</span><span id="357" class="l"><a class="l" href="#357">357: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_isDateTimeFormatCode" href="#_isDateTimeFormatCode">isDateTimeFormatCode</a>(<span class="php-var">$pFormatCode</span>)
+</span><span id="358" class="l"><a class="l" href="#358">358: </a>    {
+</span><span id="359" class="l"><a class="l" href="#359">359: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">strtolower</span>(<span class="php-var">$pFormatCode</span>) === <span class="php-keyword2">strtolower</span>(NumberFormat::FORMAT_GENERAL)) {
+</span><span id="360" class="l"><a class="l" href="#360">360: </a>            <span class="php-comment">//    &quot;General&quot; contains an epoch letter 'e', so we trap for it explicitly here (case-insensitive check)</span>
+</span><span id="361" class="l"><a class="l" href="#361">361: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="362" class="l"><a class="l" href="#362">362: </a>        }
+</span><span id="363" class="l"><a class="l" href="#363">363: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'/[0#]E[+-]0/i'</span>, <span class="php-var">$pFormatCode</span>)) {
+</span><span id="364" class="l"><a class="l" href="#364">364: </a>            <span class="php-comment">//    Scientific format</span>
+</span><span id="365" class="l"><a class="l" href="#365">365: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="366" class="l"><a class="l" href="#366">366: </a>        }
+</span><span id="367" class="l"><a class="l" href="#367">367: </a>
+</span><span id="368" class="l"><a class="l" href="#368">368: </a>        <span class="php-comment">// Switch on formatcode</span>
+</span><span id="369" class="l"><a class="l" href="#369">369: </a>        <span class="php-keyword1">switch</span> (<span class="php-var">$pFormatCode</span>) {
+</span><span id="370" class="l"><a class="l" href="#370">370: </a>            <span class="php-comment">//    Explicitly defined date formats</span>
+</span><span id="371" class="l"><a class="l" href="#371">371: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_YYYYMMDD:
+</span><span id="372" class="l"><a class="l" href="#372">372: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_YYYYMMDD2:
+</span><span id="373" class="l"><a class="l" href="#373">373: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_DDMMYYYY:
+</span><span id="374" class="l"><a class="l" href="#374">374: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_DMYSLASH:
+</span><span id="375" class="l"><a class="l" href="#375">375: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_DMYMINUS:
+</span><span id="376" class="l"><a class="l" href="#376">376: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_DMMINUS:
+</span><span id="377" class="l"><a class="l" href="#377">377: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_MYMINUS:
+</span><span id="378" class="l"><a class="l" href="#378">378: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_DATETIME:
+</span><span id="379" class="l"><a class="l" href="#379">379: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_TIME1:
+</span><span id="380" class="l"><a class="l" href="#380">380: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_TIME2:
+</span><span id="381" class="l"><a class="l" href="#381">381: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_TIME3:
+</span><span id="382" class="l"><a class="l" href="#382">382: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_TIME4:
+</span><span id="383" class="l"><a class="l" href="#383">383: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_TIME5:
+</span><span id="384" class="l"><a class="l" href="#384">384: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_TIME6:
+</span><span id="385" class="l"><a class="l" href="#385">385: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_TIME7:
+</span><span id="386" class="l"><a class="l" href="#386">386: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_TIME8:
+</span><span id="387" class="l"><a class="l" href="#387">387: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_YYYYMMDDSLASH:
+</span><span id="388" class="l"><a class="l" href="#388">388: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_XLSX14:
+</span><span id="389" class="l"><a class="l" href="#389">389: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_XLSX15:
+</span><span id="390" class="l"><a class="l" href="#390">390: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_XLSX16:
+</span><span id="391" class="l"><a class="l" href="#391">391: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_XLSX17:
+</span><span id="392" class="l"><a class="l" href="#392">392: </a>            <span class="php-keyword1">case</span> NumberFormat::FORMAT_DATE_XLSX22:
+</span><span id="393" class="l"><a class="l" href="#393">393: </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
+</span><span id="394" class="l"><a class="l" href="#394">394: </a>        }
+</span><span id="395" class="l"><a class="l" href="#395">395: </a>
+</span><span id="396" class="l"><a class="l" href="#396">396: </a>        <span class="php-comment">//    Typically number, currency or accounting (or occasionally fraction) formats</span>
+</span><span id="397" class="l"><a class="l" href="#397">397: </a>        <span class="php-keyword1">if</span> ((<span class="php-keyword2">substr</span>(<span class="php-var">$pFormatCode</span>, <span class="php-num">0</span>, <span class="php-num">1</span>) == <span class="php-quote">'_'</span>) || (<span class="php-keyword2">substr</span>(<span class="php-var">$pFormatCode</span>, <span class="php-num">0</span>, <span class="php-num">2</span>) == <span class="php-quote">'0 '</span>)) {
+</span><span id="398" class="l"><a class="l" href="#398">398: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="399" class="l"><a class="l" href="#399">399: </a>        }
+</span><span id="400" class="l"><a class="l" href="#400">400: </a>        <span class="php-comment">// Try checking for any of the date formatting characters that don't appear within square braces</span>
+</span><span id="401" class="l"><a class="l" href="#401">401: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'/(^|\])[^\[]*['</span> . self::<span class="php-var">$possibleDateFormatCharacters</span> . <span class="php-quote">']/i'</span>, <span class="php-var">$pFormatCode</span>)) {
+</span><span id="402" class="l"><a class="l" href="#402">402: </a>            <span class="php-comment">//    We might also have a format mask containing quoted strings...</span>
+</span><span id="403" class="l"><a class="l" href="#403">403: </a>            <span class="php-comment">//        we don't want to test for any of our characters within the quoted blocks</span>
+</span><span id="404" class="l"><a class="l" href="#404">404: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$pFormatCode</span>, <span class="php-quote">'&quot;'</span>) !== <span class="php-keyword1">false</span>) {
+</span><span id="405" class="l"><a class="l" href="#405">405: </a>                <span class="php-var">$segMatcher</span> = <span class="php-keyword1">false</span>;
+</span><span id="406" class="l"><a class="l" href="#406">406: </a>                <span class="php-keyword1">foreach</span> (<span class="php-keyword2">explode</span>(<span class="php-quote">'&quot;'</span>, <span class="php-var">$pFormatCode</span>) <span class="php-keyword1">as</span> <span class="php-var">$subVal</span>) {
+</span><span id="407" class="l"><a class="l" href="#407">407: </a>                    <span class="php-comment">//    Only test in alternate array entries (the non-quoted blocks)</span>
+</span><span id="408" class="l"><a class="l" href="#408">408: </a>                    <span class="php-keyword1">if</span> ((<span class="php-var">$segMatcher</span> = !<span class="php-var">$segMatcher</span>) &amp;&amp;
+</span><span id="409" class="l"><a class="l" href="#409">409: </a>                        (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'/(^|\])[^\[]*['</span> . self::<span class="php-var">$possibleDateFormatCharacters</span> . <span class="php-quote">']/i'</span>, <span class="php-var">$subVal</span>))) {
+</span><span id="410" class="l"><a class="l" href="#410">410: </a>                        <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
+</span><span id="411" class="l"><a class="l" href="#411">411: </a>                    }
+</span><span id="412" class="l"><a class="l" href="#412">412: </a>                }
+</span><span id="413" class="l"><a class="l" href="#413">413: </a>
+</span><span id="414" class="l"><a class="l" href="#414">414: </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="415" class="l"><a class="l" href="#415">415: </a>            }
+</span><span id="416" class="l"><a class="l" href="#416">416: </a>
+</span><span id="417" class="l"><a class="l" href="#417">417: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
+</span><span id="418" class="l"><a class="l" href="#418">418: </a>        }
+</span><span id="419" class="l"><a class="l" href="#419">419: </a>
+</span><span id="420" class="l"><a class="l" href="#420">420: </a>        <span class="php-comment">// No date...</span>
+</span><span id="421" class="l"><a class="l" href="#421">421: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="422" class="l"><a class="l" href="#422">422: </a>    }
+</span><span id="423" class="l"><a class="l" href="#423">423: </a>
+</span><span id="424" class="l"><a class="l" href="#424">424: </a>    <span class="php-comment">/**
+</span></span><span id="425" class="l"><a class="l" href="#425">425: </a><span class="php-comment">     * Convert a date/time string to Excel time.
+</span></span><span id="426" class="l"><a class="l" href="#426">426: </a><span class="php-comment">     *
+</span></span><span id="427" class="l"><a class="l" href="#427">427: </a><span class="php-comment">     * @param string $dateValue Examples: '2009-12-31', '2009-12-31 15:59', '2009-12-31 15:59:10'
+</span></span><span id="428" class="l"><a class="l" href="#428">428: </a><span class="php-comment">     *
+</span></span><span id="429" class="l"><a class="l" href="#429">429: </a><span class="php-comment">     * @return false|float Excel date/time serial value
+</span></span><span id="430" class="l"><a class="l" href="#430">430: </a><span class="php-comment">     */</span>
+</span><span id="431" class="l"><a class="l" href="#431">431: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_stringToExcel" href="#_stringToExcel">stringToExcel</a>(<span class="php-var">$dateValue</span>)
+</span><span id="432" class="l"><a class="l" href="#432">432: </a>    {
+</span><span id="433" class="l"><a class="l" href="#433">433: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">strlen</span>(<span class="php-var">$dateValue</span>) &lt; <span class="php-num">2</span>) {
+</span><span id="434" class="l"><a class="l" href="#434">434: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="435" class="l"><a class="l" href="#435">435: </a>        }
+</span><span id="436" class="l"><a class="l" href="#436">436: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">preg_match</span>(<span class="php-quote">'/^(\d{1,4}[ \.\/\-][A-Z]{3,9}([ \.\/\-]\d{1,4})?|[A-Z]{3,9}[ \.\/\-]\d{1,4}([ \.\/\-]\d{1,4})?|\d{1,4}[ \.\/\-]\d{1,4}([ \.\/\-]\d{1,4})?)( \d{1,2}:\d{1,2}(:\d{1,2})?)?$/iu'</span>, <span class="php-var">$dateValue</span>)) {
+</span><span id="437" class="l"><a class="l" href="#437">437: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="438" class="l"><a class="l" href="#438">438: </a>        }
+</span><span id="439" class="l"><a class="l" href="#439">439: </a>
+</span><span id="440" class="l"><a class="l" href="#440">440: </a>        <span class="php-var">$dateValueNew</span> = DateTime::DATEVALUE(<span class="php-var">$dateValue</span>);
+</span><span id="441" class="l"><a class="l" href="#441">441: </a>
+</span><span id="442" class="l"><a class="l" href="#442">442: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$dateValueNew</span> === Functions::VALUE()) {
+</span><span id="443" class="l"><a class="l" href="#443">443: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="444" class="l"><a class="l" href="#444">444: </a>        }
+</span><span id="445" class="l"><a class="l" href="#445">445: </a>
+</span><span id="446" class="l"><a class="l" href="#446">446: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$dateValue</span>, <span class="php-quote">':'</span>) !== <span class="php-keyword1">false</span>) {
+</span><span id="447" class="l"><a class="l" href="#447">447: </a>            <span class="php-var">$timeValue</span> = DateTime::TIMEVALUE(<span class="php-var">$dateValue</span>);
+</span><span id="448" class="l"><a class="l" href="#448">448: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$timeValue</span> === Functions::VALUE()) {
+</span><span id="449" class="l"><a class="l" href="#449">449: </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="450" class="l"><a class="l" href="#450">450: </a>            }
+</span><span id="451" class="l"><a class="l" href="#451">451: </a>            <span class="php-var">$dateValueNew</span> += <span class="php-var">$timeValue</span>;
+</span><span id="452" class="l"><a class="l" href="#452">452: </a>        }
+</span><span id="453" class="l"><a class="l" href="#453">453: </a>
+</span><span id="454" class="l"><a class="l" href="#454">454: </a>        <span class="php-keyword1">return</span> <span class="php-var">$dateValueNew</span>;
+</span><span id="455" class="l"><a class="l" href="#455">455: </a>    }
+</span><span id="456" class="l"><a class="l" href="#456">456: </a>
+</span><span id="457" class="l"><a class="l" href="#457">457: </a>    <span class="php-comment">/**
+</span></span><span id="458" class="l"><a class="l" href="#458">458: </a><span class="php-comment">     * Converts a month name (either a long or a short name) to a month number.
+</span></span><span id="459" class="l"><a class="l" href="#459">459: </a><span class="php-comment">     *
+</span></span><span id="460" class="l"><a class="l" href="#460">460: </a><span class="php-comment">     * @param string $month Month name or abbreviation
+</span></span><span id="461" class="l"><a class="l" href="#461">461: </a><span class="php-comment">     *
+</span></span><span id="462" class="l"><a class="l" href="#462">462: </a><span class="php-comment">     * @return int|string Month number (1 - 12), or the original string argument if it isn't a valid month name
+</span></span><span id="463" class="l"><a class="l" href="#463">463: </a><span class="php-comment">     */</span>
+</span><span id="464" class="l"><a class="l" href="#464">464: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_monthStringToNumber" href="#_monthStringToNumber">monthStringToNumber</a>(<span class="php-var">$month</span>)
+</span><span id="465" class="l"><a class="l" href="#465">465: </a>    {
+</span><span id="466" class="l"><a class="l" href="#466">466: </a>        <span class="php-var">$monthIndex</span> = <span class="php-num">1</span>;
+</span><span id="467" class="l"><a class="l" href="#467">467: </a>        <span class="php-keyword1">foreach</span> (self::<span class="php-var">$monthNames</span> <span class="php-keyword1">as</span> <span class="php-var">$shortMonthName</span> =&gt; <span class="php-var">$longMonthName</span>) {
+</span><span id="468" class="l"><a class="l" href="#468">468: </a>            <span class="php-keyword1">if</span> ((<span class="php-var">$month</span> === <span class="php-var">$longMonthName</span>) || (<span class="php-var">$month</span> === <span class="php-var">$shortMonthName</span>)) {
+</span><span id="469" class="l"><a class="l" href="#469">469: </a>                <span class="php-keyword1">return</span> <span class="php-var">$monthIndex</span>;
+</span><span id="470" class="l"><a class="l" href="#470">470: </a>            }
+</span><span id="471" class="l"><a class="l" href="#471">471: </a>            ++<span class="php-var">$monthIndex</span>;
+</span><span id="472" class="l"><a class="l" href="#472">472: </a>        }
+</span><span id="473" class="l"><a class="l" href="#473">473: </a>
+</span><span id="474" class="l"><a class="l" href="#474">474: </a>        <span class="php-keyword1">return</span> <span class="php-var">$month</span>;
+</span><span id="475" class="l"><a class="l" href="#475">475: </a>    }
+</span><span id="476" class="l"><a class="l" href="#476">476: </a>
+</span><span id="477" class="l"><a class="l" href="#477">477: </a>    <span class="php-comment">/**
+</span></span><span id="478" class="l"><a class="l" href="#478">478: </a><span class="php-comment">     * Strips an ordinal from a numeric value.
+</span></span><span id="479" class="l"><a class="l" href="#479">479: </a><span class="php-comment">     *
+</span></span><span id="480" class="l"><a class="l" href="#480">480: </a><span class="php-comment">     * @param string $day Day number with an ordinal
+</span></span><span id="481" class="l"><a class="l" href="#481">481: </a><span class="php-comment">     *
+</span></span><span id="482" class="l"><a class="l" href="#482">482: </a><span class="php-comment">     * @return int|string The integer value with any ordinal stripped, or the original string argument if it isn't a valid numeric
+</span></span><span id="483" class="l"><a class="l" href="#483">483: </a><span class="php-comment">     */</span>
+</span><span id="484" class="l"><a class="l" href="#484">484: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <a id="_dayStringToNumber" href="#_dayStringToNumber">dayStringToNumber</a>(<span class="php-var">$day</span>)
+</span><span id="485" class="l"><a class="l" href="#485">485: </a>    {
+</span><span id="486" class="l"><a class="l" href="#486">486: </a>        <span class="php-var">$strippedDayValue</span> = (<span class="php-keyword2">str_replace</span>(self::<span class="php-var">$numberSuffixes</span>, <span class="php-quote">''</span>, <span class="php-var">$day</span>));
+</span><span id="487" class="l"><a class="l" href="#487">487: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_numeric</span>(<span class="php-var">$strippedDayValue</span>)) {
+</span><span id="488" class="l"><a class="l" href="#488">488: </a>            <span class="php-keyword1">return</span> (int) <span class="php-var">$strippedDayValue</span>;
+</span><span id="489" class="l"><a class="l" href="#489">489: </a>        }
+</span><span id="490" class="l"><a class="l" href="#490">490: </a>
+</span><span id="491" class="l"><a class="l" href="#491">491: </a>        <span class="php-keyword1">return</span> <span class="php-var">$day</span>;
+</span><span id="492" class="l"><a class="l" href="#492">492: </a>    }
+</span><span id="493" class="l"><a class="l" href="#493">493: </a>}
+</span><span id="494" class="l"><a class="l" href="#494">494: </a></span></code></pre>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

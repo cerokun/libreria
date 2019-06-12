@@ -1,0 +1,3430 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class PhpOffice\PhpSpreadsheet\Spreadsheet</title>
+
+	<script type="text/javascript" src="resources/combined.js?117538352"></script>
+	<script type="text/javascript" src="elementlist.js?1778263301"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Complex.html">Complex</a>
+						</li>
+				<li><a href="namespace-Composer.html">Composer<span></span></a>
+						<ul>
+				<li><a href="namespace-Composer.Autoload.html">Autoload</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Fpdf.html">Fpdf</a>
+						</li>
+				<li><a href="namespace-Matrix.html">Matrix<span></span></a>
+						<ul>
+				<li><a href="namespace-Matrix.Operators.html">Operators</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-PhpOffice.html">PhpOffice<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.html">Calculation<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Engine.html">Engine</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Token.html">Token</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Cell.html">Cell</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.html">Chart<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.Renderer.html">Renderer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Collection.html">Collection</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Document.html">Document</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Helper.html">Helper</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.html">Reader<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.html">Xls<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Color.html">Color</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Style.html">Style</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.RichText.html">RichText</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.html">Shared<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.html">Escher<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.html">DgContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.SpgrContainer.html">SpgrContainer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.html">DggContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.html">BstoreContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.BSE.html">BSE</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.JAMA.html">JAMA</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.html">OLE<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.PPS.html">PPS</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Trend.html">Trend</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Style.html">Style</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.html">Worksheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.html">AutoFilter<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.Column.html">Column</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.Drawing.html">Drawing</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.html">Writer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.html">Ods<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.Cell.html">Cell</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Pdf.html">Pdf</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xls.html">Xls</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-Psr.html">Psr<span></span></a>
+						<ul>
+				<li><a href="namespace-Psr.SimpleCache.html">SimpleCache</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Samples.html">Samples<span></span></a>
+						<ul>
+				<li><a href="namespace-Samples.Sample09.html">Sample09</a>
+						</li>
+				<li><a href="namespace-Samples.Sample10.html">Sample10</a>
+						</li>
+				<li><a href="namespace-Samples.Sample12.html">Sample12</a>
+						</li>
+				<li><a href="namespace-Samples.Sample14.html">Sample14</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Comment.html">Comment</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.HashTable.html">HashTable</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.IOFactory.html">IOFactory</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.MyReadFilter.html">MyReadFilter</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.NamedRange.html">NamedRange</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.ReferenceHelper.html">ReferenceHelper</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Settings.html">Settings</a></li>
+				<li class="active"><a href="class-PhpOffice.PhpSpreadsheet.Spreadsheet.html">Spreadsheet</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.IComparable.html">IComparable</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">Exception</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PhpOffice.PhpSpreadsheet.html" title="Summary of PhpOffice\PhpSpreadsheet"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Spreadsheet</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-PhpOffice.html">PhpOffice</a>\<a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet</a><br>
+		
+
+		<b>Located at</b> <a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#10-1490" title="Go to source code">vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Spreadsheet.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="hasMacros" id="_hasMacros">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasMacros">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#198-206" title="Go to source code">hasMacros</a>( )</code>
+
+		<div class="description short">
+			
+<p>The workbook has macros ?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The workbook has macros ?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHasMacros" id="_setHasMacros">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHasMacros">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#208-216" title="Go to source code">setHasMacros</a>( <span>boolean <var>$hasMacros</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Define if a workbook has macros.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Define if a workbook has macros.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$hasMacros</var></dt>
+					<dd><code>boolean</code><br>$hasMacros true|false</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMacrosCode" id="_setMacrosCode">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMacrosCode">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#218-227" title="Go to source code">setMacrosCode</a>( <span>string <var>$macroCode</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the macros code.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the macros code.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$macroCode</var></dt>
+					<dd><code>string</code><br>$macroCode string|null</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMacrosCode" id="_getMacrosCode">
+
+		<td class="attributes"><code>
+			 public 
+			null|string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMacrosCode">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#229-237" title="Go to source code">getMacrosCode</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return the macros code.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the macros code.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>null|string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMacrosCertificate" id="_setMacrosCertificate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMacrosCertificate">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#239-247" title="Go to source code">setMacrosCertificate</a>( <span>null|string <var>$certificate</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the macros certificate.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the macros certificate.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$certificate</var></dt>
+					<dd><code>null|string</code><br>$certificate</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasMacrosCertificate" id="_hasMacrosCertificate">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasMacrosCertificate">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#249-257" title="Go to source code">hasMacrosCertificate</a>( )</code>
+
+		<div class="description short">
+			
+<p>Is the project signed ?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is the project signed ?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true|false<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMacrosCertificate" id="_getMacrosCertificate">
+
+		<td class="attributes"><code>
+			 public 
+			null|string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMacrosCertificate">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#259-267" title="Go to source code">getMacrosCertificate</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return the macros certificate.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the macros certificate.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>null|string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="discardMacros" id="_discardMacros">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_discardMacros">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#269-277" title="Go to source code">discardMacros</a>( )</code>
+
+		<div class="description short">
+			
+<p>Remove all macros, certificate from spreadsheet.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove all macros, certificate from spreadsheet.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRibbonXMLData" id="_setRibbonXMLData">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRibbonXMLData">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#279-292" title="Go to source code">setRibbonXMLData</a>( <span>null|mixed <var>$target</var></span>, <span>null|mixed <var>$xmlData</var></span> )</code>
+
+		<div class="description short">
+			
+<p>set ribbon XML data.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>set ribbon XML data.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$target</var></dt>
+					<dd><code>null|mixed</code><br>$target</dd>
+					<dt><var>$xmlData</var></dt>
+					<dd><code>null|mixed</code><br>$xmlData</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRibbonXMLData" id="_getRibbonXMLData">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRibbonXMLData">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#294-322" title="Go to source code">getRibbonXMLData</a>( <span>string <var>$what</var> = <span class="php-quote">'all'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>retrieve ribbon XML Data.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>retrieve ribbon XML Data.</p>
+
+<p>return string|null|array</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$what</var></dt>
+					<dd><code>string</code><br>$what</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRibbonBinObjects" id="_setRibbonBinObjects">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRibbonBinObjects">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#324-337" title="Go to source code">setRibbonBinObjects</a>( <span>null|mixed <var>$BinObjectsNames</var></span>, <span>null|mixed <var>$BinObjectsData</var></span> )</code>
+
+		<div class="description short">
+			
+<p>store binaries ribbon objects (pictures).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>store binaries ribbon objects (pictures).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$BinObjectsNames</var></dt>
+					<dd><code>null|mixed</code><br>$BinObjectsNames</dd>
+					<dt><var>$BinObjectsData</var></dt>
+					<dd><code>null|mixed</code><br>$BinObjectsData</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRibbonBinObjects" id="_getRibbonBinObjects">
+
+		<td class="attributes"><code>
+			 public 
+			null|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRibbonBinObjects">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#377-413" title="Go to source code">getRibbonBinObjects</a>( <span>string <var>$what</var> = <span class="php-quote">'all'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>retrieve Binaries Ribbon Objects.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>retrieve Binaries Ribbon Objects.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$what</var></dt>
+					<dd><code>string</code><br>$what</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>null|array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasRibbon" id="_hasRibbon">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasRibbon">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#415-423" title="Go to source code">hasRibbon</a>( )</code>
+
+		<div class="description short">
+			
+<p>This workbook have a custom UI ?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This workbook have a custom UI ?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasRibbonBinObjects" id="_hasRibbonBinObjects">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasRibbonBinObjects">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#425-433" title="Go to source code">hasRibbonBinObjects</a>( )</code>
+
+		<div class="description short">
+			
+<p>This workbook have additionnal object for the ribbon ?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This workbook have additionnal object for the ribbon ?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sheetCodeNameExists" id="_sheetCodeNameExists">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sheetCodeNameExists">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#435-445" title="Go to source code">sheetCodeNameExists</a>( <span>string <var>$pSheetCodeName</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if a sheet with a specified code name already exists.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if a sheet with a specified code name already exists.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pSheetCodeName</var></dt>
+					<dd><code>string</code><br>$pSheetCodeName Name of the worksheet to check</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSheetByCodeName" id="_getSheetByCodeName">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSheetByCodeName">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#447-464" title="Go to source code">getSheetByCodeName</a>( <span>string <var>$pName</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get sheet by code name. Warning : sheet don't have always a code name !</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get sheet by code name. Warning : sheet don't have always a code name !</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pName</var></dt>
+					<dd><code>string</code><br>$pName Sheet name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#466-495" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Create a new PhpSpreadsheet with one Worksheet.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a new PhpSpreadsheet with one Worksheet.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#497-504" title="Go to source code">__destruct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Code to execute when this worksheet is unset().</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Code to execute when this worksheet is unset().</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="disconnectWorksheets" id="_disconnectWorksheets">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_disconnectWorksheets">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#506-519" title="Go to source code">disconnectWorksheets</a>( )</code>
+
+		<div class="description short">
+			
+<p>Disconnect all worksheets from this PhpSpreadsheet workbook object, typically
+so that the PhpSpreadsheet object can be unset.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Disconnect all worksheets from this PhpSpreadsheet workbook object, typically
+so that the PhpSpreadsheet object can be unset.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCalculationEngine" id="_getCalculationEngine">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Calculation.Calculation.html">PhpOffice\PhpSpreadsheet\Calculation\Calculation</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCalculationEngine">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#521-529" title="Go to source code">getCalculationEngine</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return the calculation engine for this worksheet.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the calculation engine for this worksheet.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Calculation.Calculation.html">PhpOffice\PhpSpreadsheet\Calculation\Calculation</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getProperties" id="_getProperties">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Document.Properties.html">PhpOffice\PhpSpreadsheet\Document\Properties</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getProperties">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#531-539" title="Go to source code">getProperties</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get properties.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get properties.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Document.Properties.html">PhpOffice\PhpSpreadsheet\Document\Properties</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setProperties" id="_setProperties">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setProperties">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#541-549" title="Go to source code">setProperties</a>( <span><code><a href="class-PhpOffice.PhpSpreadsheet.Document.Properties.html">PhpOffice\PhpSpreadsheet\Document\Properties</a></code> <var>$pValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set properties.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set properties.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pValue</var></dt>
+					<dd><code><code><a href="class-PhpOffice.PhpSpreadsheet.Document.Properties.html">PhpOffice\PhpSpreadsheet\Document\Properties</a></code></code><br>$pValue</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSecurity" id="_getSecurity">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Document.Security.html">PhpOffice\PhpSpreadsheet\Document\Security</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSecurity">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#551-559" title="Go to source code">getSecurity</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get security.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get security.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Document.Security.html">PhpOffice\PhpSpreadsheet\Document\Security</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSecurity" id="_setSecurity">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSecurity">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#561-569" title="Go to source code">setSecurity</a>( <span><code><a href="class-PhpOffice.PhpSpreadsheet.Document.Security.html">PhpOffice\PhpSpreadsheet\Document\Security</a></code> <var>$pValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set security.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set security.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pValue</var></dt>
+					<dd><code><code><a href="class-PhpOffice.PhpSpreadsheet.Document.Security.html">PhpOffice\PhpSpreadsheet\Document\Security</a></code></code><br>$pValue</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getActiveSheet" id="_getActiveSheet">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getActiveSheet">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#571-581" title="Go to source code">getActiveSheet</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get active sheet.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get active sheet.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createSheet" id="_createSheet">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createSheet">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#583-598" title="Go to source code">createSheet</a>( <span>null|integer <var>$sheetIndex</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Create sheet and add it to this workbook.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create sheet and add it to this workbook.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sheetIndex</var></dt>
+					<dd><code>null|integer</code><br>$sheetIndex Index where sheet should go (0,1,..., or null for last)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sheetNameExists" id="_sheetNameExists">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sheetNameExists">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#600-610" title="Go to source code">sheetNameExists</a>( <span>string <var>$pSheetName</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if a sheet with a specified name already exists.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if a sheet with a specified name already exists.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pSheetName</var></dt>
+					<dd><code>string</code><br>$pSheetName Name of the worksheet to check</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addSheet" id="_addSheet">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addSheet">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#612-655" title="Go to source code">addSheet</a>( <span><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code> <var>$pSheet</var></span>, <span>null|integer <var>$iSheetIndex</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Add sheet.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Add sheet.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pSheet</var></dt>
+					<dd><code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>$pSheet</dd>
+					<dt><var>$iSheetIndex</var></dt>
+					<dd><code>null|integer</code><br>$iSheetIndex Index where sheet should go (0,1,..., or null for last)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeSheetByIndex" id="_removeSheetByIndex">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeSheetByIndex">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#657-679" title="Go to source code">removeSheetByIndex</a>( <span>integer <var>$pIndex</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Remove sheet by index.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove sheet by index.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pIndex</var></dt>
+					<dd><code>integer</code><br>$pIndex Active sheet index</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSheet" id="_getSheet">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSheet">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#681-701" title="Go to source code">getSheet</a>( <span>integer <var>$pIndex</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get sheet by index.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get sheet by index.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pIndex</var></dt>
+					<dd><code>integer</code><br>$pIndex Sheet index</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAllSheets" id="_getAllSheets">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAllSheets">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#703-711" title="Go to source code">getAllSheets</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get all sheets.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get all sheets.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a>[]</code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSheetByName" id="_getSheetByName">
+
+		<td class="attributes"><code>
+			 public 
+			null|<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSheetByName">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#713-730" title="Go to source code">getSheetByName</a>( <span>string <var>$pName</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get sheet by name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get sheet by name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pName</var></dt>
+					<dd><code>string</code><br>$pName Sheet name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>null|<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIndex" id="_getIndex">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIndex">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#732-750" title="Go to source code">getIndex</a>( <span><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code> <var>$pSheet</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get index for sheet.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get index for sheet.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pSheet</var></dt>
+					<dd><code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>$pSheet</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>index<br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setIndexByName" id="_setIndexByName">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setIndexByName">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#752-778" title="Go to source code">setIndexByName</a>( <span>string <var>$sheetName</var></span>, <span>integer <var>$newIndex</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set index for sheet by sheet name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set index for sheet by sheet name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sheetName</var></dt>
+					<dd><code>string</code><br>$sheetName Sheet name to modify index for</dd>
+					<dt><var>$newIndex</var></dt>
+					<dd><code>integer</code><br>$newIndex New index for the sheet</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>New sheet index<br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSheetCount" id="_getSheetCount">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSheetCount">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#780-788" title="Go to source code">getSheetCount</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get sheet count.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get sheet count.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getActiveSheetIndex" id="_getActiveSheetIndex">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getActiveSheetIndex">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#790-798" title="Go to source code">getActiveSheetIndex</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get active sheet index.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get active sheet index.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>Active sheet index<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setActiveSheetIndex" id="_setActiveSheetIndex">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setActiveSheetIndex">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#800-821" title="Go to source code">setActiveSheetIndex</a>( <span>integer <var>$pIndex</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set active sheet index.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set active sheet index.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pIndex</var></dt>
+					<dd><code>integer</code><br>$pIndex Active sheet index</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setActiveSheetIndexByName" id="_setActiveSheetIndexByName">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setActiveSheetIndexByName">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#823-841" title="Go to source code">setActiveSheetIndexByName</a>( <span>string <var>$pValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set active sheet index by name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set active sheet index by name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pValue</var></dt>
+					<dd><code>string</code><br>$pValue Sheet title</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSheetNames" id="_getSheetNames">
+
+		<td class="attributes"><code>
+			 public 
+			string[]
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSheetNames">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#843-857" title="Go to source code">getSheetNames</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get sheet names.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get sheet names.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string[]</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addExternalSheet" id="_addExternalSheet">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addExternalSheet">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#859-893" title="Go to source code">addExternalSheet</a>( <span><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code> <var>$pSheet</var></span>, <span>null|integer <var>$iSheetIndex</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Add external sheet.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Add external sheet.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pSheet</var></dt>
+					<dd><code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>$pSheet External sheet to add</dd>
+					<dt><var>$iSheetIndex</var></dt>
+					<dd><code>null|integer</code><br>$iSheetIndex Index where sheet should go (0,1,..., or null for last)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNamedRanges" id="_getNamedRanges">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.NamedRange.html">PhpOffice\PhpSpreadsheet\NamedRange</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNamedRanges">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#895-903" title="Go to source code">getNamedRanges</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get named ranges.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get named ranges.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.NamedRange.html">PhpOffice\PhpSpreadsheet\NamedRange</a>[]</code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addNamedRange" id="_addNamedRange">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addNamedRange">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#905-923" title="Go to source code">addNamedRange</a>( <span><code><a href="class-PhpOffice.PhpSpreadsheet.NamedRange.html">PhpOffice\PhpSpreadsheet\NamedRange</a></code> <var>$namedRange</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Add named range.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Add named range.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$namedRange</var></dt>
+					<dd><code><code><a href="class-PhpOffice.PhpSpreadsheet.NamedRange.html">PhpOffice\PhpSpreadsheet\NamedRange</a></code></code><br>$namedRange</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNamedRange" id="_getNamedRange">
+
+		<td class="attributes"><code>
+			 public 
+			null|<code><a href="class-PhpOffice.PhpSpreadsheet.NamedRange.html">PhpOffice\PhpSpreadsheet\NamedRange</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNamedRange">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#925-950" title="Go to source code">getNamedRange</a>( <span>string <var>$namedRange</var></span>, <span><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code> <var>$pSheet</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Get named range.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get named range.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$namedRange</var></dt>
+					<dd><code>string</code><br>$namedRange</dd>
+					<dt><var>$pSheet</var></dt>
+					<dd><code>null|<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>$pSheet Scope. Use null for global scope</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>null|<code><a href="class-PhpOffice.PhpSpreadsheet.NamedRange.html">PhpOffice\PhpSpreadsheet\NamedRange</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeNamedRange" id="_removeNamedRange">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Spreadsheet.html">PhpOffice\PhpSpreadsheet\Spreadsheet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeNamedRange">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#952-973" title="Go to source code">removeNamedRange</a>( <span>string <var>$namedRange</var></span>, <span><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code> <var>$pSheet</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Remove named range.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove named range.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$namedRange</var></dt>
+					<dd><code>string</code><br>$namedRange</dd>
+					<dt><var>$pSheet</var></dt>
+					<dd><code>null|<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Worksheet.html">PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</a></code></code><br>$pSheet scope: use null for global scope</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Spreadsheet.html">PhpOffice\PhpSpreadsheet\Spreadsheet</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getWorksheetIterator" id="_getWorksheetIterator">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Iterator.html">PhpOffice\PhpSpreadsheet\Worksheet\Iterator</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getWorksheetIterator">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#975-983" title="Go to source code">getWorksheetIterator</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get worksheet iterator.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get worksheet iterator.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Worksheet.Iterator.html">PhpOffice\PhpSpreadsheet\Worksheet\Iterator</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copy" id="_copy">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Spreadsheet.html">PhpOffice\PhpSpreadsheet\Spreadsheet</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_copy">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#985-1001" title="Go to source code">copy</a>( )</code>
+
+		<div class="description short">
+			
+<p>Copy workbook (!= clone!).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Copy workbook (!= clone!).</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Spreadsheet.html">PhpOffice\PhpSpreadsheet\Spreadsheet</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__clone" id="___clone">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___clone">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1003-1013" title="Go to source code">__clone</a>( )</code>
+
+		<div class="description short">
+			
+<p>Implement PHP __clone to create a deep clone, not just a shallow copy.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Implement PHP __clone to create a deep clone, not just a shallow copy.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCellXfCollection" id="_getCellXfCollection">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCellXfCollection">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1015-1023" title="Go to source code">getCellXfCollection</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the workbook collection of cellXfs.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the workbook collection of cellXfs.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a>[]</code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCellXfByIndex" id="_getCellXfByIndex">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCellXfByIndex">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1025-1035" title="Go to source code">getCellXfByIndex</a>( <span>integer <var>$pIndex</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get cellXf by index.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get cellXf by index.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pIndex</var></dt>
+					<dd><code>integer</code><br>$pIndex</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCellXfByHashCode" id="_getCellXfByHashCode">
+
+		<td class="attributes"><code>
+			 public 
+			false|<code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCellXfByHashCode">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1037-1053" title="Go to source code">getCellXfByHashCode</a>( <span>string <var>$pValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get cellXf by hash code.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get cellXf by hash code.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pValue</var></dt>
+					<dd><code>string</code><br>$pValue</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>false|<code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cellXfExists" id="_cellXfExists">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cellXfExists">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1055-1065" title="Go to source code">cellXfExists</a>( <span><code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code> <var>$pCellStyle</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if style exists in style collection.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if style exists in style collection.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pCellStyle</var></dt>
+					<dd><code><code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code></code><br>$pCellStyle</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDefaultStyle" id="_getDefaultStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDefaultStyle">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1067-1081" title="Go to source code">getDefaultStyle</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get default style.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get default style.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code></code><br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addCellXf" id="_addCellXf">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addCellXf">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1083-1092" title="Go to source code">addCellXf</a>( <span><code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code> <var>$style</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Add a cellXf to the workbook.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Add a cellXf to the workbook.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$style</var></dt>
+					<dd><code><code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code></code><br>$style</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeCellXfByIndex" id="_removeCellXfByIndex">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeCellXfByIndex">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1094-1124" title="Go to source code">removeCellXfByIndex</a>( <span>integer <var>$pIndex</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Remove cellXf by index. It is ensured that all cells get their xf index
+updated.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove cellXf by index. It is ensured that all cells get their xf index
+updated.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pIndex</var></dt>
+					<dd><code>integer</code><br>$pIndex Index to cellXf</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCellXfSupervisor" id="_getCellXfSupervisor">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCellXfSupervisor">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1126-1134" title="Go to source code">getCellXfSupervisor</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the cellXf supervisor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the cellXf supervisor.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCellStyleXfCollection" id="_getCellStyleXfCollection">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCellStyleXfCollection">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1136-1144" title="Go to source code">getCellStyleXfCollection</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the workbook collection of cellStyleXfs.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the workbook collection of cellStyleXfs.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a>[]</code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCellStyleXfByIndex" id="_getCellStyleXfByIndex">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCellStyleXfByIndex">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1146-1156" title="Go to source code">getCellStyleXfByIndex</a>( <span>integer <var>$pIndex</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get cellStyleXf by index.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get cellStyleXf by index.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pIndex</var></dt>
+					<dd><code>integer</code><br>$pIndex Index to cellXf</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCellStyleXfByHashCode" id="_getCellStyleXfByHashCode">
+
+		<td class="attributes"><code>
+			 public 
+			false|<code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCellStyleXfByHashCode">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1158-1174" title="Go to source code">getCellStyleXfByHashCode</a>( <span>string <var>$pValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get cellStyleXf by hash code.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get cellStyleXf by hash code.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pValue</var></dt>
+					<dd><code>string</code><br>$pValue</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>false|<code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addCellStyleXf" id="_addCellStyleXf">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addCellStyleXf">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1176-1185" title="Go to source code">addCellStyleXf</a>( <span><code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code> <var>$pStyle</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Add a cellStyleXf to the workbook.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Add a cellStyleXf to the workbook.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pStyle</var></dt>
+					<dd><code><code><a href="class-PhpOffice.PhpSpreadsheet.Style.Style.html">PhpOffice\PhpSpreadsheet\Style\Style</a></code></code><br>$pStyle</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeCellStyleXfByIndex" id="_removeCellStyleXfByIndex">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeCellStyleXfByIndex">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1187-1200" title="Go to source code">removeCellStyleXfByIndex</a>( <span>integer <var>$pIndex</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Remove cellStyleXf by index.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove cellStyleXf by index.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pIndex</var></dt>
+					<dd><code>integer</code><br>$pIndex Index to cellXf</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="garbageCollect" id="_garbageCollect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_garbageCollect">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1202-1280" title="Go to source code">garbageCollect</a>( )</code>
+
+		<div class="description short">
+			
+<p>Eliminate all unneeded cellXf and afterwards update the xfIndex for all cells
+and columns in the workbook.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Eliminate all unneeded cellXf and afterwards update the xfIndex for all cells
+and columns in the workbook.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getID" id="_getID">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getID">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1282-1290" title="Go to source code">getID</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return the unique ID value assigned to this spreadsheet workbook.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the unique ID value assigned to this spreadsheet workbook.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getShowHorizontalScroll" id="_getShowHorizontalScroll">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getShowHorizontalScroll">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1292-1300" title="Go to source code">getShowHorizontalScroll</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the visibility of the horizonal scroll bar in the application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the visibility of the horizonal scroll bar in the application.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True if horizonal scroll bar is visible<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowHorizontalScroll" id="_setShowHorizontalScroll">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowHorizontalScroll">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1302-1310" title="Go to source code">setShowHorizontalScroll</a>( <span>boolean <var>$showHorizontalScroll</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the visibility of the horizonal scroll bar in the application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the visibility of the horizonal scroll bar in the application.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$showHorizontalScroll</var></dt>
+					<dd><code>boolean</code><br>$showHorizontalScroll True if horizonal scroll bar is visible</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getShowVerticalScroll" id="_getShowVerticalScroll">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getShowVerticalScroll">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1312-1320" title="Go to source code">getShowVerticalScroll</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the visibility of the vertical scroll bar in the application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the visibility of the vertical scroll bar in the application.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True if vertical scroll bar is visible<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowVerticalScroll" id="_setShowVerticalScroll">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowVerticalScroll">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1322-1330" title="Go to source code">setShowVerticalScroll</a>( <span>boolean <var>$showVerticalScroll</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the visibility of the vertical scroll bar in the application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the visibility of the vertical scroll bar in the application.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$showVerticalScroll</var></dt>
+					<dd><code>boolean</code><br>$showVerticalScroll True if vertical scroll bar is visible</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getShowSheetTabs" id="_getShowSheetTabs">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getShowSheetTabs">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1332-1340" title="Go to source code">getShowSheetTabs</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the visibility of the sheet tabs in the application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the visibility of the sheet tabs in the application.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True if the sheet tabs are visible<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowSheetTabs" id="_setShowSheetTabs">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowSheetTabs">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1342-1350" title="Go to source code">setShowSheetTabs</a>( <span>boolean <var>$showSheetTabs</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the visibility of the sheet tabs in the application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the visibility of the sheet tabs in the application.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$showSheetTabs</var></dt>
+					<dd><code>boolean</code><br>$showSheetTabs True if sheet tabs are visible</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMinimized" id="_getMinimized">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMinimized">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1352-1360" title="Go to source code">getMinimized</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return whether the workbook window is minimized.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return whether the workbook window is minimized.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if workbook window is minimized<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMinimized" id="_setMinimized">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMinimized">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1362-1370" title="Go to source code">setMinimized</a>( <span>boolean <var>$minimized</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set whether the workbook window is minimized.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set whether the workbook window is minimized.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$minimized</var></dt>
+					<dd><code>boolean</code><br>$minimized true if workbook window is minimized</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAutoFilterDateGrouping" id="_getAutoFilterDateGrouping">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAutoFilterDateGrouping">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1372-1381" title="Go to source code">getAutoFilterDateGrouping</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return whether to group dates when presenting the user with filtering optiomd
+in the user interface.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return whether to group dates when presenting the user with filtering optiomd
+in the user interface.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if workbook window is minimized<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAutoFilterDateGrouping" id="_setAutoFilterDateGrouping">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAutoFilterDateGrouping">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1383-1392" title="Go to source code">setAutoFilterDateGrouping</a>( <span>boolean <var>$autoFilterDateGrouping</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set whether to group dates when presenting the user with filtering optiomd in
+the user interface.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set whether to group dates when presenting the user with filtering optiomd in
+the user interface.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$autoFilterDateGrouping</var></dt>
+					<dd><code>boolean</code><br>$autoFilterDateGrouping true if workbook window is minimized</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFirstSheetIndex" id="_getFirstSheetIndex">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFirstSheetIndex">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1394-1402" title="Go to source code">getFirstSheetIndex</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return the first sheet in the book view.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the first sheet in the book view.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>First sheet in book view<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFirstSheetIndex" id="_setFirstSheetIndex">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFirstSheetIndex">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1404-1418" title="Go to source code">setFirstSheetIndex</a>( <span>integer <var>$firstSheetIndex</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the first sheet in the book view.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the first sheet in the book view.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$firstSheetIndex</var></dt>
+					<dd><code>integer</code><br>$firstSheetIndex First sheet in book view</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>if the given value is invalid<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getVisibility" id="_getVisibility">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getVisibility">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1420-1431" title="Go to source code">getVisibility</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return the visibility status of the workbook.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the visibility status of the workbook.</p>
+
+<p>This may be one of the following three values:</p>
+
+<ul>
+	<li>visibile</li>
+</ul>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Visible status<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setVisibility" id="_setVisibility">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setVisibility">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1433-1461" title="Go to source code">setVisibility</a>( <span>string <var>$visibility</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the visibility status of the workbook.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the visibility status of the workbook.</p>
+
+<p>Valid values are: - 'visible' (self::VISIBILITY_VISIBLE): Workbook window is
+visible - 'hidden' (self::VISIBILITY_HIDDEN): Workbook window is hidden, but can
+be shown by the user via the user interface - 'veryHidden'
+(self::VISIBILITY_VERY_HIDDEN): Workbook window is hidden and cannot be shown in
+the user interface.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$visibility</var></dt>
+					<dd><code>string</code><br>$visibility visibility status of the workbook</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>if the given value is invalid<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTabRatio" id="_getTabRatio">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTabRatio">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1463-1472" title="Go to source code">getTabRatio</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the ratio between the workbook tabs bar and the horizontal scroll bar.
+TabRatio is assumed to be out of 1000 of the horizontal window width.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the ratio between the workbook tabs bar and the horizontal scroll bar.
+TabRatio is assumed to be out of 1000 of the horizontal window width.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>Ratio between the workbook tabs bar and the horizontal scroll bar<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTabRatio" id="_setTabRatio">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTabRatio">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#1474-1489" title="Go to source code">setTabRatio</a>( <span>integer <var>$tabRatio</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the ratio between the workbook tabs bar and the horizontal scroll bar
+TabRatio is assumed to be out of 1000 of the horizontal window width.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the ratio between the workbook tabs bar and the horizontal scroll bar
+TabRatio is assumed to be out of 1000 of the horizontal window width.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tabRatio</var></dt>
+					<dd><code>integer</code><br>$tabRatio Ratio between the tabs bar and the horizontal scroll bar</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Exception.html">PhpOffice\PhpSpreadsheet\Exception</a></code></code><br>if the given value is invalid<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="VISIBILITY_VISIBLE" id="VISIBILITY_VISIBLE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#13" title="Go to source code"><b>VISIBILITY_VISIBLE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'visible'</span></code></td>
+		<td class="description"><div>
+			<a href="#VISIBILITY_VISIBLE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="VISIBILITY_HIDDEN" id="VISIBILITY_HIDDEN">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#14" title="Go to source code"><b>VISIBILITY_HIDDEN</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'hidden'</span></code></td>
+		<td class="description"><div>
+			<a href="#VISIBILITY_HIDDEN" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="VISIBILITY_VERY_HIDDEN" id="VISIBILITY_VERY_HIDDEN">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Spreadsheet.html#15" title="Go to source code"><b>VISIBILITY_VERY_HIDDEN</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'veryHidden'</span></code></td>
+		<td class="description"><div>
+			<a href="#VISIBILITY_VERY_HIDDEN" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

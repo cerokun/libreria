@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class PhpOffice\PhpSpreadsheet\Reader\BaseReader</title>
+
+	<script type="text/javascript" src="resources/combined.js?117538352"></script>
+	<script type="text/javascript" src="elementlist.js?1778263301"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Complex.html">Complex</a>
+						</li>
+				<li><a href="namespace-Composer.html">Composer<span></span></a>
+						<ul>
+				<li><a href="namespace-Composer.Autoload.html">Autoload</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Fpdf.html">Fpdf</a>
+						</li>
+				<li><a href="namespace-Matrix.html">Matrix<span></span></a>
+						<ul>
+				<li><a href="namespace-Matrix.Operators.html">Operators</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-PhpOffice.html">PhpOffice<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.html">Calculation<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Engine.html">Engine</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Calculation.Token.html">Token</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Cell.html">Cell</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.html">Chart<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Chart.Renderer.html">Renderer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Collection.html">Collection</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Document.html">Document</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Helper.html">Helper</a>
+						</li>
+				<li class="active"><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.html">Reader<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Security.html">Security</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.html">Xls<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Color.html">Color</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xls.Style.html">Style</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Reader.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.RichText.html">RichText</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.html">Shared<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.html">Escher<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.html">DgContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DgContainer.SpgrContainer.html">SpgrContainer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.html">DggContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.html">BstoreContainer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Escher.DggContainer.BstoreContainer.BSE.html">BSE</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.JAMA.html">JAMA</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.html">OLE<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.OLE.PPS.html">PPS</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Shared.Trend.html">Trend</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Style.html">Style</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.html">Worksheet<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.html">AutoFilter<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.AutoFilter.Column.html">Column</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Worksheet.Drawing.html">Drawing</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.html">Writer<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.html">Ods<span></span></a>
+						<ul>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Ods.Cell.html">Cell</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Pdf.html">Pdf</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xls.html">Xls</a>
+						</li>
+				<li><a href="namespace-PhpOffice.PhpSpreadsheet.Writer.Xlsx.html">Xlsx</a>
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li><a href="namespace-Psr.html">Psr<span></span></a>
+						<ul>
+				<li><a href="namespace-Psr.SimpleCache.html">SimpleCache</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Samples.html">Samples<span></span></a>
+						<ul>
+				<li><a href="namespace-Samples.Sample09.html">Sample09</a>
+						</li>
+				<li><a href="namespace-Samples.Sample10.html">Sample10</a>
+						</li>
+				<li><a href="namespace-Samples.Sample12.html">Sample12</a>
+						</li>
+				<li><a href="namespace-Samples.Sample14.html">Sample14</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html">BaseReader</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Csv.html">Csv</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.DefaultReadFilter.html">DefaultReadFilter</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Gnumeric.html">Gnumeric</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Html.html">Html</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Ods.html">Ods</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Slk.html">Slk</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Xls.html">Xls</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Xlsx.html">Xlsx</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Xml.html">Xml</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">IReader</a></li>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReadFilter.html">IReadFilter</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-PhpOffice.PhpSpreadsheet.Reader.Exception.html">Exception</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PhpOffice.PhpSpreadsheet.Reader.html" title="Summary of PhpOffice\PhpSpreadsheet\Reader"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class BaseReader</h1>
+
+
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>PhpOffice\PhpSpreadsheet\Reader\BaseReader</span></b>			
+			 implements 
+				<a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html"><span>PhpOffice\PhpSpreadsheet\Reader\IReader</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.Csv.html">PhpOffice\PhpSpreadsheet\Reader\Csv</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.Gnumeric.html">PhpOffice\PhpSpreadsheet\Reader\Gnumeric</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.Html.html">PhpOffice\PhpSpreadsheet\Reader\Html</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.Ods.html">PhpOffice\PhpSpreadsheet\Reader\Ods</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.Slk.html">PhpOffice\PhpSpreadsheet\Reader\Slk</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.Xls.html">PhpOffice\PhpSpreadsheet\Reader\Xls</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.Xlsx.html">PhpOffice\PhpSpreadsheet\Reader\Xlsx</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.Xml.html">PhpOffice\PhpSpreadsheet\Reader\Xml</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br>
+		
+		<b>Namespace:</b> <a href="namespace-PhpOffice.html">PhpOffice</a>\<a href="namespace-PhpOffice.PhpSpreadsheet.html">PhpSpreadsheet</a>\<a href="namespace-PhpOffice.PhpSpreadsheet.Reader.html">Reader</a><br>
+		
+
+		<b>Located at</b> <a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#8-239" title="Go to source code">vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/BaseReader.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getReadDataOnly" id="_getReadDataOnly">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getReadDataOnly">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#58-68" title="Go to source code">getReadDataOnly</a>( )</code>
+
+		<div class="description short">
+			
+<p>Read data only?<br />
+If this is true, then the Reader will only read data values for cells, it will
+not read any formatting information.<br />
+If false (the default) it will read data and formatting.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read data only? If this is true, then the Reader will only read data values
+for cells, it will not read any formatting information. If false (the default)
+it will read data and formatting.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setReadDataOnly" id="_setReadDataOnly">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">PhpOffice\PhpSpreadsheet\Reader\IReader</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setReadDataOnly">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#70-84" title="Go to source code">setReadDataOnly</a>( <span>boolean <var>$pValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set read data only<br />
+Set to true, to advise the Reader only to read data values for cells, and to
+ignore any formatting information.<br />
+Set to false (the default) to advise the Reader to read both data and formatting
+for cells.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set read data only Set to true, to advise the Reader only to read data values
+for cells, and to ignore any formatting information. Set to false (the default)
+to advise the Reader to read both data and formatting for cells.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pValue</var></dt>
+					<dd><code>boolean</code><br>$pValue</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">PhpOffice\PhpSpreadsheet\Reader\IReader</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getReadEmptyCells" id="_getReadEmptyCells">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getReadEmptyCells">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#86-96" title="Go to source code">getReadEmptyCells</a>( )</code>
+
+		<div class="description short">
+			
+<p>Read empty cells?<br />
+If this is true (the default), then the Reader will read data values for all
+cells, irrespective of value.<br />
+If false it will not read data for cells containing a null value or an empty
+string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read empty cells? If this is true (the default), then the Reader will read
+data values for all cells, irrespective of value. If false it will not read data
+for cells containing a null value or an empty string.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setReadEmptyCells" id="_setReadEmptyCells">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">PhpOffice\PhpSpreadsheet\Reader\IReader</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setReadEmptyCells">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#98-112" title="Go to source code">setReadEmptyCells</a>( <span>boolean <var>$pValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set read empty cells<br />
+Set to true (the default) to advise the Reader read data values for all cells,
+irrespective of value.<br />
+Set to false to advise the Reader to ignore cells containing a null value or an
+empty string.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set read empty cells Set to true (the default) to advise the Reader read data
+values for all cells, irrespective of value. Set to false to advise the Reader
+to ignore cells containing a null value or an empty string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pValue</var></dt>
+					<dd><code>boolean</code><br>$pValue</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">PhpOffice\PhpSpreadsheet\Reader\IReader</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIncludeCharts" id="_getIncludeCharts">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIncludeCharts">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#114-125" title="Go to source code">getIncludeCharts</a>( )</code>
+
+		<div class="description short">
+			
+<p>Read charts in workbook?<br />
+If this is true, then the Reader will include any charts that exist in the
+workbook.<br />
+Note that a ReadDataOnly value of false overrides, and charts won't be read
+regardless of the IncludeCharts value.<br />
+If false (the default) it will ignore any charts defined in the workbook
+file.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read charts in workbook? If this is true, then the Reader will include any
+charts that exist in the workbook. Note that a ReadDataOnly value of false
+overrides, and charts won't be read regardless of the IncludeCharts value. If
+false (the default) it will ignore any charts defined in the workbook file.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setIncludeCharts" id="_setIncludeCharts">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">PhpOffice\PhpSpreadsheet\Reader\IReader</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setIncludeCharts">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#127-142" title="Go to source code">setIncludeCharts</a>( <span>boolean <var>$pValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set read charts in workbook<br />
+Set to true, to advise the Reader to include any charts that exist in the
+workbook.<br />
+Note that a ReadDataOnly value of false overrides, and charts won't be read
+regardless of the IncludeCharts value.<br />
+Set to false (the default) to discard charts.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set read charts in workbook Set to true, to advise the Reader to include any
+charts that exist in the workbook. Note that a ReadDataOnly value of false
+overrides, and charts won't be read regardless of the IncludeCharts value. Set
+to false (the default) to discard charts.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pValue</var></dt>
+					<dd><code>boolean</code><br>$pValue</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">PhpOffice\PhpSpreadsheet\Reader\IReader</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLoadSheetsOnly" id="_getLoadSheetsOnly">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLoadSheetsOnly">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#144-154" title="Go to source code">getLoadSheetsOnly</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get which sheets to load Returns either an array of worksheet names (the list
+of worksheets that should be loaded), or a null<br />
+indicating that all worksheets in the workbook should be loaded.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get which sheets to load Returns either an array of worksheet names (the list
+of worksheets that should be loaded), or a null indicating that all worksheets
+in the workbook should be loaded.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLoadSheetsOnly" id="_setLoadSheetsOnly">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">PhpOffice\PhpSpreadsheet\Reader\IReader</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLoadSheetsOnly">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#156-174" title="Go to source code">setLoadSheetsOnly</a>( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set which sheets to load.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set which sheets to load.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>$value This should be either an array of worksheet names to be loaded, or a
+string containing a single worksheet name. If NULL, then it tells the Reader to
+read all worksheets in the workbook</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">PhpOffice\PhpSpreadsheet\Reader\IReader</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLoadAllSheets" id="_setLoadAllSheets">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">PhpOffice\PhpSpreadsheet\Reader\IReader</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLoadAllSheets">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#176-187" title="Go to source code">setLoadAllSheets</a>( )</code>
+
+		<div class="description short">
+			
+<p>Set all sheets to load<br />
+Tells the Reader to load all worksheets from the workbook.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set all sheets to load Tells the Reader to load all worksheets from the
+workbook.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">PhpOffice\PhpSpreadsheet\Reader\IReader</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getReadFilter" id="_getReadFilter">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReadFilter.html">PhpOffice\PhpSpreadsheet\Reader\IReadFilter</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getReadFilter">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#189-197" title="Go to source code">getReadFilter</a>( )</code>
+
+		<div class="description short">
+			
+<p>Read filter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read filter.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReadFilter.html">PhpOffice\PhpSpreadsheet\Reader\IReadFilter</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setReadFilter" id="_setReadFilter">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">PhpOffice\PhpSpreadsheet\Reader\IReader</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setReadFilter">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#199-211" title="Go to source code">setReadFilter</a>( <span><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReadFilter.html">PhpOffice\PhpSpreadsheet\Reader\IReadFilter</a></code> <var>$pValue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set read filter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set read filter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pValue</var></dt>
+					<dd><code><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReadFilter.html">PhpOffice\PhpSpreadsheet\Reader\IReadFilter</a></code></code><br>$pValue</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html">PhpOffice\PhpSpreadsheet\Reader\IReader</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSecuritySCanner" id="_getSecuritySCanner">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSecuritySCanner">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#213-220" title="Go to source code">getSecuritySCanner</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="openFile" id="_openFile">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_openFile">#</a>
+		<code><a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#222-238" title="Go to source code">openFile</a>( <span>string <var>$pFilename</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Open file for reading.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Open file for reading.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pFilename</var></dt>
+					<dd><code>string</code><br>$pFilename</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-PhpOffice.PhpSpreadsheet.Reader.Exception.html">PhpOffice\PhpSpreadsheet\Reader\Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html#methods">PhpOffice\PhpSpreadsheet\Reader\IReader</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html#___construct">__construct()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html#_canRead">canRead()</a>, 
+			<a href="class-PhpOffice.PhpSpreadsheet.Reader.IReader.html#_load">load()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="readDataOnly" id="$readDataOnly">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#10-17" title="Go to source code"><var>$readDataOnly</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$readDataOnly" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Read data only? Identifies whether the Reader should only read data values
+for cells, and ignore any formatting information;<br />
+or whether it should read both data and formatting.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Read data only? Identifies whether the Reader should only read data values
+for cells, and ignore any formatting information; or whether it should read both
+data and formatting.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="readEmptyCells" id="$readEmptyCells">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#19-26" title="Go to source code"><var>$readEmptyCells</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$readEmptyCells" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Read empty cells? Identifies whether the Reader should read data values for
+cells all cells, or should ignore cells containing<br />
+null value or empty string.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Read empty cells? Identifies whether the Reader should read data values for
+cells all cells, or should ignore cells containing null value or empty
+string.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="includeCharts" id="$includeCharts">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#28-34" title="Go to source code"><var>$includeCharts</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$includeCharts" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Read charts that are defined in the workbook? Identifies whether the Reader
+should read the definitions for any charts that exist in the workbook;.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Read charts that are defined in the workbook? Identifies whether the Reader
+should read the definitions for any charts that exist in the workbook;.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadSheetsOnly" id="$loadSheetsOnly">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#36-42" title="Go to source code"><var>$loadSheetsOnly</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$loadSheetsOnly" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Restrict which sheets should be loaded? This property holds an array of
+worksheet names to be loaded. If null, then all worksheets will be loaded.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Restrict which sheets should be loaded? This property holds an array of
+worksheet names to be loaded. If null, then all worksheets will be loaded.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="readFilter" id="$readFilter">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Reader.IReadFilter.html">PhpOffice\PhpSpreadsheet\Reader\IReadFilter</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#44-49" title="Go to source code"><var>$readFilter</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$readFilter" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>IReadFilter instance.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>IReadFilter instance.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="fileHandle" id="$fileHandle">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#51" title="Go to source code"><var>$fileHandle</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$fileHandle" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="securityScanner" id="$securityScanner">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-PhpOffice.PhpSpreadsheet.Reader.Security.XmlScanner.html">PhpOffice\PhpSpreadsheet\Reader\Security\XmlScanner</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhpOffice.PhpSpreadsheet.Reader.BaseReader.html#53-56" title="Go to source code"><var>$securityScanner</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$securityScanner" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
